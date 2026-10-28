@@ -127,7 +127,9 @@ export function buildTimeline(input: TimelineInput): Timeline {
   let t = toFrame(bodyEnd, fps);
   for (const s of tail) {
     const dur = 2.5; // a closing line needs ≥ 2 s on screen
-    scenes.push({ id: s.id, start: round3(t), duration: dur, scene: s.scene, assets: input.shotAssets[s.id] ?? [], lineId: s.lineId });
+    // The brief's handle is the source of truth: models and replays often carry a placeholder.
+    const scene = s.scene.type === "endcard" && brief.handle ? { ...s.scene, handle: brief.handle } : s.scene;
+    scenes.push({ id: s.id, start: round3(t), duration: dur, scene, assets: input.shotAssets[s.id] ?? [], lineId: s.lineId });
     t = toFrame(t + dur, fps);
   }
   const durationSec = round3(Math.max(t, bodyEnd));

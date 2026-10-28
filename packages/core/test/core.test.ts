@@ -141,6 +141,9 @@ describe("pipeline (offline, mock providers)", () => {
     expect(p.files["index.html"]).toContain('data-composition-id="main"');
     for (const s of tl.scenes) expect(p.files[`compositions/s-${s.id}.html`]).toContain(`window.__timelines["s-${s.id}"]`);
     expect(p.files["compositions/chrome.html"]).toContain("Your Save Icon Is a Fossil");
+    // the brief's handle overrides the storyboard's placeholder on the end card and watermark
+    const end = tl.scenes.find((s) => s.scene.type === "endcard")!;
+    expect(end.scene.type === "endcard" && end.scene.handle).toBe("@vidskills");
     expect(Object.keys(p.assetPaths).length).toBeGreaterThan(5);
     expect(res.qa!.findings.find((f) => f.code === "frame0_empty")).toBeUndefined();
     expect(res.copy!.title.length).toBeGreaterThan(5);

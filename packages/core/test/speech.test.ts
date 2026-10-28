@@ -57,3 +57,14 @@ describe("pipeline voice stage", () => {
     expect(Math.abs(tw.start - yearWord.start)).toBeLessThan(0.1);
   });
 });
+
+describe("handle", () => {
+  it("uses the brief's handle on the end card and watermark", async () => {
+    const res = await runPipeline({ topic: "the floppy disk save icon", durationSec: 25, handle: "@hiddeninplainsight.tv" }, { providers: { llm: fakeLLM(), tts: fakeTTS() }, storage: new MemoryStorage(), jobId: "h1", stopAfter: "compose" });
+    const end = res.timeline!.scenes.find((s) => s.scene.type === "endcard")!;
+    expect(end.scene.type === "endcard" && end.scene.handle).toBe("@hiddeninplainsight.tv");
+    expect(res.project!.files["compositions/chrome.html"]).toContain("@hiddeninplainsight.tv");
+    expect(Object.values(res.project!.files).join("")).not.toContain("@vidskills");
+  });
+});
+

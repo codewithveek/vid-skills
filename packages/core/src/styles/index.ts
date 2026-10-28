@@ -21,7 +21,7 @@ export const fullBleed: StylePack = {
     return {
       window: { x: 0, y: 0, w: W, h: H },
       captions: { x: Math.round(W * 0.08), y: Math.round(H * 0.58), w: Math.round(W * 0.84), h: Math.round(H * 0.1) },
-      handle: { x: W - 300, y: Math.round(H * 0.74), w: 260, h: 40 },
+      handle: { x: W - 520, y: Math.round(H * 0.74), w: 480, h: 40 },
       blurFill: false,
     };
   },

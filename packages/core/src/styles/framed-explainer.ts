@@ -31,7 +31,7 @@ export const framedExplainer: StylePack = {
         title: { x: 0, y: Math.round(H * 0.035), w: W, h: Math.round(H * 0.09) },
         window: { x: Math.round((W - winW) / 2), y: Math.round(H * 0.15), w: winW, h: winH },
         captions: { x: Math.round(W * 0.1), y: Math.round(H * 0.78), w: Math.round(W * 0.8), h: Math.round(H * 0.1) },
-        handle: { x: W - 360, y: H - 70, w: 320, h: 40 },
+        handle: { x: W - 560, y: H - 70, w: 520, h: 40 },
         blurFill: true,
       };
     }
@@ -43,7 +43,7 @@ export const framedExplainer: StylePack = {
       window: { x: 0, y: winY, w: W, h: Math.min(winH, H - winY - Math.round(H * 0.12)) },
       // Captions sit just under the window, above the platform caption/UI zone (≤ 1330 px on 1920).
       captions: { x: Math.round(W * 0.08), y: winY + winH + Math.round(H * 0.02), w: Math.round(W * 0.84), h: Math.round(H * 0.07) },
-      handle: { x: W - 300, y: Math.round(H * 0.74), w: 260, h: 40 },
+      handle: { x: W - 520, y: Math.round(H * 0.74), w: 480, h: 40 },
       blurFill: true,
     };
   },
