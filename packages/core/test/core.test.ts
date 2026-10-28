@@ -20,6 +20,7 @@ import {
   synthSfx,
   toSrt,
   VideoBrief,
+  rankCandidates,
   type StockProvider,
 } from "../src/index.js";
 import { fakeLLM, fakeTTS } from "./fixtures.js";
@@ -174,6 +175,11 @@ describe("pipeline (offline, mock providers)", () => {
     const second = await run(["assets"]);
     expect(searches).toBe(fetched);
     expect(second.manifest.assets.filter((a) => a.provider === "fake-stock").length).toBe(first.manifest.assets.filter((a) => a.provider === "fake-stock").length);
+  });
+  it("ranks tiny stock images last", () => {
+    const lic = { name: "CC0", commercialUse: true, requiresAttribution: false };
+    const c = (id: string, w: number) => ({ id, kind: "image" as const, url: `https://x.test/${id}`, width: w, height: Math.round(w * 0.7), description: `File:Ray Tomlinson ${id}.jpg`, provider: "t", license: lic });
+    expect(rankCandidates([c("tiny", 318), c("big", 1123)], "Ray Tomlinson").map((x) => x.id)).toEqual(["big", "tiny"]);
   });
   it("brief defaults are sane", () => {
     const b = VideoBrief.parse({ topic: "x y z" });

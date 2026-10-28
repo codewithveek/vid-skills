@@ -373,7 +373,7 @@
           "type": "broll",
           "asset": {
             "kind": "image",
-            "query": "intitle:\"Hispalis (Seville), Braun & Hoefnagel, 1565 (detail)\"",
+            "query": "intitle:\"Sevilla en el siglo XVI, detalle\"",
             "prompt": "16th-century view of Seville",
             "prefer": "stock"
           },
@@ -462,13 +462,13 @@
           "type": "broll",
           "asset": {
             "kind": "image",
-            "query": "intitle:\"Ray Tomlinson (cropped)\"",
+            "query": "intitle:\"With Ray Tomlinson\"",
             "prompt": "portrait of Ray Tomlinson",
             "prefer": "stock"
           },
           "treatment": "natural",
           "move": "pushIn",
-          "label": "Ray Tomlinson"
+          "label": "Ray Tomlinson (left)"
         },
         "anchor": "Tomlinson"
       },

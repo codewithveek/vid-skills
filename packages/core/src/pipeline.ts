@@ -386,10 +386,15 @@ export function rankCandidates(cands: VisualCandidate[], query: string): VisualC
     const text = `${c.description ?? ""} ${c.id}`.toLowerCase();
     return terms.reduce((n, t) => n + (text.includes(t) ? 1 : 0), 0) + (c.description === undefined ? 0.5 : 0);
   };
-  const scored = cands.map((c, i) => ({ c, s: score(c), i }));
+  // Images under ~720 px look soft once scaled to a 1080-wide frame: keep them only as a last resort.
+  const small = (c: VisualCandidate) => (c.width && c.height ? Math.max(c.width, c.height) < 720 : false);
+  const scored = cands.map((c, i) => ({ c, s: score(c), i, small: small(c) }));
   const best = Math.max(0, ...scored.map((x) => x.s));
   // With descriptions available, require at least one matching term when any candidate has one.
-  return scored.filter((x) => best === 0 || x.s > 0).sort((a, b) => b.s - a.s || a.i - b.i).map((x) => x.c);
+  return scored
+    .filter((x) => best === 0 || x.s > 0)
+    .sort((a, b) => Number(a.small) - Number(b.small) || b.s - a.s || a.i - b.i)
+    .map((x) => x.c);
 }
 
 async function mapLimit<T, R>(items: T[], limit: number, fn: (t: T, i: number) => Promise<R>): Promise<R[]> {
