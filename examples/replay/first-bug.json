@@ -356,13 +356,12 @@
           "type": "broll",
           "asset": {
             "kind": "image",
-            "query": "intitle:\"Commodore Grace M. Hopper, USN (covered)\"",
-            "prompt": "portrait of Grace Hopper",
+            "query": "intitle:\"African Moon Moth (Argema mimosae) resting on a wall 08\"",
+            "prompt": "a moth resting on a wall",
             "prefer": "stock"
           },
           "treatment": "natural",
-          "move": "pushIn",
-          "label": "Grace Hopper"
+          "move": "pushIn"
         },
         "anchor": "moth"
       },
@@ -400,7 +399,7 @@
           "type": "broll",
           "asset": {
             "kind": "image",
-            "query": "intitle:\"Delta Electronics DPS-350FB A - board 1\"",
+            "query": "intitle:\"OEG SDT-SS-112M - case removed\"",
             "prompt": "an electromechanical relay",
             "prefer": "stock"
           },
@@ -457,11 +456,11 @@
           "type": "broll",
           "asset": {
             "kind": "image",
-            "query": "intitle:\"Grace Hopper and UNIVAC\"",
-            "prompt": "Grace Hopper at a computer console",
+            "query": "intitle:\"Commodore Grace M. Hopper, USN (covered)\"",
+            "prompt": "portrait of Grace Hopper",
             "prefer": "stock"
           },
-          "treatment": "bw",
+          "treatment": "natural",
           "move": "pushIn",
           "label": "Grace Hopper"
         },
@@ -525,7 +524,7 @@
         "lineId": "l10",
         "scene": {
           "type": "quote",
-          "text": "“Bugs” — as such little faults and difficulties are called",
+          "text": "Bugs — as such little faults and difficulties are called",
           "attribution": "Thomas Edison, 1878"
         },
         "anchor": "faults"

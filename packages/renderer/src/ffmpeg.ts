@@ -76,21 +76,28 @@ export async function masterAudio(input: string, output: string, target = { lufs
     `alimiter=limit=${Math.pow(10, (target.truePeak - 0.8) / 20).toFixed(4)}:attack=2:release=50:level=disabled,aresample=48000`;
   await execOk(FFMPEG, ["-y", "-hide_banner", "-i", input, "-map", "0:v?", "-map", "0:a?", "-c:v", "copy", "-af", filter, "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-movflags", "+faststart", output], { timeoutMs: 20 * 60_000 });
   let measured = await measureLoudness(output);
-  const regain = async (gain: number) => {
+  const refilter = async (af: string) => {
     const fixed = `${output}.tp.mp4`;
-    await execOk(FFMPEG, ["-y", "-hide_banner", "-i", output, "-map", "0:v?", "-map", "0:a?", "-c:v", "copy", "-af", `volume=${gain.toFixed(2)}dB`, "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-movflags", "+faststart", fixed], { timeoutMs: 20 * 60_000 });
+    await execOk(FFMPEG, ["-y", "-hide_banner", "-i", output, "-map", "0:v?", "-map", "0:a?", "-c:v", "copy", "-af", af, "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-movflags", "+faststart", fixed], { timeoutMs: 20 * 60_000 });
     await rename(fixed, output);
     measured = await measureLoudness(output);
   };
-  // Verify after encoding: if the codec's overshoot still breaks the ceiling, apply the exact
-  // gain correction (plus margin) and re-encode the audio only. Costs ≤ ~0.5 LU of loudness.
-  for (let pass = 0; measured && measured.truePeak > target.truePeak && pass < 2; pass++) await regain(target.truePeak - measured.truePeak - 0.15);
-  // loudnorm can stop short of the target when short transients (SFX) make linear gain look
-  // unsafe; if the master came out quiet and there is peak headroom, close the gap with plain gain.
-  if (measured && measured.integrated < target.lufs - 0.5) {
-    const gain = Math.min(target.lufs - measured.integrated, target.truePeak - 0.2 - measured.truePeak);
-    if (gain > 0.3) await regain(gain);
+  // Converge on both targets after encoding. loudnorm can stop short of the loudness target
+  // (SFX transients block linear gain) and AAC can overshoot the ceiling; plain gain-down for
+  // the latter costs loudness, so each pass applies gain into a limiter whose ceiling drops by
+  // the measured overshoot, then re-measures.
+  const lin = (db: number) => Math.pow(10, db / 20).toFixed(4);
+  let ceiling = target.truePeak - 0.8;
+  for (let pass = 0; measured && pass < 3; pass++) {
+    const hot = measured.truePeak > target.truePeak;
+    const quiet = measured.integrated < target.lufs - 0.5;
+    if (!hot && !quiet) break;
+    if (hot) ceiling -= measured.truePeak - target.truePeak + 0.1;
+    const gain = quiet ? target.lufs - measured.integrated : 0;
+    await refilter(`volume=${gain.toFixed(2)}dB,alimiter=limit=${lin(ceiling)}:attack=1:release=50:level=disabled`);
   }
+  // Last resort: the ceiling is a hard requirement, loudness is not.
+  if (measured && measured.truePeak > target.truePeak) await refilter(`volume=${(target.truePeak - measured.truePeak - 0.15).toFixed(2)}dB`);
   return measured;
 }
 

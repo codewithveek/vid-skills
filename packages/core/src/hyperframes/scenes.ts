@@ -275,7 +275,8 @@ function typewriter(ctx: SceneCtx): SceneOutput {
   if (s.type !== "typewriter") throw new Error("typewriter");
   const sid = ctx.sid;
   const chars = [...`${s.lead} `].map((c) => ({ c, hi: false })).concat([...s.highlight].map((c) => ({ c, hi: true })));
-  const per = 1 / s.cps;
+  // Type faster when the shot is short, so the line is complete for ≥ 40 % of the shot (never < 1/40 s a char).
+  const per = Math.max(1 / 40, Math.min(1 / s.cps, (ctx.ts.duration * 0.6 - 0.1) / chars.length));
   // Fit the typed line inside the window: Inter 800 averages ~0.58 em per glyph.
   const k = ctx.width / 1080;
   const winW = ctx.win?.w ?? ctx.width;
@@ -345,7 +346,9 @@ function quote(ctx: SceneCtx): SceneOutput {
   const s = ctx.ts.scene;
   if (s.type !== "quote") throw new Error("quote");
   const sid = ctx.sid;
-  const html = darkStage(ctx, `<div id="${sid}-q" class="vs-quote">“${e(s.text)}”</div>${s.attribution ? `<div id="${sid}-a" class="vs-quote-by">— ${e(s.attribution)}</div>` : ""}`);
+  // Don't double up: text that already opens with a quotation mark keeps its own.
+  const text = /^["“'‘]/.test(s.text.trim()) ? e(s.text) : `“${e(s.text)}”`;
+  const html = darkStage(ctx, `<div id="${sid}-q" class="vs-quote">${text}</div>${s.attribution ? `<div id="${sid}-a" class="vs-quote-by">— ${e(s.attribution)}</div>` : ""}`);
   const js = `tl.fromTo("#${sid}-q", {opacity:0, y:16}, {opacity:1, y:0, duration:0.35, ease:"power2.out"}, 0.05);` + (s.attribution ? `tl.fromTo("#${sid}-a", {opacity:0}, {opacity:1, duration:0.3}, 0.4);` : "");
   return { css: "", html, js };
 }
@@ -494,7 +497,7 @@ body{font-family:"${f.ui}",sans-serif;color:var(--vs-ink);}
 .vs-cards{display:flex;gap:${Math.round(34 * k)}px;align-items:center;}
 .vs-card{width:${Math.round(260 * k)}px;height:${Math.round(330 * k)}px;border-radius:${Math.round(22 * k)}px;background:linear-gradient(180deg,#1b1c22,#131419);box-shadow:0 22px 50px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.04);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:${Math.round(30 * k)}px;}
 .vs-card-hot{box-shadow:0 22px 50px rgba(0,0,0,.6),0 0 0 2px rgba(255,159,28,.35);}
-.vs-vs{font:900 ${Math.round(40 * k)}px "${f.ui}",sans-serif;color:var(--vs-muted);}
+.vs-vs{font:900 ${Math.round(40 * k)}px "${f.ui}",sans-serif;color:color-mix(in srgb,var(--vs-ink) 55%,var(--vs-bg));}
 .vs-rocker{width:${Math.round(170 * k)}px;height:${Math.round(300 * k)}px;border-radius:${Math.round(18 * k)}px;background:#0d0e12;box-shadow:inset 0 0 0 3px #22232a,0 20px 40px rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;}
 .vs-rocker-knob{width:76%;height:86%;border-radius:${Math.round(12 * k)}px;background:linear-gradient(180deg,#24252c,#15161b);display:flex;flex-direction:column;align-items:center;justify-content:space-around;font:700 ${Math.round(64 * k)}px "${f.ui}",sans-serif;}
 .vs-rk-on{color:var(--vs-on);}
@@ -505,7 +508,7 @@ body{font-family:"${f.ui}",sans-serif;color:var(--vs-ink);}
 .vs-flow-fill{width:100%;height:100%;background:repeating-linear-gradient(90deg,var(--vs-standby) 0 10px,transparent 10px 18px);transform-origin:0 50%;}
 .vs-counter{font:900 ${Math.round(190 * k)}px/1 "${f.ui}",sans-serif;color:var(--vs-accent);font-variant-numeric:tabular-nums;}
 .vs-unit{font:800 ${Math.round(60 * k)}px "${f.ui}",sans-serif;color:var(--vs-accent);}
-.vs-tl{position:relative;width:84%;height:${Math.round(240 * k)}px;}
+.vs-tl{position:relative;width:70%;height:${Math.round(240 * k)}px;}
 .vs-tl-rail{position:absolute;left:0;right:0;top:50%;height:4px;background:#2a2b33;}
 .vs-tl-fill{width:100%;height:100%;background:var(--vs-accent);transform-origin:0 50%;}
 .vs-tl-ev{position:absolute;top:50%;width:0;display:flex;flex-direction:column;align-items:center;}
