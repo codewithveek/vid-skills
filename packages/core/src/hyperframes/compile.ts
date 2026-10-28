@@ -197,7 +197,7 @@ function chromeFile(tl: Timeline, style: StylePack, layout: ReturnType<StylePack
     #root { position: absolute; inset: 0; pointer-events: none; }
     .vs-title-band { position: absolute; left: 0; right: 0; display: flex; align-items: center; justify-content: center; }
     #chrome-title { font-family: "${style.fonts.display}", "Oswald", "Archivo Black", sans-serif; font-weight: ${style.title.weight}; font-size: ${size}px; line-height: 1; letter-spacing: ${style.title.letterSpacing}; color: ${p.title}; -webkit-text-stroke: ${style.title.strokePx * 2}px ${p.titleStroke}; paint-order: stroke fill; text-shadow: 0 ${Math.round(3 * k)}px ${Math.round(6 * k)}px rgba(0,0,0,.45); white-space: nowrap; ${style.title.uppercase ? "text-transform: uppercase;" : ""} }
-    #chrome-handle { position: absolute; text-align: right; font: 700 ${Math.round(30 * k)}px "${style.fonts.ui}", sans-serif; color: rgba(255,255,255,.85); text-shadow: 0 1px 3px rgba(0,0,0,.6); }
+    #chrome-handle { position: absolute; text-align: right; font: 700 ${Math.round(30 * k)}px "${style.fonts.ui}", sans-serif; color: rgba(255,255,255,.9); -webkit-text-stroke: ${Math.max(2, Math.round(4 * k))}px rgba(0,0,0,.55); paint-order: stroke fill; text-shadow: 0 1px 3px rgba(0,0,0,.6); }
   </style>
   <div id="root" data-composition-id="chrome" data-width="${w}" data-height="${h}" data-composition-variables="${attrJson(vars)}" data-layout-allow-overlap>
     ${title}
@@ -230,7 +230,9 @@ function captionsFile(tl: Timeline, style: StylePack, box: { x: number; y: numbe
     cue.words.forEach((wd, j) => {
       const emph = cue.emphasis.includes(j);
       js += `tl.fromTo("#${id}-w${j}", {color:"#FFFFFF", scale:1}, {color:"${c.highlight}", scale:1.08, duration:0.06}, ${round3(wd.start)});`;
-      if (!emph) js += `tl.fromTo("#${id}-w${j}", {color:"${c.highlight}", scale:1.08}, {color:"#FFFFFF", scale:1, duration:0.06, immediateRender:false}, ${round3(Math.max(wd.start + 0.07, wd.end))});`;
+      // Every word settles back to scale 1 (a lingering 1.08 eats the word gap); emphasis keeps its colour.
+      const settle = emph ? `{scale:1.08}, {scale:1` : `{color:"${c.highlight}", scale:1.08}, {color:"#FFFFFF", scale:1`;
+      js += `tl.fromTo("#${id}-w${j}", ${settle}, duration:0.06, immediateRender:false}, ${round3(Math.max(wd.start + 0.07, wd.end))});`;
     });
   });
   return `<template>

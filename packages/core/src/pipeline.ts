@@ -417,7 +417,14 @@ async function download(url: string, signal?: AbortSignal): Promise<{ bytes: Uin
   return { bytes, mime: (res.headers.get("content-type") ?? "application/octet-stream").split(";")[0]!.trim() };
 }
 
-export async function stageAssets(ctx: PipelineContext, brief: VideoBrief, storyboard: Storyboard, script: Script): Promise<{ assets: Asset[]; shotAssets: Record<string, string[]> }> {
+export async function stageAssets(
+  ctx: PipelineContext,
+  brief: VideoBrief,
+  storyboard: Storyboard,
+  script: Script,
+  /** Assets from an earlier run of this job: unchanged requests reuse them instead of hitting providers again. */
+  previous: Asset[] = [],
+): Promise<{ assets: Asset[]; shotAssets: Record<string, string[]> }> {
   const style = getStyle(brief.style);
   const win = style.layout(brief.aspect).window;
   const orientation = win.w > win.h * 1.1 ? "landscape" : win.h > win.w * 1.1 ? "portrait" : "square";
@@ -436,6 +443,9 @@ export async function stageAssets(ctx: PipelineContext, brief: VideoBrief, story
       if (existing) return existing;
     }
     const query = req.query ?? hint;
+    // 0. Re-runs keep what already resolved for the same request (placeholders are retried).
+    const prev = previous.find((a) => a.id === id && a.role === "visual" && a.query === query && a.provider !== "placeholder" && a.provider !== "synthetic-document");
+    if (prev && (await ctx.storage.exists(prev.uri.replace(/^store:\/\//, "")))) return prev;
     // 1. Stock
     if (req.prefer !== "generate" && ctx.providers.stock?.length && query) {
       for (const kind of req.kind === "video" ? (["video", "image"] as const) : (["image"] as const)) {
@@ -658,7 +668,10 @@ export async function runPipeline(briefInput: VideoBriefInput, opts: PipelineOpt
   };
   upsertAssets(voiceOut.assets);
   if (stop("voice")) return result;
-  const visual = await stage("assets", null, () => stageAssets(ctx, brief, storyboard, script));
+  const visual = await stage("assets", null, async () => {
+    const previous = (await getJson<{ assets: Asset[] }>(opts.storage, `${base}stages/assets.json`))?.assets ?? [];
+    return stageAssets(ctx, brief, storyboard, script, previous);
+  });
   upsertAssets(visual.assets);
   if (stop("assets")) return result;
   let timeline = await stage("timeline", null, async () => buildTimeline({ brief, script, storyboard, voice: voiceOut.voice, style, shotAssets: visual.shotAssets }));

@@ -20,6 +20,7 @@ import {
   synthSfx,
   toSrt,
   VideoBrief,
+  type StockProvider,
 } from "../src/index.js";
 import { fakeLLM, fakeTTS } from "./fixtures.js";
 
@@ -152,6 +153,28 @@ describe("pipeline (offline, mock providers)", () => {
     await runPipeline({ topic: "the floppy disk save icon", durationSec: 25 }, { providers: { llm: fakeLLM(), tts: fakeTTS() }, storage, jobId: "t1", onProgress: (s, st) => stages.push(`${s}:${st}`) });
     expect(stages.filter((s) => s.endsWith(":running"))).toEqual([]);
   });
+  it("re-running assets reuses what already resolved", async () => {
+    const storage = new MemoryStorage();
+    let searches = 0;
+    let n = 0;
+    const stock: StockProvider = {
+      id: "fake-stock",
+      kinds: ["image"],
+      search: async () => {
+        searches++;
+        const url = `data:image/png;base64,${btoa(`img${n++}`)}`;
+        return [{ id: url, kind: "image", url, width: 1600, height: 1100, provider: "fake-stock", license: { name: "CC0", commercialUse: true, requiresAttribution: false } }];
+      },
+    };
+    const run = (force?: ("assets" | "timeline")[]) =>
+      runPipeline({ topic: "the floppy disk save icon", durationSec: 25 }, { providers: { llm: fakeLLM(), tts: fakeTTS(), stock: [stock] }, storage, jobId: "t3", stopAfter: "assets", force });
+    const first = await run();
+    const fetched = searches;
+    expect(fetched).toBeGreaterThan(0);
+    const second = await run(["assets"]);
+    expect(searches).toBe(fetched);
+    expect(second.manifest.assets.filter((a) => a.provider === "fake-stock").length).toBe(first.manifest.assets.filter((a) => a.provider === "fake-stock").length);
+  });
   it("brief defaults are sane", () => {
     const b = VideoBrief.parse({ topic: "x y z" });
     expect(b.aspect).toBe("9:16");
@@ -170,5 +193,7 @@ describe("compile", () => {
     expect(p2.files["index.html"]).toContain("data-audio-group");
     // caption words get an explicit gap (text strokes eat plain spaces)
     expect(p2.files["compositions/captions.html"]).toMatch(/column-gap: 0\.32em/);
+    // emphasised words keep their colour but settle back to scale 1, so they don't eat the gap
+    expect(p2.files["compositions/captions.html"]).toContain("{scale:1.08}, {scale:1, duration:0.06");
   });
 });
