@@ -23,7 +23,7 @@ import { consoleLogger, getJson, newId, runPipeline, STAGE_ORDER, type JobManife
 import { ConfigError, describeProviders, DryRunTTS, limitsMarkdown, providersFromEnv, type Env } from "@vid-skills/providers";
 import { authorizeUrl, bytesSource, createPublisher, exchangeCode, OAUTH, publishersFromEnv, type TokenSet, type TokenStore } from "@vid-skills/distribute";
 import { anthropicTools, geminiTools, handleMcpHttp, openAiTools, openApiSpec, serveLines, VidSkillsMcp, TOOLS } from "@vid-skills/mcp";
-import { auditVideo, checkProject, FsStorage, LocalKokoroTTS, LocalRenderBackend, LocalWhisperSTT, probe, renderProjectDir, exec, hyperframesBin } from "@vid-skills/renderer";
+import { auditVideo, checkProject, FsStorage, LocalKokoroTTS, LocalRenderBackend, LocalWhisperSTT, probe, renderProjectDir, exec, hyperframesBin, thumbnail } from "@vid-skills/renderer";
 
 /* ------------------------------ env & stores ------------------------------ */
 
@@ -163,6 +163,9 @@ async function finish(m: JobManifest, storage: FsStorage, out: string) {
     const dst = join(out, `${m.id}.mp4`);
     await copyFile(storage.path(m.outputs.videoKey), dst);
     log(`video: ${dst}`);
+    // Frame 0 is the poster: save it as the cover image for platforms that take a separate upload.
+    const cover = join(out, `${m.id}.poster.jpg`);
+    if (await thumbnail(dst, cover, 0).then(() => true, () => false)) log(`poster: ${cover}`);
   }
   if (m.outputs.captionsKey) await copyFile(storage.path(m.outputs.captionsKey), join(out, `${m.id}.srt`));
   console.log(JSON.stringify({ jobId: m.id, outputs: m.outputs, publications: m.publications }, null, 2));

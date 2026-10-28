@@ -38,8 +38,8 @@ Full schema: MCP resource `vidsk://schemas` → `VideoBrief`.
 
 ## Format rules (don't break these)
 
-1. **Frame 0 is the hook**: a striking visual plus the headline already on screen. Never black, never a logo.
-2. **Headline**: ≤ 6 words, ≤ 40 characters, a claim and not a question. It stays on screen for the whole video.
+1. **Frame 0 is a poster** (on by default, `brief.poster`): the headline in huge display type with its key word in yellow, a red kicker tag ("DID YOU KNOW?"), the sharpest b-roll still as a tilted photo card over its own blur, and the handle. It holds for 0.6 s while the voice starts underneath, then punches away. Platforms use frame 0 as the cover, and the CLI also saves it as `<job>.poster.jpg`. Override with `poster: { text, kicker, durationSec }`, pin the image with `timeline.poster.heroAssetId`, or turn it off with `poster: { enabled: false }`. Never black, never a logo.
+2. **Headline**: ≤ 6 words, ≤ 40 characters, a claim and not a question. It stays on screen for the whole video in a band above the window: red display type with a white outline over a dark scrim, set on two balanced lines when that makes it at least 15% larger. The poster highlights words the script stresses, then a number, then the last word.
 3. **Script formula**: hook (imperative, ≤ 12 words) → stakes → **twist** (music drops to silence for about 0.7 s before it) → history/mechanism → proof → payoff → CTA that reuses the topic's metaphor. Add a turn word ("Except", "Then", "By 2004") every 20–30 s. About 170 wpm.
 4. **Every factual line cites claim ids** from the research dossier. QA blocks publishing on uncited facts when `requireSources` is on.
 5. **Visual literalness**: each shot lands on its anchor word (the engine does this from word timings). Lists of 3+ items become montages cut on each list word (0.2–0.27 s). Years become typewriter cards. Mechanisms become diagrams. "The rulebook says…" becomes a document with a highlighter.

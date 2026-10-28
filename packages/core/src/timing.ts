@@ -137,18 +137,39 @@ export function buildTimeline(input: TimelineInput): Timeline {
   const emphasis = script.beats.flatMap((b) => b.lines.flatMap((l) => l.emphasis));
   const captions = brief.captions ? buildCaptionCues(voice.words, style, emphasis) : [];
 
+  const headline = brief.headline ?? script.headline;
   return {
     fps,
     width: canvas.width,
     height: canvas.height,
     durationSec,
-    headline: brief.headline ?? script.headline,
+    headline,
     handle: brief.handle,
     scenes,
     captions,
     audio: input.audio ?? [],
     style: style.id,
+    poster: brief.poster.enabled ? posterFor(brief.poster.text ?? headline, brief.poster.kicker, emphasis, brief.poster.durationSec, fps) : undefined,
   };
+}
+
+/**
+ * The poster highlights the words the script stresses; failing that a number (years and
+ * counts stop the scroll), failing that the last word.
+ */
+export function posterFor(text: string, kicker: string, emphasis: string[], durationSec: number, fps: number): NonNullable<Timeline["poster"]> {
+  const norm = (w: string) => w.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
+  const stressed = new Set(emphasis.map(norm).filter(Boolean));
+  const words = text.split(/\s+/).filter(Boolean);
+  // "Patent" in the headline matches "patented" in the script: shared stems of 4+ letters count.
+  const isStressed = (w: string) => {
+    const n = norm(w);
+    return n.length > 1 && [...stressed].some((s) => s === n || (Math.min(s.length, n.length) >= 4 && (s.startsWith(n) || n.startsWith(s))));
+  };
+  let highlight = words.filter(isStressed);
+  if (!highlight.length) highlight = words.filter((w) => /\d/.test(w));
+  if (!highlight.length && words.length) highlight = [words[words.length - 1]!];
+  return { text, kicker, highlight, durationSec: Math.max(1 / fps, toFrame(durationSec, fps)) };
 }
 
 /** Shots whose scenes are visible at time t (for QA and previews). */

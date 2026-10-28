@@ -28,7 +28,7 @@ export const framedExplainer: StylePack = {
       const winH = Math.round(H * 0.74);
       const winW = Math.round((winH * 16) / 9);
       return {
-        title: { x: 0, y: Math.round(H * 0.035), w: W, h: Math.round(H * 0.09) },
+        title: { x: 0, y: Math.round(H * 0.02), w: W, h: Math.round(H * 0.12) },
         window: { x: Math.round((W - winW) / 2), y: Math.round(H * 0.15), w: winW, h: winH },
         captions: { x: Math.round(W * 0.1), y: Math.round(H * 0.78), w: Math.round(W * 0.8), h: Math.round(H * 0.1) },
         handle: { x: W - 560, y: H - 70, w: 520, h: 40 },
@@ -39,7 +39,8 @@ export const framedExplainer: StylePack = {
     const winY = Math.round(H * 0.2547); // 489 / 1920
     const winH = Math.round((W * 11) / 16); // 742 for 1080 wide
     return {
-      title: { x: 0, y: Math.round(H * 0.168), w: W, h: Math.round(H * 0.045) },
+      // Headline band sits just above the window (0.125–0.25 H): room for one large line or two balanced ones.
+      title: { x: 0, y: Math.round(H * 0.125), w: W, h: Math.round(H * 0.125) },
       window: { x: 0, y: winY, w: W, h: Math.min(winH, H - winY - Math.round(H * 0.12)) },
       // Captions sit just under the window, above the platform caption/UI zone (≤ 1330 px on 1920).
       captions: { x: Math.round(W * 0.08), y: winY + winH + Math.round(H * 0.02), w: Math.round(W * 0.84), h: Math.round(H * 0.07) },
@@ -68,7 +69,7 @@ export const framedExplainer: StylePack = {
     ui: "Inter",
     mono: "JetBrains Mono",
   },
-  title: { size: 64, weight: 400, strokePx: 3, uppercase: false, letterSpacing: "0.005em" },
+  title: { size: 120, weight: 400, strokePx: 5, uppercase: false, letterSpacing: "0.01em" },
   captions: { size: 50, weight: 900, maxWordsPerCue: 4, maxCharsPerCue: 24, maxCueSec: 1.6, highlight: "#FFD400", uppercase: false, wordGapEm: 0.32 },
   motion: { cutLeadSec: 0.033, minShotSec: 0.18, maxShotSec: 8, montagePerItemSec: 0.22, ease: "power3.out", drawOnSec: 0.6 },
   audio: { targetLufs: -14, truePeakDb: -1, bedUnderVoice: 0.14, bedNoVoice: 0.45, sfxGain: 0.6, voiceGain: 1 },

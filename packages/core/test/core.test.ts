@@ -20,6 +20,7 @@ import {
   synthSfx,
   toSrt,
   VideoBrief,
+  posterFor,
   rankCandidates,
   type StockProvider,
 } from "../src/index.js";
@@ -185,6 +186,30 @@ describe("pipeline (offline, mock providers)", () => {
     const b = VideoBrief.parse({ topic: "x y z" });
     expect(b.aspect).toBe("9:16");
     expect(b.voice.targetWpm).toBe(170);
+  });
+});
+
+describe("poster", () => {
+  it("highlights stressed words, then numbers, then the last word", () => {
+    expect(posterFor("Your Jeans Have a Patent", "", ["patented", "rivets"], 0.6, 30).highlight).toEqual(["Patent"]);
+    expect(posterFor("The @ Sign Is 500 Years Old", "", ["wine"], 0.6, 30).highlight).toEqual(["500"]);
+    expect(posterFor("Barcodes Began in the Sand", "", [], 0.6, 30).highlight).toEqual(["Sand"]);
+  });
+  it("opens every video on a poster frame unless disabled", async () => {
+    const run = (poster?: { enabled: boolean }) =>
+      runPipeline({ topic: "the floppy disk save icon", durationSec: 25, handle: "@hiddeninplainsight.tv", ...(poster ? { poster } : {}) }, { providers: { llm: fakeLLM(), tts: fakeTTS() }, storage: new MemoryStorage(), jobId: "p1", stopAfter: "compose" });
+    const res = await run();
+    const p = res.project!;
+    expect(p.files["index.html"]).toMatch(/id="poster"[^>]*data-start="0"[^>]*data-duration="0\.6"/);
+    const poster = p.files["compositions/poster.html"]!;
+    expect(poster).toContain("DID YOU KNOW?");
+    expect(poster).toContain('class="pst-hl"');
+    expect(poster).toContain("@hiddeninplainsight.tv");
+    expect(poster).toContain("data-layout-ignore");
+    // visible at frame 0: no entrance tween, only the exit
+    expect(poster).not.toMatch(/\{opacity:0[^}]*\}, \{opacity:1/);
+    const off = await run({ enabled: false });
+    expect(off.project!.files["compositions/poster.html"]).toBeUndefined();
   });
 });
 

@@ -66,6 +66,14 @@ export const MusicPreference = z.object({
   drops: z.boolean().default(true).describe("Cut the bed to silence right before twist beats"),
 });
 
+export const PosterPreference = z.object({
+  enabled: z.boolean().default(true).describe("Open on a poster frame (thumbnail-grade hook card) for platforms that use frame 0 as the cover"),
+  durationSec: z.number().min(0.1).max(3).default(0.6).describe("How long the poster holds before revealing the video (the voice starts underneath)"),
+  text: z.string().max(80).optional().describe("Poster headline; defaults to the video headline"),
+  kicker: z.string().max(30).default("DID YOU KNOW?").describe("Small tag above the headline; empty string hides it"),
+});
+export type PosterPreference = z.infer<typeof PosterPreference>;
+
 export const VideoBrief = z.object({
   topic: z.string().min(3),
   angle: z.string().optional().describe("The counter-intuitive claim the video proves"),
@@ -84,6 +92,7 @@ export const VideoBrief = z.object({
     drops: true,
   }),
   captions: z.boolean().default(true),
+  poster: PosterPreference.default({ enabled: true, durationSec: 0.6, kicker: "DID YOU KNOW?" }),
   cta: z.string().optional().describe("Call to action, ideally reusing the topic's metaphor"),
   handle: z.string().optional().describe("Creator handle shown as watermark / end card"),
   licensedOnly: z.boolean().default(true).describe("Refuse assets without a commercial-use license"),
@@ -390,6 +399,18 @@ export const Timeline = z.object({
   captions: z.array(CaptionCue).default([]),
   audio: z.array(AudioClip).default([]),
   style: z.string(),
+  /** Opening poster frame: hook text over the hero image, shown from frame 0. */
+  poster: z
+    .object({
+      text: z.string(),
+      kicker: z.string().default(""),
+      /** Words of `text` drawn in the highlight colour */
+      highlight: z.array(z.string()).default([]),
+      /** Image asset for the poster; the compiler picks the sharpest b-roll still when absent */
+      heroAssetId: z.string().optional(),
+      durationSec: z.number().positive(),
+    })
+    .optional(),
 });
 export type Timeline = z.infer<typeof Timeline>;
 

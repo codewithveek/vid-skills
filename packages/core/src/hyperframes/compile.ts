@@ -118,6 +118,16 @@ export function compileHyperFrames(tl: Timeline, opts: CompileOptions): HyperFra
     );
   }
 
+  if (tl.poster) {
+    const hero = pickHero(tl, byId);
+    const heroPath = hero ? pathOf(hero.id) : undefined;
+    const bg = heroPath ? derive(heroPath, "blur-bg") : null;
+    files["compositions/poster.html"] = posterFile(tl, tl.poster, style, width, height, heroPath?.path, bg);
+    hosts.push(
+      `<div id="poster" data-composition-id="poster" data-composition-src="compositions/poster.html" data-start="0" data-duration="${round3(tl.poster.durationSec)}" data-track-index="5" data-track-kind="graphics" data-width="${width}" data-height="${height}" data-variable-values="${attrJson({ posterText: tl.poster.text, kicker: tl.poster.kicker })}" style="z-index:40"></div>`,
+    );
+  }
+
   const audioTags = tl.audio.map((c, i) => audioTag(c, pathOf(c.assetId), i)).filter(Boolean);
 
   files["index.html"] = `<!doctype html>
@@ -180,10 +190,16 @@ function chromeFile(tl: Timeline, style: StylePack, layout: ReturnType<StylePack
   const p = style.palette;
   const t = layout.title;
   const k = w / 1080;
-  // Fit the headline on one line: League Gothic averages ~0.40 em per glyph.
-  const chars = Math.max(8, tl.headline.length);
-  const fit = Math.floor((w * 0.9) / (chars * 0.4));
-  const size = Math.min(Math.round(style.title.size * 1.25 * k), fit);
+  // League Gothic averages ~0.42 em per glyph (stroke included). Two balanced lines when they
+  // set the headline at least 15 % larger than one line would; otherwise one line.
+  const target = Math.round(style.title.size * k);
+  const maxW = w * 0.92;
+  const glyph = 0.42;
+  const oneLine = Math.min(target, Math.floor(maxW / (Math.max(8, tl.headline.length) * glyph)), t ? Math.floor(t.h * 0.85) : Infinity);
+  const twoLine = t ? Math.min(target, Math.floor(maxW / ((Math.ceil(tl.headline.length / 2) + 3) * glyph)), Math.floor(t.h / 2.05)) : 0;
+  const twoLines = twoLine > oneLine * 1.15 && tl.headline.trim().includes(" ");
+  const size = twoLines ? twoLine : oneLine;
+  const stroke = Math.max(2, Math.round(style.title.strokePx * 2 * k));
   const vars = [
     { id: "headline", type: "string", label: "Headline", default: tl.headline, maxLength: 60 },
     { id: "handle", type: "string", label: "Handle", default: tl.handle ?? "" },
@@ -195,8 +211,9 @@ function chromeFile(tl: Timeline, style: StylePack, layout: ReturnType<StylePack
   return `<template>
   <style>
     #root { position: absolute; inset: 0; pointer-events: none; }
-    .vs-title-band { position: absolute; left: 0; right: 0; display: flex; align-items: center; justify-content: center; }
-    #chrome-title { font-family: "${style.fonts.display}", "Oswald", "Archivo Black", sans-serif; font-weight: ${style.title.weight}; font-size: ${size}px; line-height: 1; letter-spacing: ${style.title.letterSpacing}; color: ${p.title}; -webkit-text-stroke: ${style.title.strokePx * 2}px ${p.titleStroke}; paint-order: stroke fill; text-shadow: 0 ${Math.round(3 * k)}px ${Math.round(6 * k)}px rgba(0,0,0,.45); white-space: nowrap; ${style.title.uppercase ? "text-transform: uppercase;" : ""} }
+    /* A soft dark scrim keeps the headline readable over bright b-roll fills. */
+    .vs-title-band { position: absolute; left: 0; right: 0; display: flex; align-items: center; justify-content: center; background: linear-gradient(180deg, rgba(10,9,14,0) 0%, rgba(10,9,14,.6) 22%, rgba(10,9,14,.6) 78%, rgba(10,9,14,0) 100%); }
+    #chrome-title { margin: 0; max-width: 94%; text-align: center; font-family: "${style.fonts.display}", "Oswald", "Archivo Black", sans-serif; font-weight: ${style.title.weight}; font-size: ${size}px; line-height: ${twoLines ? 0.95 : 1}; letter-spacing: ${style.title.letterSpacing}; color: ${p.title}; -webkit-text-stroke: ${stroke}px ${p.titleStroke}; paint-order: stroke fill; text-shadow: 0 0 ${Math.max(1, Math.round(2 * k))}px rgba(0,0,0,.9), 0 ${Math.round(4 * k)}px ${Math.round(14 * k)}px rgba(0,0,0,.65); ${twoLines ? "white-space: normal; text-wrap: balance;" : "white-space: nowrap;"} ${style.title.uppercase ? "text-transform: uppercase;" : ""} }
     #chrome-handle { position: absolute; text-align: right; font: 700 ${Math.round(30 * k)}px "${style.fonts.ui}", sans-serif; color: rgba(255,255,255,.9); -webkit-text-stroke: ${Math.max(2, Math.round(4 * k))}px rgba(0,0,0,.55); paint-order: stroke fill; text-shadow: 0 1px 3px rgba(0,0,0,.6); }
   </style>
   <div id="root" data-composition-id="chrome" data-width="${w}" data-height="${h}" data-composition-variables="${attrJson(vars)}" data-layout-allow-overlap>
@@ -208,6 +225,96 @@ function chromeFile(tl: Timeline, style: StylePack, layout: ReturnType<StylePack
       const tl = gsap.timeline({ paused: true });
       window.__timelines = window.__timelines || {};
       window.__timelines["chrome"] = tl;
+    })();
+  </script>
+</template>
+`;
+}
+
+/** The sharpest b-roll still, preferring shots that are not on screen under the poster. */
+function pickHero(tl: Timeline, byId: Map<string, Asset>): Asset | undefined {
+  const poster = tl.poster!;
+  if (poster.heroAssetId) {
+    const a = byId.get(poster.heroAssetId);
+    if (a) return a;
+  }
+  const still = (a: Asset | undefined): a is Asset => !!a && a.kind === "image" && a.provider !== "placeholder" && !a.mime?.includes("svg") && !/\.svg(?:$|\?)/i.test(a.uri);
+  const cands = tl.scenes
+    .filter((s) => s.scene.type === "broll" || s.scene.type === "analogy")
+    .flatMap((s) => s.assets.map((id) => ({ a: byId.get(id), later: s.start >= poster.durationSec, at: s.start })))
+    .filter((c): c is { a: Asset; later: boolean; at: number } => still(c.a));
+  const px = (a: Asset) => Math.min(a.width ?? 0, a.height ?? 0);
+  // Prefer an image that is not on screen under the poster, is sharp enough (≥ 700 px short side), and comes early.
+  cands.sort((x, y) => Number(y.later) - Number(x.later) || Number(px(y.a) >= 700) - Number(px(x.a) >= 700) || x.at - y.at);
+  return cands[0]?.a;
+}
+
+/**
+ * Opening poster: what platforms show as the cover and what a scrolling viewer sees first.
+ * Hook text in huge display type (key word highlighted) over a tilted photo card of the hero
+ * image, kicker tag and handle. Visible at frame 0 with no entrance animation; it punches
+ * away to reveal the video while the voice is already running.
+ */
+function posterFile(tl: Timeline, poster: NonNullable<Timeline["poster"]>, style: StylePack, w: number, h: number, hero: string | undefined, bg: string | null): string {
+  const p = style.palette;
+  const k = Math.min(w, h) / 1080;
+  const portrait = h >= w;
+  const words = poster.text.split(/\s+/).filter(Boolean);
+  const hl = new Set(poster.highlight);
+  const titleHtml = words.map((wd) => (hl.has(wd) ? `<span class="pst-hl">${e(wd)}</span>` : e(wd))).join(" ");
+  // Size the headline for balanced lines: League Gothic caps average ~0.40 em per glyph.
+  const n = poster.text.length;
+  const lines = n <= 12 ? 1 : n <= 28 ? 2 : 3;
+  const boxW = portrait ? w * 0.9 : w * 0.5;
+  const perLine = Math.ceil(n / lines) + 2;
+  const size = Math.round(Math.min((portrait ? 250 : 190) * k, boxW / (perLine * 0.4)));
+  const cardW = Math.round(portrait ? w * 0.84 : w * 0.4);
+  const cardH = Math.round(cardW * (portrait ? 0.68 : 0.75));
+  const d = poster.durationSec;
+  const out = Math.min(0.16, d / 3);
+  const bgLayer = bg ?? hero;
+  const vars = [
+    { id: "posterText", type: "string", label: "Poster text", default: poster.text, maxLength: 80 },
+    { id: "kicker", type: "string", label: "Poster kicker", default: poster.kicker },
+  ];
+  const card = hero
+    ? `<div id="pst-card" class="pst-card"><img src="${e(hero)}" alt="" /></div>`
+    : "";
+  const text = `${poster.kicker ? `<div id="pst-kicker" class="pst-kicker" data-var-text="kicker">${e(poster.kicker)}</div>` : ""}<h1 id="pst-title" class="pst-title">${titleHtml}</h1>`;
+  const handle = tl.handle ? `<div id="pst-handle" class="pst-handle">${e(tl.handle)}</div>` : "";
+  const body = portrait
+    ? `<div class="pst-stack">${text}${card}${handle}</div>`
+    : `<div class="pst-row"><div class="pst-col">${text}${handle}</div>${card}</div>`;
+  return `<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #pst { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, #1D1F27 0%, ${p.bg} 70%); transform-origin: 50% 45%; }
+    .pst-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; ${bg ? "" : `filter: blur(${Math.round(30 * k)}px);`} transform: scale(1.1); }
+    .pst-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,9,14,.78) 0%, rgba(10,9,14,.55) 45%, rgba(10,9,14,.85) 100%); }
+    .pst-stack { position: absolute; left: 0; right: 0; top: ${Math.round(h * 0.07)}px; bottom: ${Math.round(h * 0.17)}px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: ${Math.round(40 * k)}px; }
+    .pst-row { position: absolute; inset: ${Math.round(h * 0.1)}px ${Math.round(w * 0.05)}px; display: flex; align-items: center; justify-content: space-between; gap: ${Math.round(40 * k)}px; }
+    .pst-col { width: ${Math.round(boxW)}px; display: flex; flex-direction: column; align-items: flex-start; gap: ${Math.round(28 * k)}px; }
+    .pst-kicker { font: 900 ${Math.round(40 * k)}px/1 "${style.fonts.ui}", sans-serif; letter-spacing: .06em; color: #fff; background: ${p.title}; padding: ${Math.round(14 * k)}px ${Math.round(26 * k)}px; border-radius: ${Math.round(10 * k)}px; transform: rotate(-2deg); box-shadow: 0 ${Math.round(8 * k)}px ${Math.round(24 * k)}px rgba(0,0,0,.45); }
+    .pst-title { margin: 0; width: ${Math.round(boxW)}px; text-align: ${portrait ? "center" : "left"}; text-wrap: balance; font-family: "${style.fonts.display}", "Oswald", "Archivo Black", sans-serif; font-weight: 400; font-size: ${size}px; line-height: .92; letter-spacing: .01em; text-transform: uppercase; color: #fff; -webkit-text-stroke: ${Math.max(3, Math.round(16 * k))}px #000; paint-order: stroke fill; text-shadow: 0 ${Math.round(10 * k)}px ${Math.round(30 * k)}px rgba(0,0,0,.7); }
+    .pst-hl { color: ${p.highlight}; }
+    .pst-card { width: ${cardW}px; height: ${cardH}px; flex: none; border: ${Math.max(4, Math.round(12 * k))}px solid #fff; border-radius: ${Math.round(18 * k)}px; overflow: hidden; transform: rotate(-2.5deg); box-shadow: 0 ${Math.round(24 * k)}px ${Math.round(60 * k)}px rgba(0,0,0,.6); background: ${p.card}; }
+    .pst-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .pst-handle { font: 800 ${Math.round(38 * k)}px/1 "${style.fonts.ui}", sans-serif; color: #fff; -webkit-text-stroke: ${Math.max(2, Math.round(6 * k))}px rgba(0,0,0,.6); paint-order: stroke fill; }
+  </style>
+  <div id="root" data-composition-id="poster" data-width="${w}" data-height="${h}" data-composition-variables="${attrJson(vars)}" data-layout-ignore data-hold>
+    <div id="pst">
+      ${bgLayer ? `<img class="pst-bg" src="${e(bgLayer)}" alt="" />` : ""}
+      <div class="pst-shade"></div>
+      ${body}
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      ${hero ? `tl.fromTo("#pst-card", {scale:1}, {scale:1.04, duration:${round3(Math.max(0.05, d - out))}, ease:"none"}, 0);` : ""}
+      tl.fromTo("#pst", {opacity:1, scale:1}, {opacity:0, scale:1.08, duration:${round3(out)}, ease:"power2.in"}, ${round3(Math.max(0, d - out))});
+      window.__timelines = window.__timelines || {};
+      window.__timelines["poster"] = tl;
     })();
   </script>
 </template>
