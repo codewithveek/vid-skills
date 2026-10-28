@@ -98,7 +98,7 @@ export function compileHyperFrames(tl: Timeline, opts: CompileOptions): HyperFra
   tl.scenes.forEach((ts, i) => {
     const sid = sceneId(ts.id);
     const assets = ts.assets.map(pathOf).filter((x): x is SceneAsset => !!x);
-    const out = renderScene({ sid, ts, style, width, height, blurFill: layout.blurFill, assets, fps: tl.fps, derive });
+    const out = renderScene({ sid, ts, style, width, height, blurFill: layout.blurFill, win: layout.window, assets, fps: tl.fps, derive });
     files[`compositions/${sid}.html`] = sceneFile(sid, width, height, out.css, out.html, out.js);
     hosts.push(
       `<div id="${sid}" data-composition-id="${sid}" data-composition-src="compositions/${sid}.html" data-start="${round3(ts.start)}" data-duration="${round3(ts.duration)}" data-track-index="1" data-track-kind="graphics" data-width="${width}" data-height="${height}" style="z-index:${1 + (i % 2)}"></div>`,

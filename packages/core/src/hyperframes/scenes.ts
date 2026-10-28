@@ -23,6 +23,8 @@ export interface SceneCtx {
   width: number;
   height: number;
   blurFill: boolean;
+  /** Media window size (defaults to the canvas) */
+  win?: { w: number; h: number };
   assets: SceneAsset[];
   fps: number;
   /** Registers a derived asset (e.g. a pre-blurred background) and returns its project path. */
@@ -274,9 +276,13 @@ function typewriter(ctx: SceneCtx): SceneOutput {
   const sid = ctx.sid;
   const chars = [...`${s.lead} `].map((c) => ({ c, hi: false })).concat([...s.highlight].map((c) => ({ c, hi: true })));
   const per = 1 / s.cps;
+  // Fit the typed line inside the window: Inter 800 averages ~0.58 em per glyph.
+  const k = ctx.width / 1080;
+  const winW = ctx.win?.w ?? ctx.width;
+  const size = Math.max(Math.round(40 * k), Math.min(Math.round(92 * k), Math.floor((winW * 0.88) / (chars.length * 0.58))));
   const html = darkStage(
     ctx,
-    `<div class="vs-type">${chars.map((ch, i) => `<span id="${sid}-ch${i}" class="${ch.hi ? "vs-type-hi" : "vs-type-lead"}">${ch.c === " " ? "&nbsp;" : e(ch.c)}</span>`).join("")}<span id="${sid}-caret" class="vs-caret"></span></div>`,
+    `<div class="vs-type" style="font-size:${size}px">${chars.map((ch, i) => `<span id="${sid}-ch${i}" class="${ch.hi ? "vs-type-hi" : "vs-type-lead"}">${ch.c === " " ? "&nbsp;" : e(ch.c)}</span>`).join("")}<span id="${sid}-caret" class="vs-caret"></span></div>`,
   );
   let js = "";
   chars.forEach((_, i) => {
@@ -509,7 +515,7 @@ body{font-family:"${f.ui}",sans-serif;color:var(--vs-ink);}
 .vs-list{display:flex;flex-direction:column;gap:${Math.round(22 * k)}px;}
 .vs-li{display:flex;align-items:center;gap:${Math.round(18 * k)}px;font:700 ${Math.round(44 * k)}px "${f.ui}",sans-serif;}
 .vs-type{font:800 ${Math.round(92 * k)}px/1 "${f.ui}",sans-serif;letter-spacing:-.02em;display:flex;align-items:center;}
-.vs-type-lead{color:var(--vs-muted);}
+.vs-type-lead{color:color-mix(in srgb,var(--vs-ink) 55%,var(--vs-bg));}
 .vs-type-hi{color:var(--vs-accent);}
 .vs-caret{display:inline-block;width:${Math.max(3, Math.round(5 * k))}px;height:${Math.round(96 * k)}px;background:#e9eaee;margin-left:${Math.round(6 * k)}px;}
 .vs-doc-zoom{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}

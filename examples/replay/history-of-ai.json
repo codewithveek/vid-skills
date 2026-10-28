@@ -378,17 +378,6 @@
         }
       },
       {
-        "id": "sh2",
-        "lineId": "l1",
-        "scene": {
-          "type": "typewriter",
-          "lead": "Deadline:",
-          "highlight": "one summer",
-          "cps": 16
-        },
-        "anchor": "summer"
-      },
-      {
         "id": "sh3",
         "lineId": "l2",
         "scene": {
@@ -453,6 +442,17 @@
           "label": "Dartmouth College"
         },
         "anchor": "Dartmouth"
+      },
+      {
+        "id": "sh7b",
+        "lineId": "l4",
+        "anchor": "1956",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Summer",
+          "highlight": "1956",
+          "cps": 12
+        }
       },
       {
         "id": "sh8",
@@ -571,6 +571,21 @@
         "anchor": "winters"
       },
       {
+        "id": "sh15a",
+        "lineId": "l11",
+        "anchor": "eight",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "user",
+            "label": "8 GOOGLE RESEARCHERS",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        }
+      },
+      {
         "id": "sh15",
         "lineId": "l11",
         "scene": {
@@ -585,15 +600,15 @@
           "move": "pushIn",
           "label": "Attention Is All You Need"
         },
-        "anchor": "paper"
+        "anchor": "Attention"
       },
       {
         "id": "sh16",
         "lineId": "l12",
         "scene": {
           "type": "typewriter",
-          "lead": "GP",
-          "highlight": "T = Transformer",
+          "lead": "T in GPT =",
+          "highlight": "Transformer",
           "cps": 18
         },
         "anchor": "GPT"
