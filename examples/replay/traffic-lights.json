@@ -335,7 +335,7 @@
      "type": "broll",
      "asset": {
       "kind": "image",
-      "query": "traffic light",
+      "query": "traffic lights",
       "prompt": "editorial photograph of traffic light, no text, no logos",
       "prefer": "either"
      },
@@ -506,15 +506,10 @@
     "lineId": "l9",
     "anchor": "Cleveland",
     "scene": {
-     "type": "broll",
-     "asset": {
-      "kind": "image",
-      "query": "Cleveland Ohio 1910s street",
-      "prompt": "editorial photograph of Cleveland Ohio 1910s street, no text, no logos",
-      "prefer": "either"
-     },
-     "treatment": "vintage",
-     "move": "panLeft"
+     "type": "typewriter",
+     "lead": "1914 \u00b7",
+     "highlight": "Cleveland",
+     "cps": 14
     }
    },
    {
@@ -581,7 +576,7 @@
      "type": "broll",
      "asset": {
       "kind": "image",
-      "query": "amber traffic light",
+      "query": "yellow traffic signal",
       "prompt": "editorial photograph of amber traffic light, no text, no logos",
       "prefer": "either"
      },

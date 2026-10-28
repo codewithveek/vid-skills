@@ -124,7 +124,10 @@ export class WikimediaStock implements StockProvider {
       provider: this.id,
       headers: { "user-agent": this.o.userAgent ?? "vid-skills/0.1 (https://github.com/codewithveek/vid-skills)" },
       signal: q.signal,
-      retry: { retries: 1, timeoutMs: 20_000 },
+      // Wikimedia throttles bursts with empty/HTML bodies: stay well under its anonymous rate.
+      rateKey: "wikimedia",
+      ratePerMinute: 30,
+      retry: { retries: 2, timeoutMs: 20_000 },
     });
     return Object.values(j.query?.pages ?? {}).flatMap((p) => {
       const ii = p.imageinfo?.[0];
