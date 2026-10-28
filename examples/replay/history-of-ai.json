@@ -1,0 +1,714 @@
+{
+  "ResearchDossier": {
+    "topic": "the history of artificial intelligence",
+    "summary": "AI was named in a 1955 proposal for a two-month summer study at Dartmouth (1956). Hype (the Navy's 1958 perceptron), early chatbots (ELIZA, 1966), two AI winters, then the 2017 transformer paper led to ChatGPT in 2022.",
+    "angle": "Artificial intelligence was planned as a two-month summer project; it has been running for 70 years.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "On 2 September 1955 John McCarthy, Marvin Minsky, Nathaniel Rochester and Claude Shannon proposed 'a 2-month, 10-man study of artificial intelligence' for summer 1956 at Dartmouth, arguing a significant advance could be made if scientists worked on it together for a summer.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Dartmouth_workshop",
+            "title": "Dartmouth workshop - Wikipedia",
+            "quote": "We propose that a 2-month, 10-man study of artificial intelligence be carried out during the summer of 1956"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The proposal is credited with introducing the term 'artificial intelligence'; the 1956 Dartmouth workshop is widely considered the founding event of AI as a field.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Dartmouth_workshop",
+            "title": "Dartmouth workshop - Wikipedia",
+            "quote": "the founding event of artificial intelligence as a field"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "At a 1958 press conference organised by the US Navy, Frank Rosenblatt presented the perceptron; The New York Times called it the embryo of a computer the Navy expected to walk, talk, see, write, reproduce itself and be conscious of its existence.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Perceptron",
+            "title": "Perceptron - Wikipedia",
+            "quote": "the embryo of an electronic computer that [the Navy] expects will be able to walk, talk, see, write"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "ELIZA was developed from 1964 to 1967 at MIT by Joseph Weizenbaum (released 1966); its DOCTOR script simulated a Rogerian psychotherapist.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/ELIZA",
+            "title": "ELIZA - Wikipedia",
+            "quote": "developed from 1964 to 1967 at MIT by Joseph Weizenbaum"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "Weizenbaum's secretary asked him to leave the room so that she and ELIZA could have a real conversation.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/ELIZA",
+            "title": "ELIZA - Wikipedia",
+            "quote": "asked Weizenbaum to leave the room so that she and ELIZA could have a real conversation"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c6",
+        "text": "AI winters are periods of reduced funding and interest in AI research; the two major ones lasted roughly 1974–1980 and 1987–2000.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/AI_winter",
+            "title": "AI winter - Wikipedia",
+            "quote": "an AI winter is a period of reduced funding and interest in AI research"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c7",
+        "text": "'Attention Is All You Need' (2017), by eight researchers at Google, introduced the transformer, which underlies most modern large language models.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Attention_Is_All_You_Need",
+            "title": "Attention Is All You Need - Wikipedia",
+            "quote": "introduced a new deep learning architecture known as the transformer"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c8",
+        "text": "ChatGPT, released by OpenAI on 30 November 2022 (GPT: generative pre-trained transformer), gained 100 million users in two months.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/ChatGPT",
+            "title": "ChatGPT - Wikipedia",
+            "quote": "gained one million users in five days and 100 million in two months"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1956",
+        "event": "Dartmouth workshop",
+        "claimId": "c2"
+      },
+      {
+        "year": "1958",
+        "event": "Perceptron press conference",
+        "claimId": "c3"
+      },
+      {
+        "year": "1966",
+        "event": "ELIZA",
+        "claimId": "c4"
+      },
+      {
+        "year": "2017",
+        "event": "Transformer",
+        "claimId": "c7"
+      },
+      {
+        "year": "2022",
+        "event": "ChatGPT",
+        "claimId": "c8"
+      }
+    ],
+    "analogies": [
+      "a summer project that never ended"
+    ],
+    "visualIdeas": [
+      "Dartmouth Hall",
+      "Mark I Perceptron",
+      "ELIZA transcript",
+      "transformer diagram"
+    ],
+    "openQuestions": [
+      "Exact winter dates vary by source; script says 'twice' only"
+    ]
+  },
+  "Script": {
+    "headline": "AI Was a Summer Project",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Artificial intelligence was supposed to take one summer.",
+            "emphasis": [
+              "summer"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "In 1955, four scientists asked for money to make real progress in just two months.",
+            "emphasis": [
+              "two"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l3",
+            "text": "Their proposal even invented the name: artificial intelligence.",
+            "emphasis": [
+              "name"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l4",
+            "text": "The workshop ran at Dartmouth in the summer of 1956.",
+            "emphasis": [
+              "Dartmouth"
+            ],
+            "claimIds": [
+              "c1",
+              "c2"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "Two years later, the Navy showed off the perceptron.",
+            "emphasis": [
+              "perceptron"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l6",
+            "text": "The New York Times wrote that it would one day walk, talk, see and write.",
+            "emphasis": [
+              "walk"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l7",
+            "text": "In 1966, a chatbot called ELIZA played therapist.",
+            "emphasis": [
+              "ELIZA"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l8",
+            "text": "Its creator's own secretary asked him to leave the room so she could have a real conversation with it.",
+            "emphasis": [
+              "real"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "twist",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l9",
+            "text": "Then the money dried up. Twice.",
+            "emphasis": [
+              "Twice"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l10",
+            "text": "Researchers call those years the AI winters.",
+            "emphasis": [
+              "winters"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l11",
+            "text": "In 2017, eight Google researchers published a paper called Attention Is All You Need.",
+            "emphasis": [
+              "Attention"
+            ],
+            "claimIds": [
+              "c7"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l12",
+            "text": "It introduced the transformer. That's the T in GPT.",
+            "emphasis": [
+              "transformer"
+            ],
+            "claimIds": [
+              "c7",
+              "c8"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l13",
+            "text": "In 2022, ChatGPT reached 100 million users in two months.",
+            "emphasis": [
+              "million"
+            ],
+            "claimIds": [
+              "c8"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b6",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l14",
+            "text": "So that two-month summer project? It's been running for about 70 years.",
+            "emphasis": [
+              "running"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b7",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l15",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "cpu",
+            "label": "ARTIFICIAL INTELLIGENCE",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Deadline:",
+          "highlight": "one summer",
+          "cps": 16
+        },
+        "anchor": "summer"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "typewriter",
+          "lead": "In",
+          "highlight": "1955",
+          "cps": 12
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"John McCarthy Stanford\"",
+            "prompt": "portrait of John McCarthy",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "John McCarthy"
+        },
+        "anchor": "four"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l2",
+        "scene": {
+          "type": "stat",
+          "value": "2 months",
+          "caption": "\"a 2-month, 10-man study of artificial intelligence\"",
+          "sourceClaimId": "c1"
+        },
+        "anchor": "two"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l3",
+        "scene": {
+          "type": "typewriter",
+          "lead": "name:",
+          "highlight": "artificial intelligence",
+          "cps": 22
+        },
+        "anchor": "name"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Dartmouth Hall - Dartmouth College - DSC01608\"",
+            "prompt": "Dartmouth Hall",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "kenBurns",
+          "label": "Dartmouth College"
+        },
+        "anchor": "Dartmouth"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Mark I Perceptron, Figure 2 of operator's manual\"",
+            "prompt": "Mark I Perceptron machine",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Mark I Perceptron",
+          "sfx": "pop"
+        },
+        "anchor": "perceptron"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "checklist",
+          "data": {
+            "items": [
+              "Walk",
+              "Talk",
+              "See",
+              "Write"
+            ]
+          }
+        },
+        "anchor": "walk"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l7",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"ELIZA conversation\" jpg",
+            "prompt": "ELIZA chatbot conversation transcript",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "ELIZA, 1966"
+        },
+        "anchor": "ELIZA"
+      },
+      {
+        "id": "sh11",
+        "lineId": "l8",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Weizenbaum 1982\"",
+            "prompt": "portrait of Joseph Weizenbaum",
+            "prefer": "stock"
+          },
+          "treatment": "bw",
+          "move": "pushIn",
+          "label": "Joseph Weizenbaum"
+        },
+        "anchor": "secretary"
+      },
+      {
+        "id": "sh12",
+        "lineId": "l8",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "lock",
+            "label": "PRIVATE CHAT",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "conversation"
+      },
+      {
+        "id": "sh13",
+        "lineId": "l9",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "dollar",
+            "label": "FUNDING CUT",
+            "color": "#E50914"
+          },
+          "sfx": "impact"
+        },
+        "anchor": "money"
+      },
+      {
+        "id": "sh14",
+        "lineId": "l10",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Snowy Forest Path in Winter\"",
+            "prompt": "snowy winter forest",
+            "prefer": "stock"
+          },
+          "treatment": "bw",
+          "move": "pushIn",
+          "label": "AI winters"
+        },
+        "anchor": "winters"
+      },
+      {
+        "id": "sh15",
+        "lineId": "l11",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Transformer, full architecture\"",
+            "prompt": "transformer architecture diagram",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Attention Is All You Need"
+        },
+        "anchor": "paper"
+      },
+      {
+        "id": "sh16",
+        "lineId": "l12",
+        "scene": {
+          "type": "typewriter",
+          "lead": "GP",
+          "highlight": "T = Transformer",
+          "cps": 18
+        },
+        "anchor": "GPT"
+      },
+      {
+        "id": "sh17",
+        "lineId": "l13",
+        "scene": {
+          "type": "diagram",
+          "template": "counter",
+          "data": {
+            "from": 0,
+            "to": 100,
+            "unit": "M users",
+            "label": "IN TWO MONTHS"
+          }
+        },
+        "anchor": "100"
+      },
+      {
+        "id": "sh18",
+        "lineId": "l14",
+        "scene": {
+          "type": "diagram",
+          "template": "timeline",
+          "data": {
+            "events": [
+              {
+                "year": "1956",
+                "label": "Dartmouth"
+              },
+              {
+                "year": "1966",
+                "label": "ELIZA"
+              },
+              {
+                "year": "2017",
+                "label": "Transformer"
+              },
+              {
+                "year": "2022",
+                "label": "ChatGPT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "sh19",
+        "lineId": "l15",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh20",
+        "lineId": "l15",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "AI was supposed to be a two-month summer project",
+    "description": "Artificial intelligence was supposed to take one summer.\nIn 1955, McCarthy, Minsky, Rochester and Shannon proposed a 2-month study at Dartmouth and coined the name. Then came the Navy's perceptron, ELIZA, two AI winters, the 2017 transformer paper (the T in GPT) and ChatGPT. The summer project has been running for 70 years.",
+    "hashtags": [
+      "AI",
+      "history",
+      "technology",
+      "didyouknow"
+    ],
+    "keywords": [
+      "history of AI",
+      "Dartmouth workshop",
+      "ELIZA chatbot",
+      "AI winter",
+      "Attention Is All You Need"
+    ],
+    "hook": "AI was supposed to take one summer.",
+    "altText": "Motion-graphics explainer on the history of artificial intelligence.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Dartmouth_workshop",
+        "title": "Dartmouth workshop"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Perceptron",
+        "title": "Perceptron"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/ELIZA",
+        "title": "ELIZA"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/AI_winter",
+        "title": "AI winter"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Attention_Is_All_You_Need",
+        "title": "Attention Is All You Need"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/ChatGPT",
+        "title": "ChatGPT"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}
