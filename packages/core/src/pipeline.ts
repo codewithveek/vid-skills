@@ -690,6 +690,8 @@ export async function runPipeline(briefInput: VideoBriefInput, opts: PipelineOpt
   const project = await stage("compose", null, async () => {
     const p = compileHyperFrames(timeline, { assets: manifest.assets, style, aspect: brief.aspect });
     for (const [path, text] of Object.entries(p.files)) await opts.storage.put(`${base}project/${path}`, text, path.endsWith(".html") ? "text/html" : "application/json");
+    // A re-compose can drop files (e.g. the poster when it is turned off): remove the stale ones.
+    for (const o of await opts.storage.list(`${base}project/`)) if (!(o.key.slice(`${base}project/`.length) in p.files)) await opts.storage.delete?.(o.key);
     return p;
   });
   manifest.outputs.projectKey = `${base}project/`;

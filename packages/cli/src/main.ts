@@ -13,7 +13,7 @@
  *   vidsk providers | limits | doctor | tools [--format openai|anthropic|gemini|openapi|mcp]
  */
 import { existsSync, readFileSync } from "node:fs";
-import { chmod, copyFile, mkdir, readFile, writeFile } from "node:fs/promises";
+import { chmod, copyFile, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { createServer } from "node:http";
 import { homedir } from "node:os";
 import { dirname, join, resolve } from "node:path";
@@ -148,6 +148,7 @@ async function finish(m: JobManifest, storage: FsStorage, out: string) {
   const files = await storage.list(`jobs/${m.id}/project/`);
   if (files.length) {
     const { materializeProject } = await import("@vid-skills/renderer");
+    await rm(projectDir, { recursive: true, force: true }); // drop files a re-compose no longer produces
     const fileMap: Record<string, string> = {};
     for (const f of files) fileMap[f.key.slice(`jobs/${m.id}/project/`.length)] = (await storage.getText(f.key)) ?? "";
     const assets = JSON.parse(fileMap["vidsk.assets.json"] ?? "[]") as { path: string; id: string }[];

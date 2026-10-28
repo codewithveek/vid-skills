@@ -367,14 +367,16 @@
         "id": "sh1",
         "lineId": "l1",
         "scene": {
-          "type": "diagram",
-          "template": "icon-draw",
-          "data": {
-            "icon": "cpu",
-            "label": "ARTIFICIAL INTELLIGENCE",
-            "color": "#20FFF6",
-            "glow": "yes"
-          }
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Dartmouth Hall - Dartmouth College - DSC01608\"",
+            "prompt": "Dartmouth Hall",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Dartmouth, 1956"
         }
       },
       {
@@ -433,7 +435,7 @@
           "type": "broll",
           "asset": {
             "kind": "image",
-            "query": "intitle:\"Dartmouth Hall - Dartmouth College - DSC01608\"",
+            "query": "intitle:\"Dartmouth Hall at Dartmouth College\"",
             "prompt": "Dartmouth Hall",
             "prefer": "stock"
           },

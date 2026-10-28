@@ -38,6 +38,9 @@ export function runQa(i: {
   // Hook
   const first = tl.scenes[0];
   if (!first || first.start > 0.001) f.push({ severity: "blocker", code: "frame0_empty", message: "Frame 0 has no scene (it is the thumbnail and the hook)." });
+  // Motion-graphic scenes animate in from an empty stage, so frame 0 (the cover) shows only the chrome.
+  else if (["diagram", "typewriter", "stat", "quote", "cta", "endcard"].includes(first.scene.type))
+    f.push({ severity: "minor", code: "frame0_weak", where: first.id, message: `Frame 0 opens on a ${first.scene.type} that animates in from empty; the cover shows little.`, fix: "Open on b-roll (a striking still or clip) and move the graphic to the next beat." });
   const hook = i.script.beats[0]?.lines[0]?.text ?? "";
   if (hook.split(/\s+/).length > 14) f.push({ severity: "major", code: "hook_long", where: "l1", message: "First line is long; the viewer decides in ~1 s.", fix: "≤ 12 words." });
 
