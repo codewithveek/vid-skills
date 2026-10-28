@@ -1,0 +1,21 @@
+{
+  "name": "@vid-skills/renderer",
+  "version": "0.1.0",
+  "description": "Node render node: materializes HyperFrames projects, renders with the HyperFrames CLI/producer, masters audio with ffmpeg (two-pass loudnorm, true-peak), audits reference videos, and serves it all over HTTP (Cloudflare Container / Docker / Cloud Run).",
+  "type": "module",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": { "source": "./src/index.ts", "types": "./dist/index.d.ts", "default": "./dist/index.js" }
+  },
+  "bin": { "vidsk-render-server": "./dist/server.js" },
+  "files": ["dist", "src", "Dockerfile"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@vid-skills/core": "workspace:*",
+    "hyperframes": "0.8.211"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "vid-skills",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Model-agnostic, hands-free short-form video production: research → script → voice → HyperFrames motion graphics → sound design → render → publish. Usable as skills, MCP, CLI, library or a Cloudflare Worker.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@10.20.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "pnpm run gen && pnpm -r --filter './packages/**' run build",
+    "gen": "node scripts/gen-prompts.mjs && tsx scripts/gen-limits-doc.ts",
+    "typecheck": "pnpm run gen && pnpm -r run typecheck",
+    "test": "pnpm run gen && vitest run",
+    "lint:skills": "node scripts/lint-skills.mjs",
+    "check": "pnpm run typecheck && pnpm run test && pnpm run lint:skills",
+    "vidsk": "node packages/cli/bin/vidsk.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}

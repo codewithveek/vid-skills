@@ -1,0 +1,16 @@
+{
+  "name": "@vid-skills/providers",
+  "version": "0.1.0",
+  "description": "Model-agnostic provider adapters (LLM, TTS, music, SFX, images, stock, video, research, STT) with documented limits and automatic workarounds. fetch-only, Workers-safe.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": { "source": "./src/index.ts", "types": "./dist/index.d.ts", "default": "./dist/index.js" }
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": { "@vid-skills/core": "workspace:*", "zod": "^4.1.0" }
+}
