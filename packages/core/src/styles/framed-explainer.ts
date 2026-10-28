@@ -69,7 +69,7 @@ export const framedExplainer: StylePack = {
     mono: "JetBrains Mono",
   },
   title: { size: 64, weight: 400, strokePx: 3, uppercase: false, letterSpacing: "0.005em" },
-  captions: { size: 50, weight: 900, maxWordsPerCue: 4, maxCharsPerCue: 24, maxCueSec: 1.6, highlight: "#FFD400", uppercase: false },
+  captions: { size: 50, weight: 900, maxWordsPerCue: 4, maxCharsPerCue: 24, maxCueSec: 1.6, highlight: "#FFD400", uppercase: false, wordGapEm: 0.32 },
   motion: { cutLeadSec: 0.033, minShotSec: 0.18, maxShotSec: 8, montagePerItemSec: 0.22, ease: "power3.out", drawOnSec: 0.6 },
   audio: { targetLufs: -14, truePeakDb: -1, bedUnderVoice: 0.14, bedNoVoice: 0.45, sfxGain: 0.6, voiceGain: 1 },
 };

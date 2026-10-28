@@ -165,5 +165,7 @@ describe("compile", () => {
     expect(chrome).toContain("&lt;b&gt;");
     const p2 = compileHyperFrames(res.timeline!, { assets: res.manifest.assets, style: framedExplainer, aspect: "9:16" });
     expect(p2.files["index.html"]).toContain("data-audio-group");
+    // caption words get an explicit gap (text strokes eat plain spaces)
+    expect(p2.files["compositions/captions.html"]).toMatch(/column-gap: 0\.32em/);
   });
 });

@@ -237,7 +237,7 @@ function captionsFile(tl: Timeline, style: StylePack, box: { x: number; y: numbe
   <style>
     #root { position: absolute; inset: 0; pointer-events: none; }
     .vs-cue { position: absolute; left: ${box.x}px; top: ${box.y}px; width: ${box.w}px; height: ${box.h}px; display: flex; align-items: center; justify-content: center; }
-    .vs-cue-in { text-align: center; font: ${c.weight} ${size}px/1.1 "${style.fonts.ui}", sans-serif; color: #fff; -webkit-text-stroke: ${Math.max(2, Math.round(8 * k))}px #000; paint-order: stroke fill; text-shadow: 0 ${Math.round(4 * k)}px ${Math.round(10 * k)}px rgba(0,0,0,.55); }
+    .vs-cue-in { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; column-gap: ${c.wordGapEm ?? 0.32}em; row-gap: 0.08em; max-width: 100%; text-align: center; font: ${c.weight} ${size}px/1.1 "${style.fonts.ui}", sans-serif; color: #fff; -webkit-text-stroke: ${Math.max(2, Math.round(8 * k))}px #000; paint-order: stroke fill; text-shadow: 0 ${Math.round(4 * k)}px ${Math.round(10 * k)}px rgba(0,0,0,.55); }
     .vs-w { display: inline-block; }
     .vs-w-em { color: ${c.highlight}; }
   </style>

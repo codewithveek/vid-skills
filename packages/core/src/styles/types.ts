@@ -48,6 +48,8 @@ export interface StylePack {
     maxCueSec: number;
     highlight: string;
     uppercase: boolean;
+    /** Gap between caption words, in em. Explicit because thick text strokes eat normal spaces. */
+    wordGapEm?: number;
   };
   motion: {
     /** Seconds the cut leads the anchor word (negative = after). The reference lands visuals on the word. */
