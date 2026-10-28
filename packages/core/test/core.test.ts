@@ -195,10 +195,10 @@ describe("poster", () => {
     expect(posterFor("The @ Sign Is 500 Years Old", "", ["wine"], 0.6, 30).highlight).toEqual(["500"]);
     expect(posterFor("Barcodes Began in the Sand", "", [], 0.6, 30).highlight).toEqual(["Sand"]);
   });
-  it("opens every video on a poster frame unless disabled", async () => {
+  it("is off by default and opens on a poster frame when enabled", async () => {
     const run = (poster?: { enabled: boolean }) =>
       runPipeline({ topic: "the floppy disk save icon", durationSec: 25, handle: "@hiddeninplainsight.tv", ...(poster ? { poster } : {}) }, { providers: { llm: fakeLLM(), tts: fakeTTS() }, storage: new MemoryStorage(), jobId: "p1", stopAfter: "compose" });
-    const res = await run();
+    const res = await run({ enabled: true });
     const p = res.project!;
     expect(p.files["index.html"]).toMatch(/id="poster"[^>]*data-start="0"[^>]*data-duration="0\.6"/);
     const poster = p.files["compositions/poster.html"]!;
@@ -208,7 +208,7 @@ describe("poster", () => {
     expect(poster).toContain("data-layout-ignore");
     // visible at frame 0: no entrance tween, only the exit
     expect(poster).not.toMatch(/\{opacity:0[^}]*\}, \{opacity:1/);
-    const off = await run({ enabled: false });
+    const off = await run();
     expect(off.project!.files["compositions/poster.html"]).toBeUndefined();
   });
 });

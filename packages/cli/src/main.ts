@@ -163,9 +163,9 @@ async function finish(m: JobManifest, storage: FsStorage, out: string) {
     const dst = join(out, `${m.id}.mp4`);
     await copyFile(storage.path(m.outputs.videoKey), dst);
     log(`video: ${dst}`);
-    // Frame 0 is the poster: save it as the cover image for platforms that take a separate upload.
-    const cover = join(out, `${m.id}.poster.jpg`);
-    if (await thumbnail(dst, cover, 0).then(() => true, () => false)) log(`poster: ${cover}`);
+    // Frame 0 doubles as the cover image for platforms that take a separate upload.
+    const cover = join(out, `${m.id}.cover.jpg`);
+    if (await thumbnail(dst, cover, 0).then(() => true, () => false)) log(`cover: ${cover}`);
   }
   if (m.outputs.captionsKey) await copyFile(storage.path(m.outputs.captionsKey), join(out, `${m.id}.srt`));
   console.log(JSON.stringify({ jobId: m.id, outputs: m.outputs, publications: m.publications }, null, 2));

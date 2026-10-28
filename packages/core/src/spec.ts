@@ -67,7 +67,8 @@ export const MusicPreference = z.object({
 });
 
 export const PosterPreference = z.object({
-  enabled: z.boolean().default(true).describe("Open on a poster frame (thumbnail-grade hook card) for platforms that use frame 0 as the cover"),
+  // Off by default: on the channel it was tried on, videos that opened straight into the hook outperformed poster openers.
+  enabled: z.boolean().default(false).describe("Opt in: open on a poster frame (hook card) for platforms that use frame 0 as the cover"),
   durationSec: z.number().min(0.1).max(3).default(0.6).describe("How long the poster holds before revealing the video (the voice starts underneath)"),
   text: z.string().max(80).optional().describe("Poster headline; defaults to the video headline"),
   kicker: z.string().max(30).default("DID YOU KNOW?").describe("Small tag above the headline; empty string hides it"),
@@ -92,7 +93,7 @@ export const VideoBrief = z.object({
     drops: true,
   }),
   captions: z.boolean().default(true),
-  poster: PosterPreference.default({ enabled: true, durationSec: 0.6, kicker: "DID YOU KNOW?" }),
+  poster: PosterPreference.default({ enabled: false, durationSec: 0.6, kicker: "DID YOU KNOW?" }),
   cta: z.string().optional().describe("Call to action, ideally reusing the topic's metaphor"),
   handle: z.string().optional().describe("Creator handle shown as watermark / end card"),
   licensedOnly: z.boolean().default(true).describe("Refuse assets without a commercial-use license"),
