@@ -18,6 +18,11 @@ describe("speech normalization", () => {
     expect(toSpeech("on 2 January 1869 it exploded").spoken).toBe("on two January eighteen sixty-nine it exploded");
     expect(toSpeech("Sony made the last ones in 2011.").spoken).toBe("Sony made the last ones in twenty eleven.");
   });
+  it("reads Roman numerals after cue words as numbers", () => {
+    expect(toSpeech("the Harvard Mark II found a moth").spoken).toBe("the Harvard Mark two found a moth");
+    expect(toSpeech("after World War I, and Apollo XI.").spoken).toBe("after World War one, and Apollo eleven.");
+    expect(toSpeech("I think Henry VIII and I agree").spoken).toBe("I think Henry VIII and I agree");
+  });
   it("handles decades, quantities, money, percent and ordinals", () => {
     expect(toSpeech("the 1980s").spoken).toBe("the nineteen eighties");
     expect(toSpeech("1500 people").spoken).toBe("one thousand five hundred people");

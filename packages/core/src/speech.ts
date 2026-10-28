@@ -76,11 +76,33 @@ const YEAR_CUES = /^(in|by|since|from|until|till|to|of|circa|c\.|around|before|a
 const MONTHS = /^(jan(uary)?|feb(ruary)?|mar(ch)?|apr(il)?|may|june?|july?|aug(ust)?|sep(t(ember)?)?|oct(ober)?|nov(ember)?|dec(ember)?)\.?$/i;
 
 /** Speak one whitespace-delimited token, given its neighbours. Returns null if unchanged. */
+/** Words after which a Roman numeral is a plain number: "Mark II", "World War I", "Apollo XI". */
+const NUMERAL_CUES = new Set(["mark", "war", "apollo", "model", "type", "part", "phase", "chapter", "volume", "vol", "class", "level", "stage", "series", "episode", "title", "act", "gen", "generation", "pioneer", "voyager", "gemini", "saturn", "falcon"]);
+const ROMAN: Record<string, number> = { I: 1, V: 5, X: 10, L: 50, C: 100 };
+
+function romanValue(r: string): number | null {
+  if (!/^(?=[IVXLC])(C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$/.test(r)) return null;
+  let n = 0;
+  for (let i = 0; i < r.length; i++) {
+    const v = ROMAN[r[i]!]!;
+    const nx = ROMAN[r[i + 1] ?? ""] ?? 0;
+    n += v < nx ? -v : v;
+  }
+  return n > 0 && n < 200 ? n : null;
+}
+
 function speakToken(tok: string, prev: string, next: string): string | null {
   const m = /^([("'“‘]*)(.*?)([)"'”’.,;:!?…]*)$/.exec(tok);
   if (!m) return null;
   const [, lead, core, trail] = m as unknown as [string, string, string, string];
   let out: string | null = null;
+
+  // Roman numerals after a cue word ("Mark II" → "Mark two"); TTS engines read them as letters.
+  const prevWord = prev.replace(/[^A-Za-z]/g, "").toLowerCase();
+  if (NUMERAL_CUES.has(prevWord) && /^[IVXLC]+$/.test(core)) {
+    const v = romanValue(core);
+    if (v !== null) return `${lead}${cardinal(v)}${trail}`;
+  }
 
   // Decades: 1980s, 1980's, '90s
   let d = /^(1[1-9]|20)(\d)0'?s$/.exec(core);
