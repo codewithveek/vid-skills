@@ -6,6 +6,12 @@ import { runWorkersAi, type AiBinding } from "./llm.js";
 
 type Q = Parameters<StockProvider["search"]>[0];
 
+const sleep = (ms: number, signal?: AbortSignal) =>
+  new Promise<void>((resolve, reject) => {
+    const t = setTimeout(resolve, ms);
+    signal?.addEventListener("abort", () => (clearTimeout(t), reject(signal.reason)), { once: true });
+  });
+
 /* ============================ Stock ============================ */
 
 /** Pexels: free commercial use, no attribution required (credit appreciated). 200 req/h, 20k/month. */
@@ -120,15 +126,25 @@ export class WikimediaStock implements StockProvider {
   async search(q: Q): Promise<VisualCandidate[]> {
     if (q.kind !== "image") return [];
     const url = `https://commons.wikimedia.org/w/api.php?action=query&format=json&origin=*&generator=search&gsrnamespace=6&gsrlimit=${q.limit ?? 8}&gsrsearch=${encodeURIComponent(`filetype:bitmap ${q.query}`)}&prop=imageinfo&iiprop=url|size|extmetadata&iiurlwidth=1600`;
-    const j = await requestJson<{ query?: { pages?: Record<string, { title: string; imageinfo?: { thumburl?: string; url: string; width: number; height: number; descriptionurl: string; extmetadata?: Record<string, { value: string }> }[] }> } }>(url, {
-      provider: this.id,
-      headers: { "user-agent": this.o.userAgent ?? "vid-skills/0.1 (https://github.com/codewithveek/vid-skills)" },
-      signal: q.signal,
-      // Wikimedia throttles bursts with empty/HTML bodies: stay well under its anonymous rate.
-      rateKey: "wikimedia",
-      ratePerMinute: 30,
-      retry: { retries: 2, timeoutMs: 20_000 },
-    });
+    type Res = { error?: { code?: string; info?: string }; query?: { pages?: Record<string, { title: string; imageinfo?: { thumburl?: string; url: string; width: number; height: number; descriptionurl: string; extmetadata?: Record<string, { value: string }> }[] }> } };
+    let j: Res = {};
+    // MediaWiki reports throttling as HTTP 200 + {"error":{"code":"ratelimited"}}: back off instead of
+    // reading it as "no results" (which silently turns shots into placeholders).
+    for (let attempt = 0; ; attempt++) {
+      j = await requestJson<Res>(url, {
+        provider: this.id,
+        headers: { "user-agent": this.o.userAgent ?? "vid-skills/0.1 (https://github.com/codewithveek/vid-skills)" },
+        signal: q.signal,
+        // Wikimedia throttles bursts with empty/HTML bodies: stay well under its anonymous rate.
+        rateKey: "wikimedia",
+        ratePerMinute: 30,
+        retry: { retries: 2, timeoutMs: 20_000 },
+      });
+      if (!j.error) break;
+      const throttled = /ratelimit|maxlag|toomany|readonly/i.test(j.error.code ?? "");
+      if (!throttled || attempt >= 3) throw new ProviderError(`wikimedia: ${j.error.code ?? "error"} ${j.error.info ?? ""}`.trim(), this.id, 200, throttled);
+      await sleep(5_000 * 2 ** attempt, q.signal);
+    }
     return Object.values(j.query?.pages ?? {}).flatMap((p) => {
       const ii = p.imageinfo?.[0];
       if (!ii) return [];

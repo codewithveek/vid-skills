@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { base64FromBytes } from "@vid-skills/core";
-import { ElevenLabsTTS, FallbackLLM, FallbackTTS, KokoroTTS, OpenAICompatibleLLM, PROVIDER_LIMITS, StaticLLM, describeProviders, limitsMarkdown, parseSpecs, providersFromEnv, request, ConfigError } from "../src/index.js";
+import { ElevenLabsTTS, FallbackLLM, FallbackTTS, KokoroTTS, OpenAICompatibleLLM, PROVIDER_LIMITS, StaticLLM, describeProviders, limitsMarkdown, parseSpecs, providersFromEnv, request, ConfigError, WikimediaStock } from "../src/index.js";
 
 const json = (v: unknown, init: ResponseInit = {}) => new Response(JSON.stringify(v), { status: 200, headers: { "content-type": "application/json" }, ...init });
 
@@ -22,6 +22,25 @@ describe("http", () => {
     });
     await expect(request("https://x.test", { provider: "t" })).rejects.toThrow(/\[redacted\]/);
     expect(n).toBe(1);
+  });
+});
+
+describe("wikimedia", () => {
+  it("backs off on in-body ratelimited errors instead of returning no results", async () => {
+    vi.useFakeTimers();
+    let n = 0;
+    vi.stubGlobal("fetch", async () =>
+      ++n === 1
+        ? json({ error: { code: "ratelimited", info: "You've exceeded your rate limit." } })
+        : json({ query: { pages: { "1": { title: "File:UPCA.jpg", imageinfo: [{ url: "https://u.test/a.jpg", width: 800, height: 600, descriptionurl: "https://c.test/File:UPCA.jpg", extmetadata: { LicenseShortName: { value: "Public domain" } } }] } } } }),
+    );
+    const p = new WikimediaStock().search({ query: "UPCA", kind: "image" });
+    await vi.advanceTimersByTimeAsync(6_000);
+    const res = await p;
+    vi.useRealTimers();
+    expect(n).toBe(2);
+    expect(res.map((c) => c.description)).toEqual(["File:UPCA.jpg"]);
+    expect(res[0]!.license.commercialUse).toBe(true);
   });
 });
 
