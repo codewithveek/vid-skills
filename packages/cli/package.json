@@ -1,0 +1,21 @@
+{
+  "name": "@vid-skills/cli",
+  "version": "0.1.0",
+  "description": "vidsk: make, audit, render and publish short-form videos from the terminal; also runs the MCP server (stdio/HTTP).",
+  "type": "module",
+  "license": "Apache-2.0",
+  "bin": { "vidsk": "./bin/vidsk.mjs" },
+  "files": ["bin", "dist", "src"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@vid-skills/core": "workspace:*",
+    "@vid-skills/providers": "workspace:*",
+    "@vid-skills/distribute": "workspace:*",
+    "@vid-skills/mcp": "workspace:*",
+    "@vid-skills/renderer": "workspace:*",
+    "tsx": "^4.20.0"
+  }
+}

@@ -77,6 +77,8 @@ export interface RequestOptions extends RequestInit {
   rateKey?: string;
   ratePerMinute?: number;
   signal?: AbortSignal;
+  /** Route through a binding's fetch (Workers Container/Service binding) instead of global fetch. */
+  fetcher?: { fetch(req: Request): Promise<Response> };
 }
 
 export async function request(url: string, o: RequestOptions): Promise<Response> {
@@ -91,7 +93,8 @@ export async function request(url: string, o: RequestOptions): Promise<Response>
     let res: Response | undefined;
     let netErr: unknown;
     try {
-      res = await fetch(url, { ...o, signal: ctl.signal });
+      const { provider: _p, retry: _r, rateKey: _k, ratePerMinute: _m, fetcher, ...init } = o;
+      res = fetcher ? await fetcher.fetch(new Request(url, { ...init, signal: ctl.signal })) : await fetch(url, { ...init, signal: ctl.signal });
     } catch (e) {
       netErr = e;
     } finally {

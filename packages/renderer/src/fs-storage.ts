@@ -62,6 +62,28 @@ export class FsStorage implements Storage {
     await walk(this.root);
     return out;
   }
+  async getRange(key: string, offset: number, length: number): Promise<Uint8Array | null> {
+    const { open } = await import("node:fs/promises");
+    try {
+      const fh = await open(this.path(key), "r");
+      try {
+        const buf = new Uint8Array(length);
+        const { bytesRead } = await fh.read(buf, 0, length, offset);
+        return buf.subarray(0, bytesRead);
+      } finally {
+        await fh.close();
+      }
+    } catch {
+      return null;
+    }
+  }
+  async size(key: string): Promise<number | null> {
+    try {
+      return (await stat(this.path(key))).size;
+    } catch {
+      return null;
+    }
+  }
   async delete(key: string): Promise<void> {
     await rm(this.path(key), { force: true });
   }

@@ -107,7 +107,7 @@ export class KokoroTTS implements TTSProvider {
   readonly id = "kokoro";
   readonly capabilities: TTSCapabilities = { maxCharsPerRequest: 1000, timestamps: "word", ssml: false, instructions: false, contextStitching: false, languages: ["en-us", "en-gb", "es", "fr", "hi", "it", "ja", "pt-br", "zh"], outputs: ["wav", "mp3"], local: true };
   private captioned = true;
-  constructor(private readonly o: { baseUrl: string; voice?: string; apiKey?: string }) {}
+  constructor(private readonly o: { baseUrl: string; voice?: string; apiKey?: string; fetcher?: { fetch(req: Request): Promise<Response> } }) {}
   async synthesize(req: TTSRequest): Promise<TTSResult> {
     const base = this.o.baseUrl.replace(/\/$/, "");
     const voice = req.voice ?? this.o.voice ?? "am_michael";
@@ -121,6 +121,7 @@ export class KokoroTTS implements TTSProvider {
           headers,
           body: JSON.stringify({ model: "kokoro", input: req.text, voice, speed: req.speed ?? 1, response_format: "wav", stream: false, return_timestamps: true }),
           signal: req.signal,
+          fetcher: this.o.fetcher,
           retry: { retries: 1, timeoutMs: 180_000 },
         });
         if (j.audio) {
@@ -132,7 +133,7 @@ export class KokoroTTS implements TTSProvider {
         this.captioned = false; // route missing on this server build → use the OpenAI route from now on
       }
     }
-    const { bytes } = await requestBytes(`${base}/v1/audio/speech`, { provider: this.id, method: "POST", headers, body: JSON.stringify({ model: "kokoro", input: req.text, voice, speed: req.speed ?? 1, response_format: "wav" }), signal: req.signal, retry: { timeoutMs: 180_000 } });
+    const { bytes } = await requestBytes(`${base}/v1/audio/speech`, { provider: this.id, method: "POST", headers, body: JSON.stringify({ model: "kokoro", input: req.text, voice, speed: req.speed ?? 1, response_format: "wav" }), signal: req.signal, fetcher: this.o.fetcher, retry: { timeoutMs: 180_000 } });
     return finish(bytes, "audio/wav", undefined, "none", lic);
   }
   async listVoices() {

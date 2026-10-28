@@ -1,0 +1,629 @@
+{
+ "ResearchDossier": {
+  "topic": "the power button symbol",
+  "summary": "The ubiquitous power icon (a broken circle with a line) comes from IEC 60417, where it originally meant standby, not on/off.",
+  "angle": "The power symbol on your devices originally meant standby, because most devices never fully turn off.",
+  "claims": [
+   {
+    "id": "c1",
+    "text": "IEC 60417 defines language-independent graphical symbols for equipment, including power controls.",
+    "sources": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Power_symbol",
+      "title": "Power symbol - Wikipedia"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "id": "c2",
+    "text": "In IEC 60417 a line means on (5007) and a circle means off (5008).",
+    "sources": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Power_symbol",
+      "title": "Power symbol - Wikipedia"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "id": "c3",
+    "text": "The broken circle with a line (IEC 60417-5009) is defined as the standby symbol.",
+    "sources": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Power_symbol",
+      "title": "Power symbol - Wikipedia"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "id": "c4",
+    "text": "A line inside a complete circle (IEC 60417-5010) marks a push-button that toggles power on and off.",
+    "sources": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Power_symbol",
+      "title": "Power symbol - Wikipedia"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "id": "c5",
+    "text": "IEEE 1621, published in 2004, treats the broken-circle symbol as a generic power symbol and adds a crescent moon for sleep.",
+    "sources": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Power_symbol",
+      "title": "Power symbol - Wikipedia"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "id": "c6",
+    "text": "Devices in standby keep drawing a small amount of power, for example to receive remote-control signals.",
+    "sources": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Standby_power",
+      "title": "Standby power - Wikipedia"
+     }
+    ],
+    "confidence": "high"
+   }
+  ],
+  "timeline": [
+   {
+    "year": "2004",
+    "event": "IEEE 1621 adds the sleep crescent",
+    "claimId": "c5"
+   }
+  ],
+  "analogies": [
+   "a doorbell that is always listening",
+   "a car idling at a red light"
+  ],
+  "visualIdeas": [
+   "hand holding a TV remote",
+   "stereo amplifier switch",
+   "standby LED glowing in a dark room"
+  ],
+  "openQuestions": []
+ },
+ "Script": {
+  "headline": "Your Power Button Isn't Power",
+  "cta": "Your power button bends the truth. The follow button won't.",
+  "beats": [
+   {
+    "id": "b1",
+    "kind": "hook",
+    "musicCue": "none",
+    "lines": [
+     {
+      "id": "l1",
+      "text": "Look at the power button on whatever you're holding.",
+      "emphasis": [
+       "power"
+      ],
+      "claimIds": [],
+      "pauseAfterSec": 0.25
+     }
+    ]
+   },
+   {
+    "id": "b2",
+    "kind": "stakes",
+    "musicCue": "none",
+    "lines": [
+     {
+      "id": "l2",
+      "text": "Phones, laptops, consoles, the remote on your couch.",
+      "emphasis": [
+       "remote"
+      ],
+      "claimIds": [],
+      "pauseAfterSec": 0.25
+     },
+     {
+      "id": "l3",
+      "text": "They all share one tiny symbol.",
+      "emphasis": [
+       "one"
+      ],
+      "claimIds": [],
+      "pauseAfterSec": 0.4
+     }
+    ]
+   },
+   {
+    "id": "b3",
+    "kind": "twist",
+    "musicCue": "drop",
+    "lines": [
+     {
+      "id": "l4",
+      "text": "Except that symbol never meant power.",
+      "emphasis": [
+       "never"
+      ],
+      "claimIds": [
+       "c3"
+      ],
+      "pauseAfterSec": 0.25
+     },
+     {
+      "id": "l5",
+      "text": "Its official name was standby.",
+      "emphasis": [
+       "standby"
+      ],
+      "claimIds": [
+       "c3"
+      ],
+      "pauseAfterSec": 0.25
+     }
+    ]
+   },
+   {
+    "id": "b4",
+    "kind": "history",
+    "musicCue": "none",
+    "lines": [
+     {
+      "id": "l6",
+      "text": "A standards body swapped the words on and off for two shapes.",
+      "emphasis": [
+       "shapes"
+      ],
+      "claimIds": [
+       "c1"
+      ],
+      "pauseAfterSec": 0.25
+     },
+     {
+      "id": "l7",
+      "text": "A line meant on. A circle meant off.",
+      "emphasis": [
+       "line",
+       "circle"
+      ],
+      "claimIds": [
+       "c2"
+      ],
+      "pauseAfterSec": 0.25
+     },
+     {
+      "id": "l8",
+      "text": "Put the line inside the circle, and you get a true on-off switch.",
+      "emphasis": [
+       "true"
+      ],
+      "claimIds": [
+       "c4"
+      ],
+      "pauseAfterSec": 0.25
+     }
+    ]
+   },
+   {
+    "id": "b5",
+    "kind": "mechanism",
+    "musicCue": "none",
+    "lines": [
+     {
+      "id": "l9",
+      "text": "But the broken circle only means the device is lightly asleep.",
+      "emphasis": [
+       "asleep"
+      ],
+      "claimIds": [
+       "c3"
+      ],
+      "pauseAfterSec": 0.25
+     },
+     {
+      "id": "l10",
+      "text": "It keeps sipping power, listening for your remote.",
+      "emphasis": [
+       "listening"
+      ],
+      "claimIds": [
+       "c6"
+      ],
+      "pauseAfterSec": 0.25
+     }
+    ]
+   },
+   {
+    "id": "b6",
+    "kind": "proof",
+    "musicCue": "none",
+    "lines": [
+     {
+      "id": "l11",
+      "text": "By 2004, a new standard simply called it power.",
+      "emphasis": [
+       "2004"
+      ],
+      "claimIds": [
+       "c5"
+      ],
+      "pauseAfterSec": 0.25
+     },
+     {
+      "id": "l12",
+      "text": "And added a crescent moon for sleep.",
+      "emphasis": [
+       "moon"
+      ],
+      "claimIds": [
+       "c5"
+      ],
+      "pauseAfterSec": 0.25
+     }
+    ]
+   },
+   {
+    "id": "b7",
+    "kind": "payoff",
+    "musicCue": "none",
+    "lines": [
+     {
+      "id": "l13",
+      "text": "So that gap at the top is proof your device never fully turns off.",
+      "emphasis": [
+       "never"
+      ],
+      "claimIds": [
+       "c6"
+      ],
+      "pauseAfterSec": 0.4
+     }
+    ]
+   },
+   {
+    "id": "b8",
+    "kind": "cta",
+    "musicCue": "none",
+    "lines": [
+     {
+      "id": "l14",
+      "text": "Your power button bends the truth. The follow button won't.",
+      "emphasis": [
+       "follow"
+      ],
+      "claimIds": [],
+      "pauseAfterSec": 0.2
+     }
+    ]
+   }
+  ]
+ },
+ "Storyboard": {
+  "shots": [
+   {
+    "id": "sh1",
+    "lineId": "l1",
+    "scene": {
+     "type": "broll",
+     "asset": {
+      "kind": "image",
+      "query": "hand holding remote control",
+      "prompt": "editorial photograph of hand holding remote control, cinematic light, no text, no logos",
+      "prefer": "either"
+     },
+     "treatment": "bw",
+     "move": "pushIn"
+    }
+   },
+   {
+    "id": "sh2",
+    "lineId": "l1",
+    "anchor": "power",
+    "scene": {
+     "type": "diagram",
+     "template": "icon-draw",
+     "data": {
+      "icon": "power",
+      "color": "#20FFF6",
+      "glow": "yes"
+     }
+    }
+   },
+   {
+    "id": "sh3",
+    "lineId": "l2",
+    "scene": {
+     "type": "montage",
+     "perItemSec": 0.22,
+     "items": [
+      {
+       "kind": "image",
+       "query": "smartphone",
+       "prompt": "editorial photograph of smartphone, cinematic light, no text, no logos",
+       "prefer": "either"
+      },
+      {
+       "kind": "image",
+       "query": "laptop computer",
+       "prompt": "editorial photograph of laptop computer, cinematic light, no text, no logos",
+       "prefer": "either"
+      },
+      {
+       "kind": "image",
+       "query": "video game console",
+       "prompt": "editorial photograph of video game console, cinematic light, no text, no logos",
+       "prefer": "either"
+      },
+      {
+       "kind": "image",
+       "query": "television remote control",
+       "prompt": "editorial photograph of television remote control, cinematic light, no text, no logos",
+       "prefer": "either"
+      }
+     ]
+    }
+   },
+   {
+    "id": "sh4",
+    "lineId": "l3",
+    "anchor": "symbol",
+    "scene": {
+     "type": "diagram",
+     "template": "icon-draw",
+     "data": {
+      "icon": "power",
+      "label": "ONE SYMBOL",
+      "color": "#F4F5F7"
+     }
+    }
+   },
+   {
+    "id": "sh5",
+    "lineId": "l4",
+    "scene": {
+     "type": "diagram",
+     "template": "button-cards",
+     "data": {
+      "cards": [
+       {
+        "icon": "power",
+        "label": "STAND-BY",
+        "state": "standby"
+       },
+       {
+        "icon": "onoff",
+        "label": "ON / OFF",
+        "state": "idle"
+       }
+      ],
+      "active": 0
+     }
+    }
+   },
+   {
+    "id": "sh6",
+    "lineId": "l5",
+    "anchor": "standby",
+    "scene": {
+     "type": "document",
+     "asset": {
+      "kind": "image",
+      "query": "IEC 60417 graphical symbols",
+      "prompt": "Standby symbol: a broken circle with a vertical line. Use: to identify the switch or switch position by means of which part of the equipment is switched on in order to bring it into the stand-by condition.",
+      "prefer": "generate"
+     },
+     "highlights": [
+      {
+       "x": 0.08,
+       "y": 0.1,
+       "w": 0.84,
+       "h": 0.06
+      },
+      {
+       "x": 0.08,
+       "y": 0.2,
+       "w": 0.7,
+       "h": 0.05
+      }
+     ],
+     "pageTurn": true
+    }
+   },
+   {
+    "id": "sh7",
+    "lineId": "l6",
+    "scene": {
+     "type": "broll",
+     "asset": {
+      "kind": "image",
+      "query": "vintage stereo amplifier",
+      "prompt": "editorial photograph of vintage stereo amplifier, cinematic light, no text, no logos",
+      "prefer": "either"
+     },
+     "treatment": "vintage",
+     "move": "panLeft"
+    }
+   },
+   {
+    "id": "sh8",
+    "lineId": "l7",
+    "scene": {
+     "type": "diagram",
+     "template": "button-cards",
+     "data": {
+      "cards": [
+       {
+        "icon": "on",
+        "label": "ON",
+        "state": "on"
+       },
+       {
+        "icon": "off",
+        "label": "OFF",
+        "state": "idle"
+       }
+      ],
+      "active": 0
+     }
+    }
+   },
+   {
+    "id": "sh9",
+    "lineId": "l8",
+    "scene": {
+     "type": "diagram",
+     "template": "icon-draw",
+     "data": {
+      "icon": "onoff",
+      "label": "ON / OFF",
+      "color": "#20FFF6",
+      "glow": "yes"
+     }
+    }
+   },
+   {
+    "id": "sh10",
+    "lineId": "l9",
+    "scene": {
+     "type": "diagram",
+     "template": "compare",
+     "data": {
+      "left": "ON / OFF",
+      "right": "STAND-BY",
+      "leftIcon": "onoff",
+      "rightIcon": "power"
+     }
+    }
+   },
+   {
+    "id": "sh11",
+    "lineId": "l10",
+    "anchor": "listening",
+    "scene": {
+     "type": "analogy",
+     "asset": {
+      "kind": "image",
+      "query": "television standby light dark room",
+      "prompt": "editorial photograph of television standby light dark room, cinematic light, no text, no logos",
+      "prefer": "either"
+     },
+     "caption": "Always listening"
+    }
+   },
+   {
+    "id": "sh12",
+    "lineId": "l11",
+    "scene": {
+     "type": "typewriter",
+     "lead": "By",
+     "highlight": "2004",
+     "cps": 12
+    }
+   },
+   {
+    "id": "sh13",
+    "lineId": "l11",
+    "anchor": "power",
+    "scene": {
+     "type": "diagram",
+     "template": "icon-draw",
+     "data": {
+      "icon": "power",
+      "label": "POWER",
+      "color": "#E50914"
+     }
+    }
+   },
+   {
+    "id": "sh14",
+    "lineId": "l12",
+    "anchor": "moon",
+    "scene": {
+     "type": "diagram",
+     "template": "button-cards",
+     "data": {
+      "cards": [
+       {
+        "icon": "power",
+        "label": "POWER",
+        "state": "danger"
+       },
+       {
+        "icon": "moon",
+        "label": "SLEEP",
+        "state": "sleep"
+       }
+      ],
+      "active": 1
+     }
+    }
+   },
+   {
+    "id": "sh15",
+    "lineId": "l13",
+    "scene": {
+     "type": "broll",
+     "asset": {
+      "kind": "image",
+      "query": "smart speaker on table at night",
+      "prompt": "editorial photograph of smart speaker on table at night, cinematic light, no text, no logos",
+      "prefer": "either"
+     },
+     "treatment": "dark",
+     "move": "kenBurns"
+    }
+   },
+   {
+    "id": "sh16",
+    "lineId": "l14",
+    "scene": {
+     "type": "cta",
+     "variant": "subscribe-morph",
+     "text": "FOLLOW",
+     "doneText": "FOLLOWING"
+    }
+   },
+   {
+    "id": "sh17",
+    "lineId": "l14",
+    "scene": {
+     "type": "endcard",
+     "handle": "@vidskills"
+    }
+   }
+  ]
+ },
+ "PublishCopy": {
+  "title": "Your power button has been bending the truth",
+  "description": "Look at the power button on whatever you're holding.\nThat broken circle was originally the IEC symbol for standby, not on/off.",
+  "hashtags": [
+   "tech",
+   "design",
+   "history",
+   "engineering"
+  ],
+  "keywords": [
+   "power symbol",
+   "IEC 60417",
+   "standby power",
+   "IEEE 1621"
+  ],
+  "hook": "That power symbol? Its official name was standby.",
+  "altText": "Motion-graphics explainer about the origin of the power button symbol.",
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Power_symbol",
+    "title": "Power symbol"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Standby_power",
+    "title": "Standby power"
+   }
+  ]
+ },
+ "Review": {
+  "pass": true,
+  "score": 90,
+  "issues": []
+ }
+}

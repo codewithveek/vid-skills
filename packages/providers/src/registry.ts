@@ -15,7 +15,7 @@
 import type { ImageProvider, LLMProvider, MusicProvider, ProviderSet, ResearchProvider, SfxProvider, StockProvider, STTProvider, TTSProvider, VideoGenProvider } from "@vid-skills/core";
 import { ElevenLabsMusic, ElevenLabsSfx, ElevenLabsSTT, FallbackSfx, FreesoundSfx, HostedMusic, OpenverseSfx, ProceduralSfx, StableAudioMusic, WhisperSTT, DeepgramSTT, WorkersAiSTT } from "./audio.js";
 import type { HostedModel } from "./hosted.js";
-import { AnthropicLLM, FallbackLLM, GeminiLLM, OpenAICompatibleLLM, WorkersAiLLM, type AiBinding } from "./llm.js";
+import { AnthropicLLM, FallbackLLM, GeminiLLM, OpenAICompatibleLLM, StaticLLM, WorkersAiLLM, type AiBinding } from "./llm.js";
 import { HttpRenderBackend } from "./render-http.js";
 import { BraveResearch, ExaResearch, SearxngResearch, TavilyResearch, WikipediaResearch, readWithJina, withReader } from "./research.js";
 import { AzureTTS, CartesiaTTS, DeepgramTTS, DryRunTTS, ElevenLabsTTS, FallbackTTS, GoogleTTS, KokoroTTS, OpenAITTS, WorkersAiTTS } from "./tts.js";
@@ -98,6 +98,10 @@ function llmFrom(spec: Spec, env: Env, o: FactoryOptions): LLMProvider {
   if (p === "anthropic") return new AnthropicLLM({ apiKey: need(env, "ANTHROPIC_API_KEY"), model: model ?? "claude-sonnet-5-5", baseUrl: env.ANTHROPIC_BASE_URL });
   if (p === "gemini" || p === "google") return new GeminiLLM({ apiKey: need(env, "GEMINI_API_KEY"), model: model ?? "gemini-2.5-pro" });
   if (p === "workers-ai") return new WorkersAiLLM({ model: model ?? "@cf/meta/llama-3.3-70b-instruct-fp8-fast", binding: o.ai, accountId: env.CF_ACCOUNT_ID, apiToken: env.CF_API_TOKEN });
+  if (p === "static") {
+    // Replay canned answers (CI, demos, deterministic re-renders): VIDSK_STATIC_ANSWERS='{"Script": {...}, ...}'
+    return new StaticLLM(JSON.parse(need(env, "VIDSK_STATIC_ANSWERS")) as Record<string, unknown>);
+  }
   if (p === "compat") {
     if (!spec.arg) throw new ConfigError("compat LLM needs a base URL: compat:https://host/v1#model");
     return new OpenAICompatibleLLM({ id: "compat", baseUrl: spec.arg, apiKey: env.COMPAT_API_KEY, model: spec.model ?? "default", capabilities: { jsonSchema: false } });

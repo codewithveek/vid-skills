@@ -25,6 +25,13 @@ export class MemoryStorage implements Storage {
   async delete(key: string): Promise<void> {
     this.map.delete(key);
   }
+  async getRange(key: string, offset: number, length: number): Promise<Uint8Array | null> {
+    const b = this.map.get(key)?.data;
+    return b ? b.subarray(offset, offset + length) : null;
+  }
+  async size(key: string): Promise<number | null> {
+    return this.map.get(key)?.data.length ?? null;
+  }
 }
 
 export async function putJson(storage: Storage, key: string, value: unknown): Promise<void> {

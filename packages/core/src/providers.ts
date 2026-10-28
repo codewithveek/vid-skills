@@ -208,6 +208,10 @@ export interface Storage {
   put(key: string, data: Uint8Array | string, contentType?: string): Promise<StoredObject>;
   get(key: string): Promise<Uint8Array | null>;
   getText(key: string): Promise<string | null>;
+  /** Optional ranged read (R2/S3/fs) so large videos can be uploaded in chunks without loading them whole. */
+  getRange?(key: string, offset: number, length: number): Promise<Uint8Array | null>;
+  /** Optional size lookup without reading the object. */
+  size?(key: string): Promise<number | null>;
   exists(key: string): Promise<boolean>;
   list(prefix: string): Promise<StoredObject[]>;
   delete?(key: string): Promise<void>;
