@@ -100,7 +100,7 @@ export function runQa(i: {
 
   // Loudness
   if (i.measured?.lufs !== undefined && Math.abs(i.measured.lufs - -14) > 2) f.push({ severity: "major", code: "loudness", message: `Integrated loudness ${i.measured.lufs.toFixed(1)} LUFS (target −14 ± 1).` });
-  if (i.measured?.truePeak !== undefined && i.measured.truePeak > -0.9) f.push({ severity: "major", code: "true_peak", message: `True peak ${i.measured.truePeak.toFixed(1)} dBTP (limit −1).` });
+  if (i.measured?.truePeak !== undefined && i.measured.truePeak > -0.95) f.push({ severity: "major", code: "true_peak", message: `True peak ${i.measured.truePeak.toFixed(1)} dBTP (limit −1).` });
 
   const weights = { blocker: 40, major: 10, minor: 3 };
   const score = Math.max(0, 100 - f.reduce((n, x) => n + weights[x.severity], 0));

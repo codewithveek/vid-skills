@@ -2,6 +2,7 @@
  * ffmpeg/ffprobe helpers: probing, loudness measurement, two-pass EBU R128
  * mastering with a true-peak ceiling, platform transcodes and thumbnails.
  */
+import { rename } from "node:fs/promises";
 import { platformSpec, type Platform } from "@vid-skills/core";
 import { exec, execOk } from "./exec.js";
 
@@ -74,7 +75,17 @@ export async function masterAudio(input: string, output: string, target = { lufs
     // AAC encoding adds ~0.3–0.6 dB of inter-sample overshoot: limit 0.8 dB under the true-peak target.
     `alimiter=limit=${Math.pow(10, (target.truePeak - 0.8) / 20).toFixed(4)}:attack=2:release=50:level=disabled,aresample=48000`;
   await execOk(FFMPEG, ["-y", "-hide_banner", "-i", input, "-map", "0:v?", "-map", "0:a?", "-c:v", "copy", "-af", filter, "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-movflags", "+faststart", output], { timeoutMs: 20 * 60_000 });
-  return measureLoudness(output);
+  let measured = await measureLoudness(output);
+  // Verify after encoding: if the codec's overshoot still breaks the ceiling, apply the exact
+  // gain correction (plus margin) and re-encode the audio only. Costs ≤ ~0.5 LU of loudness.
+  for (let pass = 0; measured && measured.truePeak > target.truePeak && pass < 2; pass++) {
+    const gain = (target.truePeak - measured.truePeak - 0.15).toFixed(2);
+    const fixed = `${output}.tp.mp4`;
+    await execOk(FFMPEG, ["-y", "-hide_banner", "-i", output, "-map", "0:v?", "-map", "0:a?", "-c:v", "copy", "-af", `volume=${gain}dB`, "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-movflags", "+faststart", fixed], { timeoutMs: 20 * 60_000 });
+    await rename(fixed, output);
+    measured = await measureLoudness(output);
+  }
+  return measured;
 }
 
 /** Re-encode for a platform's limits when the master doesn't fit (size/duration/fps). */
