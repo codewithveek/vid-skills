@@ -53,6 +53,7 @@ export const VoicePreference = z.object({
   speed: z.number().min(0.5).max(2).default(1.08),
   style: z.string().optional().describe("Free-text delivery direction for models that accept it"),
   targetWpm: z.number().min(90).max(240).default(170),
+  normalizeNumbers: z.boolean().default(true).describe("Spell out years/numbers for the TTS engine (1868 → 'eighteen sixty-eight'); captions keep digits"),
 });
 
 export const MusicPreference = z.object({
@@ -75,7 +76,7 @@ export const VideoBrief = z.object({
   style: z.string().default("framed-explainer"),
   headline: z.string().max(60).optional().describe("Persistent on-screen title; generated when absent"),
   platforms: z.array(Platform).default(["youtube_shorts", "tiktok", "instagram_reels"]),
-  voice: VoicePreference.default({ speed: 1.08, targetWpm: 170 }),
+  voice: VoicePreference.default({ speed: 1.08, targetWpm: 170, normalizeNumbers: true }),
   music: MusicPreference.default({
     enabled: true,
     prompt: "minimal dark tech pulse, subtle analog synth drone, light percussion, no vocals, 118 bpm, loopable",

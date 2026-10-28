@@ -83,6 +83,7 @@
 **Limits**
 
 - ~510 phoneme tokens per inference pass; long text must be split.
+- Reads 4-digit years as cardinals (1868 → "one thousand eight hundred sixty-eight").
 - No voice cloning; fixed voice set (af_*, am_*, bf_*, bm_*, …).
 - No delivery instructions/emotion control.
 - Word timestamps only via Kokoro-FastAPI /dev/captioned_speech.
@@ -90,6 +91,7 @@
 **Workarounds implemented**
 
 - Pipeline chunks by beat under 1,000 chars.
+- core/speech.ts spells out years, decades, money, percents, decimals and ordinals before TTS for every provider (brief.voice.normalizeNumbers), then folds word timings back so captions keep the digits.
 - Adapter uses captioned_speech for word timings, auto-falls back to /v1/audio/speech + STT/estimated alignment.
 - speed 1.05–1.12 matches the reference's ~170 wpm delivery.
 - Runs on CPU in a container next to the renderer, so a fully open-source, zero-API pipeline is possible.

@@ -21,6 +21,8 @@ The reference voice is a male, expressive narrator at about 122 Hz median pitch 
 
 **Alignment** never blocks a run: provider timestamps first, then STT (`VIDSK_STT`: groq, openai, deepgram, elevenlabs, workers-ai, local whisper), then syllable-weighted estimation (±120 ms). Whisper hallucinations over silence are filtered.
 
+**Numbers are spelled out before synthesis** (`core/src/speech.ts`, on by default via `brief.voice.normalizeNumbers`): 1868 → "eighteen sixty-eight", 2004 → "two thousand four", 1980s → "nineteen eighties", $5 → "five dollars", 45% → "forty-five percent", 3rd → "third". Many engines (Kokoro included) otherwise read years as cardinals. Word timings are folded back onto the original tokens, so captions still show "1868" and cuts still land on the year.
+
 **Chunking**: the pipeline synthesizes one clip per beat under the provider's `maxCharsPerRequest` and passes previous/next text when the provider supports stitching. No audio is decoded on Workers.
 
 ## Music (`VIDSK_MUSIC`)

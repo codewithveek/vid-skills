@@ -38,6 +38,7 @@ import { getStyle } from "./styles/index.js";
 import { getJson, putJson } from "./storage.js";
 import { buildTimeline } from "./timing.js";
 import { estimateWordTimings, guardHallucinations, mapLinesToWords, shiftWords } from "./transcript.js";
+import { joinSpeech, remapToDisplay, toSpeech } from "./speech.js";
 import { errorMessage, isoNow, newId, normWord, round3, sha256Hex } from "./util.js";
 import { documentPage, placeholderCard, svgBytes } from "./visuals.js";
 
@@ -322,14 +323,17 @@ export async function stageVoice(ctx: PipelineContext, brief: VideoBrief, script
   for (let k = 0; k < chunks.length; k++) {
     const lines = chunks[k]!;
     const text = lines.map((l) => l.text).join(" ");
+    // What the engine reads (years/numbers spelled out) vs. what captions show (digits kept).
+    const speak = (ls: typeof lines | undefined) => (ls ? joinSpeech(ls.map((l) => (brief.voice.normalizeNumbers ? toSpeech(l.text) : { spoken: l.text, map: l.text.split(/\s+/).filter(Boolean).map((d) => ({ display: d, spoken: 1 })) }))) : undefined);
+    const sp = speak(lines)!;
     const res: TTSResult = await tts.synthesize({
-      text,
+      text: sp.spoken,
       voice: brief.voice.voice,
       speed: brief.voice.speed,
       language: brief.language,
       instructions: brief.voice.style ?? "Conversational, curious, confident explainer voice. Brisk pace, clear consonants, natural emphasis.",
-      previousText: chunks[k - 1]?.map((l) => l.text).join(" "),
-      nextText: chunks[k + 1]?.map((l) => l.text).join(" "),
+      previousText: speak(chunks[k - 1])?.spoken,
+      nextText: speak(chunks[k + 1])?.spoken,
       signal: ctx.signal,
     });
     const dur = res.durationSec ?? audioDuration(res.bytes, res.mime) ?? (res.words?.length ? res.words[res.words.length - 1]!.end + 0.15 : estimateDuration(text, brief.voice.targetWpm));
@@ -345,10 +349,11 @@ export async function stageVoice(ctx: PipelineContext, brief: VideoBrief, script
         }
       }
       if (!ws?.length) {
-        ws = estimateWordTimings(text, dur);
+        ws = estimateWordTimings(sp.spoken, dur);
         how = "estimated";
       }
     }
+    ws = remapToDisplay(ws, sp);
     if (how === "estimated" || (how === "stt" && alignment !== "estimated")) alignment = how;
     else if (how === "provider-char" && alignment === "provider-word") alignment = how;
     const ext = res.mime.includes("mpeg") ? "mp3" : res.mime.includes("ogg") ? "ogg" : "wav";

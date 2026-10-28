@@ -3,6 +3,7 @@ export * from "./providers.js";
 export * from "./util.js";
 export * from "./llm.js";
 export * from "./transcript.js";
+export * from "./speech.js";
 export * from "./captions.js";
 export * from "./timing.js";
 export * from "./audio-plan.js";
