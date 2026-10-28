@@ -1,0 +1,153 @@
+{
+  "ResearchDossier": {
+    "topic": "why jeans have tiny metal rivets on the pockets",
+    "summary": "The copper rivets on jeans are a patented fix from 1873: a Reno tailor reinforced a woodcutter's work pants, then partnered with his fabric supplier, Levi Strauss, to patent it. The tiny watch pocket came a few years later.",
+    "angle": "The little metal studs you never look at are a 150-year-old patent that started with one woodcutter's pants.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Jacob W. Davis opened a tailor shop in Reno, Nevada in 1869.",
+        "sources": [{ "url": "https://en.wikipedia.org/wiki/Jacob_W._Davis", "title": "Jacob W. Davis - Wikipedia", "quote": "a tailor shop in the main street of the town" }],
+        "confidence": "medium"
+      },
+      {
+        "id": "c2",
+        "text": "In December 1870 a customer asked Davis to make a pair of strong working pants for her husband, a woodcutter.",
+        "sources": [{ "url": "https://en.wikipedia.org/wiki/Jacob_W._Davis", "title": "Jacob W. Davis - Wikipedia", "quote": "a pair of strong working pants for her husband who was a woodcutter" }],
+        "confidence": "medium"
+      },
+      {
+        "id": "c3",
+        "text": "Copper rivets reinforced the points of stress, such as pocket corners and the bottom of the button fly.",
+        "sources": [{ "url": "https://en.wikipedia.org/wiki/Jeans", "title": "Jeans - Wikipedia", "quote": "The copper rivets were to reinforce the points of stress, such as pocket corners and at the bottom of the button fly." }],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "Davis wanted financial backing for a patent and wrote to Levi Strauss, his fabric supplier, in 1872; Strauss accepted.",
+        "sources": [
+          { "url": "https://en.wikipedia.org/wiki/Jeans", "title": "Jeans - Wikipedia", "quote": "In 1872, Davis wrote to Strauss asking to partner with him to patent and sell clothing reinforced with rivets." },
+          { "url": "https://en.wikipedia.org/wiki/Jacob_W._Davis", "title": "Jacob W. Davis - Wikipedia" }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "On May 20, 1873, Davis and Strauss received US patent No. 139,121 for an 'Improvement in Fastening Pocket-Openings'.",
+        "sources": [{ "url": "https://en.wikipedia.org/wiki/Jeans", "title": "Jeans - Wikipedia", "quote": "received US patent No. 139,121 for an \"Improvement in Fastening Pocket-Openings\" on May 20, 1873" }],
+        "confidence": "high"
+      },
+      {
+        "id": "c6",
+        "text": "The small riveted watch pocket was first added by Levi Strauss to their jeans in the late 1870s.",
+        "sources": [
+          { "url": "https://en.wikipedia.org/wiki/Jeans", "title": "Jeans - Wikipedia", "quote": "The small riveted watch pocket was first added by Levi Strauss to their jeans in the late 1870s." },
+          { "url": "https://en.wikipedia.org/wiki/Watch_pocket", "title": "Watch pocket - Wikipedia", "quote": "originally for holding a pocket watch" }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [
+      { "year": "1870", "event": "Woodcutter's pants, Reno", "claimId": "c2" },
+      { "year": "1872", "event": "Letter to Levi Strauss", "claimId": "c4" },
+      { "year": "1873", "event": "Patent 139,121", "claimId": "c5" },
+      { "year": "1870s", "event": "Watch pocket added", "claimId": "c6" }
+    ],
+    "analogies": ["a staple holding paper together"],
+    "visualIdeas": ["close-up of jeans rivet", "pocket watch", "Levi Strauss portrait", "patent drawing"],
+    "openQuestions": ["Exact year the watch pocket appeared (source says late 1870s)"]
+  },
+  "Script": {
+    "headline": "Your Jeans Have a Patent",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1", "kind": "hook", "musicCue": "none",
+        "lines": [
+          { "id": "l1", "text": "Look at the pockets on your jeans.", "emphasis": ["pockets"], "claimIds": [], "pauseAfterSec": 0.25 },
+          { "id": "l2", "text": "See those tiny metal studs? They're not decoration.", "emphasis": ["decoration"], "claimIds": ["c3"], "pauseAfterSec": 0.4 }
+        ]
+      },
+      {
+        "id": "b2", "kind": "twist", "musicCue": "drop",
+        "lines": [
+          { "id": "l3", "text": "They're a patented invention, and it started with one woodcutter.", "emphasis": ["patented"], "claimIds": ["c2", "c5"], "pauseAfterSec": 0.3 }
+        ]
+      },
+      {
+        "id": "b3", "kind": "history", "musicCue": "none",
+        "lines": [
+          { "id": "l4", "text": "Back in 1870, a tailor in Reno, Nevada got a request.", "emphasis": ["1870"], "claimIds": ["c1", "c2"], "pauseAfterSec": 0.2 },
+          { "id": "l5", "text": "A woman needed work pants for her husband that wouldn't fall apart.", "emphasis": ["apart"], "claimIds": ["c2"], "pauseAfterSec": 0.3 }
+        ]
+      },
+      {
+        "id": "b4", "kind": "mechanism", "musicCue": "none",
+        "lines": [
+          { "id": "l6", "text": "So Jacob Davis hammered copper rivets into the spots that took the most strain.", "emphasis": ["rivets"], "claimIds": ["c3"], "pauseAfterSec": 0.2 },
+          { "id": "l7", "text": "The pocket corners. The bottom of the fly.", "emphasis": ["corners"], "claimIds": ["c3"], "pauseAfterSec": 0.3 }
+        ]
+      },
+      {
+        "id": "b5", "kind": "proof", "musicCue": "none",
+        "lines": [
+          { "id": "l8", "text": "He needed money for a patent, so he wrote to his fabric supplier.", "emphasis": ["patent"], "claimIds": ["c4"], "pauseAfterSec": 0.2 },
+          { "id": "l9", "text": "A man named Levi Strauss.", "emphasis": ["Levi"], "claimIds": ["c4"], "pauseAfterSec": 0.3 },
+          { "id": "l10", "text": "In 1873, the two of them got the patent together.", "emphasis": ["1873"], "claimIds": ["c5"], "pauseAfterSec": 0.3 }
+        ]
+      },
+      {
+        "id": "b6", "kind": "payoff", "musicCue": "none",
+        "lines": [
+          { "id": "l11", "text": "And that tiny pocket inside the big one? Added a few years later, for a pocket watch.", "emphasis": ["watch"], "claimIds": ["c6"], "pauseAfterSec": 0.4 },
+          { "id": "l12", "text": "So every pair you own still carries a fix for one woodcutter's pants.", "emphasis": ["woodcutter's"], "claimIds": ["c2", "c3"], "pauseAfterSec": 0.4 }
+        ]
+      },
+      {
+        "id": "b7", "kind": "cta", "musicCue": "none",
+        "lines": [
+          { "id": "l13", "text": "Follow for more things hiding in plain sight.", "emphasis": ["Follow"], "claimIds": [], "pauseAfterSec": 0.2 }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      { "id": "sh1", "lineId": "l1", "scene": { "type": "broll", "asset": { "kind": "image", "query": "blue jeans", "prompt": "editorial photograph of blue jeans front pocket, no text, no logos", "prefer": "either" }, "treatment": "natural", "move": "pushIn" } },
+      { "id": "sh2", "lineId": "l2", "anchor": "studs", "scene": { "type": "broll", "asset": { "kind": "image", "query": "jeans rivet", "prompt": "macro photograph of a copper rivet on denim, no text, no logos", "prefer": "either" }, "treatment": "natural", "move": "kenBurns", "label": "Copper rivet", "sfx": "pop" } },
+      { "id": "sh3", "lineId": "l2", "anchor": "decoration", "scene": { "type": "diagram", "template": "compare", "data": { "left": "DECORATION", "right": "ENGINEERING", "leftIcon": "x", "rightIcon": "bolt" } } },
+      { "id": "sh4", "lineId": "l3", "anchor": "patented", "scene": { "type": "stat", "value": "No. 139,121", "caption": "US patent, \"Improvement in Fastening Pocket-Openings\"", "sourceClaimId": "c5" } },
+      { "id": "sh5", "lineId": "l3", "anchor": "woodcutter", "scene": { "type": "broll", "asset": { "kind": "image", "query": "lumberjacks 19th century", "prompt": "vintage photograph of 19th century lumberjacks, no text, no logos", "prefer": "either" }, "treatment": "bw", "move": "pushIn" } },
+      { "id": "sh6", "lineId": "l4", "scene": { "type": "typewriter", "lead": "Back in", "highlight": "1870", "cps": 12 } },
+      { "id": "sh7", "lineId": "l4", "anchor": "Reno", "scene": { "type": "broll", "asset": { "kind": "image", "query": "Reno Nevada historic", "prompt": "vintage photograph of 19th century Reno Nevada main street, no text, no logos", "prefer": "either" }, "treatment": "vintage", "move": "kenBurns", "label": "Reno, Nevada" } },
+      { "id": "sh8", "lineId": "l5", "anchor": "pants", "scene": { "type": "broll", "asset": { "kind": "image", "query": "work trousers", "prompt": "vintage photograph of worn work trousers, no text, no logos", "prefer": "either" }, "treatment": "vintage", "move": "pushIn" } },
+      { "id": "sh9", "lineId": "l5", "anchor": "apart", "scene": { "type": "diagram", "template": "icon-draw", "data": { "icon": "warning", "label": "TORN SEAMS", "color": "#E50914" }, "sfx": "impact" } },
+      { "id": "sh10", "lineId": "l6", "anchor": "copper", "scene": { "type": "broll", "asset": { "kind": "image", "query": "copper rivets", "prompt": "macro photograph of copper rivets, no text, no logos", "prefer": "either" }, "treatment": "natural", "move": "pushIn", "label": "Copper rivets" } },
+      { "id": "sh11", "lineId": "l6", "anchor": "strain", "scene": { "type": "diagram", "template": "icon-draw", "data": { "icon": "bolt", "label": "STRESS POINTS", "color": "#FF9F1C", "glow": "yes" } } },
+      { "id": "sh12", "lineId": "l7", "anchor": "pocket", "scene": { "type": "diagram", "template": "checklist", "data": { "items": ["Pocket corners", "Bottom of the fly"] } } },
+      { "id": "sh13", "lineId": "l8", "anchor": "money", "scene": { "type": "diagram", "template": "icon-draw", "data": { "icon": "dollar", "label": "PATENT FEES", "color": "#20FFF6" } } },
+      { "id": "sh14", "lineId": "l8", "anchor": "wrote", "scene": { "type": "diagram", "template": "flow", "data": { "nodes": [{ "label": "DAVIS", "icon": "user" }, { "label": "LETTER", "icon": "arrow" }, { "label": "STRAUSS", "icon": "user" }] } } },
+      { "id": "sh15", "lineId": "l9", "anchor": "Levi", "scene": { "type": "broll", "asset": { "kind": "image", "query": "Levi Strauss", "prompt": "historical portrait photograph of Levi Strauss, no text", "prefer": "either" }, "treatment": "bw", "move": "pushIn", "label": "Levi Strauss" } },
+      { "id": "sh16", "lineId": "l10", "scene": { "type": "diagram", "template": "timeline", "data": { "events": [{ "year": "1870", "label": "Reno" }, { "year": "1872", "label": "The letter" }, { "year": "1873", "label": "Patent" }] } } },
+      { "id": "sh17", "lineId": "l11", "anchor": "tiny", "scene": { "type": "broll", "asset": { "kind": "image", "query": "jeans watch pocket", "prompt": "close-up photograph of the small watch pocket on jeans, no text, no logos", "prefer": "either" }, "treatment": "natural", "move": "pushIn", "label": "The watch pocket" } },
+      { "id": "sh18", "lineId": "l11", "anchor": "watch", "scene": { "type": "broll", "asset": { "kind": "image", "query": "pocket watch", "prompt": "vintage photograph of a pocket watch, no text, no logos", "prefer": "either" }, "treatment": "vintage", "move": "kenBurns", "sfx": "tick" } },
+      { "id": "sh19", "lineId": "l12", "scene": { "type": "broll", "asset": { "kind": "image", "query": "denim", "prompt": "editorial photograph of stacked denim jeans, no text, no logos", "prefer": "either" }, "treatment": "dark", "move": "pushIn" } },
+      { "id": "sh20", "lineId": "l13", "scene": { "type": "cta", "variant": "subscribe-morph", "text": "FOLLOW", "doneText": "FOLLOWING" } },
+      { "id": "sh21", "lineId": "l13", "scene": { "type": "endcard", "handle": "@hiddeninplainsight.tv" } }
+    ]
+  },
+  "PublishCopy": {
+    "title": "The tiny metal studs on your jeans are a patent from 1873",
+    "description": "Look at the pockets on your jeans.\nThose copper rivets started with a Reno tailor, Jacob Davis, reinforcing a woodcutter's work pants in 1870. He partnered with his fabric supplier, Levi Strauss, and in 1873 they patented it. The tiny watch pocket came a few years later.",
+    "hashtags": ["history", "jeans", "fashionhistory", "didyouknow"],
+    "keywords": ["jeans rivets", "Jacob Davis", "Levi Strauss patent", "watch pocket", "denim history"],
+    "hook": "Those tiny metal studs on your jeans? They're a patent.",
+    "altText": "Motion-graphics explainer on why jeans have copper rivets on the pockets.",
+    "sources": [
+      { "url": "https://en.wikipedia.org/wiki/Jeans", "title": "Jeans" },
+      { "url": "https://en.wikipedia.org/wiki/Jacob_W._Davis", "title": "Jacob W. Davis" },
+      { "url": "https://en.wikipedia.org/wiki/Watch_pocket", "title": "Watch pocket" }
+    ]
+  },
+  "Review": { "pass": true, "score": 90, "issues": [] }
+}
