@@ -1,0 +1,645 @@
+{
+ "ResearchDossier": {
+  "topic": "why traffic lights are red, yellow and green",
+  "summary": "The first traffic signal predates the car, exploded within weeks, and the amber caution light was only added in 1920.",
+  "angle": "The traffic light is older than the car, and the yellow light is the newest part.",
+  "claims": [
+   {
+    "id": "c1",
+    "text": "Traffic signals invented by John Peake Knight were installed outside the Houses of Parliament in London in December 1868.",
+    "sources": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Traffic_light",
+      "title": "Traffic light - Wikipedia",
+      "quote": "installed outside the Houses of Parliament in London"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "id": "c2",
+    "text": "A police constable operated the signal, using a lever at night to show a red or green light.",
+    "sources": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Traffic_light",
+      "title": "Traffic light - Wikipedia",
+      "quote": "at night, operated a lever to control the lights"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "id": "c3",
+    "text": "The London signal exploded on 2 January 1869 and was taken down.",
+    "sources": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Traffic_light",
+      "title": "Traffic light - Wikipedia",
+      "quote": "This system exploded on 2 January 1869 and was taken down."
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "id": "c4",
+    "text": "In 1912 Lester Wire, a policeman in Salt Lake City, developed the first electric traffic light.",
+    "sources": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Traffic_light",
+      "title": "Traffic light - Wikipedia"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "id": "c5",
+    "text": "In August 1914 the American Traffic Signal Company installed a signal at East 105th Street in Cleveland.",
+    "sources": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Traffic_light",
+      "title": "Traffic light - Wikipedia"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "id": "c6",
+    "text": "In 1920 William Potts created the first four-way, three-color traffic light in Detroit, the first to include an amber caution light.",
+    "sources": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Traffic_light",
+      "title": "Traffic light - Wikipedia",
+      "quote": "the first to include an amber 'caution' light"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "id": "c7",
+    "text": "The Benz Patent-Motorwagen, regarded as the first practical automobile, dates from 1885\u20131886.",
+    "sources": [
+     {
+      "url": "https://en.wikipedia.org/wiki/Benz_Patent-Motorwagen",
+      "title": "Benz Patent-Motorwagen - Wikipedia"
+     }
+    ],
+    "confidence": "high"
+   }
+  ],
+  "timeline": [
+   {
+    "year": "1868",
+    "event": "London signal",
+    "claimId": "c1"
+   },
+   {
+    "year": "1912",
+    "event": "Electric light, Salt Lake City",
+    "claimId": "c4"
+   },
+   {
+    "year": "1914",
+    "event": "Cleveland",
+    "claimId": "c5"
+   },
+   {
+    "year": "1920",
+    "event": "Amber added, Detroit",
+    "claimId": "c6"
+   }
+  ],
+  "analogies": [
+   "a referee's whistle",
+   "a railway guard's flag"
+  ],
+  "visualIdeas": [
+   "traffic light at night",
+   "Houses of Parliament",
+   "vintage car"
+  ],
+  "openQuestions": [
+   "Was the 1868 signal gas-lit? (not stated in the source used)",
+   "Origin of green/white railway colour conventions"
+  ]
+ },
+ "Script": {
+  "headline": "Traffic Lights Came Before Cars",
+  "cta": "Red means stop. Follow means more stories like this.",
+  "beats": [
+   {
+    "id": "b1",
+    "kind": "hook",
+    "musicCue": "none",
+    "lines": [
+     {
+      "id": "l1",
+      "text": "Look at the next traffic light you stop at.",
+      "emphasis": [
+       "traffic"
+      ],
+      "claimIds": [],
+      "pauseAfterSec": 0.25
+     },
+     {
+      "id": "l2",
+      "text": "Red, yellow, green. It feels as old as the car.",
+      "emphasis": [
+       "car"
+      ],
+      "claimIds": [],
+      "pauseAfterSec": 0.4
+     }
+    ]
+   },
+   {
+    "id": "b2",
+    "kind": "twist",
+    "musicCue": "drop",
+    "lines": [
+     {
+      "id": "l3",
+      "text": "Except the first one showed up before the car existed.",
+      "emphasis": [
+       "before"
+      ],
+      "claimIds": [
+       "c1",
+       "c7"
+      ],
+      "pauseAfterSec": 0.25
+     },
+     {
+      "id": "l4",
+      "text": "Back in 1868, outside the Houses of Parliament in London.",
+      "emphasis": [
+       "1868"
+      ],
+      "claimIds": [
+       "c1"
+      ],
+      "pauseAfterSec": 0.25
+     }
+    ]
+   },
+   {
+    "id": "b3",
+    "kind": "history",
+    "musicCue": "none",
+    "lines": [
+     {
+      "id": "l5",
+      "text": "A police officer pulled a lever to show red or green.",
+      "emphasis": [
+       "lever"
+      ],
+      "claimIds": [
+       "c2"
+      ],
+      "pauseAfterSec": 0.25
+     },
+     {
+      "id": "l6",
+      "text": "Within weeks, it exploded.",
+      "emphasis": [
+       "exploded"
+      ],
+      "claimIds": [
+       "c3"
+      ],
+      "pauseAfterSec": 0.25
+     },
+     {
+      "id": "l7",
+      "text": "And the idea was taken down.",
+      "emphasis": [
+       "down"
+      ],
+      "claimIds": [
+       "c3"
+      ],
+      "pauseAfterSec": 0.4
+     }
+    ]
+   },
+   {
+    "id": "b4",
+    "kind": "mechanism",
+    "musicCue": "none",
+    "lines": [
+     {
+      "id": "l8",
+      "text": "By 1912, a Salt Lake City policeman built an electric version.",
+      "emphasis": [
+       "electric"
+      ],
+      "claimIds": [
+       "c4"
+      ],
+      "pauseAfterSec": 0.25
+     },
+     {
+      "id": "l9",
+      "text": "In 1914, Cleveland mounted one on a street corner.",
+      "emphasis": [
+       "Cleveland"
+      ],
+      "claimIds": [
+       "c5"
+      ],
+      "pauseAfterSec": 0.25
+     }
+    ]
+   },
+   {
+    "id": "b5",
+    "kind": "proof",
+    "musicCue": "none",
+    "lines": [
+     {
+      "id": "l10",
+      "text": "But there was still nothing between stop and go.",
+      "emphasis": [
+       "nothing"
+      ],
+      "claimIds": [
+       "c6"
+      ],
+      "pauseAfterSec": 0.25
+     },
+     {
+      "id": "l11",
+      "text": "In 1920, a Detroit signal added a third color.",
+      "emphasis": [
+       "third"
+      ],
+      "claimIds": [
+       "c6"
+      ],
+      "pauseAfterSec": 0.25
+     },
+     {
+      "id": "l12",
+      "text": "Amber, for caution.",
+      "emphasis": [
+       "Amber"
+      ],
+      "claimIds": [
+       "c6"
+      ],
+      "pauseAfterSec": 0.25
+     }
+    ]
+   },
+   {
+    "id": "b6",
+    "kind": "payoff",
+    "musicCue": "none",
+    "lines": [
+     {
+      "id": "l13",
+      "text": "So that yellow light you rush through is the newest part of the whole idea.",
+      "emphasis": [
+       "newest"
+      ],
+      "claimIds": [
+       "c6"
+      ],
+      "pauseAfterSec": 0.4
+     }
+    ]
+   },
+   {
+    "id": "b7",
+    "kind": "cta",
+    "musicCue": "none",
+    "lines": [
+     {
+      "id": "l14",
+      "text": "Red means stop. Follow means more stories like this.",
+      "emphasis": [
+       "Follow"
+      ],
+      "claimIds": [],
+      "pauseAfterSec": 0.2
+     }
+    ]
+   }
+  ]
+ },
+ "Storyboard": {
+  "shots": [
+   {
+    "id": "sh1",
+    "lineId": "l1",
+    "scene": {
+     "type": "broll",
+     "asset": {
+      "kind": "image",
+      "query": "traffic light",
+      "prompt": "editorial photograph of traffic light, no text, no logos",
+      "prefer": "either"
+     },
+     "treatment": "natural",
+     "move": "pushIn"
+    }
+   },
+   {
+    "id": "sh2",
+    "lineId": "l2",
+    "anchor": "Red",
+    "scene": {
+     "type": "diagram",
+     "template": "button-cards",
+     "data": {
+      "cards": [
+       {
+        "icon": "x",
+        "label": "STOP",
+        "state": "danger"
+       },
+       {
+        "icon": "warning",
+        "label": "CAUTION",
+        "state": "standby"
+       },
+       {
+        "icon": "check",
+        "label": "GO",
+        "state": "on"
+       }
+      ],
+      "active": 2
+     }
+    }
+   },
+   {
+    "id": "sh3",
+    "lineId": "l3",
+    "anchor": "before",
+    "scene": {
+     "type": "analogy",
+     "asset": {
+      "kind": "image",
+      "query": "Benz Patent-Motorwagen",
+      "prompt": "editorial photograph of Benz Patent-Motorwagen, no text, no logos",
+      "prefer": "either"
+     },
+     "caption": "Not invented yet"
+    }
+   },
+   {
+    "id": "sh4",
+    "lineId": "l4",
+    "scene": {
+     "type": "typewriter",
+     "lead": "Back in",
+     "highlight": "1868",
+     "cps": 12
+    }
+   },
+   {
+    "id": "sh5",
+    "lineId": "l4",
+    "anchor": "Houses",
+    "scene": {
+     "type": "broll",
+     "asset": {
+      "kind": "image",
+      "query": "Palace of Westminster",
+      "prompt": "editorial photograph of Palace of Westminster, no text, no logos",
+      "prefer": "either"
+     },
+     "treatment": "vintage",
+     "move": "kenBurns"
+    }
+   },
+   {
+    "id": "sh6",
+    "lineId": "l5",
+    "scene": {
+     "type": "broll",
+     "asset": {
+      "kind": "image",
+      "query": "Victorian police constable",
+      "prompt": "editorial photograph of Victorian police constable, no text, no logos",
+      "prefer": "either"
+     },
+     "treatment": "bw",
+     "move": "pushIn"
+    }
+   },
+   {
+    "id": "sh7",
+    "lineId": "l5",
+    "anchor": "lever",
+    "scene": {
+     "type": "diagram",
+     "template": "button-cards",
+     "data": {
+      "cards": [
+       {
+        "icon": "x",
+        "label": "STOP",
+        "state": "danger"
+       },
+       {
+        "icon": "check",
+        "label": "GO",
+        "state": "on"
+       }
+      ],
+      "active": 0
+     }
+    }
+   },
+   {
+    "id": "sh8",
+    "lineId": "l6",
+    "anchor": "exploded",
+    "scene": {
+     "type": "stat",
+     "value": "1869",
+     "caption": "The first traffic signal exploded",
+     "sourceClaimId": "c3"
+    }
+   },
+   {
+    "id": "sh9",
+    "lineId": "l7",
+    "scene": {
+     "type": "diagram",
+     "template": "icon-draw",
+     "data": {
+      "icon": "x",
+      "label": "TAKEN DOWN",
+      "color": "#E50914"
+     }
+    }
+   },
+   {
+    "id": "sh10",
+    "lineId": "l8",
+    "scene": {
+     "type": "typewriter",
+     "lead": "By",
+     "highlight": "1912",
+     "cps": 12
+    }
+   },
+   {
+    "id": "sh11",
+    "lineId": "l8",
+    "anchor": "electric",
+    "scene": {
+     "type": "diagram",
+     "template": "icon-draw",
+     "data": {
+      "icon": "bolt",
+      "label": "ELECTRIC",
+      "color": "#20FFF6",
+      "glow": "yes"
+     }
+    }
+   },
+   {
+    "id": "sh12",
+    "lineId": "l9",
+    "anchor": "Cleveland",
+    "scene": {
+     "type": "broll",
+     "asset": {
+      "kind": "image",
+      "query": "Cleveland Ohio 1910s street",
+      "prompt": "editorial photograph of Cleveland Ohio 1910s street, no text, no logos",
+      "prefer": "either"
+     },
+     "treatment": "vintage",
+     "move": "panLeft"
+    }
+   },
+   {
+    "id": "sh13",
+    "lineId": "l10",
+    "scene": {
+     "type": "diagram",
+     "template": "compare",
+     "data": {
+      "left": "STOP",
+      "right": "GO",
+      "leftIcon": "x",
+      "rightIcon": "check"
+     }
+    }
+   },
+   {
+    "id": "sh14",
+    "lineId": "l11",
+    "scene": {
+     "type": "diagram",
+     "template": "timeline",
+     "data": {
+      "events": [
+       {
+        "year": "1868",
+        "label": "London"
+       },
+       {
+        "year": "1912",
+        "label": "Salt Lake City"
+       },
+       {
+        "year": "1914",
+        "label": "Cleveland"
+       },
+       {
+        "year": "1920",
+        "label": "Detroit"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "id": "sh15",
+    "lineId": "l12",
+    "anchor": "Amber",
+    "scene": {
+     "type": "diagram",
+     "template": "icon-draw",
+     "data": {
+      "icon": "warning",
+      "label": "CAUTION",
+      "color": "#FF9F1C",
+      "glow": "yes"
+     }
+    }
+   },
+   {
+    "id": "sh16",
+    "lineId": "l13",
+    "scene": {
+     "type": "broll",
+     "asset": {
+      "kind": "image",
+      "query": "amber traffic light",
+      "prompt": "editorial photograph of amber traffic light, no text, no logos",
+      "prefer": "either"
+     },
+     "treatment": "dark",
+     "move": "pushIn"
+    }
+   },
+   {
+    "id": "sh17",
+    "lineId": "l14",
+    "scene": {
+     "type": "cta",
+     "variant": "subscribe-morph",
+     "text": "FOLLOW",
+     "doneText": "FOLLOWING"
+    }
+   },
+   {
+    "id": "sh18",
+    "lineId": "l14",
+    "scene": {
+     "type": "endcard",
+     "handle": "@vidskills"
+    }
+   }
+  ]
+ },
+ "PublishCopy": {
+  "title": "Traffic lights are older than cars (and the first one exploded)",
+  "description": "Look at the next traffic light you stop at.\nThe first traffic signal went up outside the Houses of Parliament in 1868, before the car existed, and exploded within weeks. The amber 'caution' light didn't arrive until 1920.",
+  "hashtags": [
+   "history",
+   "traffic",
+   "engineering",
+   "didyouknow"
+  ],
+  "keywords": [
+   "traffic light history",
+   "John Peake Knight",
+   "first traffic light",
+   "William Potts amber light"
+  ],
+  "hook": "The first traffic light came before the first car. Then it exploded.",
+  "altText": "Motion-graphics explainer on the history of the traffic light.",
+  "sources": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Traffic_light",
+    "title": "Traffic light"
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Benz_Patent-Motorwagen",
+    "title": "Benz Patent-Motorwagen"
+   }
+  ]
+ },
+ "Review": {
+  "pass": true,
+  "score": 90,
+  "issues": []
+ }
+}
