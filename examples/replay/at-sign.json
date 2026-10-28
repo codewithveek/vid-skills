@@ -1,0 +1,121 @@
+{
+  "ResearchDossier": {
+    "topic": "where the @ sign in email addresses comes from",
+    "summary": "The @ sign was a merchant's unit for an amphora of wine in a 1536 letter, became accounting shorthand for 'at the rate of', reached typewriters by 1900, and was chosen by Ray Tomlinson in 1971 to split user from host in the first networked email because nobody used it in names.",
+    "angle": "The symbol in your email address is a 500-year-old wine measurement.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Historian Giorgio Stabile traced the @ symbol to a mercantile letter sent by Florentine Francesco Lapi from Seville to Rome on 4 May 1536, where it meant an amphora (anfora), a unit of weight and volume; the document concerns the price of an @ of wine in Peru.",
+        "sources": [{ "url": "https://en.wikipedia.org/wiki/At_sign", "title": "At sign - Wikipedia", "quote": "the price of an @ of wine in Peru" }],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The @ is used as an accounting and invoice abbreviation meaning 'at a rate of'.",
+        "sources": [{ "url": "https://en.wikipedia.org/wiki/At_sign", "title": "At sign - Wikipedia", "quote": "used as an accounting and invoice abbreviation meaning \"at a rate of\"" }],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "The @ appeared on Underwood typewriters from the Underwood No. 5 in 1900 onward.",
+        "sources": [{ "url": "https://en.wikipedia.org/wiki/At_sign", "title": "At sign - Wikipedia" }],
+        "confidence": "medium"
+      },
+      {
+        "id": "c4",
+        "text": "In 1971 Ray Tomlinson created the first networked email system; the @ was chosen because it was not used in usernames or in TENEX programming, separating the user name from the host.",
+        "sources": [
+          { "url": "https://en.wikipedia.org/wiki/Ray_Tomlinson", "title": "Ray Tomlinson - Wikipedia", "quote": "The symbol was chosen because it was not used in usernames or in TENEX programming." },
+          { "url": "https://en.wikipedia.org/wiki/At_sign", "title": "At sign - Wikipedia", "quote": "Ray Tomlinson of BBN Technologies is credited for having introduced this usage in 1971." }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "Tomlinson's first email was a test message between two computers placed side by side.",
+        "sources": [{ "url": "https://en.wikipedia.org/wiki/Ray_Tomlinson", "title": "Ray Tomlinson - Wikipedia", "quote": "a test message between two computers placed side by side" }],
+        "confidence": "high"
+      },
+      {
+        "id": "c6",
+        "text": "In 2010 the Museum of Modern Art added the @ symbol to its design collection.",
+        "sources": [{ "url": "https://en.wikipedia.org/wiki/At_sign", "title": "At sign - Wikipedia", "quote": "In 2010, the Museum of Modern Art (MoMA) added the @ symbol to its design collection." }],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [
+      { "year": "1536", "event": "A jar of wine", "claimId": "c1" },
+      { "year": "1900", "event": "On typewriters", "claimId": "c3" },
+      { "year": "1971", "event": "First network email", "claimId": "c4" },
+      { "year": "2010", "event": "MoMA collection", "claimId": "c6" }
+    ],
+    "analogies": ["an address on an envelope: name, then building"],
+    "visualIdeas": ["@ key on a keyboard", "amphora", "Seville", "Underwood typewriter", "Ray Tomlinson", "ARPANET map"],
+    "openQuestions": ["Earlier non-commercial @-like shapes exist (1345 manuscript); script says 'merchant letter' only"]
+  },
+  "Script": {
+    "headline": "The @ Sign Is 500 Years Old",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1", "kind": "hook", "musicCue": "none",
+        "lines": [
+          { "id": "l1", "text": "Look at the at sign in your email address.", "emphasis": ["email"], "claimIds": [], "pauseAfterSec": 0.25 },
+          { "id": "l2", "text": "It's older than email by more than four centuries.", "emphasis": ["centuries"], "claimIds": ["c1", "c4"], "pauseAfterSec": 0.4 }
+        ]
+      },
+      {
+        "id": "b2", "kind": "history", "musicCue": "drop",
+        "lines": [
+          { "id": "l3", "text": "In 1536, a Florentine merchant in Seville wrote a letter to Rome.", "emphasis": ["1536"], "claimIds": ["c1"], "pauseAfterSec": 0.2 },
+          { "id": "l4", "text": "He used the symbol for a jar of wine. An amphora.", "emphasis": ["wine"], "claimIds": ["c1"], "pauseAfterSec": 0.25 },
+          { "id": "l5", "text": "The letter was about the price of wine in Peru.", "emphasis": ["Peru"], "claimIds": ["c1"], "pauseAfterSec": 0.3 }
+        ]
+      },
+      {
+        "id": "b3", "kind": "mechanism", "musicCue": "none",
+        "lines": [
+          { "id": "l6", "text": "Merchants kept it as shorthand for at the rate of.", "emphasis": ["rate"], "claimIds": ["c2"], "pauseAfterSec": 0.25 },
+          { "id": "l7", "text": "By 1900, it was on typewriter keyboards.", "emphasis": ["typewriter"], "claimIds": ["c3"], "pauseAfterSec": 0.3 }
+        ]
+      },
+      {
+        "id": "b4", "kind": "twist", "musicCue": "none",
+        "lines": [
+          { "id": "l8", "text": "Then in 1971, Ray Tomlinson built the first email that could travel between computers.", "emphasis": ["Tomlinson"], "claimIds": ["c4"], "pauseAfterSec": 0.25 },
+          { "id": "l9", "text": "He needed a symbol to split a person's name from their machine.", "emphasis": ["split"], "claimIds": ["c4"], "pauseAfterSec": 0.2 },
+          { "id": "l10", "text": "He picked the at sign, because nobody used it in names.", "emphasis": ["nobody"], "claimIds": ["c4"], "pauseAfterSec": 0.25 },
+          { "id": "l11", "text": "His first test went to a computer sitting right next to him.", "emphasis": ["next"], "claimIds": ["c5"], "pauseAfterSec": 0.35 }
+        ]
+      },
+      {
+        "id": "b5", "kind": "payoff", "musicCue": "none",
+        "lines": [
+          { "id": "l12", "text": "In 2010, the Museum of Modern Art added it to its design collection.", "emphasis": ["Museum"], "claimIds": ["c6"], "pauseAfterSec": 0.25 },
+          { "id": "l13", "text": "Not bad for a wine jar.", "emphasis": ["wine"], "claimIds": ["c1"], "pauseAfterSec": 0.4 }
+        ]
+      },
+      {
+        "id": "b6", "kind": "cta", "musicCue": "none",
+        "lines": [
+          { "id": "l14", "text": "Follow for more things hiding in plain sight.", "emphasis": ["Follow"], "claimIds": [], "pauseAfterSec": 0.2 }
+        ]
+      }
+    ]
+  },
+  "Storyboard": { "shots": [] },
+  "PublishCopy": {
+    "title": "The @ in your email address is a 500-year-old wine measurement",
+    "description": "Look at the @ in your email address.\nIn a 1536 merchant's letter it meant an amphora, a jar of wine. Merchants kept it as shorthand for 'at the rate of', it reached typewriters by 1900, and in 1971 Ray Tomlinson picked it for the first networked email because nobody used it in names.",
+    "hashtags": ["history", "email", "typography", "didyouknow"],
+    "keywords": ["at sign history", "Ray Tomlinson", "first email", "amphora symbol", "@ symbol origin"],
+    "hook": "The @ in your email is older than email by four centuries.",
+    "altText": "Motion-graphics explainer on the history of the @ sign.",
+    "sources": [
+      { "url": "https://en.wikipedia.org/wiki/At_sign", "title": "At sign" },
+      { "url": "https://en.wikipedia.org/wiki/Ray_Tomlinson", "title": "Ray Tomlinson" }
+    ]
+  },
+  "Review": { "pass": true, "score": 90, "issues": [] }
+}

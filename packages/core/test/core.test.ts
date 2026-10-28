@@ -193,7 +193,7 @@ describe("compile", () => {
     expect(p2.files["index.html"]).toContain("data-audio-group");
     // caption words get an explicit gap (text strokes eat plain spaces)
     expect(p2.files["compositions/captions.html"]).toMatch(/column-gap: 0\.32em/);
-    // emphasised words keep their colour but settle back to scale 1, so they don't eat the gap
-    expect(p2.files["compositions/captions.html"]).toContain("{scale:1.08}, {scale:1, duration:0.06");
+    // the scale pop is a short pulse, so long or emphasised words don't eat the gap
+    expect(p2.files["compositions/captions.html"]).toContain("{scale:1.08}, {scale:1, duration:0.08");
   });
 });

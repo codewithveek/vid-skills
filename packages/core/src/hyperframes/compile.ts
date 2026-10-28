@@ -230,9 +230,10 @@ function captionsFile(tl: Timeline, style: StylePack, box: { x: number; y: numbe
     cue.words.forEach((wd, j) => {
       const emph = cue.emphasis.includes(j);
       js += `tl.fromTo("#${id}-w${j}", {color:"#FFFFFF", scale:1}, {color:"${c.highlight}", scale:1.08, duration:0.06}, ${round3(wd.start)});`;
-      // Every word settles back to scale 1 (a lingering 1.08 eats the word gap); emphasis keeps its colour.
-      const settle = emph ? `{scale:1.08}, {scale:1` : `{color:"${c.highlight}", scale:1.08}, {color:"#FFFFFF", scale:1`;
-      js += `tl.fromTo("#${id}-w${j}", ${settle}, duration:0.06, immediateRender:false}, ${round3(Math.max(wd.start + 0.07, wd.end))});`;
+      // The scale pop is a brief pulse: held for a long word, 1.08 eats the gaps on both sides.
+      js += `tl.fromTo("#${id}-w${j}", {scale:1.08}, {scale:1, duration:0.08, immediateRender:false}, ${round3(wd.start + 0.08)});`;
+      // The highlight colour lasts the whole word; emphasis keeps it.
+      if (!emph) js += `tl.fromTo("#${id}-w${j}", {color:"${c.highlight}"}, {color:"#FFFFFF", duration:0.06, immediateRender:false}, ${round3(Math.max(wd.start + 0.17, wd.end))});`;
     });
   });
   return `<template>
