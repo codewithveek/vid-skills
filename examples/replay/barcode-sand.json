@@ -1,0 +1,149 @@
+{
+  "ResearchDossier": {
+    "topic": "how the barcode was invented",
+    "summary": "The barcode began in 1948 when Bernard Silver overheard a supermarket president asking for automated checkout; Norman Woodland drew Morse-code dots and dashes in the sand of a Florida beach and stretched them into narrow and wide lines. Patented in 1952, it first scanned a product, a pack of Juicy Fruit gum, in Troy, Ohio in 1974.",
+    "angle": "The lines on every package are Morse code someone dragged through beach sand.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "In 1948 Bernard Silver, a Drexel graduate student, overheard the president of the Food Fair supermarket chain asking a dean to research automatic checkout; Silver told his friend Norman Woodland.",
+        "sources": [
+          { "url": "https://en.wikipedia.org/wiki/Barcode", "title": "Barcode - Wikipedia", "quote": "overheard the president of the local food chain, Food Fair, asking one of the deans to research a system" },
+          { "url": "https://en.wikipedia.org/wiki/Norman_Joseph_Woodland", "title": "Norman Joseph Woodland - Wikipedia" }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "At his grandfather's apartment in Florida, Woodland drew dots and dashes like Morse code in the beach sand.",
+        "sources": [
+          { "url": "https://en.wikipedia.org/wiki/Norman_Joseph_Woodland", "title": "Norman Joseph Woodland - Wikipedia", "quote": "drew dots and dashes in the sand similar to the shapes used in Morse code" },
+          { "url": "https://en.wikipedia.org/wiki/Barcode", "title": "Barcode - Wikipedia", "quote": "he formed his first barcode from sand on the beach" }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Woodland: 'I just extended the dots and dashes downwards and made narrow lines and wide lines out of them.'",
+        "sources": [{ "url": "https://en.wikipedia.org/wiki/Barcode", "title": "Barcode - Wikipedia", "quote": "I just extended the dots and dashes downwards and made narrow lines and wide lines out of them." }],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "Woodland and Silver filed a patent on 20 October 1949; US Patent 2,612,994 'Classifying Apparatus and Method' was granted on 7 October 1952 and covered linear and circular bullseye designs.",
+        "sources": [{ "url": "https://en.wikipedia.org/wiki/Norman_Joseph_Woodland", "title": "Norman Joseph Woodland - Wikipedia", "quote": "circular bulls-eye printing designs" }],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "On 26 June 1974 at 8:01 a.m., a 10-pack of Wrigley's Juicy Fruit gum was the first product scanned with a UPC, at the Marsh supermarket in Troy, Ohio; it rang up at 67 cents.",
+        "sources": [
+          { "url": "https://en.wikipedia.org/wiki/Universal_Product_Code", "title": "Universal Product Code - Wikipedia" },
+          { "url": "https://en.wikipedia.org/wiki/Barcode", "title": "Barcode - Wikipedia", "quote": "a 10-pack of Wrigley's Juicy Fruit gum was scanned, registering the first commercial use of the UPC" }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [
+      { "year": "1948", "event": "Lines in the sand", "claimId": "c2" },
+      { "year": "1952", "event": "Patent granted", "claimId": "c4" },
+      { "year": "1974", "event": "First UPC scan", "claimId": "c5" }
+    ],
+    "analogies": ["Morse code you can see"],
+    "visualIdeas": ["barcode close-up", "Morse code chart", "writing in beach sand", "vintage Juicy Fruit pack", "supermarket scanner"],
+    "openQuestions": ["Earlier non-UPC barcode systems (e.g. Sainsbury's 1972) predate the 1974 scan; the script says first UPC scan only"]
+  },
+  "Script": {
+    "headline": "Barcodes Began in the Sand",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1", "kind": "hook", "musicCue": "none",
+        "lines": [
+          { "id": "l1", "text": "Every barcode you've ever scanned started as a drawing in the sand.", "emphasis": ["sand"], "claimIds": ["c2"], "pauseAfterSec": 0.25 },
+          { "id": "l2", "text": "Literally. On a beach in Florida.", "emphasis": ["Florida"], "claimIds": ["c2"], "pauseAfterSec": 0.4 }
+        ]
+      },
+      {
+        "id": "b2", "kind": "history", "musicCue": "drop",
+        "lines": [
+          { "id": "l3", "text": "In 1948, a student overheard a supermarket boss asking his college for a faster checkout.", "emphasis": ["checkout"], "claimIds": ["c1"], "pauseAfterSec": 0.25 },
+          { "id": "l4", "text": "His friend Norman Woodland took the problem with him to Florida.", "emphasis": ["Woodland"], "claimIds": ["c1", "c2"], "pauseAfterSec": 0.3 }
+        ]
+      },
+      {
+        "id": "b3", "kind": "mechanism", "musicCue": "none",
+        "lines": [
+          { "id": "l5", "text": "His inspiration was Morse code. Dots and dashes.", "emphasis": ["Morse"], "claimIds": ["c2"], "pauseAfterSec": 0.25 },
+          { "id": "l6", "text": "So he drew them in the sand, and dragged them downwards.", "emphasis": ["downwards"], "claimIds": ["c3"], "pauseAfterSec": 0.2 },
+          { "id": "l7", "text": "Narrow lines and wide lines.", "emphasis": ["wide"], "claimIds": ["c3"], "pauseAfterSec": 0.3 }
+        ]
+      },
+      {
+        "id": "b4", "kind": "proof", "musicCue": "none",
+        "lines": [
+          { "id": "l8", "text": "He and Bernard Silver got a patent in 1952.", "emphasis": ["patent"], "claimIds": ["c4"], "pauseAfterSec": 0.2 },
+          { "id": "l9", "text": "It even included a round, bullseye version.", "emphasis": ["bullseye"], "claimIds": ["c4"], "pauseAfterSec": 0.25 },
+          { "id": "l10", "text": "Then it took 22 more years to reach a store.", "emphasis": ["store"], "claimIds": ["c4", "c5"], "pauseAfterSec": 0.3 }
+        ]
+      },
+      {
+        "id": "b5", "kind": "twist", "musicCue": "none",
+        "lines": [
+          { "id": "l11", "text": "In 1974, at a supermarket in Troy, Ohio, a cashier scanned the first product.", "emphasis": ["first"], "claimIds": ["c5"], "pauseAfterSec": 0.2 },
+          { "id": "l12", "text": "A pack of Juicy Fruit gum.", "emphasis": ["gum"], "claimIds": ["c5"], "pauseAfterSec": 0.2 },
+          { "id": "l13", "text": "It rang up at 67 cents.", "emphasis": ["cents"], "claimIds": ["c5"], "pauseAfterSec": 0.35 }
+        ]
+      },
+      {
+        "id": "b6", "kind": "payoff", "musicCue": "none",
+        "lines": [
+          { "id": "l14", "text": "So every beep at the checkout traces back to lines drawn in the sand.", "emphasis": ["beep"], "claimIds": ["c2", "c3"], "pauseAfterSec": 0.4 }
+        ]
+      },
+      {
+        "id": "b7", "kind": "cta", "musicCue": "none",
+        "lines": [
+          { "id": "l15", "text": "Follow for more things hiding in plain sight.", "emphasis": ["Follow"], "claimIds": [], "pauseAfterSec": 0.2 }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      { "id": "sh1", "lineId": "l1", "scene": { "type": "broll", "asset": { "kind": "image", "query": "intitle:\"UPCA\"", "prompt": "close-up of a UPC barcode", "prefer": "stock" }, "treatment": "natural", "move": "pushIn" } },
+      { "id": "sh2", "lineId": "l1", "anchor": "drawing", "scene": { "type": "broll", "asset": { "kind": "image", "query": "intitle:\"Writing on sand Aberdeen\"", "prompt": "writing drawn in beach sand", "prefer": "stock" }, "treatment": "natural", "move": "kenBurns", "sfx": "whoosh" } },
+      { "id": "sh3", "lineId": "l2", "anchor": "beach", "scene": { "type": "broll", "asset": { "kind": "image", "query": "intitle:\"Miami Beach - Albion Hotel, 1940s\"", "prompt": "vintage 1940s Miami Beach", "prefer": "stock" }, "treatment": "vintage", "move": "kenBurns", "label": "Florida, 1940s" } },
+      { "id": "sh4", "lineId": "l3", "scene": { "type": "typewriter", "lead": "In", "highlight": "1948", "cps": 12 } },
+      { "id": "sh5", "lineId": "l3", "anchor": "supermarket", "scene": { "type": "diagram", "template": "flow", "data": { "nodes": [{ "label": "SUPERMARKET", "icon": "dollar" }, { "label": "COLLEGE", "icon": "user" }] } } },
+      { "id": "sh6", "lineId": "l3", "anchor": "checkout", "scene": { "type": "diagram", "template": "icon-draw", "data": { "icon": "clock", "label": "FASTER CHECKOUT", "color": "#20FFF6", "glow": "yes" } } },
+      { "id": "sh7", "lineId": "l4", "anchor": "Woodland", "scene": { "type": "diagram", "template": "flow", "data": { "nodes": [{ "label": "SILVER", "icon": "user" }, { "label": "WOODLAND", "icon": "user" }, { "label": "FLORIDA", "icon": "globe" }] } } },
+      { "id": "sh8", "lineId": "l5", "anchor": "Morse", "scene": { "type": "broll", "asset": { "kind": "image", "query": "intitle:\"International Morse code\" png", "prompt": "International Morse code chart", "prefer": "stock" }, "treatment": "natural", "move": "pushIn", "label": "Morse code", "sfx": "tick" } },
+      { "id": "sh9", "lineId": "l6", "anchor": "drew", "scene": { "type": "broll", "asset": { "kind": "image", "query": "intitle:\"A picture with the word Peace grafted into beach sand\"", "prompt": "lines drawn in beach sand", "prefer": "stock" }, "treatment": "natural", "move": "panLeft" } },
+      { "id": "sh10", "lineId": "l7", "anchor": "Narrow", "scene": { "type": "broll", "asset": { "kind": "image", "query": "intitle:\"UPC-A.png\"", "prompt": "UPC-A barcode", "prefer": "stock" }, "treatment": "natural", "move": "pushIn", "label": "Narrow + wide lines", "sfx": "pop" } },
+      { "id": "sh11", "lineId": "l8", "anchor": "patent", "scene": { "type": "stat", "value": "1952", "caption": "US Patent 2,612,994, \"Classifying Apparatus and Method\"", "sourceClaimId": "c4" } },
+      { "id": "sh12", "lineId": "l9", "anchor": "bullseye", "scene": { "type": "broll", "asset": { "kind": "image", "query": "intitle:\"UPC HKB\"", "prompt": "bullseye barcode next to a linear barcode", "prefer": "stock" }, "treatment": "natural", "move": "pushIn", "label": "Bullseye vs. lines" } },
+      { "id": "sh13", "lineId": "l10", "scene": { "type": "diagram", "template": "timeline", "data": { "events": [{ "year": "1948", "label": "The sand" }, { "year": "1952", "label": "Patent" }, { "year": "1974", "label": "First scan" }] } } },
+      { "id": "sh14", "lineId": "l11", "anchor": "supermarket", "scene": { "type": "broll", "asset": { "kind": "image", "query": "intitle:\"An old price scanner at a supermarket\"", "prompt": "supermarket checkout barcode scanner", "prefer": "stock" }, "treatment": "natural", "move": "kenBurns", "label": "Troy, Ohio" } },
+      { "id": "sh15", "lineId": "l12", "anchor": "Juicy", "scene": { "type": "broll", "asset": { "kind": "image", "query": "intitle:\"Juicy Fruit 1946\"", "prompt": "vintage Juicy Fruit chewing gum pack", "prefer": "stock" }, "treatment": "natural", "move": "pushIn", "label": "Juicy Fruit gum", "sfx": "pop" } },
+      { "id": "sh16", "lineId": "l13", "anchor": "67", "scene": { "type": "stat", "value": "67¢", "caption": "The first UPC scan, 26 June 1974", "sourceClaimId": "c5" } },
+      { "id": "sh17", "lineId": "l14", "anchor": "beep", "scene": { "type": "broll", "asset": { "kind": "image", "query": "intitle:\"Barcode-scanner\" jpg", "prompt": "handheld barcode scanner", "prefer": "stock" }, "treatment": "dark", "move": "pushIn", "sfx": "click" } },
+      { "id": "sh18", "lineId": "l15", "scene": { "type": "cta", "variant": "subscribe-morph", "text": "FOLLOW", "doneText": "FOLLOWING" } },
+      { "id": "sh19", "lineId": "l15", "scene": { "type": "endcard", "handle": "@hiddeninplainsight.tv" } }
+    ]
+  },
+  "PublishCopy": {
+    "title": "The barcode started as Morse code drawn in beach sand",
+    "description": "Every barcode you've ever scanned started as a drawing in the sand.\nIn 1948 Norman Woodland drew Morse-code dots and dashes on a Florida beach and dragged them into narrow and wide lines. He and Bernard Silver patented it in 1952, and in 1974 a pack of Juicy Fruit gum became the first product scanned with a UPC, in Troy, Ohio, for 67 cents.",
+    "hashtags": ["history", "barcode", "inventions", "didyouknow"],
+    "keywords": ["barcode history", "Norman Joseph Woodland", "Morse code barcode", "first barcode scan", "Juicy Fruit UPC"],
+    "hook": "Every barcode started as a drawing in the sand.",
+    "altText": "Motion-graphics explainer on how the barcode was invented from Morse code drawn in sand.",
+    "sources": [
+      { "url": "https://en.wikipedia.org/wiki/Barcode", "title": "Barcode" },
+      { "url": "https://en.wikipedia.org/wiki/Norman_Joseph_Woodland", "title": "Norman Joseph Woodland" },
+      { "url": "https://en.wikipedia.org/wiki/Universal_Product_Code", "title": "Universal Product Code" }
+    ]
+  },
+  "Review": { "pass": true, "score": 90, "issues": [] }
+}
