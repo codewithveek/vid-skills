@@ -1,0 +1,55 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "vid-skills",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+
+  // Wrangler bundles the workspace packages straight from TypeScript source.
+  "alias": {
+    "@vid-skills/core": "../../packages/core/src/index.ts",
+    "@vid-skills/providers": "../../packages/providers/src/index.ts",
+    "@vid-skills/distribute": "../../packages/distribute/src/index.ts",
+    "@vid-skills/mcp": "../../packages/mcp/src/index.ts"
+  },
+
+  "vars": {
+    // Provider chains (see docs/provider-limits.md). Secrets (API keys) go in `wrangler secret put`.
+    "VIDSK_LLM": "workers-ai:@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+    "VIDSK_TTS": "kokoro:am_michael",
+    "VIDSK_IMAGE": "workers-ai",
+    "VIDSK_STOCK": "openverse,wikimedia",
+    "VIDSK_RESEARCH": "wikipedia",
+    // Publishing policy for automated runs: "qa-pass" | "always" | "never"
+    "VIDSK_PUBLISH_WHEN": "qa-pass",
+    // Comma-separated platforms for scheduled runs
+    "VIDSK_SCHEDULE_PLATFORMS": "youtube_shorts,tiktok,instagram_reels",
+    "VIDSK_HANDLE": ""
+  },
+
+  "ai": { "binding": "AI" },
+
+  "r2_buckets": [{ "binding": "MEDIA", "bucket_name": "vid-skills-media" }],
+
+  "kv_namespaces": [{ "binding": "KV", "id": "REPLACE_WITH_KV_ID" }],
+
+  "workflows": [{ "name": "vidsk-pipeline", "binding": "PIPELINE", "class_name": "PipelineWorkflow" }],
+
+  "containers": [
+    {
+      "class_name": "RenderContainer",
+      "image": "../../Dockerfile",
+      "instance_type": "standard-4",
+      "max_instances": 3
+    }
+  ],
+
+  "durable_objects": {
+    "bindings": [{ "name": "RENDER_CONTAINER", "class_name": "RenderContainer" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["RenderContainer"] }],
+
+  // Hands-free: every 6 hours take the next topic from the queue and make + publish a video.
+  "triggers": { "crons": ["17 */6 * * *"] }
+}

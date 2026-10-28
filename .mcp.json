@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "vid-skills": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT:-.}/packages/cli/bin/vidsk.mjs", "mcp"],
+      "env": { "VIDSK_OUT": "./out" }
+    }
+  }
+}

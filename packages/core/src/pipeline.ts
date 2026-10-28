@@ -370,6 +370,23 @@ function estimateDuration(text: string, wpm: number): number {
   return (text.split(/\s+/).length / wpm) * 60 + 0.3;
 }
 
+/**
+ * Prefer candidates whose title/description mention the query terms (keyless archives such as
+ * Wikimedia return loosely related files), keeping provider order as the tie-breaker.
+ */
+export function rankCandidates(cands: VisualCandidate[], query: string): VisualCandidate[] {
+  const terms = query.toLowerCase().split(/\W+/).filter((t) => t.length > 2);
+  if (!terms.length) return cands;
+  const score = (c: VisualCandidate) => {
+    const text = `${c.description ?? ""} ${c.id}`.toLowerCase();
+    return terms.reduce((n, t) => n + (text.includes(t) ? 1 : 0), 0) + (c.description === undefined ? 0.5 : 0);
+  };
+  const scored = cands.map((c, i) => ({ c, s: score(c), i }));
+  const best = Math.max(0, ...scored.map((x) => x.s));
+  // With descriptions available, require at least one matching term when any candidate has one.
+  return scored.filter((x) => best === 0 || x.s > 0).sort((a, b) => b.s - a.s || a.i - b.i).map((x) => x.c);
+}
+
 async function mapLimit<T, R>(items: T[], limit: number, fn: (t: T, i: number) => Promise<R>): Promise<R[]> {
   const out: R[] = new Array(items.length);
   let next = 0;
@@ -400,6 +417,10 @@ export async function stageAssets(ctx: PipelineContext, brief: VideoBrief, story
   const win = style.layout(brief.aspect).window;
   const orientation = win.w > win.h * 1.1 ? "landscape" : win.h > win.w * 1.1 ? "portrait" : "square";
   const usedUrls = new Set<string>();
+  // Per-job circuit breaker: a stock provider that errors twice is skipped for the rest of the job.
+  const failures = new Map<string, number>();
+  const open = (id: string) => (failures.get(id) ?? 0) >= 2;
+  const fail = (id: string) => failures.set(id, (failures.get(id) ?? 0) + 1);
   const assets: Asset[] = [];
   const shotAssets: Record<string, string[]> = {};
   const lineText = new Map(script.beats.flatMap((b) => b.lines.map((l) => [l.id, l.text] as const)));
@@ -413,15 +434,16 @@ export async function stageAssets(ctx: PipelineContext, brief: VideoBrief, story
     // 1. Stock
     if (req.prefer !== "generate" && ctx.providers.stock?.length && query) {
       for (const kind of req.kind === "video" ? (["video", "image"] as const) : (["image"] as const)) {
-        for (const sp of ctx.providers.stock.filter((s) => s.kinds.includes(kind))) {
+        for (const sp of ctx.providers.stock.filter((s) => s.kinds.includes(kind) && !open(s.id))) {
           let cands: VisualCandidate[] = [];
           try {
             cands = await sp.search({ query, kind, orientation, limit: 8, signal: ctx.signal });
           } catch (e) {
-            ctx.logger.warn(`assets: ${sp.id} search failed`, { query, error: errorMessage(e) });
+            fail(sp.id);
+            ctx.logger.warn(`assets: ${sp.id} search failed${open(sp.id) ? " (disabled for this job)" : ""}`, { query, error: errorMessage(e) });
             continue;
           }
-          const pick = cands.find((c) => !usedUrls.has(c.url) && (!brief.licensedOnly || c.license.commercialUse));
+          const pick = rankCandidates(cands, query).find((c) => !usedUrls.has(c.url) && (!brief.licensedOnly || c.license.commercialUse));
           if (!pick) continue;
           try {
             const dl = await download(pick.url, ctx.signal);
@@ -712,6 +734,9 @@ export async function runPipeline(briefInput: VideoBriefInput, opts: PipelineOpt
     });
     const urls = new Set(c.sources.map((s) => s.url));
     for (const s of dossier.claims.flatMap((x) => x.sources)) if (!urls.has(s.url)) c.sources.push(s);
+    // License compliance: credit every asset whose license requires attribution (CC BY, CC BY-SA, Unsplash…).
+    const credits = [...new Set(manifest.assets.filter((a) => a.license.requiresAttribution).map((a) => a.license.attribution ?? `${a.provider}: ${a.license.name}`))];
+    if (credits.length && !c.description.includes("Credits:")) c.description = `${c.description}\n\nCredits:\n${credits.map((x) => `• ${x}`).join("\n")}`.slice(0, 5000);
     return c;
   });
   result.copy = copy;

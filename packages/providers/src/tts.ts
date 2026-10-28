@@ -121,7 +121,7 @@ export class KokoroTTS implements TTSProvider {
           headers,
           body: JSON.stringify({ model: "kokoro", input: req.text, voice, speed: req.speed ?? 1, response_format: "wav", stream: false, return_timestamps: true }),
           signal: req.signal,
-          fetcher: this.o.fetcher,
+          via: this.o.fetcher,
           retry: { retries: 1, timeoutMs: 180_000 },
         });
         if (j.audio) {
@@ -133,7 +133,7 @@ export class KokoroTTS implements TTSProvider {
         this.captioned = false; // route missing on this server build → use the OpenAI route from now on
       }
     }
-    const { bytes } = await requestBytes(`${base}/v1/audio/speech`, { provider: this.id, method: "POST", headers, body: JSON.stringify({ model: "kokoro", input: req.text, voice, speed: req.speed ?? 1, response_format: "wav" }), signal: req.signal, fetcher: this.o.fetcher, retry: { timeoutMs: 180_000 } });
+    const { bytes } = await requestBytes(`${base}/v1/audio/speech`, { provider: this.id, method: "POST", headers, body: JSON.stringify({ model: "kokoro", input: req.text, voice, speed: req.speed ?? 1, response_format: "wav" }), signal: req.signal, via: this.o.fetcher, retry: { timeoutMs: 180_000 } });
     return finish(bytes, "audio/wav", undefined, "none", lic);
   }
   async listVoices() {

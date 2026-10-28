@@ -139,9 +139,15 @@ export async function checkProject(dir: string): Promise<CheckResult> {
   const { cmd, pre } = hyperframesBin();
   const r = await exec(cmd, [...pre, "check", dir, "--json"], { timeoutMs: 5 * 60_000 });
   try {
-    const j = JSON.parse(r.stdout.slice(r.stdout.indexOf("{"))) as { ok?: boolean; errors?: unknown[]; warnings?: unknown[]; findings?: { severity?: string }[] };
-    const errors = j.errors ?? j.findings?.filter((f) => f.severity === "error") ?? [];
-    const warnings = j.warnings ?? j.findings?.filter((f) => f.severity !== "error") ?? [];
+    const j = JSON.parse(r.stdout.slice(r.stdout.indexOf("{"))) as Record<string, unknown> & { ok?: boolean };
+    // `check --json` groups findings by section (lint, runtime, layout, motion, contrast, craft, audio…).
+    const findings: { severity?: string; code?: string; message?: string; section: string }[] = [];
+    for (const [section, v] of Object.entries(j)) {
+      const f = (v as { findings?: { severity?: string; code?: string; message?: string }[] } | null)?.findings;
+      if (Array.isArray(f)) for (const x of f) findings.push({ section, severity: x.severity, code: x.code, message: x.message });
+    }
+    const errors = findings.filter((f) => f.severity === "error");
+    const warnings = findings.filter((f) => f.severity === "warning");
     return { ok: j.ok ?? errors.length === 0, errors, warnings, raw: r.stdout };
   } catch {
     return { ok: r.code === 0, errors: r.code === 0 ? [] : [r.stderr.slice(-2000)], warnings: [], raw: r.stdout + r.stderr };

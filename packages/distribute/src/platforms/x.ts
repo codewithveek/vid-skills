@@ -31,7 +31,7 @@ export class XPublisher implements PlatformPublisher {
       const bytes = await i.video.read(off, Math.min(seg, i.video.size - off));
       const fd = new FormData();
       fd.set("segment_index", String(k));
-      fd.set("media", new Blob([bytes as BlobPart], { type: "application/octet-stream" }), "chunk");
+      fd.set("media", new Blob([bytes as unknown as ArrayBuffer], { type: "application/octet-stream" }), "chunk");
       await request(`${API}/media/upload/${id}/append`, { provider: "x", method: "POST", headers: auth, body: fd, signal: i.signal, retry: { retries: 4, timeoutMs: 300_000 } });
     }
     const fin = await requestJson<{ data?: { processing_info?: { state: string; check_after_secs?: number } } }>(`${API}/media/upload/${id}/finalize`, { provider: "x", method: "POST", headers: auth, signal: i.signal });

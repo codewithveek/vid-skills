@@ -17,7 +17,7 @@ export class PinterestPublisher implements PlatformPublisher {
     const reg = await requestJson<{ media_id: string; upload_url: string; upload_parameters: Record<string, string> }>("https://api.pinterest.com/v5/media", { provider: "pinterest", method: "POST", headers: { ...auth, "content-type": "application/json" }, body: JSON.stringify({ media_type: "video" }), signal: i.signal });
     const fd = new FormData();
     for (const [k, val] of Object.entries(reg.upload_parameters)) fd.set(k, val);
-    fd.set("file", new Blob([(await readAll(i.video)) as BlobPart], { type: i.video.mime }), i.video.name ?? "video.mp4");
+    fd.set("file", new Blob([(await readAll(i.video)) as unknown as ArrayBuffer], { type: i.video.mime }), i.video.name ?? "video.mp4");
     await request(reg.upload_url, { provider: "pinterest", method: "POST", body: fd, signal: i.signal, retry: { retries: 2, timeoutMs: 900_000 } });
     await poll(
       async () => {

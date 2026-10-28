@@ -8,7 +8,9 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const built = join(here, "../dist/main.js");
-if (existsSync(built) && !process.env.VIDSK_FROM_SOURCE) {
+// Inside the monorepo, run sources (never a stale build); published installs run dist.
+const inMonorepo = existsSync(join(here, "../../../pnpm-workspace.yaml")) && existsSync(join(here, "../src/main.ts"));
+if (existsSync(built) && !inMonorepo && !process.env.VIDSK_FROM_SOURCE) {
   await import(pathToFileURL(built).href);
 } else {
   const require = createRequire(import.meta.url);

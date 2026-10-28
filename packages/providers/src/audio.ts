@@ -37,7 +37,7 @@ export class WhisperSTT implements STTProvider {
   async transcribe(audio: { bytes: Uint8Array; mime: string }, opts: { language?: string; prompt?: string } = {}) {
     if (audio.bytes.length > this.maxBytes) throw new ProviderError(`${this.id}: audio exceeds ${this.maxBytes} bytes`, this.id, 413, false);
     const fd = new FormData();
-    fd.set("file", new Blob([audio.bytes as BlobPart], { type: audio.mime }), `audio.${ext(audio.mime)}`);
+    fd.set("file", new Blob([audio.bytes as unknown as ArrayBuffer], { type: audio.mime }), `audio.${ext(audio.mime)}`);
     fd.set("model", this.o.model ?? "whisper-1");
     fd.set("response_format", "verbose_json");
     fd.append("timestamp_granularities[]", "word");
@@ -76,7 +76,7 @@ export class ElevenLabsSTT implements STTProvider {
   constructor(private readonly o: { apiKey: string; model?: string }) {}
   async transcribe(audio: { bytes: Uint8Array; mime: string }, opts: { language?: string } = {}) {
     const fd = new FormData();
-    fd.set("file", new Blob([audio.bytes as BlobPart], { type: audio.mime }), `audio.${ext(audio.mime)}`);
+    fd.set("file", new Blob([audio.bytes as unknown as ArrayBuffer], { type: audio.mime }), `audio.${ext(audio.mime)}`);
     fd.set("model_id", this.o.model ?? "scribe_v1");
     if (opts.language) fd.set("language_code", opts.language);
     const j = await requestJson<{ text?: string; language_code?: string; words?: { text: string; start: number; end: number; type?: string }[] }>("https://api.elevenlabs.io/v1/speech-to-text", { provider: this.id, method: "POST", headers: { "xi-api-key": this.o.apiKey }, body: fd, retry: { timeoutMs: 300_000 } });
@@ -206,7 +206,7 @@ export class FreesoundSfx implements SfxProvider {
     const filter = encodeURIComponent(`duration:[0.05 TO ${Math.max(1, (req.durationSec ?? 1) * 3)}] (${lic.map((l) => `license:"${l}"`).join(" OR ")})`);
     const j = await requestJson<{ results?: { id: number; name: string; username: string; license: string; previews?: Record<string, string> }[] }>(
       `https://freesound.org/apiv2/search/text/?query=${q}&filter=${filter}&fields=id,name,username,license,previews&page_size=10&sort=rating_desc&token=${this.o.apiKey}`,
-      { provider: this.id, rateKey: "freesound", ratePerMinute: 55 },
+      { provider: this.id, rateKey: "freesound", ratePerMinute: 55, retry: { retries: 1, timeoutMs: 20_000 } },
     );
     const hit = j.results?.[0];
     const url = hit?.previews?.["preview-hq-mp3"];
@@ -223,7 +223,7 @@ export class OpenverseSfx implements SfxProvider {
   async generate(req: SfxRequest): Promise<AudioResult> {
     const j = await requestJson<{ results?: { url: string; title?: string; creator?: string; license: string; license_version?: string; foreign_landing_url?: string; duration?: number }[] }>(
       `https://api.openverse.org/v1/audio/?q=${encodeURIComponent(req.prompt ?? req.cue)}&license_type=commercial&page_size=10`,
-      { provider: this.id, rateKey: "openverse", ratePerMinute: 20 },
+      { provider: this.id, rateKey: "openverse", ratePerMinute: 20, retry: { retries: 1, timeoutMs: 20_000 } },
     );
     const hit = (j.results ?? []).find((r) => !r.duration || r.duration < 8000);
     if (!hit) throw new ProviderError(`openverse: nothing for ${req.cue}`, this.id, 404, false);
@@ -247,12 +247,14 @@ export class FallbackSfx implements SfxProvider {
   constructor(private readonly chain: SfxProvider[]) {
     this.id = `fallback(${chain.map((c) => c.id).join(",")})`;
   }
+  private fails = new Map<string, number>();
   async generate(req: SfxRequest): Promise<AudioResult> {
     for (const p of this.chain) {
+      if ((this.fails.get(p.id) ?? 0) >= 2) continue; // circuit open: stop paying timeouts on a dead provider
       try {
         return await p.generate(req);
       } catch {
-        /* next */
+        this.fails.set(p.id, (this.fails.get(p.id) ?? 0) + 1);
       }
     }
     return new ProceduralSfx().generate(req);

@@ -206,6 +206,8 @@ export interface StoredObject {
 /** Blob storage abstraction (R2, S3, GCS, local fs, memory). Keys use "/" separators. */
 export interface Storage {
   put(key: string, data: Uint8Array | string, contentType?: string): Promise<StoredObject>;
+  /** Optional streaming write (R2/S3) so large renders never sit fully in memory. */
+  putStream?(key: string, stream: ReadableStream<Uint8Array>, contentType?: string, size?: number): Promise<StoredObject>;
   get(key: string): Promise<Uint8Array | null>;
   getText(key: string): Promise<string | null>;
   /** Optional ranged read (R2/S3/fs) so large videos can be uploaded in chunks without loading them whole. */

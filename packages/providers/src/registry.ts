@@ -249,7 +249,7 @@ export function providersFromEnv(env: Env, o: FactoryOptions = {}): ProviderSet 
 
   const stock: StockProvider[] =
     o.overrides?.stock ??
-    parseSpecs(env.VIDSK_STOCK ?? [env.PEXELS_API_KEY ? "pexels" : "", env.PIXABAY_API_KEY ? "pixabay" : "", env.UNSPLASH_ACCESS_KEY ? "unsplash" : "", "openverse", "wikimedia"].filter(Boolean).join(",")).map((s) => {
+    parseSpecs(env.VIDSK_STOCK ?? [env.PEXELS_API_KEY ? "pexels" : "", env.PIXABAY_API_KEY ? "pixabay" : "", env.UNSPLASH_ACCESS_KEY ? "unsplash" : "", "openverse", "wikimedia"].filter(Boolean).join(",")).map((s): StockProvider | null => {
       switch (s.provider) {
         case "pexels":
           return new PexelsStock({ apiKey: need(env, "PEXELS_API_KEY") });
@@ -261,10 +261,12 @@ export function providersFromEnv(env: Env, o: FactoryOptions = {}): ProviderSet 
           return new OpenverseStock();
         case "wikimedia":
           return new WikimediaStock();
+        case "none":
+          return null;
         default:
           throw new ConfigError(`unknown stock provider "${s.provider}"`);
       }
-    });
+    }).filter((x): x is StockProvider => x !== null);
 
   let image: ImageProvider | undefined = o.overrides?.image;
   if (!image) {

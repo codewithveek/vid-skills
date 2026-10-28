@@ -15,7 +15,7 @@ export class PexelsStock implements StockProvider {
   constructor(private readonly o: { apiKey: string }) {}
   async search(q: Q): Promise<VisualCandidate[]> {
     const lic = (url: string, who: string): License => ({ name: "Pexels License", url: "https://www.pexels.com/license/", attribution: `${who} via Pexels (${url})`, commercialUse: true, requiresAttribution: false });
-    const common = { provider: this.id, headers: { authorization: this.o.apiKey }, rateKey: "pexels", ratePerMinute: 3, signal: q.signal };
+    const common = { provider: this.id, headers: { authorization: this.o.apiKey }, rateKey: "pexels", ratePerMinute: 3, signal: q.signal, retry: { retries: 1, timeoutMs: 20_000 } };
     const orient = q.orientation ? `&orientation=${q.orientation}` : "";
     if (q.kind === "video") {
       const j = await requestJson<{ videos?: { id: number; url: string; duration: number; user?: { name: string }; video_files: { link: string; width: number; height: number; quality?: string; file_type?: string }[]; image?: string }[] }>(
@@ -45,7 +45,7 @@ export class PixabayStock implements StockProvider {
   async search(q: Q): Promise<VisualCandidate[]> {
     const lic: License = { name: "Pixabay Content License", url: "https://pixabay.com/service/license-summary/", commercialUse: true, requiresAttribution: false };
     const orient = q.orientation === "landscape" ? "horizontal" : q.orientation === "portrait" ? "vertical" : "all";
-    const common = { provider: this.id, rateKey: "pixabay", ratePerMinute: 90, signal: q.signal };
+    const common = { provider: this.id, rateKey: "pixabay", ratePerMinute: 90, signal: q.signal, retry: { retries: 1, timeoutMs: 20_000 } };
     if (q.kind === "video") {
       const j = await requestJson<{ hits?: { id: number; duration: number; pageURL: string; videos: Record<string, { url: string; width: number; height: number }> }[] }>(`https://pixabay.com/api/videos/?key=${this.o.apiKey}&q=${encodeURIComponent(q.query)}&per_page=${Math.max(3, q.limit ?? 8)}&safesearch=true`, common);
       return (j.hits ?? []).flatMap((h) => {
@@ -70,7 +70,7 @@ export class UnsplashStock implements StockProvider {
     if (q.kind !== "image") return [];
     const j = await requestJson<{ results?: { id: string; width: number; height: number; alt_description?: string; urls: Record<string, string>; links: { html: string; download_location: string }; user: { name: string } }[] }>(
       `https://api.unsplash.com/search/photos?query=${encodeURIComponent(q.query)}&per_page=${q.limit ?? 8}${q.orientation ? `&orientation=${q.orientation === "square" ? "squarish" : q.orientation}` : ""}&content_filter=high`,
-      { provider: this.id, headers: { authorization: `Client-ID ${this.o.accessKey}`, "accept-version": "v1" }, rateKey: "unsplash", ratePerMinute: 0.8, signal: q.signal },
+      { provider: this.id, headers: { authorization: `Client-ID ${this.o.accessKey}`, "accept-version": "v1" }, rateKey: "unsplash", ratePerMinute: 0.8, signal: q.signal, retry: { retries: 1, timeoutMs: 20_000 } },
     );
     return (j.results ?? []).map((r) => ({
       id: `unsplash-${r.id}`,
@@ -96,7 +96,7 @@ export class OpenverseStock implements StockProvider {
     const ar = q.orientation === "landscape" ? "&aspect_ratio=wide" : q.orientation === "portrait" ? "&aspect_ratio=tall" : "";
     const j = await requestJson<{ results?: { id: string; url: string; thumbnail?: string; width?: number; height?: number; title?: string; creator?: string; license: string; license_version?: string; foreign_landing_url?: string; attribution?: string }[] }>(
       `https://api.openverse.org/v1/images/?q=${encodeURIComponent(q.query)}&license_type=commercial&page_size=${q.limit ?? 8}${ar}&mature=false`,
-      { provider: this.id, rateKey: "openverse", ratePerMinute: 20, signal: q.signal },
+      { provider: this.id, rateKey: "openverse", ratePerMinute: 20, signal: q.signal, retry: { retries: 1, timeoutMs: 20_000 } },
     );
     return (j.results ?? []).map((r) => ({
       id: `openverse-${r.id}`,
@@ -124,6 +124,7 @@ export class WikimediaStock implements StockProvider {
       provider: this.id,
       headers: { "user-agent": this.o.userAgent ?? "vid-skills/0.1 (https://github.com/codewithveek/vid-skills)" },
       signal: q.signal,
+      retry: { retries: 1, timeoutMs: 20_000 },
     });
     return Object.values(j.query?.pages ?? {}).flatMap((p) => {
       const ii = p.imageinfo?.[0];

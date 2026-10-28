@@ -71,7 +71,8 @@ export async function masterAudio(input: string, output: string, target = { lufs
   }
   const filter =
     `loudnorm=I=${target.lufs}:TP=${target.truePeak}:LRA=11:measured_I=${j.input_i}:measured_TP=${j.input_tp}:measured_LRA=${j.input_lra}:measured_thresh=${j.input_thresh}:offset=${j.target_offset}:linear=true:print_format=summary,` +
-    `alimiter=limit=${Math.pow(10, (target.truePeak - 0.3) / 20).toFixed(4)}:attack=2:release=50:level=disabled,aresample=48000`;
+    // AAC encoding adds ~0.3–0.6 dB of inter-sample overshoot: limit 0.8 dB under the true-peak target.
+    `alimiter=limit=${Math.pow(10, (target.truePeak - 0.8) / 20).toFixed(4)}:attack=2:release=50:level=disabled,aresample=48000`;
   await execOk(FFMPEG, ["-y", "-hide_banner", "-i", input, "-map", "0:v?", "-map", "0:a?", "-c:v", "copy", "-af", filter, "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-movflags", "+faststart", output], { timeoutMs: 20 * 60_000 });
   return measureLoudness(output);
 }

@@ -15,7 +15,7 @@ import { Readable } from "node:stream";
 import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import type { Platform } from "@vid-skills/core";
+import type { Asset, Platform } from "@vid-skills/core";
 import { auditVideo } from "./audit.js";
 import { transcodeFor } from "./ffmpeg.js";
 import { LocalKokoroTTS, LocalWhisperSTT } from "./local-providers.js";
@@ -52,12 +52,14 @@ async function route(req: Request): Promise<Response> {
     const work = await mkdtemp(join(tmpdir(), "vidsk-node-"));
     try {
       const fd = await req.formData();
-      const manifest = JSON.parse(String(fd.get("manifest") ?? "{}")) as { fps?: number; quality?: "draft" | "standard" | "high"; format?: string; master?: { lufs: number; truePeak: number } };
+      const manifest = JSON.parse(String(fd.get("manifest") ?? "{}")) as { fps?: number; quality?: "draft" | "standard" | "high"; format?: string; master?: { lufs: number; truePeak: number }; assetUrls?: Record<string, string> };
       const files: Record<string, Uint8Array> = {};
       for (const [k, v] of fd.entries()) if (k.startsWith("file:") && typeof v !== "string") files[k.slice(5)] = new Uint8Array(await v.arrayBuffer());
       const textFiles: Record<string, string | Uint8Array> = {};
       for (const [p, b] of Object.entries(files)) textFiles[p] = /\.(html|json|css|js|md|srt|vtt)$/.test(p) ? new TextDecoder().decode(b) : b;
-      const dir = await materializeProject({ files: textFiles }, join(work, "project"));
+      // Assets may arrive inline (file: parts) or as URLs the node downloads itself.
+      const assetPaths = Object.fromEntries(Object.entries(manifest.assetUrls ?? {}).map(([p, uri]) => [p, { id: p, kind: "image", uri, provider: "remote", license: { name: "n/a", commercialUse: true, requiresAttribution: false }, role: "other" } as Asset]));
+      const dir = await materializeProject({ files: textFiles, assetPaths }, join(work, "project"));
       const out = join(work, "out.mp4");
       const r = await renderProjectDir(dir, out, { fps: manifest.fps ?? 30, quality: manifest.quality ?? "high", format: manifest.format, master: manifest.master, signal: req.signal });
       const bytes = await readFile(out);
