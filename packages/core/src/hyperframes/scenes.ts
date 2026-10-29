@@ -196,7 +196,7 @@ function diagram(ctx: SceneCtx): SceneOutput {
         `<div class="vs-flow">${nodes
           .map(
             (nd, i) =>
-              `${i ? `<div class="vs-flow-line"><div id="${sid}-l${i}" class="vs-flow-fill"></div></div>` : ""}<div id="${sid}-n${i}" class="vs-flow-node">${iconSvg(nd.icon ?? "cpu", `${sid}-n${i}i`, { size: 64, color: p.ink, stroke: 1.7 })}<div class="vs-smallcaps vs-tiny">${e(nd.label ?? "")}</div></div>`,
+              `${i ? `<div class="vs-flow-line"><div id="${sid}-l${i}" class="vs-flow-fill"></div></div>` : ""}<div id="${sid}-n${i}" class="vs-flow-node">${iconSvg(nd.icon ?? "cpu", `${sid}-n${i}i`, { size: Math.round(110 * (ctx.width / 1080)), color: p.ink, stroke: 1.7 })}<div class="vs-smallcaps vs-tiny">${e(nd.label ?? "")}</div></div>`,
           )
           .join("")}</div>`,
       );
@@ -555,9 +555,10 @@ body{font-family:"${f.ui}",sans-serif;color:var(--vs-ink);}
 .vs-rocker-knob{width:76%;height:86%;border-radius:${Math.round(12 * k)}px;background:linear-gradient(180deg,#24252c,#15161b);display:flex;flex-direction:column;align-items:center;justify-content:space-around;font:700 ${Math.round(64 * k)}px "${f.ui}",sans-serif;}
 .vs-rk-on{color:var(--vs-on);}
 .vs-rk-off{color:var(--vs-muted);}
-.vs-flow{display:flex;align-items:center;gap:0;}
-.vs-flow-node{width:${Math.round(170 * k)}px;height:${Math.round(170 * k)}px;border-radius:${Math.round(20 * k)}px;background:#17181e;box-shadow:0 14px 34px rgba(0,0,0,.55);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:${Math.round(10 * k)}px;}
-.vs-flow-line{width:${Math.round(110 * k)}px;height:4px;background:#2a2b33;}
+.vs-flow{display:flex;align-items:center;justify-content:center;gap:0;width:94%;}
+.vs-flow-node{flex:0 1 ${Math.round(270 * k)}px;min-width:0;aspect-ratio:1;box-sizing:border-box;padding:${Math.round(18 * k)}px;border-radius:${Math.round(24 * k)}px;background:linear-gradient(180deg,#1b1c22,#131419);box-shadow:0 18px 40px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.04);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:${Math.round(16 * k)}px;}
+.vs-flow-node .vs-smallcaps{text-align:center;line-height:1.2;max-width:100%;overflow-wrap:break-word;letter-spacing:.1em;}
+.vs-flow-line{flex:0 1 ${Math.round(90 * k)}px;min-width:${Math.round(24 * k)}px;height:4px;background:#2a2b33;}
 .vs-flow-fill{width:100%;height:100%;background:repeating-linear-gradient(90deg,var(--vs-standby) 0 10px,transparent 10px 18px);transform-origin:0 50%;}
 .vs-counter{font:900 ${Math.round(190 * k)}px/1 "${f.ui}",sans-serif;color:var(--vs-accent);font-variant-numeric:tabular-nums;}
 .vs-unit{font:800 ${Math.round(60 * k)}px "${f.ui}",sans-serif;color:var(--vs-accent);}
