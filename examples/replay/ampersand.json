@@ -328,13 +328,13 @@
           "type": "broll",
           "asset": {
             "kind": "image",
-            "query": "intitle:\"Roman cursive\" png",
-            "prompt": "Roman cursive handwriting",
+            "query": "intitle:\"EB1911 Palaeography - Pompeian Tablet\"",
+            "prompt": "Roman cursive wax tablet from Pompeii",
             "prefer": "stock"
           },
           "treatment": "warm",
           "move": "pushIn",
-          "label": "Roman cursive"
+          "label": "Roman handwriting, Pompeii"
         }
       },
       {
@@ -391,31 +391,15 @@
           "type": "broll",
           "asset": {
             "kind": "image",
-            "query": "intitle:\"Apple Pie ABC 01\"",
-            "prompt": "Victorian children's alphabet book cover",
+            "query": "intitle:\"New McGuffey first reader (pp 4-5)\"",
+            "prompt": "19th-century American school reader alphabet page",
             "prefer": "stock"
           },
           "treatment": "vintage",
           "move": "pushIn",
-          "label": "Victorian alphabet book"
+          "label": "American school reader"
         },
         "anchor": "children"
-      },
-      {
-        "id": "sh8",
-        "lineId": "l7",
-        "scene": {
-          "type": "broll",
-          "asset": {
-            "kind": "image",
-            "query": "intitle:\"Apple Pie ABC 03\"",
-            "prompt": "alphabet book page U to Z",
-            "prefer": "stock"
-          },
-          "treatment": "vintage",
-          "move": "kenBurns"
-        },
-        "anchor": "After"
       },
       {
         "id": "sh9",
