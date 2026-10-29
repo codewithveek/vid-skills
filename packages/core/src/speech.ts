@@ -73,6 +73,8 @@ function ordinal(n: number): string {
 }
 
 const YEAR_CUES = /^(in|by|since|from|until|till|to|of|circa|c\.|around|before|after|during|year|back|early|late|mid|summer|winter|spring|autumn|fall|january|february|march|april|may|june|july|august|september|october|november|december)$/i;
+/** Words that make the number before them a year: "the 1840 election", "the 1918 flu", "a 1966 model". */
+const YEAR_NOUNS = /^(elections?|campaigns?|census|olympics|games|world|cup|season|edition|model|version|war|crash|crisis|recession|depression|revolution|uprising|treaty|act|law|ruling|budget|flu|pandemic|epidemic|earthquake|flood|fire|storm|hurricane|eclipse|launch|mission|paper|patent|proposal|letter|report|issue|film|movie|novel|album|tour|summit|expo|exhibition|fair|riots?|strike|presidential|general|midterm)$/i;
 const MONTHS = /^(jan(uary)?|feb(ruary)?|mar(ch)?|apr(il)?|may|june?|july?|aug(ust)?|sep(t(ember)?)?|oct(ober)?|nov(ember)?|dec(ember)?)\.?$/i;
 
 /** Speak one whitespace-delimited token, given its neighbours. Returns null if unchanged. */
@@ -120,7 +122,7 @@ function speakToken(tok: string, prev: string, next: string): string | null {
   if (!out && /^(1[1-9]\d\d|20\d\d)$/.test(core)) {
     const p = prev.replace(/[^\w.]/g, "");
     const n = next.replace(/[^\w]/g, "");
-    const looksYear = YEAR_CUES.test(p) || MONTHS.test(p) || /^\d{1,2}(st|nd|rd|th)?$/.test(p) || trail.length > 0 || !n || /^(and|or|to|through|when|where|was|were|is|the|a|an|it|they|he|she|we|you|i)$/i.test(n);
+    const looksYear = YEAR_CUES.test(p) || YEAR_NOUNS.test(n.replace(/[^A-Za-z]/g, "")) || MONTHS.test(p) || /^\d{1,2}(st|nd|rd|th)?$/.test(p) || trail.length > 0 || !n || /^(and|or|to|through|when|where|was|were|is|the|a|an|it|they|he|she|we|you|i)$/i.test(n);
     if (looksYear) out = yearWords(Number(core));
   }
 

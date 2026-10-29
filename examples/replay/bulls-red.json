@@ -1,0 +1,472 @@
+{
+  "ResearchDossier": {
+    "topic": "do bulls hate the color red",
+    "summary": "Bulls are dichromats and cannot pick out red; the perceived threat of the bullfighter makes them charge. The muleta stays red for tradition and to hide bloodstains.",
+    "angle": "The red cape was never for the bull.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Bulls are not enraged by the color red used in bullfighters' capes; cattle are dichromats, so red does not stand out as a bright color.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_science,_technology,_and_mathematics",
+            "title": "List of common misconceptions about science, technology, and mathematics - Wikipedia",
+            "quote": "Bulls are not enraged by the color red, used in capes by professional bullfighters."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "It is not the color of the cape but the perceived threat by the bullfighter that incites the bull to charge, along with the spearing and agitation it endures beforehand.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_science,_technology,_and_mathematics",
+            "title": "List of common misconceptions about science, technology, and mathematics - Wikipedia",
+            "quote": "It is not the color of the cape, but the perceived threat by the bullfighter that incites it to charge"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "The muleta is a stick with a red cloth; neither cape color can be accurately discerned by the dichromatic bull, and the red is retained for tradition and to hide bloodstains.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Muleta",
+            "title": "Muleta - Wikipedia",
+            "quote": "is retained merely for tradition, and to hide bloodstains"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "Cattle are dichromatic, like most mammals; humans are trichromats.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Cattle",
+            "title": "Cattle - Wikipedia",
+            "quote": "They are dichromatic, like most mammals."
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Trichromacy",
+            "title": "Trichromacy - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Bulls Don't Hate Red",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Red makes bulls angry. Right?",
+            "emphasis": [
+              "angry"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l2",
+            "text": "Wrong. To a bull, red barely stands out at all.",
+            "emphasis": [
+              "Wrong"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "You see color with three kinds of cone cells. Cattle have just two, like most mammals.",
+            "emphasis": [
+              "two"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "So that bright red cape? To the bull, it's nothing special.",
+            "emphasis": [
+              "nothing"
+            ],
+            "claimIds": [
+              "c1",
+              "c3"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "So why does it charge?",
+            "emphasis": [
+              "charge"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l6",
+            "text": "The threat. A person in the ring, moving at it.",
+            "emphasis": [
+              "threat"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l7",
+            "text": "Plus the stress the bull is put through before the fight.",
+            "emphasis": [
+              "stress"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l8",
+            "text": "So why is the cape red?",
+            "emphasis": [
+              "red"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l9",
+            "text": "Tradition. And red hides the bloodstains.",
+            "emphasis": [
+              "bloodstains"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l10",
+            "text": "The red was never for the bull. It's for the people watching.",
+            "emphasis": [
+              "watching"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Matador in the Plaza de toros de la Real Maestranza\"",
+            "prompt": "matador holding a red cape",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l2",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "x",
+            "title": "MYTH",
+            "label": "Red makes bulls angry"
+          },
+          "right": {
+            "icon": "check",
+            "title": "FACT",
+            "label": "Bulls barely see red"
+          },
+          "winner": "right"
+        },
+        "anchor": "Wrong."
+      },
+      {
+        "id": "sh3",
+        "lineId": "l3",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "eye",
+            "title": "3",
+            "label": "Human cone types"
+          },
+          "right": {
+            "icon": "eye",
+            "title": "2",
+            "label": "Cattle cone types"
+          },
+          "winner": "none"
+        },
+        "anchor": "three"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Bull grazing, Loughmacrory\"",
+            "prompt": "a bull grazing in a field",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Like most mammals"
+        },
+        "anchor": "Cattle"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "eye-off",
+            "label": "RED DOESN'T POP",
+            "color": "#E50914",
+            "glow": "yes"
+          }
+        },
+        "anchor": "cape?"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "typewriter",
+          "lead": "why does it",
+          "highlight": "charge?",
+          "cps": 14
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "triangle-alert",
+            "label": "THE THREAT",
+            "color": "#FF9F1C",
+            "glow": "yes"
+          }
+        },
+        "anchor": "threat."
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "flow",
+          "data": {
+            "nodes": [
+              {
+                "label": "PERSON IN THE RING",
+                "icon": "user"
+              },
+              {
+                "label": "CHARGE",
+                "icon": "zap"
+              }
+            ]
+          }
+        },
+        "anchor": "person"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "activity",
+            "label": "STRESS",
+            "color": "#E50914"
+          }
+        },
+        "anchor": "stress"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l8",
+        "scene": {
+          "type": "typewriter",
+          "lead": "why is the cape",
+          "highlight": "red?",
+          "cps": 14
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "l9",
+        "scene": {
+          "type": "diagram",
+          "template": "checklist",
+          "data": {
+            "items": [
+              "Tradition",
+              "Hides the bloodstains"
+            ]
+          }
+        },
+        "anchor": "Tradition."
+      },
+      {
+        "id": "sh12",
+        "lineId": "l10",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "users",
+            "label": "FOR THE CROWD",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "people"
+      },
+      {
+        "id": "sh13",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh14",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Bulls don't hate red. The cape is red for a darker reason",
+    "description": "Red makes bulls angry. Right? Wrong.\nCattle have two kinds of colour cone cells, not three, so a red cape doesn't stand out to them. They charge at the threat in the ring. The cape stays red for tradition and to hide the bloodstains.",
+    "hashtags": [
+      "mythbusting",
+      "animals",
+      "didyouknow",
+      "science"
+    ],
+    "keywords": [
+      "do bulls hate red",
+      "bull colour vision",
+      "muleta red",
+      "bullfighting myth",
+      "dichromat"
+    ],
+    "hook": "Red makes bulls angry. Right? Wrong.",
+    "altText": "Motion-graphics explainer busting the myth that bulls hate red.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_science,_technology,_and_mathematics",
+        "title": "List of common misconceptions"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Muleta",
+        "title": "Muleta"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

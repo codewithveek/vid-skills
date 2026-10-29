@@ -1,0 +1,547 @@
+{
+  "ResearchDossier": {
+    "topic": "why QR codes still scan when damaged",
+    "summary": "QR codes, invented in 1994 by Masahiro Hara at Denso Wave to track car parts, carry Reed–Solomon error correction that rebuilds up to ~30% of the code — which is also how logo QR codes work.",
+    "angle": "A QR code carries its own spare parts.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "QR codes incorporate Reed–Solomon error correction so the code remains readable even if partially damaged.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/QR_code",
+            "title": "QR code - Wikipedia",
+            "quote": "to ensure that the code remains readable even if it is partially damaged"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The QR code was invented in 1994 by Masahiro Hara of Denso Wave for labelling and keeping track of automobile parts.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/QR_code",
+            "title": "QR code - Wikipedia",
+            "quote": "invented in 1994 by Masahiro Hara of the Japanese company Denso Wave"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Error correction was designed for factory labels exposed to oil stains and physical wear that made one-dimensional barcodes unreadable.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/QR_code",
+            "title": "QR code - Wikipedia",
+            "quote": "exposed to oil stains and physical wear that rendered standard one-dimensional barcodes unreadable"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "The design was influenced by the black and white stones of a Go board.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/QR_code",
+            "title": "QR code - Wikipedia",
+            "quote": "was influenced by the black and white stones played on a Go board"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "Three corner finder patterns let the scanner orient the code and work out its perspective.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/QR_code",
+            "title": "QR code - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c6",
+        "text": "At the highest level (H), about 30% of codewords can be restored; artistic codes put a logo in the centre and the scanner treats it as damage.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/QR_code",
+            "title": "QR code - Wikipedia",
+            "quote": "the scanner treats the obscured squares under the logo as a damaged area"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "QR Codes Carry a Spare",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Cover part of a QR code, and it can still scan.",
+            "emphasis": [
+              "still"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l2",
+            "text": "That's not luck. It's built in.",
+            "emphasis": [
+              "built"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "In 1994, an engineer named Masahiro Hara invented it at Denso Wave in Japan.",
+            "emphasis": [
+              "Hara"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l4",
+            "text": "To track car parts in factories.",
+            "emphasis": [
+              "car"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l5",
+            "text": "Where labels got oil stains and wear that made barcodes unreadable.",
+            "emphasis": [
+              "oil"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l6",
+            "text": "Its look was inspired by black and white stones on a Go board.",
+            "emphasis": [
+              "Go"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "The three big squares tell the scanner which way is up.",
+            "emphasis": [
+              "squares"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l8",
+            "text": "And woven into the dots is spare data, called error correction.",
+            "emphasis": [
+              "spare"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l9",
+            "text": "At the highest level, it can rebuild about 30 percent of the code.",
+            "emphasis": [
+              "30"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l10",
+            "text": "That's how some QR codes have a logo stamped right in the middle.",
+            "emphasis": [
+              "logo"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l11",
+            "text": "The scanner just treats the logo as damage.",
+            "emphasis": [
+              "damage"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l12",
+            "text": "A label built to survive oily car parts, now on every menu and ticket.",
+            "emphasis": [
+              "oily"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"QR Code Linking to QR Code Apps\"",
+            "prompt": "a QR code",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "scan-line",
+            "label": "STILL SCANS",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "still"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "shield-check",
+            "label": "BUILT IN",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "built"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "typewriter",
+          "lead": "In",
+          "highlight": "1994",
+          "cps": 12
+        }
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Masahiro Hara 202303\"",
+            "prompt": "portrait of Masahiro Hara",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Masahiro Hara"
+        },
+        "anchor": "Masahiro"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"002 Production line - car assembly line\"",
+            "prompt": "car assembly line in a factory",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Car factory"
+        },
+        "anchor": "car"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "barcode",
+            "title": "1D",
+            "label": "Barcode: unreadable when dirty"
+          },
+          "right": {
+            "icon": "qr-code",
+            "title": "2D",
+            "label": "QR: built to survive"
+          },
+          "winner": "right"
+        },
+        "anchor": "oil"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Go -- 2021 -- 6757\"",
+            "prompt": "black and white Go stones on a board",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Go stones"
+        },
+        "anchor": "Go"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "square-dashed",
+            "label": "FINDER SQUARES",
+            "color": "#F4F5F7",
+            "glow": "yes"
+          }
+        },
+        "anchor": "squares"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l8",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "layers",
+            "label": "SPARE DATA",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "spare"
+      },
+      {
+        "id": "sh11",
+        "lineId": "l9",
+        "scene": {
+          "type": "diagram",
+          "template": "counter",
+          "data": {
+            "from": 0,
+            "to": 30,
+            "unit": "%",
+            "label": "CAN BE REBUILT (LEVEL H)"
+          }
+        },
+        "anchor": "30"
+      },
+      {
+        "id": "sh12",
+        "lineId": "l10",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Logo example Visual QR Code\"",
+            "prompt": "QR code with a logo in the centre",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Logo = damage"
+        },
+        "anchor": "logo"
+      },
+      {
+        "id": "sh13",
+        "lineId": "l11",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "scan-search",
+            "label": "TREATED AS DAMAGE",
+            "color": "#FF9F1C",
+            "glow": "yes"
+          }
+        },
+        "anchor": "treats"
+      },
+      {
+        "id": "sh14",
+        "lineId": "l12",
+        "scene": {
+          "type": "diagram",
+          "template": "timeline",
+          "data": {
+            "events": [
+              {
+                "year": "1994",
+                "label": "Car parts"
+              },
+              {
+                "year": "Today",
+                "label": "Menus & tickets"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "sh15",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh16",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Why a QR code still scans with a piece missing",
+    "description": "Cover part of a QR code, and it can still scan.\nMasahiro Hara invented it in 1994 at Denso Wave to track car parts in oily factories. Woven into the dots is error correction that can rebuild about 30% of the code, which is also how QR codes can have logos in the middle.",
+    "hashtags": [
+      "tech",
+      "howitworks",
+      "qrcode",
+      "didyouknow"
+    ],
+    "keywords": [
+      "how QR codes work",
+      "QR code error correction",
+      "Masahiro Hara",
+      "Denso Wave",
+      "QR code logo"
+    ],
+    "hook": "Cover part of a QR code, and it still scans.",
+    "altText": "Motion-graphics explainer on how QR codes survive damage.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/QR_code",
+        "title": "QR code"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

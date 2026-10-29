@@ -17,6 +17,8 @@ describe("speech normalization", () => {
     expect(toSpeech("In 1920, a Detroit signal").spoken).toBe("In nineteen twenty, a Detroit signal");
     expect(toSpeech("on 2 January 1869 it exploded").spoken).toBe("on two January eighteen sixty-nine it exploded");
     expect(toSpeech("Sony made the last ones in 2011.").spoken).toBe("Sony made the last ones in twenty eleven.");
+    expect(toSpeech("Then came the 1840 election.").spoken).toBe("Then came the eighteen forty election.");
+    expect(toSpeech("the 1500 people who came").spoken).toBe("the one thousand five hundred people who came");
   });
   it("reads Roman numerals after cue words as numbers", () => {
     expect(toSpeech("the Harvard Mark II found a moth").spoken).toBe("the Harvard Mark two found a moth");
