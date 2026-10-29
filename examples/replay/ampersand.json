@@ -1,0 +1,591 @@
+{
+  "ResearchDossier": {
+    "topic": "where the ampersand comes from",
+    "summary": "& is the Latin et written as one shape in Roman cursive. Children once recited it as the 27th letter: '…X, Y, Z, and per se and', slurred into 'ampersand' (common by 1837). The Ampère origin is a myth.",
+    "angle": "The & was a letter of the alphabet, and its name is a mispronunciation.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "The ampersand originated as a ligature of the word et (Latin for 'and'), traced to the 1st century CE and old Roman cursive, where E and T were occasionally written together.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ampersand",
+            "title": "Ampersand - Wikipedia",
+            "quote": "originated as a ligature of the word et"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "& was regarded as the 27th letter of the English alphabet, as taught to children in the US and elsewhere.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ampersand",
+            "title": "Ampersand - Wikipedia",
+            "quote": "& was regarded as the 27th letter of the English alphabet"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "The character was referred to as 'and per se and' (the symbol by itself, 'and'), which was routinely slurred to 'ampersand'.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ampersand",
+            "title": "Ampersand - Wikipedia",
+            "quote": "was routinely slurred to 'ampersand'"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "The term 'ampersand' had entered common English usage by 1837.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ampersand",
+            "title": "Ampersand - Wikipedia",
+            "quote": "had entered common English usage by 1837"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "It has been falsely claimed that André-Marie Ampère used the symbol in his publications and that it was named 'Ampère's and'.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ampersand",
+            "title": "Ampersand - Wikipedia",
+            "quote": "falsely claimed that André-Marie Ampère used the symbol"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1st c.",
+        "event": "Roman cursive et",
+        "claimId": "c1"
+      },
+      {
+        "year": "1837",
+        "event": "'ampersand' common",
+        "claimId": "c4"
+      }
+    ],
+    "analogies": [],
+    "visualIdeas": [
+      "many ampersand glyphs",
+      "italic ampersand",
+      "Victorian alphabet book"
+    ],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "& Was the 27th Letter",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "See this squiggle? The and sign.",
+            "emphasis": [
+              "squiggle"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l2",
+            "text": "It used to be the 27th letter of the alphabet.",
+            "emphasis": [
+              "27th"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "Two thousand years ago, Romans wrote et, Latin for and.",
+            "emphasis": [
+              "et"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l4",
+            "text": "Writing fast, they joined the E and the T into one shape.",
+            "emphasis": [
+              "joined"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l5",
+            "text": "Look closely and you can still see them.",
+            "emphasis": [
+              "see"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l6",
+            "text": "Centuries later, children learned it as the last letter of the alphabet.",
+            "emphasis": [
+              "last"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l7",
+            "text": "After Z, they'd say: and per se and.",
+            "emphasis": [
+              "per"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l8",
+            "text": "Meaning: this symbol by itself means and.",
+            "emphasis": [
+              "itself"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "twist",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l9",
+            "text": "Say it fast enough, and per se and becomes ampersand.",
+            "emphasis": [
+              "ampersand"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l10",
+            "text": "By 1837, the slurred name was common English.",
+            "emphasis": [
+              "1837"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l11",
+            "text": "And no, it wasn't named after the physicist Ampère.",
+            "emphasis": [
+              "Ampère"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l12",
+            "text": "That's a myth.",
+            "emphasis": [
+              "myth"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l13",
+            "text": "So the name is a mispronunciation, and the symbol is a Roman shortcut.",
+            "emphasis": [
+              "shortcut"
+            ],
+            "claimIds": [
+              "c1",
+              "c3"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l14",
+            "text": "Hiding on your keyboard the whole time.",
+            "emphasis": [
+              "keyboard"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b6",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l15",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Circle of ampersands\"",
+            "prompt": "many ampersand glyphs in different typefaces",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l2",
+        "scene": {
+          "type": "stat",
+          "value": "27th",
+          "caption": "letter of the alphabet",
+          "sourceClaimId": "c2"
+        },
+        "anchor": "27th"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Roman cursive\" png",
+            "prompt": "Roman cursive handwriting",
+            "prefer": "stock"
+          },
+          "treatment": "warm",
+          "move": "pushIn",
+          "label": "Roman cursive"
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "typewriter",
+          "lead": "et =",
+          "highlight": "and",
+          "cps": 12
+        },
+        "anchor": "et"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "type",
+            "title": "E + T",
+            "label": "Two letters"
+          },
+          "right": {
+            "icon": "ampersand",
+            "title": "&",
+            "label": "One shape"
+          },
+          "winner": "right"
+        },
+        "anchor": "joined"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Italic ampersands\"",
+            "prompt": "italic ampersand glyphs",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Italic &: an E and a T"
+        },
+        "anchor": "see"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l6",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Apple Pie ABC 01\"",
+            "prompt": "Victorian children's alphabet book cover",
+            "prefer": "stock"
+          },
+          "treatment": "vintage",
+          "move": "pushIn",
+          "label": "Victorian alphabet book"
+        },
+        "anchor": "children"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l7",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Apple Pie ABC 03\"",
+            "prompt": "alphabet book page U to Z",
+            "prefer": "stock"
+          },
+          "treatment": "vintage",
+          "move": "kenBurns"
+        },
+        "anchor": "After"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "typewriter",
+          "lead": "…Z,",
+          "highlight": "and per se and",
+          "cps": 16
+        },
+        "anchor": "per"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l8",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "ampersand",
+            "label": "BY ITSELF = AND",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "itself"
+      },
+      {
+        "id": "sh11",
+        "lineId": "l9",
+        "scene": {
+          "type": "diagram",
+          "template": "flow",
+          "data": {
+            "nodes": [
+              {
+                "label": "AND PER SE AND",
+                "icon": "mic"
+              },
+              {
+                "label": "AMPERSAND",
+                "icon": "ampersand"
+              }
+            ]
+          }
+        },
+        "anchor": "becomes"
+      },
+      {
+        "id": "sh12",
+        "lineId": "l10",
+        "scene": {
+          "type": "typewriter",
+          "lead": "By",
+          "highlight": "1837",
+          "cps": 12
+        }
+      },
+      {
+        "id": "sh13",
+        "lineId": "l11",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Ampere portrait at the Musee Poleymieux\"",
+            "prompt": "portrait of André-Marie Ampère",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "André-Marie Ampère"
+        },
+        "anchor": "physicist"
+      },
+      {
+        "id": "sh14",
+        "lineId": "l12",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "circle-x",
+            "label": "MYTH",
+            "color": "#E50914",
+            "glow": "yes"
+          }
+        },
+        "anchor": "myth"
+      },
+      {
+        "id": "sh15",
+        "lineId": "l13",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"EsperluetteOppenord\"",
+            "prompt": "ornamental ampersand drawing",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Ornamental &"
+        },
+        "anchor": "symbol"
+      },
+      {
+        "id": "sh16",
+        "lineId": "l14",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "keyboard",
+            "label": "SHIFT + 7",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "keyboard"
+      },
+      {
+        "id": "sh17",
+        "lineId": "l15",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh18",
+        "lineId": "l15",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "& used to be the 27th letter of the alphabet",
+    "description": "See this squiggle? The and sign. It used to be the 27th letter of the alphabet.\nThe & is the Latin word et, its E and T joined in Roman handwriting. Children recited it after Z as 'and per se and', which slurred into 'ampersand'. And no, it isn't named after Ampère.",
+    "hashtags": [
+      "history",
+      "typography",
+      "language",
+      "didyouknow"
+    ],
+    "keywords": [
+      "ampersand history",
+      "27th letter",
+      "and per se and",
+      "et ligature",
+      "Ampère myth"
+    ],
+    "hook": "& used to be the 27th letter of the alphabet.",
+    "altText": "Motion-graphics explainer on the history of the ampersand.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Ampersand",
+        "title": "Ampersand"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}
