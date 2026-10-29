@@ -213,9 +213,8 @@ function chromeFile(tl: Timeline, style: StylePack, layout: ReturnType<StylePack
   return `<template>
   <style>
     #root { position: absolute; inset: 0; pointer-events: none; }
-    /* A soft dark scrim keeps the headline readable over bright b-roll fills. */
-    .vs-title-band { position: absolute; left: 0; right: 0; display: flex; align-items: center; justify-content: center; background: linear-gradient(180deg, rgba(10,9,14,0) 0%, rgba(10,9,14,.6) 22%, rgba(10,9,14,.6) 78%, rgba(10,9,14,0) 100%); }
-    #chrome-title { margin: 0; max-width: 94%; text-align: center; font-family: "${style.fonts.display}", "Oswald", "Archivo Black", sans-serif; font-weight: ${style.title.weight}; font-size: ${size}px; line-height: ${twoLines ? 0.95 : 1}; letter-spacing: ${style.title.letterSpacing}; color: ${p.title}; -webkit-text-stroke: ${stroke}px ${p.titleStroke}; paint-order: stroke fill; text-shadow: 0 0 ${Math.max(1, Math.round(2 * k))}px rgba(0,0,0,.9), 0 ${Math.round(4 * k)}px ${Math.round(14 * k)}px rgba(0,0,0,.65); ${twoLines ? "white-space: normal; text-wrap: balance;" : "white-space: nowrap;"} ${style.title.uppercase ? "text-transform: uppercase;" : ""} }
+    .vs-title-band { position: absolute; left: 0; right: 0; display: flex; align-items: center; justify-content: center; }
+    #chrome-title { margin: 0; max-width: 94%; text-align: center; font-family: "${style.fonts.display}", "Oswald", "Archivo Black", sans-serif; font-weight: ${style.title.weight}; font-size: ${size}px; line-height: ${twoLines ? 0.95 : 1}; letter-spacing: ${style.title.letterSpacing}; color: ${p.title}; -webkit-text-stroke: ${stroke}px ${p.titleStroke}; paint-order: stroke fill; ${twoLines ? "white-space: normal; text-wrap: balance;" : "white-space: nowrap;"} ${style.title.uppercase ? "text-transform: uppercase;" : ""} }
     #chrome-handle { position: absolute; text-align: right; font: 700 ${Math.round(30 * k)}px "${style.fonts.ui}", sans-serif; color: rgba(255,255,255,.9); -webkit-text-stroke: ${Math.max(2, Math.round(4 * k))}px rgba(0,0,0,.55); paint-order: stroke fill; text-shadow: 0 1px 3px rgba(0,0,0,.6); }
   </style>
   <div id="root" data-composition-id="chrome" data-width="${w}" data-height="${h}" data-composition-variables="${attrJson(vars)}" data-layout-allow-overlap>

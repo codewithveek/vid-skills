@@ -144,6 +144,10 @@ describe("pipeline (offline, mock providers)", () => {
     expect(p.files["index.html"]).toContain('data-composition-id="main"');
     for (const s of tl.scenes) expect(p.files[`compositions/s-${s.id}.html`]).toContain(`window.__timelines["s-${s.id}"]`);
     expect(p.files["compositions/chrome.html"]).toContain("Your Save Icon Is a Fossil");
+    // the red headline has a white outline only: no backdrop band, no drop shadow
+    const titleCss = /#chrome-title \{[^}]*\}/.exec(p.files["compositions/chrome.html"]!)![0];
+    expect(titleCss).not.toContain("text-shadow");
+    expect(p.files["compositions/chrome.html"]).not.toMatch(/\.vs-title-band \{[^}]*background/);
     // the brief's handle overrides the storyboard's placeholder on the end card and watermark
     const end = tl.scenes.find((s) => s.scene.type === "endcard")!;
     expect(end.scene.type === "endcard" && end.scene.handle).toBe("@vidskills");
