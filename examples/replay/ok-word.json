@@ -262,10 +262,16 @@
         "id": "sh1",
         "lineId": "l1",
         "scene": {
-          "type": "stat",
-          "value": "OK",
-          "caption": "maybe the most used word on Earth",
-          "sourceClaimId": "c1"
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Martin Van Buren.jpg\"",
+            "prompt": "portrait of Martin Van Buren",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "He's the K in OK"
         }
       },
       {
