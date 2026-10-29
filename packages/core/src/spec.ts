@@ -287,8 +287,24 @@ export const EndCardScene = SceneBase.extend({
   text: z.string().optional(),
 });
 
+export const VersusSide = z.object({
+  asset: AssetRequest.optional().describe("Photo for this side (preferred: real images beat icons)"),
+  icon: z.string().optional().describe("Fallback when there is no photo: any Lucide icon name, e.g. 'bug', 'scroll-text'"),
+  title: z.string().max(16).describe("Big year, number or word, e.g. '1878'"),
+  label: z.string().max(48).describe("Short caption under the title"),
+});
+export type VersusSide = z.infer<typeof VersusSide>;
+
+export const VersusScene = SceneBase.extend({
+  type: z.literal("versus"),
+  left: VersusSide,
+  right: VersusSide,
+  winner: z.enum(["left", "right", "none"]).default("right").describe("Side that gets the highlight ring"),
+});
+
 export const Scene = z.discriminatedUnion("type", [
   BrollScene,
+  VersusScene,
   MontageScene,
   DiagramScene,
   TypewriterScene,

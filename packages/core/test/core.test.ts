@@ -20,8 +20,11 @@ import {
   synthSfx,
   toSrt,
   VideoBrief,
+  ICONS,
+  iconSvg,
   posterFor,
   rankCandidates,
+  resolveIcon,
   type StockProvider,
 } from "../src/index.js";
 import { fakeLLM, fakeTTS } from "./fixtures.js";
@@ -226,6 +229,34 @@ describe("poster", () => {
     const on = await run({ enabled: true }, "p3");
     expect(on.project!.files["compositions/poster.html"]).toBeDefined();
     expect(on.manifest.outputs.variants?.poster).toBeUndefined();
+  });
+});
+
+describe("icons and versus cards", () => {
+  it("resolves hand-drawn, Lucide and alias names; unknown names get a neutral icon", () => {
+    expect(resolveIcon("power")).toEqual(ICONS.power);
+    expect(resolveIcon("Bug")!.length).toBeGreaterThan(3);
+    expect(resolveIcon("scroll text")).toEqual(resolveIcon("scroll-text"));
+    expect(resolveIcon("moth")).toEqual(resolveIcon("bug"));
+    expect(resolveIcon("definitely-not-an-icon")).toBeNull();
+    const svg = iconSvg("definitely-not-an-icon", "i1", { size: 64, color: "#fff" });
+    expect(svg).not.toContain(ICONS.power![0]!);
+    // every primitive is a path so the draw-on works
+    expect(iconSvg("traffic-cone", "i2", { size: 64, color: "#fff" })).not.toMatch(/<(circle|rect|line|polyline|polygon|ellipse)\b/);
+  });
+  it("renders a versus card with a photo side and an icon side", async () => {
+    const res = await runPipeline({ topic: "the floppy disk save icon", durationSec: 25, poster: { mode: "off" } }, { providers: { llm: fakeLLM(), tts: fakeTTS() }, storage: new MemoryStorage(), jobId: "v1", stopAfter: "compose" });
+    const tl = structuredClone(res.timeline!);
+    const i = tl.scenes.findIndex((s) => s.id === "sh5");
+    tl.scenes[i] = { ...tl.scenes[i]!, assets: ["sh5-L"], scene: { type: "versus", left: { asset: { kind: "image", query: "8 inch floppy", prefer: "either" }, title: "1971", label: "8-inch floppy" }, right: { icon: "save", title: "TODAY", label: "The save icon" }, winner: "right" } };
+    const assets = [...res.manifest.assets, { id: "sh5-L", kind: "image" as const, uri: "store://x/sh5-L.jpg", mime: "image/jpeg", width: 1600, height: 1200, provider: "t", license: { name: "CC0", commercialUse: true, requiresAttribution: false }, role: "visual" as const }];
+    const p = compileHyperFrames(tl, { assets, style: framedExplainer, aspect: "9:16" });
+    const html = p.files["compositions/s-sh5.html"]!;
+    expect(html).toContain('src="assets/img/sh5-L.jpg"');
+    expect(html).toContain("vs-vx-hot");
+    expect(html).toContain(">1971<");
+    expect(html).toContain(">VS<");
+    expect(p.assetPaths["assets/img/sh5-L.jpg"]).toBeDefined();
   });
 });
 

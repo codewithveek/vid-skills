@@ -1,5 +1,8 @@
+import { LUCIDE } from "./icons.lucide.generated.js";
+
 /**
- * Stroke icons (24×24, round caps) used by diagram scenes. Every path carries
+ * Stroke icons (24×24, round caps) used by diagram scenes. The hand-drawn set below wins;
+ * any other name resolves against the bundled Lucide set (2,000+ icons, ISC). Every path carries
  * pathLength="1" so a draw-on is a deterministic stroke-dashoffset 1 → 0 tween.
  * Shapes follow IEC 60417 where one exists (5007 on, 5008 off, 5009 standby/power, 5010 on/off).
  */
@@ -31,8 +34,52 @@ export const ICONS: Record<string, string[]> = {
   dollar: ["M12 2v20", "M17 6.5C16 5 14.2 4.5 12 4.5c-3 0-5 1.4-5 3.5 0 5 10 2.5 10 8 0 2.1-2 3.5-5 3.5-2.4 0-4.4-.8-5.3-2.5"],
 };
 
+/** Common words models use for icons that Lucide names differently. */
+const ALIASES: Record<string, string> = {
+  warning: "triangle-alert",
+  error: "circle-x",
+  question: "circle-question-mark",
+  info: "info",
+  money: "banknote",
+  car: "car-front",
+  stop: "octagon",
+  phone: "smartphone",
+  email: "mail",
+  letter: "mail",
+  document: "file-text",
+  person: "user",
+  people: "users",
+  idea: "lightbulb",
+  bulb: "lightbulb",
+  time: "clock",
+  calendar: "calendar-days",
+  science: "flask-conical",
+  trophy: "trophy",
+  insect: "bug",
+  moth: "bug",
+  ship: "ship",
+  train: "train-front",
+};
+
+const norm = (name: string) => name.trim().toLowerCase().replace(/[\s_]+/g, "-").replace(/^lucide-/, "");
+
+/** Resolve an icon name (hand-drawn set, then Lucide, then aliases); null when unknown. */
+export function resolveIcon(name: string): string[] | null {
+  const n = norm(name);
+  return ICONS[n] ?? LUCIDE[n] ?? LUCIDE[ALIASES[n] ?? ""] ?? LUCIDE[`${n}s`] ?? LUCIDE[n.replace(/s$/, "")] ?? null;
+}
+
+export function hasIcon(name: string): boolean {
+  return resolveIcon(name) !== null;
+}
+
+export function iconNames(): string[] {
+  return [...new Set([...Object.keys(ICONS), ...Object.keys(LUCIDE)])].sort();
+}
+
 export function iconSvg(name: string, id: string, opts: { size: number; color: string; stroke?: number; glow?: string }): string {
-  const paths = ICONS[name] ?? ICONS.power!;
+  // Unknown names fall back to a neutral spark rather than an unrelated symbol.
+  const paths = resolveIcon(name) ?? LUCIDE.sparkles ?? ICONS.power!;
   const sw = opts.stroke ?? 1.8;
   const filter = opts.glow ? ` style="filter: drop-shadow(0 0 10px ${opts.glow}) drop-shadow(0 0 22px ${opts.glow});"` : "";
   return `<svg id="${id}" class="vs-icon" width="${opts.size}" height="${opts.size}" viewBox="0 0 24 24" fill="none" stroke="${opts.color}" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round"${filter}>${paths

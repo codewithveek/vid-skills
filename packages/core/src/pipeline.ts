@@ -515,6 +515,13 @@ export async function stageAssets(
         assets.push(a);
         ids.push(a.id);
       }
+    } else if (sc.type === "versus") {
+      for (const [side, key] of [[sc.left, "L"], [sc.right, "R"]] as const) {
+        if (!side.asset) continue;
+        const a = await resolve(side.asset, `${shot.id}-${key}`, side.asset.query ?? side.label);
+        assets.push(a);
+        ids.push(a.id);
+      }
     } else if (sc.type === "document") {
       let a: Asset | null = null;
       if (sc.asset.assetId || (sc.asset.prefer === "stock" && sc.asset.query)) a = await resolve(sc.asset, `${shot.id}-d`, hint);

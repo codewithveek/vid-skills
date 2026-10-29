@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "pnpm run gen && pnpm -r --filter './packages/**' run build",
-    "gen": "tsx scripts/gen-limits-doc.ts && node scripts/gen-prompts.mjs",
+    "gen": "tsx scripts/gen-limits-doc.ts && node scripts/gen-icons.mjs && node scripts/gen-prompts.mjs",
     "typecheck": "pnpm run gen && pnpm -r run typecheck",
     "test": "pnpm run gen && vitest run",
     "lint:skills": "node scripts/lint-skills.mjs",
@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
+    "lucide-static": "1.56.0",
     "tsx": "^4.20.0",
     "typescript": "^5.9.3",
     "vitest": "^3.2.4"

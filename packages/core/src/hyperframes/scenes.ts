@@ -143,7 +143,7 @@ function diagram(ctx: SceneCtx): SceneOutput {
       const label = str("label");
       const html = darkStage(
         ctx,
-        `<div id="${sid}-btn" class="vs-roundbtn">${iconSvg(icon, `${sid}-ic`, { size: 150, color, stroke: 1.6, glow: str("glow") ? color : undefined })}</div>${label ? `<div id="${sid}-lb" class="vs-smallcaps">${e(label)}</div>` : ""}`,
+        `<div id="${sid}-btn" class="vs-roundbtn">${iconSvg(icon, `${sid}-ic`, { size: 150, color, stroke: 1.6, glow: str("glow") ? color : undefined })}</div>${label ? `<div id="${sid}-lb" class="vs-smallcaps" style="text-align:center;max-width:86%;line-height:1.2">${e(label)}</div>` : ""}`,
       );
       let js = `tl.fromTo("#${sid}-btn", {scale:0.92, opacity:0}, {scale:1, opacity:1, duration:0.25, ease:"power2.out"}, 0);` + drawOn(`#${sid}-ic`, 0.15);
       if (label) js += `tl.fromTo("#${sid}-lb", {opacity:0, y:10}, {opacity:1, y:0, duration:0.3}, ${n(0.2 + draw)});`;
@@ -160,7 +160,7 @@ function diagram(ctx: SceneCtx): SceneOutput {
         `<div class="vs-cards">${cards
           .map(
             (c, i) =>
-              `<div id="${sid}-c${i}" class="vs-card"><div class="vs-roundbtn vs-roundbtn-sm">${iconSvg(c.icon ?? "power", `${sid}-c${i}i`, { size: 96, color: colorOf(c.state), stroke: 1.7 })}</div><div class="vs-smallcaps">${e(c.label ?? "")}</div></div>`,
+              `<div id="${sid}-c${i}" class="vs-card"><div class="vs-roundbtn vs-roundbtn-sm">${iconSvg(c.icon ?? "power", `${sid}-c${i}i`, { size: Math.round(120 * (ctx.width / 1080)), color: colorOf(c.state), stroke: 1.7 })}</div><div class="vs-smallcaps">${e(c.label ?? "")}</div></div>`,
           )
           .join("")}</div>`,
       );
@@ -214,15 +214,21 @@ function diagram(ctx: SceneCtx): SceneOutput {
       const right = str("right", "THE NEW WAY");
       const li = str("leftIcon", "onoff");
       const ri = str("rightIcon", "power");
+      // A year or number reads faster than an abstract icon: leftTitle/rightTitle replace the icon.
+      const lt = str("leftTitle");
+      const rt = str("rightTitle");
+      const k = ctx.width / 1080;
+      const top = (title: string, icon: string, id: string, color: string) =>
+        title ? `<div class="vs-card-title" style="color:${color}">${e(title)}</div>` : iconSvg(icon, id, { size: Math.round(170 * k), color, stroke: 1.6 });
       const html = darkStage(
         ctx,
-        `<div class="vs-cards"><div id="${sid}-L" class="vs-card">${iconSvg(li, `${sid}-Li`, { size: 110, color: p.ink })}<div class="vs-smallcaps">${e(left)}</div></div><div class="vs-vs">VS</div><div id="${sid}-R" class="vs-card vs-card-hot">${iconSvg(ri, `${sid}-Ri`, { size: 110, color: p.standby })}<div class="vs-smallcaps">${e(right)}</div></div></div>`,
+        `<div class="vs-cards"><div id="${sid}-L" class="vs-card">${top(lt, li, `${sid}-Li`, p.ink)}<div class="vs-smallcaps">${e(left)}</div></div><div class="vs-vs">VS</div><div id="${sid}-R" class="vs-card vs-card-hot">${top(rt, ri, `${sid}-Ri`, p.standby)}<div class="vs-smallcaps">${e(right)}</div></div></div>`,
       );
       const js =
         `tl.fromTo("#${sid}-L", {x:-40, opacity:0}, {x:0, opacity:1, duration:0.3, ease:"power3.out"}, 0);` +
-        drawOn(`#${sid}-Li`, 0.1) +
+        (lt ? "" : drawOn(`#${sid}-Li`, 0.1)) +
         `tl.fromTo("#${sid}-R", {x:40, opacity:0}, {x:0, opacity:1, duration:0.25, ease:"power3.out"}, ${n(Math.min(0.35, d * 0.15))});` +
-        drawOn(`#${sid}-Ri`, Math.min(0.45, d * 0.2));
+        (rt ? "" : drawOn(`#${sid}-Ri`, Math.min(0.45, d * 0.2)));
       return { css: "", html, js };
     }
     case "counter": {
@@ -387,8 +393,42 @@ function endcard(ctx: SceneCtx): SceneOutput {
   return { css: "", html, js };
 }
 
+/**
+ * Two photo cards facing off: big year/number, short label, the winner gets a yellow ring.
+ * Real images beat abstract icons; a side without a photo falls back to a large icon or the title alone.
+ */
+function versus(ctx: SceneCtx): SceneOutput {
+  const s = ctx.ts.scene;
+  if (s.type !== "versus") throw new Error("versus");
+  const sid = ctx.sid;
+  const p = ctx.style.palette;
+  const k = ctx.width / 1080;
+  const side = (key: "L" | "R", v: typeof s.left) => {
+    const a = ctx.assets.find((x) => x.asset.id.endsWith(`-${key}`));
+    const hot = (s.winner === "left" && key === "L") || (s.winner === "right" && key === "R");
+    const visual = a
+      ? `<div class="vs-vx-img">${mediaTag(`${sid}-${key}m`, a, ctx.ts.duration, "vs-media")}</div>`
+      : v.icon
+        ? `<div class="vs-vx-img vs-vx-icon">${iconSvg(v.icon, `${sid}-${key}i`, { size: Math.round(150 * k), color: hot ? p.highlight : p.ink, stroke: 1.6 })}</div>`
+        : "";
+    return `<div id="${sid}-${key}" class="vs-vx-card${hot ? " vs-vx-hot" : ""}${visual ? "" : " vs-vx-textonly"}">${visual}<div class="vs-vx-title${hot ? " vs-vx-title-hot" : ""}">${e(v.title)}</div><div class="vs-vx-label">${e(v.label)}</div></div>`;
+  };
+  const html = darkStage(ctx, `<div class="vs-vx">${side("L", s.left)}<div id="${sid}-vs" class="vs-vx-badge">VS</div>${side("R", s.right)}</div>`);
+  const hotKey = s.winner === "left" ? "L" : s.winner === "right" ? "R" : null;
+  let js =
+    `tl.fromTo("#${sid}-L", {x:${-Math.round(80 * k)}, opacity:0}, {x:0, opacity:1, duration:0.32, ease:"power3.out"}, 0);` +
+    `tl.fromTo("#${sid}-R", {x:${Math.round(80 * k)}, opacity:0}, {x:0, opacity:1, duration:0.32, ease:"power3.out"}, 0.12);` +
+    `tl.fromTo("#${sid}-vs", {scale:0.4, opacity:0}, {scale:1, opacity:1, duration:0.22, ease:"back.out(2.2)"}, 0.3);`;
+  const drawOn = (sel: string, at: number) => `tl.fromTo("${sel} path", {strokeDashoffset:1}, {strokeDashoffset:0, duration:${n(ctx.style.motion.drawOnSec)}, ease:"power2.out", stagger:0.08}, ${n(at)});`;
+  if (s.left.icon && !ctx.assets.some((x) => x.asset.id.endsWith("-L"))) js += drawOn(`#${sid}-Li`, 0.1);
+  if (s.right.icon && !ctx.assets.some((x) => x.asset.id.endsWith("-R"))) js += drawOn(`#${sid}-Ri`, 0.22);
+  if (hotKey) js += `tl.fromTo("#${sid}-${hotKey}", {scale:1}, {scale:1.04, duration:0.25, ease:"power2.out"}, ${n(Math.min(0.9, ctx.ts.duration * 0.45))});`;
+  return { css: "", html, js };
+}
+
 const RENDERERS: Record<string, (ctx: SceneCtx) => SceneOutput> = {
   broll,
+  versus,
   montage,
   diagram,
   typewriter,
@@ -494,9 +534,22 @@ body{font-family:"${f.ui}",sans-serif;color:var(--vs-ink);}
 .vs-roundbtn-sm{width:${Math.round(150 * k)}px;height:${Math.round(150 * k)}px;}
 .vs-smallcaps{font:700 ${Math.round(32 * k)}px/1 "${f.ui}",sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#b9bcc6;}
 .vs-tiny{font-size:${Math.round(28 * k)}px;}
-.vs-cards{display:flex;gap:${Math.round(34 * k)}px;align-items:center;}
-.vs-card{width:${Math.round(260 * k)}px;height:${Math.round(330 * k)}px;border-radius:${Math.round(22 * k)}px;background:linear-gradient(180deg,#1b1c22,#131419);box-shadow:0 22px 50px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.04);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:${Math.round(30 * k)}px;}
+.vs-cards{display:flex;gap:${Math.round(30 * k)}px;align-items:center;justify-content:center;width:92%;}
+.vs-card .vs-smallcaps{text-align:center;line-height:1.2;max-width:100%;overflow-wrap:break-word;letter-spacing:.12em;}
+.vs-card{flex:0 1 ${Math.round(400 * k)}px;min-width:0;height:${Math.round(470 * k)}px;padding:${Math.round(24 * k)}px;box-sizing:border-box;border-radius:${Math.round(26 * k)}px;background:linear-gradient(180deg,#1b1c22,#131419);box-shadow:0 22px 50px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.04);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:${Math.round(30 * k)}px;}
 .vs-card-hot{box-shadow:0 22px 50px rgba(0,0,0,.6),0 0 0 2px rgba(255,159,28,.35);}
+.vs-card-title{font:800 ${Math.round(96 * k)}px/1 "${f.ui}",sans-serif;color:var(--vs-ink);letter-spacing:-.02em;}
+.vs-vx{display:flex;align-items:center;justify-content:center;gap:${Math.round(18 * k)}px;width:94%;height:92%;}
+.vs-vx-card{flex:1 1 0;min-width:0;height:100%;box-sizing:border-box;padding:${Math.round(16 * k)}px;border-radius:${Math.round(26 * k)}px;background:linear-gradient(180deg,#1b1c22,#131419);box-shadow:0 22px 50px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.05);display:flex;flex-direction:column;align-items:center;gap:${Math.round(12 * k)}px;}
+.vs-vx-hot{box-shadow:0 22px 50px rgba(0,0,0,.6),0 0 0 ${Math.max(2, Math.round(5 * k))}px var(--vs-hl);}
+.vs-vx-img{width:100%;flex:1 1 auto;min-height:0;border-radius:${Math.round(16 * k)}px;overflow:hidden;background:#0c0d11;position:relative;}
+.vs-vx-img .vs-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.vs-vx-icon{display:flex;align-items:center;justify-content:center;}
+.vs-vx-textonly{justify-content:center;}
+.vs-vx-title{font:800 ${Math.round(84 * k)}px/1 "${f.ui}",sans-serif;color:var(--vs-ink);letter-spacing:-.02em;white-space:nowrap;}
+.vs-vx-title-hot{color:var(--vs-hl);}
+.vs-vx-label{font:700 ${Math.round(30 * k)}px/1.2 "${f.ui}",sans-serif;color:#c9ccd5;text-align:center;max-width:100%;overflow-wrap:break-word;}
+.vs-vx-badge{flex:none;width:${Math.round(84 * k)}px;height:${Math.round(84 * k)}px;margin:0 ${Math.round(-50 * k)}px;z-index:2;border-radius:50%;background:var(--vs-title);color:#fff;font:900 ${Math.round(34 * k)}px/1 "${f.ui}",sans-serif;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.6),0 0 0 ${Math.max(2, Math.round(5 * k))}px #fff;}
 .vs-vs{font:900 ${Math.round(40 * k)}px "${f.ui}",sans-serif;color:color-mix(in srgb,var(--vs-ink) 55%,var(--vs-bg));}
 .vs-rocker{width:${Math.round(170 * k)}px;height:${Math.round(300 * k)}px;border-radius:${Math.round(18 * k)}px;background:#0d0e12;box-shadow:inset 0 0 0 3px #22232a,0 20px 40px rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;}
 .vs-rocker-knob{width:76%;height:86%;border-radius:${Math.round(12 * k)}px;background:linear-gradient(180deg,#24252c,#15161b);display:flex;flex-direction:column;align-items:center;justify-content:space-around;font:700 ${Math.round(64 * k)}px "${f.ui}",sans-serif;}

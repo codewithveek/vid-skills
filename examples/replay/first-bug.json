@@ -340,7 +340,7 @@
           "type": "diagram",
           "template": "icon-draw",
           "data": {
-            "icon": "warning",
+            "icon": "bug",
             "label": "BUG",
             "color": "#E50914",
             "glow": "yes"
@@ -481,14 +481,28 @@
         "id": "sh11",
         "lineId": "l8",
         "scene": {
-          "type": "diagram",
-          "template": "compare",
-          "data": {
-            "left": "FIRST BUG",
-            "right": "FIRST ACTUAL BUG",
-            "leftIcon": "x",
-            "rightIcon": "check"
-          }
+          "type": "versus",
+          "left": {
+            "asset": {
+              "kind": "image",
+              "query": "intitle:\"Thomas Edison2\"",
+              "prompt": "portrait of Thomas Edison",
+              "prefer": "stock"
+            },
+            "title": "1878",
+            "label": "Edison's “bugs”"
+          },
+          "right": {
+            "asset": {
+              "kind": "image",
+              "query": "intitle:\"African Moon Moth (Argema mimosae) resting on a wall 09\"",
+              "prompt": "a moth",
+              "prefer": "stock"
+            },
+            "title": "1947",
+            "label": "The first “actual” bug"
+          },
+          "winner": "left"
         },
         "anchor": "joke"
       },
