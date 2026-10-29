@@ -485,16 +485,14 @@
         "id": "sh13",
         "lineId": "l10",
         "scene": {
-          "type": "broll",
-          "asset": {
-            "kind": "image",
-            "query": "intitle:\"Old-style Stop Sign(MUTCD)\"",
-            "prompt": "the 1924 yellow stop sign design",
-            "prefer": "stock"
-          },
-          "treatment": "natural",
-          "move": "pushIn",
-          "label": "1924–1954 design"
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "octagon",
+            "label": "1924–1954: YELLOW",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
         },
         "anchor": "yellow"
       },
@@ -534,7 +532,7 @@
           "type": "broll",
           "asset": {
             "kind": "image",
-            "query": "red traffic light",
+            "query": "intitle:\"Traffic lights at Manchester St, Christchurch, New Zealand 04\"",
             "prompt": "a red traffic light",
             "prefer": "stock"
           },
