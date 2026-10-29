@@ -25,6 +25,7 @@ import {
   Script,
   Storyboard,
   VideoBrief,
+  posterMode,
   type AssetRequest,
   type Platform,
   type Shot,
@@ -687,14 +688,23 @@ export async function runPipeline(briefInput: VideoBriefInput, opts: PipelineOpt
   await saveManifest();
   if (stop("sound") || stop("timeline")) return result;
 
-  const project = await stage("compose", null, async () => {
-    const p = compileHyperFrames(timeline, { assets: manifest.assets, style, aspect: brief.aspect });
-    for (const [path, text] of Object.entries(p.files)) await opts.storage.put(`${base}project/${path}`, text, path.endsWith(".html") ? "text/html" : "application/json");
+  // Cuts: the main video, plus a poster variant when brief.poster.mode is "both".
+  const mode = posterMode(brief.poster);
+  const compileCut = (poster: boolean) => compileHyperFrames(timeline, { assets: manifest.assets, style, aspect: brief.aspect, poster });
+  const writeProject = async (dir: string, p: ReturnType<typeof compileHyperFrames>) => {
+    for (const [path, text] of Object.entries(p.files)) await opts.storage.put(`${dir}${path}`, text, path.endsWith(".html") ? "text/html" : "application/json");
     // A re-compose can drop files (e.g. the poster when it is turned off): remove the stale ones.
-    for (const o of await opts.storage.list(`${base}project/`)) if (!(o.key.slice(`${base}project/`.length) in p.files)) await opts.storage.delete?.(o.key);
+    for (const o of await opts.storage.list(dir)) if (!(o.key.slice(dir.length) in p.files)) await opts.storage.delete?.(o.key);
+  };
+  const project = await stage("compose", null, async () => {
+    const p = compileCut(mode === "on");
+    await writeProject(`${base}project/`, p);
+    if (mode === "both") await writeProject(`${base}project-poster/`, compileCut(true));
     return p;
   });
   manifest.outputs.projectKey = `${base}project/`;
+  if (mode === "both") manifest.outputs.variants = { ...manifest.outputs.variants, poster: { ...manifest.outputs.variants?.poster, projectKey: `${base}project-poster/` } };
+  else if (manifest.outputs.variants?.poster) delete manifest.outputs.variants.poster;
   result.project = project;
   const captions = timeline.captions.length ? `${base}captions.srt` : undefined;
   if (captions) {
@@ -707,17 +717,31 @@ export async function runPipeline(briefInput: VideoBriefInput, opts: PipelineOpt
 
   let measured: { lufs?: number; truePeak?: number; durationSec?: number } = {};
   if (opts.providers.render) {
-    const r = await stage("render", null, async () => {
+    const renderCut = async (p: ReturnType<typeof compileHyperFrames>, key: string) => {
       const assetKeys: Record<string, string> = {};
-      const files: Record<string, string | Uint8Array> = { ...project.files };
-      for (const [path, a] of Object.entries(project.assetPaths)) {
+      const files: Record<string, string | Uint8Array> = { ...p.files };
+      for (const [path, a] of Object.entries(p.assetPaths)) {
         const k = keyFromUri(a.uri);
         if (k) assetKeys[path] = k;
       }
-      const out = await opts.providers.render!.render({ files, assetKeys, fps: project.fps, quality: "high", format: "mp4", master: { lufs: style.audio.targetLufs, truePeak: style.audio.truePeakDb }, signal: ctx.signal }, opts.storage, `${base}video.mp4`);
-      return { storageKey: out.storageKey ?? `${base}video.mp4`, durationSec: out.durationSec, lufs: out.measuredLufs, truePeak: out.measuredTruePeak };
+      const out = await opts.providers.render!.render({ files, assetKeys, fps: p.fps, quality: "high", format: "mp4", master: { lufs: style.audio.targetLufs, truePeak: style.audio.truePeakDb }, signal: ctx.signal }, opts.storage, key);
+      return { storageKey: out.storageKey ?? key, durationSec: out.durationSec, lufs: out.measuredLufs, truePeak: out.measuredTruePeak };
+    };
+    const r = await stage("render", null, async () => {
+      const main = await renderCut(project, `${base}video.mp4`);
+      // The variant is a bonus: a failure there must not lose the main render.
+      let posterKey: string | undefined;
+      if (mode === "both") {
+        try {
+          posterKey = (await renderCut(compileCut(true), `${base}video.poster.mp4`)).storageKey;
+        } catch (e) {
+          ctx.logger.warn("render: poster variant failed", { error: errorMessage(e) });
+        }
+      }
+      return { ...main, posterKey };
     });
     manifest.outputs.videoKey = r.storageKey;
+    if (r.posterKey) manifest.outputs.variants = { ...manifest.outputs.variants, poster: { ...manifest.outputs.variants?.poster, videoKey: r.posterKey } };
     measured = { lufs: r.lufs, truePeak: r.truePeak, durationSec: r.durationSec };
     await saveManifest();
   } else {

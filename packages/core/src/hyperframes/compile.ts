@@ -20,6 +20,8 @@ export interface CompileOptions {
   assets: Asset[];
   style: StylePack;
   aspect: "9:16" | "16:9" | "1:1" | "4:5";
+  /** Draw `tl.poster` at frame 0 (default true when the timeline has one). */
+  poster?: boolean;
 }
 
 export interface HyperFramesProject {
@@ -118,7 +120,7 @@ export function compileHyperFrames(tl: Timeline, opts: CompileOptions): HyperFra
     );
   }
 
-  if (tl.poster) {
+  if (tl.poster && opts.poster !== false) {
     const hero = pickHero(tl, byId);
     const heroPath = hero ? pathOf(hero.id) : undefined;
     const bg = heroPath ? derive(heroPath, "blur-bg") : null;

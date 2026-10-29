@@ -67,13 +67,22 @@ export const MusicPreference = z.object({
 });
 
 export const PosterPreference = z.object({
-  // Off by default: on the channel it was tried on, videos that opened straight into the hook outperformed poster openers.
-  enabled: z.boolean().default(false).describe("Opt in: open on a poster frame (hook card) for platforms that use frame 0 as the cover"),
+  mode: z
+    .enum(["off", "on", "both"])
+    .optional()
+    .describe("off: no poster; on: the video opens on the poster; both (default): the main video has none and a poster variant is rendered alongside for A/B tests"),
+  /** Legacy switch: true = "on", false = "off" (used when `mode` is absent). */
+  enabled: z.boolean().optional(),
   durationSec: z.number().min(0.1).max(3).default(0.6).describe("How long the poster holds before revealing the video (the voice starts underneath)"),
   text: z.string().max(80).optional().describe("Poster headline; defaults to the video headline"),
   kicker: z.string().max(30).default("DID YOU KNOW?").describe("Small tag above the headline; empty string hides it"),
 });
 export type PosterPreference = z.infer<typeof PosterPreference>;
+
+/** Resolve the poster mode (the main video opened straight into the hook performed better, so "both" keeps it clean and adds a variant). */
+export function posterMode(p: Partial<PosterPreference> | undefined): "off" | "on" | "both" {
+  return p?.mode ?? (p?.enabled === true ? "on" : p?.enabled === false ? "off" : "both");
+}
 
 export const VideoBrief = z.object({
   topic: z.string().min(3),
@@ -93,7 +102,7 @@ export const VideoBrief = z.object({
     drops: true,
   }),
   captions: z.boolean().default(true),
-  poster: PosterPreference.default({ enabled: false, durationSec: 0.6, kicker: "DID YOU KNOW?" }),
+  poster: PosterPreference.default({ durationSec: 0.6, kicker: "DID YOU KNOW?" }),
   cta: z.string().optional().describe("Call to action, ideally reusing the topic's metaphor"),
   handle: z.string().optional().describe("Creator handle shown as watermark / end card"),
   licensedOnly: z.boolean().default(true).describe("Refuse assets without a commercial-use license"),
@@ -474,6 +483,8 @@ export const JobManifest = z.object({
       videoKey: z.string().optional(),
       captionsKey: z.string().optional(),
       thumbnailKey: z.string().optional(),
+      /** Alternate cuts rendered alongside the main video (e.g. "poster" when brief.poster.mode is "both"). */
+      variants: z.record(z.string(), z.object({ projectKey: z.string().optional(), videoKey: z.string().optional() })).optional(),
     })
     .default({}),
   publications: z

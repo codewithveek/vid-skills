@@ -168,6 +168,12 @@ async function finish(m: JobManifest, storage: FsStorage, out: string) {
     const cover = join(out, `${m.id}.cover.jpg`);
     if (await thumbnail(dst, cover, 0).then(() => true, () => false)) log(`cover: ${cover}`);
   }
+  const posterCut = m.outputs.variants?.poster?.videoKey;
+  if (posterCut) {
+    const dst = join(out, `${m.id}.poster.mp4`);
+    await copyFile(storage.path(posterCut), dst);
+    log(`poster variant: ${dst}`);
+  }
   if (m.outputs.captionsKey) await copyFile(storage.path(m.outputs.captionsKey), join(out, `${m.id}.srt`));
   console.log(JSON.stringify({ jobId: m.id, outputs: m.outputs, publications: m.publications }, null, 2));
 }

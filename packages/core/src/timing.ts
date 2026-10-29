@@ -5,7 +5,7 @@
  * No LLM is involved here; timing is deterministic, so small models can't break it.
  */
 import { buildCaptionCues } from "./captions.js";
-import type { Script, Storyboard, TimedScene, Timeline, VoiceTrack, VideoBrief, AudioClip } from "./spec.js";
+import { posterMode, type Script, type Storyboard, type TimedScene, type Timeline, type VoiceTrack, type VideoBrief, type AudioClip } from "./spec.js";
 import type { StylePack } from "./styles/types.js";
 import { findAnchor } from "./transcript.js";
 import { clamp, round3, toFrame } from "./util.js";
@@ -149,7 +149,8 @@ export function buildTimeline(input: TimelineInput): Timeline {
     captions,
     audio: input.audio ?? [],
     style: style.id,
-    poster: brief.poster.enabled ? posterFor(brief.poster.text ?? headline, brief.poster.kicker, emphasis, brief.poster.durationSec, fps) : undefined,
+    // Computed whenever any cut uses it; the compiler decides per cut whether to draw it.
+    poster: posterMode(brief.poster) !== "off" ? posterFor(brief.poster.text ?? headline, brief.poster.kicker, emphasis, brief.poster.durationSec, fps) : undefined,
   };
 }
 

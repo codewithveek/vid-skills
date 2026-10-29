@@ -195,21 +195,33 @@ describe("poster", () => {
     expect(posterFor("The @ Sign Is 500 Years Old", "", ["wine"], 0.6, 30).highlight).toEqual(["500"]);
     expect(posterFor("Barcodes Began in the Sand", "", [], 0.6, 30).highlight).toEqual(["Sand"]);
   });
-  it("is off by default and opens on a poster frame when enabled", async () => {
-    const run = (poster?: { enabled: boolean }) =>
-      runPipeline({ topic: "the floppy disk save icon", durationSec: 25, handle: "@hiddeninplainsight.tv", ...(poster ? { poster } : {}) }, { providers: { llm: fakeLLM(), tts: fakeTTS() }, storage: new MemoryStorage(), jobId: "p1", stopAfter: "compose" });
-    const res = await run({ enabled: true });
-    const p = res.project!;
-    expect(p.files["index.html"]).toMatch(/id="poster"[^>]*data-start="0"[^>]*data-duration="0\.6"/);
-    const poster = p.files["compositions/poster.html"]!;
+  it("renders a clean main cut plus a poster variant by default", async () => {
+    const storage = new MemoryStorage();
+    const res = await runPipeline({ topic: "the floppy disk save icon", durationSec: 25, handle: "@hiddeninplainsight.tv" }, { providers: { llm: fakeLLM(), tts: fakeTTS() }, storage, jobId: "p1", stopAfter: "compose" });
+    // main cut opens straight into the hook
+    expect(res.project!.files["compositions/poster.html"]).toBeUndefined();
+    expect(res.project!.files["index.html"]).not.toContain('id="poster"');
+    // the variant carries the poster
+    expect(res.manifest.outputs.variants?.poster?.projectKey).toBe("jobs/p1/project-poster/");
+    const index = await storage.getText("jobs/p1/project-poster/index.html");
+    expect(index).toMatch(/id="poster"[^>]*data-start="0"[^>]*data-duration="0\.6"/);
+    const poster = (await storage.getText("jobs/p1/project-poster/compositions/poster.html"))!;
     expect(poster).toContain("DID YOU KNOW?");
     expect(poster).toContain('class="pst-hl"');
     expect(poster).toContain("@hiddeninplainsight.tv");
     expect(poster).toContain("data-layout-ignore");
     // visible at frame 0: no entrance tween, only the exit
     expect(poster).not.toMatch(/\{opacity:0[^}]*\}, \{opacity:1/);
-    const off = await run();
+  });
+  it("honours poster modes off and on", async () => {
+    const run = (poster: { mode?: "off" | "on"; enabled?: boolean }, jobId: string) =>
+      runPipeline({ topic: "the floppy disk save icon", durationSec: 25, poster }, { providers: { llm: fakeLLM(), tts: fakeTTS() }, storage: new MemoryStorage(), jobId, stopAfter: "compose" });
+    const off = await run({ mode: "off" }, "p2");
     expect(off.project!.files["compositions/poster.html"]).toBeUndefined();
+    expect(off.manifest.outputs.variants?.poster).toBeUndefined();
+    const on = await run({ enabled: true }, "p3");
+    expect(on.project!.files["compositions/poster.html"]).toBeDefined();
+    expect(on.manifest.outputs.variants?.poster).toBeUndefined();
   });
 });
 
