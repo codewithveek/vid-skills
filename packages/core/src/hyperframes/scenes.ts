@@ -409,7 +409,7 @@ function versus(ctx: SceneCtx): SceneOutput {
     const visual = a
       ? `<div class="vs-vx-img">${mediaTag(`${sid}-${key}m`, a, ctx.ts.duration, "vs-media")}</div>`
       : v.icon
-        ? `<div class="vs-vx-img vs-vx-icon">${iconSvg(v.icon, `${sid}-${key}i`, { size: Math.round(150 * k), color: hot ? p.highlight : p.ink, stroke: 1.6 })}</div>`
+        ? `<div class="vs-vx-img vs-vx-icon">${iconSvg(v.icon, `${sid}-${key}i`, { size: Math.round(230 * k), color: hot ? p.highlight : p.ink, stroke: 1.5 })}</div>`
         : "";
     return `<div id="${sid}-${key}" class="vs-vx-card${hot ? " vs-vx-hot" : ""}${visual ? "" : " vs-vx-textonly"}">${visual}<div class="vs-vx-title${hot ? " vs-vx-title-hot" : ""}">${e(v.title)}</div><div class="vs-vx-label">${e(v.label)}</div></div>`;
   };
@@ -545,8 +545,11 @@ body{font-family:"${f.ui}",sans-serif;color:var(--vs-ink);}
 .vs-vx-hot{box-shadow:0 22px 50px rgba(0,0,0,.6),0 0 0 ${Math.max(2, Math.round(5 * k))}px var(--vs-hl);}
 .vs-vx-img{width:100%;flex:1 1 auto;min-height:0;border-radius:${Math.round(16 * k)}px;overflow:hidden;background:#0c0d11;position:relative;}
 .vs-vx-img .vs-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
-.vs-vx-icon{display:flex;align-items:center;justify-content:center;}
-.vs-vx-textonly{justify-content:center;}
+.vs-vx-icon{display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 45%,#22232b,#0c0d11 70%);}
+/* Without a photo the card is about the words: bigger title and label. */
+.vs-vx-card:has(.vs-vx-icon) .vs-vx-label,.vs-vx-textonly .vs-vx-label{font-size:${Math.round(38 * k)}px;}
+.vs-vx-textonly{justify-content:center;gap:${Math.round(24 * k)}px;}
+.vs-vx-textonly .vs-vx-title{font-size:${Math.round(120 * k)}px;}
 .vs-vx-title{font:800 ${Math.round(84 * k)}px/1 "${f.ui}",sans-serif;color:var(--vs-ink);letter-spacing:-.02em;white-space:nowrap;}
 .vs-vx-title-hot{color:var(--vs-hl);}
 .vs-vx-label{font:700 ${Math.round(30 * k)}px/1.2 "${f.ui}",sans-serif;color:#c9ccd5;text-align:center;max-width:100%;overflow-wrap:break-word;}
