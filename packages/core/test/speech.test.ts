@@ -46,6 +46,11 @@ describe("speech normalization", () => {
     const odd = estimateWordTimings("back in eighteen sixty eight", 2); // STT split the hyphen
     expect(remapToDisplay(odd, sp)).toBe(odd);
   });
+  it("respells words engines misread, keeping the display text", () => {
+    const sp = toSpeech("The Gaels called it Samhain, the end of harvest.");
+    expect(sp.spoken).toBe("The Gaels called it Souwin, the end of harvest.");
+    expect(sp.map.find((m) => m.display === "Samhain,")?.spoken).toBe(1);
+  });
 });
 
 describe("pipeline voice stage", () => {

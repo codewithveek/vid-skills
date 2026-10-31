@@ -93,10 +93,20 @@ function romanValue(r: string): number | null {
   return n > 0 && n < 200 ? n : null;
 }
 
+/**
+ * Words TTS engines misread, respelled the way they are said. Keys are lowercase; the display
+ * text (captions, anchors) keeps the real spelling. Keep each respelling to one token.
+ */
+export const PRONUNCIATIONS: Record<string, string> = {
+  samhain: "Souwin", // SOW-in (as in "cow")
+};
+
 function speakToken(tok: string, prev: string, next: string): string | null {
   const m = /^([("'“‘]*)(.*?)([)"'”’.,;:!?…]*)$/.exec(tok);
   if (!m) return null;
   const [, lead, core, trail] = m as unknown as [string, string, string, string];
+  const say = PRONUNCIATIONS[core.toLowerCase()];
+  if (say && !/\s/.test(say)) return `${lead}${say}${trail}`;
   let out: string | null = null;
 
   // Roman numerals after a cue word ("Mark II" → "Mark two"); TTS engines read them as letters.
