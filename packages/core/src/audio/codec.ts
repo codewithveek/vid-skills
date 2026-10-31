@@ -88,6 +88,8 @@ export function mp3Duration(bytes: Uint8Array): number | null {
   }
   let dur = 0;
   let frames = 0;
+  let info = false;
+  let trim = 0;
   while (off + 4 <= bytes.length) {
     if (bytes[off] !== 0xff || (bytes[off + 1]! & 0xe0) !== 0xe0) {
       off++;
@@ -114,11 +116,34 @@ export function mp3Duration(bytes: Uint8Array): number | null {
     const samples = ver === 3 ? 1152 : 576;
     const len = Math.floor(((ver === 3 ? 144 : 72) * br) / sr) + pad;
     if (len < 4) break;
+    if (!frames && !info) {
+      // A leading Xing/Info frame is metadata, not audio; its LAME tag (when present) gives the
+      // encoder delay and end padding, which decoders trim. Without this the length runs ~0.05 s long.
+      const x = findTag(bytes, off + 4, Math.min(off + len, off + 64), ["Xing", "Info"]);
+      if (x >= 0) {
+        info = true;
+        const lame = findTag(bytes, x + 4, Math.min(off + len, x + 160), ["LAME", "Lavc", "Lavf"]);
+        if (lame >= 0 && lame + 24 <= bytes.length) {
+          const d = bytes[lame + 21]! << 4 | bytes[lame + 22]! >> 4;
+          const p = (bytes[lame + 22]! & 0x0f) << 8 | bytes[lame + 23]!;
+          trim = (d + p) / sr;
+        }
+        off += len;
+        continue;
+      }
+    }
     dur += samples / sr;
     frames++;
     off += len;
   }
-  return frames ? dur : null;
+  return frames ? Math.max(0, dur - trim) : null;
+}
+
+function findTag(bytes: Uint8Array, from: number, to: number, tags: string[]): number {
+  for (let i = from; i + 4 <= to; i++) {
+    for (const t of tags) if (bytes[i] === t.charCodeAt(0) && bytes[i + 1] === t.charCodeAt(1) && bytes[i + 2] === t.charCodeAt(2) && bytes[i + 3] === t.charCodeAt(3)) return i;
+  }
+  return -1;
 }
 
 export function audioDuration(bytes: Uint8Array, mime: string): number | null {

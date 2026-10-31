@@ -99,6 +99,18 @@ describe("audio", () => {
     buf.set(frame, 417);
     expect(mp3Duration(buf)).toBeCloseTo((2 * 1152) / 44100, 4);
   });
+  it("skips the Xing/Info frame and trims LAME encoder delay and padding", () => {
+    const frame = () => Uint8Array.from({ length: 417 }, (_, i) => (i === 0 ? 0xff : i === 1 ? 0xfb : i === 2 ? 0x90 : 0));
+    const info = frame();
+    info.set([..."Info"].map((c) => c.charCodeAt(0)), 36);
+    info.set([..."LAME"].map((c) => c.charCodeAt(0)), 156);
+    // 12-bit delay (1105) and 12-bit padding (807) at LAME+21
+    info.set([1105 >> 4, ((1105 & 0x0f) << 4) | (807 >> 8), 807 & 0xff], 156 + 21);
+    const buf = new Uint8Array(417 * 11);
+    buf.set(info, 0);
+    for (let i = 1; i < 11; i++) buf.set(frame(), 417 * i);
+    expect(mp3Duration(buf)).toBeCloseTo((10 * 1152 - 1105 - 807) / 44100, 5);
+  });
   it("slices automation per clip", () => {
     const pts = [
       { t: 0, v: 0.1 },
