@@ -40,7 +40,7 @@ import { getJson, putJson } from "./storage.js";
 import { buildTimeline } from "./timing.js";
 import { estimateWordTimings, guardHallucinations, mapLinesToWords, shiftWords } from "./transcript.js";
 import { joinSpeech, remapToDisplay, toSpeech } from "./speech.js";
-import { errorMessage, isoNow, newId, normWord, round3, sha256Hex } from "./util.js";
+import { errorMessage, isoNow, newId, normWord, round3, sha256Hex, sleep } from "./util.js";
 import { documentPage, placeholderCard, svgBytes } from "./visuals.js";
 
 export interface PublishResult {
@@ -413,8 +413,16 @@ async function mapLimit<T, R>(items: T[], limit: number, fn: (t: T, i: number) =
 
 const MAX_DOWNLOAD = 80 * 2 ** 20;
 
-async function download(url: string, signal?: AbortSignal): Promise<{ bytes: Uint8Array; mime: string }> {
-  const res = await fetch(url, { signal, redirect: "follow" });
+const DOWNLOAD_UA = "vid-skills/0.1 (https://github.com/codewithveek/vid-skills)";
+
+async function download(url: string, signal?: AbortSignal, attempts = 4): Promise<{ bytes: Uint8Array; mime: string }> {
+  let res = await fetch(url, { signal, redirect: "follow", headers: { "user-agent": DOWNLOAD_UA } });
+  // Media hosts (upload.wikimedia.org) throttle bursts with 429/503: back off and retry, honouring Retry-After.
+  for (let n = 1; (res.status === 429 || res.status === 503) && n < attempts; n++) {
+    const after = Number(res.headers.get("retry-after"));
+    await sleep(Math.min(30_000, Number.isFinite(after) && after > 0 ? after * 1000 : 3000 * 2 ** n));
+    res = await fetch(url, { signal, redirect: "follow", headers: { "user-agent": DOWNLOAD_UA } });
+  }
   if (!res.ok) throw new Error(`download ${res.status} ${url}`);
   const len = Number(res.headers.get("content-length") ?? 0);
   if (len > MAX_DOWNLOAD) throw new Error(`asset too large (${len} bytes)`);

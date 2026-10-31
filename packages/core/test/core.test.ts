@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { z } from "zod";
 import {
   audioDuration,
@@ -183,6 +183,27 @@ describe("pipeline (offline, mock providers)", () => {
     const second = await run(["assets"]);
     expect(searches).toBe(fetched);
     expect(second.manifest.assets.filter((a) => a.provider === "fake-stock").length).toBe(first.manifest.assets.filter((a) => a.provider === "fake-stock").length);
+  });
+  it("retries a throttled asset download", async () => {
+    let calls = 0;
+    const realFetch = globalThis.fetch;
+    vi.stubGlobal("fetch", async (input: RequestInfo | URL, init?: RequestInit) => {
+      if (!String(input).startsWith("https://media.test/")) return realFetch(input, init);
+      calls++;
+      return calls === 1 ? new Response("slow down", { status: 429, headers: { "retry-after": "0.01" } }) : new Response(new Uint8Array([1, 2, 3]), { headers: { "content-type": "image/jpeg" } });
+    });
+    try {
+      const stock: StockProvider = {
+        id: "fake-stock",
+        kinds: ["image"],
+        search: async ({ query }) => [{ id: query, kind: "image", url: `https://media.test/${encodeURIComponent(query)}.jpg`, width: 1600, height: 1100, provider: "fake-stock", license: { name: "CC0", commercialUse: true, requiresAttribution: false } }],
+      };
+      const res = await runPipeline({ topic: "the floppy disk save icon", durationSec: 25 }, { providers: { llm: fakeLLM(), tts: fakeTTS(), stock: [stock] }, storage: new MemoryStorage(), jobId: "t4", stopAfter: "assets" });
+      expect(calls).toBeGreaterThan(1);
+      expect(res.manifest.assets.some((a) => a.provider === "fake-stock")).toBe(true);
+    } finally {
+      vi.unstubAllGlobals();
+    }
   });
   it("ranks tiny stock images last", () => {
     const lic = { name: "CC0", commercialUse: true, requiresAttribution: false };
