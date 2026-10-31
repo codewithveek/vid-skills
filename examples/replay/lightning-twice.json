@@ -265,7 +265,7 @@
         "scene": {
           "type": "stat",
           "value": "23",
-          "caption": "strikes a year on the Empire State Building",
+          "caption": "hits a year",
           "sourceClaimId": "c2"
         },
         "anchor": "23"
@@ -282,8 +282,7 @@
             "prefer": "stock"
           },
           "treatment": "natural",
-          "move": "pushIn",
-          "label": "Berlin TV Tower"
+          "move": "pushIn"
         },
         "anchor": "Lightning"
       },
@@ -396,7 +395,7 @@
           "template": "icon-draw",
           "data": {
             "icon": "user",
-            "label": "ROY SULLIVAN · PARK RANGER",
+            "label": "ROY SULLIVAN",
             "color": "#F4F5F7",
             "glow": "yes"
           }
