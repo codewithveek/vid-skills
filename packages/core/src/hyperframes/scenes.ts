@@ -403,6 +403,13 @@ function versus(ctx: SceneCtx): SceneOutput {
   const sid = ctx.sid;
   const p = ctx.style.palette;
   const k = ctx.width / 1080;
+  // Fit both titles to one size: the longer title sets it, so a long word ("DÍA DE MUERTOS",
+  // "LABOŘI") never runs under the VS badge or off the card. Caps in the bold UI face run ~0.66em.
+  const cardW = (0.94 * (ctx.win?.w ?? ctx.width) - 18 * k) / 2 - 32 * k - 40 * k;
+  const longest = Math.max(s.left.title.length, s.right.title.length, 1);
+  const anyVisual = (key: "L" | "R", v: typeof s.left) => ctx.assets.some((x) => x.asset.id.endsWith(`-${key}`)) || !!v.icon;
+  const base = anyVisual("L", s.left) || anyVisual("R", s.right) ? 84 * k : 120 * k;
+  const titlePx = Math.round(Math.min(base, cardW / (longest * 0.66)));
   const side = (key: "L" | "R", v: typeof s.left) => {
     const a = ctx.assets.find((x) => x.asset.id.endsWith(`-${key}`));
     const hot = (s.winner === "left" && key === "L") || (s.winner === "right" && key === "R");
@@ -411,7 +418,7 @@ function versus(ctx: SceneCtx): SceneOutput {
       : v.icon
         ? `<div class="vs-vx-img vs-vx-icon">${iconSvg(v.icon, `${sid}-${key}i`, { size: Math.round(230 * k), color: hot ? p.highlight : p.ink, stroke: 1.5 })}</div>`
         : "";
-    return `<div id="${sid}-${key}" class="vs-vx-card${hot ? " vs-vx-hot" : ""}${visual ? "" : " vs-vx-textonly"}">${visual}<div class="vs-vx-title${hot ? " vs-vx-title-hot" : ""}">${e(v.title)}</div><div class="vs-vx-label">${e(v.label)}</div></div>`;
+    return `<div id="${sid}-${key}" class="vs-vx-card${hot ? " vs-vx-hot" : ""}${visual ? "" : " vs-vx-textonly"}">${visual}<div class="vs-vx-title${hot ? " vs-vx-title-hot" : ""}" style="font-size:${titlePx}px">${e(v.title)}</div><div class="vs-vx-label">${e(v.label)}</div></div>`;
   };
   const html = darkStage(ctx, `<div class="vs-vx">${side("L", s.left)}<div id="${sid}-vs" class="vs-vx-badge">VS</div>${side("R", s.right)}</div>`);
   const hotKey = s.winner === "left" ? "L" : s.winner === "right" ? "R" : null;
@@ -549,7 +556,6 @@ body{font-family:"${f.ui}",sans-serif;color:var(--vs-ink);}
 /* Without a photo the card is about the words: bigger title and label. */
 .vs-vx-card:has(.vs-vx-icon) .vs-vx-label,.vs-vx-textonly .vs-vx-label{font-size:${Math.round(38 * k)}px;}
 .vs-vx-textonly{justify-content:center;gap:${Math.round(24 * k)}px;}
-.vs-vx-textonly .vs-vx-title{font-size:${Math.round(120 * k)}px;}
 .vs-vx-title{font:800 ${Math.round(84 * k)}px/1 "${f.ui}",sans-serif;color:var(--vs-ink);letter-spacing:-.02em;white-space:nowrap;}
 .vs-vx-title-hot{color:var(--vs-hl);}
 .vs-vx-label{font:700 ${Math.round(30 * k)}px/1.2 "${f.ui}",sans-serif;color:#c9ccd5;text-align:center;max-width:100%;overflow-wrap:break-word;}

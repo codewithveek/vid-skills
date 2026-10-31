@@ -291,6 +291,22 @@ describe("icons and versus cards", () => {
     expect(html).toContain(">VS<");
     expect(p.assetPaths["assets/img/sh5-L.jpg"]).toBeDefined();
   });
+  it("shrinks versus titles so long words fit their cards", async () => {
+    const res = await runPipeline({ topic: "the floppy disk save icon", durationSec: 25, poster: { mode: "off" } }, { providers: { llm: fakeLLM(), tts: fakeTTS() }, storage: new MemoryStorage(), jobId: "v2", stopAfter: "compose" });
+    const size = (left: string, right: string) => {
+      const tl = structuredClone(res.timeline!);
+      const i = tl.scenes.findIndex((s) => s.id === "sh5");
+      tl.scenes[i] = { ...tl.scenes[i]!, scene: { type: "versus", left: { title: left, label: "a" }, right: { title: right, label: "b" }, winner: "right" } };
+      const html = compileHyperFrames(tl, { assets: res.manifest.assets, style: framedExplainer, aspect: "9:16" }).files["compositions/s-sh5.html"]!;
+      const px = [...html.matchAll(/vs-vx-title[^"]*" style="font-size:(\d+)px"/g)].map((m) => Number(m[1]));
+      expect(px[0]).toBe(px[1]);
+      return px[0]!;
+    };
+    const short = size("3", "2");
+    const long = size("LABOŘI", "DÍA DE MUERTOS");
+    expect(long).toBeLessThan(short);
+    expect(long * 14 * 0.66).toBeLessThan(1080 * 0.94 / 2);
+  });
 });
 
 describe("compile", () => {

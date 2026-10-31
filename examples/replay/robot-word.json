@@ -359,12 +359,12 @@
           "template": "icon-draw",
           "data": {
             "icon": "globe",
-            "label": "WENT AROUND THE WORLD",
+            "label": "AROUND THE WORLD",
             "color": "#20FFF6",
             "glow": "yes"
           }
         },
-        "anchor": "world."
+        "anchor": "went"
       },
       {
         "id": "sh11",
