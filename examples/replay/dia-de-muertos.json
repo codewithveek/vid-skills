@@ -1,0 +1,565 @@
+{
+  "ResearchDossier": {
+    "topic": "Día de los Muertos explained",
+    "summary": "Day of the Dead, on 1 and 2 November, emphasises celebration and collective memory. Families build ofrendas with photos and favourite foods; marigolds' scent is believed to guide souls home; sugar skulls represent the personality of the departed. La Catrina began as Posada's satirical etching (c. 1910–12) and became an icon via Rivera's 1946–47 mural. UNESCO listed the tradition in 2008.",
+    "angle": "It's not a night to fear the dead. It's a night to welcome them home.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Day of the Dead is traditionally celebrated on November 1 and 2.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Day_of_the_Dead",
+            "title": "Day of the Dead - Wikipedia",
+            "quote": "traditionally celebrated on November 1 and 2"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The holiday is characterised by remembrance activities that emphasise celebration and collective memory.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Day_of_the_Dead",
+            "title": "Day of the Dead - Wikipedia",
+            "quote": "characterised by remembrance activities that emphasise celebration and collective memory"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Ofrendas (altars) contain the favorite foods and beverages, as well as photos and memorabilia, of the departed.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Day_of_the_Dead",
+            "title": "Day of the Dead - Wikipedia",
+            "quote": "containing the favorite foods and beverages, as well as photos and memorabilia, of the departed"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "The bright petals of marigolds, with a strong scent, are believed to guide the souls from cemeteries to their family homes.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Day_of_the_Dead",
+            "title": "Day of the Dead - Wikipedia",
+            "quote": "the bright petals with a strong scent can guide the souls from cemeteries to their family homes"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "Calaveras, or sugar skulls, display colorful designs to represent the vitality and individual personality of the departed.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Day_of_the_Dead",
+            "title": "Day of the Dead - Wikipedia",
+            "quote": "Calaveras, or sugar skulls, display colorful designs to represent the vitality and individual personality of the departed."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c6",
+        "text": "La Calavera Catrina is a zinc etching by José Guadalupe Posada, usually dated c. 1910–12, intended to satirize upper class women of the Porfiriato.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/La_Calavera_Catrina",
+            "title": "La Calavera Catrina - Wikipedia",
+            "quote": "intended to satirize upper class women of the Porfiriato"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c7",
+        "text": "In 1946–47 Diego Rivera elaborated Posada's creation into a full-scale figure in his mural; Catrina is now a ubiquitous character associated with Day of the Dead.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/La_Calavera_Catrina",
+            "title": "La Calavera Catrina - Wikipedia",
+            "quote": "elaborated Posada's creation into a full-scale figure"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c8",
+        "text": "In 2008 the tradition was added to UNESCO's Representative List of the Intangible Cultural Heritage of Humanity.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Day_of_the_Dead",
+            "title": "Day of the Dead - Wikipedia",
+            "quote": "In 2008, the tradition was added to the Representative List of the Intangible Cultural Heritage of Humanity"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Day of the Dead Isn't Halloween",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Day of the Dead isn't about being scared.",
+            "emphasis": [
+              "scared"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l2",
+            "text": "It's about remembering. Every November 1st and 2nd.",
+            "emphasis": [
+              "remembering"
+            ],
+            "claimIds": [
+              "c1",
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "mechanism",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "Families build ofrendas. Altars with photos of their loved ones, and their favorite foods and drinks.",
+            "emphasis": [
+              "favorite"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "Bright marigolds line the way. Their strong scent is said to guide souls home from the cemetery.",
+            "emphasis": [
+              "home"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l5",
+            "text": "Sugar skulls aren't meant to be scary. Their colors stand for the person's life and personality.",
+            "emphasis": [
+              "personality"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l6",
+            "text": "And the famous skeleton lady, La Catrina? She started as satire.",
+            "emphasis": [
+              "satire"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l7",
+            "text": "Around 1910, printmaker José Guadalupe Posada drew her to mock Mexico's upper class.",
+            "emphasis": [
+              "mock"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l8",
+            "text": "Diego Rivera later painted her into a giant mural, and she became an icon.",
+            "emphasis": [
+              "icon"
+            ],
+            "claimIds": [
+              "c7"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l9",
+            "text": "In 2008, UNESCO added the tradition to its list of the world's cultural heritage.",
+            "emphasis": [
+              "heritage"
+            ],
+            "claimIds": [
+              "c8"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l10",
+            "text": "It's not a night to fear the dead. It's a night to welcome them home.",
+            "emphasis": [
+              "home"
+            ],
+            "claimIds": [
+              "c2",
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"A Catrina custome from Day of the Dead parade in Mexico city\"",
+            "prompt": "a woman in Catrina makeup and costume",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l2",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "ghost",
+            "title": "HALLOWEEN",
+            "label": "Being scared"
+          },
+          "right": {
+            "icon": "heart",
+            "title": "DÍA DE MUERTOS",
+            "label": "Remembering"
+          },
+          "winner": "right"
+        },
+        "anchor": "remembering."
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Nov",
+          "highlight": "1 & 2",
+          "cps": 10
+        },
+        "anchor": "November"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Altardediademuertos\"",
+            "prompt": "a Day of the Dead ofrenda with photos, food and marigolds",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "An ofrenda"
+        },
+        "anchor": "ofrendas."
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "diagram",
+          "template": "checklist",
+          "data": {
+            "items": [
+              "Photos",
+              "Favorite foods",
+              "Favorite drinks"
+            ]
+          }
+        },
+        "anchor": "photos"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Alumbrada1Mixquic\"",
+            "prompt": "a cemetery lit with candles and marigolds at night",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Mixquic, Mexico City"
+        },
+        "anchor": "marigolds"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "flow",
+          "data": {
+            "nodes": [
+              {
+                "label": "CEMETERY",
+                "icon": "flower-2"
+              },
+              {
+                "label": "MARIGOLD PATH",
+                "icon": "footprints"
+              },
+              {
+                "label": "HOME",
+                "icon": "house"
+              }
+            ]
+          }
+        },
+        "anchor": "guide"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Calavera.jpg\"",
+            "prompt": "a decorated sugar skull",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Calavera de azúcar"
+        },
+        "anchor": "Sugar"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l5",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "palette",
+            "label": "LIFE & PERSONALITY",
+            "color": "#FF4FD8",
+            "glow": "yes"
+          }
+        },
+        "anchor": "colors"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l6",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Catrina from day of the dead in Mexico city\"",
+            "prompt": "a giant Catrina figure in a red dress",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "La Catrina"
+        },
+        "anchor": "Catrina?"
+      },
+      {
+        "id": "sh11",
+        "lineId": "l7",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Posada2.Catrina\"",
+            "prompt": "José Guadalupe Posada's Calavera Catrina etching",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Posada, c. 1910"
+        },
+        "anchor": "Posada"
+      },
+      {
+        "id": "sh12",
+        "lineId": "l8",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "brush",
+            "label": "DIEGO RIVERA · 1947 MURAL",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "Diego"
+      },
+      {
+        "id": "sh13",
+        "lineId": "l9",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "landmark",
+            "label": "UNESCO · 2008",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "UNESCO"
+      },
+      {
+        "id": "sh14",
+        "lineId": "l10",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Ofrenda en el Panteón.JPG\"",
+            "prompt": "a grave decorated with marigolds and candles",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh15",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh16",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Day of the Dead isn't Mexican Halloween",
+    "description": "Day of the Dead isn't about being scared. It's about remembering, every November 1st and 2nd.\nFamilies build ofrendas with photos and favourite foods, marigolds are said to guide souls home, and sugar skulls celebrate a person's life. La Catrina started as José Guadalupe Posada's satire of Mexico's upper class, and Diego Rivera made her an icon.",
+    "hashtags": [
+      "diadelosmuertos",
+      "dayofthedead",
+      "mexico",
+      "didyouknow"
+    ],
+    "keywords": [
+      "Día de los Muertos explained",
+      "Day of the Dead meaning",
+      "ofrenda",
+      "La Catrina history",
+      "sugar skulls meaning"
+    ],
+    "hook": "Day of the Dead isn't about being scared.",
+    "altText": "Motion-graphics explainer on the traditions of Día de los Muertos.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Day_of_the_Dead",
+        "title": "Day of the Dead"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/La_Calavera_Catrina",
+        "title": "La Calavera Catrina"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}
