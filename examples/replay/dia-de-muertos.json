@@ -289,7 +289,8 @@
             "prefer": "stock"
           },
           "treatment": "natural",
-          "move": "pushIn"
+          "move": "pushIn",
+          "focusY": 0.12
         }
       },
       {
@@ -309,7 +310,7 @@
           },
           "winner": "right"
         },
-        "anchor": "remembering."
+        "anchor": "isn't"
       },
       {
         "id": "sh3",
@@ -404,13 +405,13 @@
           "type": "broll",
           "asset": {
             "kind": "image",
-            "query": "intitle:\"Calavera.jpg\"",
-            "prompt": "a decorated sugar skull",
+            "query": "intitle:\"Calaveras - sugar skulls - Dia de los Muertos - Tijuana 5422\"",
+            "prompt": "rows of decorated sugar skulls",
             "prefer": "stock"
           },
           "treatment": "natural",
           "move": "pushIn",
-          "label": "Calavera de azúcar"
+          "label": "Sugar skulls"
         },
         "anchor": "Sugar"
       },
@@ -447,6 +448,21 @@
         "anchor": "Catrina?"
       },
       {
+        "id": "sh10b",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "drama",
+            "label": "SATIRE",
+            "color": "#FF4FD8",
+            "glow": "yes"
+          }
+        },
+        "anchor": "satire."
+      },
+      {
         "id": "sh11",
         "lineId": "l7",
         "scene": {
@@ -461,7 +477,7 @@
           "move": "pushIn",
           "label": "Posada, c. 1910"
         },
-        "anchor": "Posada"
+        "anchor": "printmaker"
       },
       {
         "id": "sh12",

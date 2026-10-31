@@ -291,6 +291,15 @@ describe("icons and versus cards", () => {
     expect(html).toContain(">VS<");
     expect(p.assetPaths["assets/img/sh5-L.jpg"]).toBeDefined();
   });
+  it("keeps the requested part of a tall photo in frame", async () => {
+    const res = await runPipeline({ topic: "the floppy disk save icon", durationSec: 25, poster: { mode: "off" } }, { providers: { llm: fakeLLM(), tts: fakeTTS() }, storage: new MemoryStorage(), jobId: "v3", stopAfter: "compose" });
+    const tl = structuredClone(res.timeline!);
+    const i = tl.scenes.findIndex((s) => s.id === "sh5");
+    tl.scenes[i] = { ...tl.scenes[i]!, assets: ["sh5-a"], scene: { type: "broll", asset: { kind: "image", query: "portrait", prefer: "either" }, treatment: "natural", move: "pushIn", focusY: 0.2 } };
+    const assets = [...res.manifest.assets, { id: "sh5-a", kind: "image" as const, uri: "store://x/sh5-a.jpg", mime: "image/jpeg", width: 1200, height: 2400, provider: "t", license: { name: "CC0", commercialUse: true, requiresAttribution: false }, role: "visual" as const }];
+    const html = compileHyperFrames(tl, { assets, style: framedExplainer, aspect: "9:16" }).files["compositions/s-sh5.html"]!;
+    expect(html).toMatch(/<img id="s-sh5-a-m"[^>]*style="object-position:50% 20%"/);
+  });
   it("shrinks versus titles so long words fit their cards", async () => {
     const res = await runPipeline({ topic: "the floppy disk save icon", durationSec: 25, poster: { mode: "off" } }, { providers: { llm: fakeLLM(), tts: fakeTTS() }, storage: new MemoryStorage(), jobId: "v2", stopAfter: "compose" });
     const size = (left: string, right: string) => {

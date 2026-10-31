@@ -7,7 +7,7 @@ STYLE: {{style}}
 ASSET POLICY: {{assetPolicy}}
 
 Scene types you can use (pick the one that makes the line most literal):
-- broll: a single image or video of the literal noun being said. asset.query = a 2–5 word stock search ("tv remote couch night"); asset.prompt = a generation prompt as a fallback (photographic, 16:11 framing, no text, no logos). treatment: natural | bw | dark | warm | cool | vintage. move: pushIn | pullOut | panLeft | panRight | kenBurns | static.
+- broll: a single image or video of the literal noun being said. asset.query = a 2–5 word stock search ("tv remote couch night"); asset.prompt = a generation prompt as a fallback (photographic, 16:11 framing, no text, no logos). treatment: natural | bw | dark | warm | cool | vintage. move: pushIn | pullOut | panLeft | panRight | kenBurns | static. focusY (0–1, optional): which part of a tall photo stays in frame; 0.2 keeps faces in portraits.
 - montage: a fast list. Use it when the line enumerates 3+ items. items = one asset request per item (4–10 items). perItemSec 0.2–0.27.
 - diagram: dark-UI motion graphic for a concept with no literal footage. templates:
   - icon-draw {icon, label?, color?, glow?}. icon = any Lucide icon name (lucide.dev/icons, 2,000+), chosen to be literal: bug, scroll-text, traffic-cone, octagon-alert, bluetooth, mail, landmark, factory, ship, train-front, banknote, flask-conical, lightbulb, calendar-days… (also power, standby, onoff, wifi, cpu, globe, clock, warning). Generic check/x are a last resort.

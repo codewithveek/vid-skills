@@ -42,17 +42,18 @@ const n = (v: number) => round3(v);
 
 /* ----------------------------- media helpers ---------------------- */
 
-function mediaTag(id: string, a: SceneAsset | undefined, dur: number, cls = "vs-media", mediaStart = 0): string {
+function mediaTag(id: string, a: SceneAsset | undefined, dur: number, cls = "vs-media", mediaStart = 0, focusY?: number): string {
   if (!a) return `<div id="${id}" class="${cls} vs-missing"></div>`;
+  const st = focusY === undefined ? "" : ` style="object-position:50% ${Math.round(focusY * 100)}%"`;
   if (a.asset.kind === "video") {
     const ms = mediaStart ? ` data-media-start="${n(mediaStart)}"` : "";
-    return `<video id="${id}" class="clip ${cls}" src="${e(a.path)}" muted playsinline data-start="0" data-duration="${n(dur)}"${ms}></video>`;
+    return `<video id="${id}" class="clip ${cls}" src="${e(a.path)}" muted playsinline data-start="0" data-duration="${n(dur)}"${ms}${st}></video>`;
   }
-  return `<img id="${id}" class="${cls}" src="${e(a.path)}" alt="" />`;
+  return `<img id="${id}" class="${cls}" src="${e(a.path)}" alt=""${st} />`;
 }
 
 /** A full-canvas layer: blurred fill behind + the content window holding the media. */
-function mediaLayer(ctx: SceneCtx, key: string, a: SceneAsset | undefined, dur: number, opts: { treatment?: string; tag?: string } = {}): string {
+function mediaLayer(ctx: SceneCtx, key: string, a: SceneAsset | undefined, dur: number, opts: { treatment?: string; tag?: string; focusY?: number } = {}): string {
   const id = `${ctx.sid}-${key}`;
   const t = opts.treatment && opts.treatment !== "natural" ? ` vs-t-${opts.treatment}` : "";
   let bg = "";
@@ -64,7 +65,7 @@ function mediaLayer(ctx: SceneCtx, key: string, a: SceneAsset | undefined, dur: 
     bg = `<div class="vs-fill">${inner ? `<div class="vs-blur">${inner}</div>` : `<div class="vs-stage"></div>`}<div class="vs-dim"></div></div>`;
   }
   const tag = opts.tag ? `<div class="vs-tagwrap"><span id="${id}-tag" class="vs-tag">${e(opts.tag)}</span></div>` : "";
-  return `${bg}<div class="vs-window"><div id="${id}-mw" class="vs-mw${t}" data-layout-allow-overflow>${mediaTag(`${id}-m`, a, dur)}</div>${tag}</div>`;
+  return `${bg}<div class="vs-window"><div id="${id}-mw" class="vs-mw${t}" data-layout-allow-overflow>${mediaTag(`${id}-m`, a, dur, "vs-media", 0, opts.focusY)}</div>${tag}</div>`;
 }
 
 function moveTween(sel: string, move: string, dur: number, seed: number): string {
@@ -101,7 +102,7 @@ function broll(ctx: SceneCtx): SceneOutput {
   const s = ctx.ts.scene;
   if (s.type !== "broll") throw new Error("broll");
   const d = ctx.ts.duration;
-  const html = mediaLayer(ctx, "a", ctx.assets[0], d, { treatment: s.treatment, tag: s.label });
+  const html = mediaLayer(ctx, "a", ctx.assets[0], d, { treatment: s.treatment, tag: s.label, focusY: s.focusY });
   const js = moveTween(`#${ctx.sid}-a-mw`, s.move, d, hashString(ctx.sid)) + (s.label ? tagPop(ctx, "a") : "");
   return { css: "", html, js };
 }

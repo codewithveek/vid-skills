@@ -11,7 +11,7 @@ Each shot has `{ id, lineId, anchor?, scene }`. The **anchor** is a word or phra
 
 | Scene | Use for | Key fields |
 | --- | --- | --- |
-| `broll` | literal nouns | `asset.query` (2–5 words), `asset.prompt` fallback, `treatment` (natural/bw/dark/warm/cool/vintage), `move` (pushIn/pullOut/pan*/kenBurns/static) |
+| `broll` | literal nouns | `asset.query` (2–5 words), `asset.prompt` fallback, `treatment` (natural/bw/dark/warm/cool/vintage), `move` (pushIn/pullOut/pan*/kenBurns/static), `focusY` (0 = top of a tall photo, for faces) |
 | `montage` | lists of 3+ | `items[]` (one per list item). Items cut on each list word, 0.2–0.27 s |
 | `diagram` | mechanisms | `template`: icon-draw, button-cards, toggle-switch, flow, compare, counter, timeline, checklist. Icons: any [Lucide](https://lucide.dev/icons) name (2,000+ bundled, ISC; drawn on stroke by stroke) plus the IEC power set. Pick a literal icon (bug, scroll-text, traffic-cone); check/x are a last resort. `compare` takes `leftTitle`/`rightTitle` (a year beats an icon). |
 | `versus` | then vs now, myth vs fact | Two photo cards with a big year/number and a label each, a red VS badge, a yellow ring on the `winner`. Each side: `asset` (preferred), or `icon`, or title only. Use it instead of `compare` whenever both sides are real things. |

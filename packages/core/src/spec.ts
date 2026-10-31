@@ -212,6 +212,8 @@ export const BrollScene = SceneBase.extend({
   asset: AssetRequest,
   treatment: MediaTreatment.default("natural"),
   move: CameraMove.default("pushIn"),
+  /** Vertical crop focus for media taller than the window: 0 keeps the top (faces in portraits), 1 the bottom. Default centre. */
+  focusY: z.number().min(0).max(1).optional(),
 });
 
 export const MontageScene = SceneBase.extend({
