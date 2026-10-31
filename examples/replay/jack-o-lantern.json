@@ -358,7 +358,7 @@
           "type": "broll",
           "asset": {
             "kind": "image",
-            "query": "intitle:\"Traditional Irish Halloween, Stingy Jack, O\"",
+            "query": "intitle:\"Stingy Jack, Oíche Shamhna, Jack O'Lantern Turnip\"",
             "prompt": "a carved turnip lantern for Stingy Jack",
             "prefer": "stock"
           },
