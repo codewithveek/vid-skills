@@ -1,0 +1,502 @@
+{
+  "ResearchDossier": {
+    "topic": "does lightning strike the same place twice",
+    "summary": "Lightning often strikes the same place repeatedly, especially tall, pointy, isolated objects; the Empire State Building is hit about 23 times a year. That is what lightning rods exploit. Roy Sullivan survived seven strikes.",
+    "angle": "Lightning doesn't avoid the same place. It keeps coming back.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Myth: lightning never strikes the same place twice. Fact: lightning often strikes the same place repeatedly, especially tall, pointy, isolated objects.",
+        "sources": [
+          {
+            "url": "https://www.weather.gov/safety/lightning-myths",
+            "title": "Lightning Myths - National Weather Service",
+            "quote": "Lightning often strikes the same place repeatedly, especially if it's a tall, pointy, isolated object."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The Empire State Building is hit an average of 23 times a year.",
+        "sources": [
+          {
+            "url": "https://www.weather.gov/safety/lightning-myths",
+            "title": "Lightning Myths - National Weather Service",
+            "quote": "The Empire State Building is hit an average of 23 times a year"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Benjamin Franklin conceived the pointed lightning rod in 1749.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Lightning_rod",
+            "title": "Lightning rod - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "A lightning rod is meant to be struck instead of the structure; the current is conducted through a wire to the ground rather than through the building.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Lightning_rod",
+            "title": "Lightning rod - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "Park ranger Roy Sullivan was struck by lightning seven times between 1942 and 1977 and is recognized by Guinness World Records as the person struck by lightning more recorded times than any other human.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Roy_Sullivan",
+            "title": "Roy Sullivan - Wikipedia",
+            "quote": "Between 1942 and 1977, Sullivan was claimed to have survived being struck by lightning seven times."
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Lightning Strikes Twice",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Lightning never strikes the same place twice. Right?",
+            "emphasis": [
+              "twice"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l2",
+            "text": "Wrong. The Empire State Building gets hit about 23 times a year.",
+            "emphasis": [
+              "23"
+            ],
+            "claimIds": [
+              "c1",
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "mechanism",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "Lightning goes for tall, pointy, isolated things.",
+            "emphasis": [
+              "tall"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l4",
+            "text": "And they don't move. So it hits them again and again.",
+            "emphasis": [
+              "again"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "That's the whole idea behind the lightning rod. Benjamin Franklin came up with it in 1749.",
+            "emphasis": [
+              "rod"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "Give lightning a metal path to the ground, and it skips the building.",
+            "emphasis": [
+              "ground"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "twist",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "It even hits people twice. Park ranger Roy Sullivan survived seven strikes.",
+            "emphasis": [
+              "seven"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l8",
+            "text": "That's a Guinness world record.",
+            "emphasis": [
+              "record"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l9",
+            "text": "Lightning doesn't avoid the same place. It keeps coming back.",
+            "emphasis": [
+              "back"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Wea00610 (9672651296)\"",
+            "prompt": "lightning striking the Empire State Building",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l2",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "x",
+            "title": "MYTH",
+            "label": "Never strikes twice"
+          },
+          "right": {
+            "icon": "check",
+            "title": "FACT",
+            "label": "Same spot, again and again"
+          },
+          "winner": "right"
+        },
+        "anchor": "Wrong."
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "stat",
+          "value": "23",
+          "caption": "strikes a year on the Empire State Building",
+          "sourceClaimId": "c2"
+        },
+        "anchor": "23"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Lightning strikes the Berlin TV Tower\"",
+            "prompt": "lightning striking a tall TV tower",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Berlin TV Tower"
+        },
+        "anchor": "Lightning"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "diagram",
+          "template": "checklist",
+          "data": {
+            "items": [
+              "Tall",
+              "Pointy",
+              "Isolated"
+            ]
+          }
+        },
+        "anchor": "tall,"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "repeat",
+            "label": "AGAIN AND AGAIN",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "again"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Joseph Siffrein Duplessis - Benjamin Franklin - Google Art Project\"",
+            "prompt": "portrait of Benjamin Franklin",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Benjamin Franklin"
+        },
+        "anchor": "Benjamin"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l5",
+        "scene": {
+          "type": "typewriter",
+          "lead": "lightning rod:",
+          "highlight": "1749",
+          "cps": 12
+        },
+        "anchor": "1749."
+      },
+      {
+        "id": "sh9",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "flow",
+          "data": {
+            "nodes": [
+              {
+                "label": "LIGHTNING",
+                "icon": "zap"
+              },
+              {
+                "label": "METAL ROD",
+                "icon": "move-down"
+              },
+              {
+                "label": "GROUND",
+                "icon": "arrow-down-to-line"
+              }
+            ]
+          }
+        },
+        "anchor": "Give"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l6",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Lightning rod, Woodland Plantation House\"",
+            "prompt": "a lightning rod on a roof",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Lightning rod"
+        },
+        "anchor": "skips"
+      },
+      {
+        "id": "sh11",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "user",
+            "label": "ROY SULLIVAN · PARK RANGER",
+            "color": "#F4F5F7",
+            "glow": "yes"
+          }
+        },
+        "anchor": "Park"
+      },
+      {
+        "id": "sh12",
+        "lineId": "l7",
+        "scene": {
+          "type": "stat",
+          "value": "7",
+          "caption": "lightning strikes survived",
+          "sourceClaimId": "c5"
+        },
+        "anchor": "seven"
+      },
+      {
+        "id": "sh13",
+        "lineId": "l8",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "trophy",
+            "label": "GUINNESS WORLD RECORD",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "Guinness"
+      },
+      {
+        "id": "sh14",
+        "lineId": "l9",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Lightning striking the Eiffel Tower - NOAA.jpg\"",
+            "prompt": "lightning striking the Eiffel Tower",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Eiffel Tower, 1902"
+        }
+      },
+      {
+        "id": "sh15",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh16",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Lightning DOES strike the same place twice",
+    "description": "Lightning never strikes the same place twice. Right? Wrong.\nThe Empire State Building is hit about 23 times a year. Lightning goes for tall, pointy, isolated things, which is exactly why lightning rods work. Park ranger Roy Sullivan survived seven strikes, a Guinness world record.",
+    "hashtags": [
+      "mythbusting",
+      "lightning",
+      "science",
+      "didyouknow"
+    ],
+    "keywords": [
+      "does lightning strike twice",
+      "Empire State Building lightning",
+      "lightning rod",
+      "Roy Sullivan",
+      "weather myths"
+    ],
+    "hook": "Lightning never strikes the same place twice. Right? Wrong.",
+    "altText": "Motion-graphics explainer busting the myth that lightning never strikes twice.",
+    "sources": [
+      {
+        "url": "https://www.weather.gov/safety/lightning-myths",
+        "title": "NWS lightning myths"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Roy_Sullivan",
+        "title": "Roy Sullivan"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

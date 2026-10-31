@@ -1,0 +1,439 @@
+{
+  "ResearchDossier": {
+    "topic": "where the word robot comes from",
+    "summary": "Robot comes from Karel Čapek's 1920 play R.U.R. (Rossum's Universal Robots), about a factory making artificial workers. His brother Josef suggested 'roboti' from Czech robota, serf labour or drudgery; Karel had wanted laboři, from Latin labor.",
+    "angle": "Robots are named for the work nobody wanted to do.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "The word robot comes from Karel Čapek's play R.U.R. (Rossum's Universal Robots), published in 1920.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Robot",
+            "title": "Robot - Wikipedia",
+            "quote": "in his play R.U.R. (Rossum's Universal Robots), published in 1920"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "In Czech, robota means corvée, serf labor, and figuratively drudgery or hard work.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Robot",
+            "title": "Robot - Wikipedia",
+            "quote": "In Czech, robota means 'corvée, serf labor', and figuratively 'drudgery, hard work'."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Karel named his brother, the painter and writer Josef Čapek, as the word's originator; Josef suggested 'roboti'.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Robot",
+            "title": "Robot - Wikipedia",
+            "quote": "he named his brother, the painter and writer Josef Čapek, as its actual originator"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "Karel had originally wanted to call the creatures laboři ('workers', from Latin labor).",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Robot",
+            "title": "Robot - Wikipedia",
+            "quote": "he had originally wanted to call the creatures laboři"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "The play begins in a factory that makes artificial workers; it introduced the word robot to English.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/R.U.R.",
+            "title": "R.U.R. - Wikipedia",
+            "quote": "The play begins in a factory that makes artificial workers from synthetic organic matter."
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Robot Means Forced Labor",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "The word robot is only about a hundred years old.",
+            "emphasis": [
+              "hundred"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l2",
+            "text": "And it comes from a word for forced labor.",
+            "emphasis": [
+              "forced"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "In 1920, Czech writer Karel Čapek published a play about a factory making artificial workers.",
+            "emphasis": [
+              "factory"
+            ],
+            "claimIds": [
+              "c1",
+              "c5"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "He first wanted to call them by a Latin word for workers.",
+            "emphasis": [
+              "Latin"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "His brother Josef, a painter, suggested something else.",
+            "emphasis": [
+              "Josef"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l6",
+            "text": "Roboti. From the Czech robota. Serf labor. Drudgery.",
+            "emphasis": [
+              "Drudgery"
+            ],
+            "claimIds": [
+              "c2",
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "The play was called Rossum's Universal Robots, and the word went around the world.",
+            "emphasis": [
+              "world"
+            ],
+            "claimIds": [
+              "c1",
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l8",
+            "text": "So every robot is named for the work nobody wanted to do.",
+            "emphasis": [
+              "nobody"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Rossums-universal-robots-original-poster\"",
+            "prompt": "the original 1921 poster for R.U.R.",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l2",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "pickaxe",
+            "label": "A WORD FOR FORCED LABOR",
+            "color": "#FF9F1C",
+            "glow": "yes"
+          }
+        },
+        "anchor": "forced"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Karel Čapek 30.léta\"",
+            "prompt": "portrait of Karel Čapek",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Karel Čapek"
+        },
+        "anchor": "Karel"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Capek RUR.jpg\"",
+            "prompt": "robots on stage in R.U.R.",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "R.U.R. on stage"
+        },
+        "anchor": "factory"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Latin for workers:",
+          "highlight": "laboři",
+          "cps": 12
+        },
+        "anchor": "Latin"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Josef Capek 1937\"",
+            "prompt": "portrait of Josef Čapek",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Josef Čapek"
+        },
+        "anchor": "Josef,"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l6",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "title": "LABOŘI",
+            "label": "Karel's idea"
+          },
+          "right": {
+            "title": "ROBOTI",
+            "label": "Josef's idea"
+          },
+          "winner": "right"
+        },
+        "anchor": "Roboti."
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "typewriter",
+          "lead": "robota =",
+          "highlight": "drudgery",
+          "cps": 14
+        },
+        "anchor": "Serf"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "typewriter",
+          "lead": "R.U.R. =",
+          "highlight": "Rossum's Universal Robots",
+          "cps": 18
+        },
+        "anchor": "Rossum's"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "globe",
+            "label": "WENT AROUND THE WORLD",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "world."
+      },
+      {
+        "id": "sh11",
+        "lineId": "l8",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Robotic Arm Polishing Guitars at Martin Guitar Factory\"",
+            "prompt": "an industrial robot arm at work",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Still doing the drudgery"
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh13",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "The word 'robot' means forced labor",
+    "description": "The word robot is only about a hundred years old, and it comes from a word for forced labor.\nIn 1920, Karel Čapek wrote R.U.R. (Rossum's Universal Robots), a play about a factory making artificial workers. He wanted to call them laboři, from the Latin for work. His brother Josef suggested roboti, from the Czech robota: serf labor, drudgery.",
+    "hashtags": [
+      "etymology",
+      "robots",
+      "language",
+      "didyouknow"
+    ],
+    "keywords": [
+      "robot word origin",
+      "Karel Čapek",
+      "R.U.R.",
+      "robota meaning",
+      "Josef Čapek"
+    ],
+    "hook": "The word robot is only about a hundred years old.",
+    "altText": "Motion-graphics explainer on where the word robot comes from.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Robot",
+        "title": "Robot"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/R.U.R.",
+        "title": "R.U.R."
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}
