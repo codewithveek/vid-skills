@@ -364,7 +364,7 @@
           },
           "treatment": "natural",
           "move": "pushIn",
-          "label": "Stingy Jack's lantern"
+          "label": "Stingy Jack"
         },
         "anchor": "Stingy"
       },
@@ -381,7 +381,7 @@
             "glow": "yes"
           }
         },
-        "anchor": "Devil."
+        "anchor": "who"
       },
       {
         "id": "sh10",
