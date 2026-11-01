@@ -141,7 +141,7 @@ export class WikimediaStock implements StockProvider {
         retry: { retries: 2, timeoutMs: 20_000 },
       });
       if (!j.error) break;
-      const throttled = /ratelimit|maxlag|toomany|readonly/i.test(j.error.code ?? "");
+      const throttled = /ratelimit|maxlag|toomany|too-busy|readonly/i.test(j.error.code ?? "");
       if (!throttled || attempt >= 3) throw new ProviderError(`wikimedia: ${j.error.code ?? "error"} ${j.error.info ?? ""}`.trim(), this.id, 200, throttled);
       await sleep(5_000 * 2 ** attempt, q.signal);
     }

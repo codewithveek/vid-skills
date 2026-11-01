@@ -26,12 +26,12 @@ describe("http", () => {
 });
 
 describe("wikimedia", () => {
-  it("backs off on in-body ratelimited errors instead of returning no results", async () => {
+  it.each(["ratelimited", "cirrussearch-too-busy-error"])("backs off on in-body %s errors instead of returning no results", async (code) => {
     vi.useFakeTimers();
     let n = 0;
     vi.stubGlobal("fetch", async () =>
       ++n === 1
-        ? json({ error: { code: "ratelimited", info: "You've exceeded your rate limit." } })
+        ? json({ error: { code, info: "Try again later." } })
         : json({ query: { pages: { "1": { title: "File:UPCA.jpg", imageinfo: [{ url: "https://u.test/a.jpg", width: 800, height: 600, descriptionurl: "https://c.test/File:UPCA.jpg", extmetadata: { LicenseShortName: { value: "Public domain" } } }] } } } }),
     );
     const p = new WikimediaStock().search({ query: "UPCA", kind: "image" });

@@ -89,7 +89,7 @@
         "lines": [
           {
             "id": "l1",
-            "text": "Every time you say hey guys, you're naming a man who tried to blow up Parliament.",
+            "text": "Every hey guys names a man who tried to blow up Parliament.",
             "emphasis": [
               "Parliament"
             ],
@@ -274,7 +274,7 @@
           "highlight": "guys",
           "cps": 10
         },
-        "anchor": "naming"
+        "anchor": "names"
       },
       {
         "id": "sh3",
