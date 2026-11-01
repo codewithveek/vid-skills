@@ -413,6 +413,18 @@ async function mapLimit<T, R>(items: T[], limit: number, fn: (t: T, i: number) =
 
 const MAX_DOWNLOAD = 80 * 2 ** 20;
 
+/** A search query as words a viewer can read: no operators (intitle:, filetype:), quotes, file extensions or ids. */
+export function placeholderLabel(query: string): string {
+  return query
+    .replace(/\b[a-z]+:(?=")/gi, " ")
+    .replace(/\b[a-z]+:\S+/gi, " ")
+    .replace(/["“”]/g, " ")
+    .replace(/\.(jpe?g|png|gif|tiff?|webp|svg)\b/gi, " ")
+    .replace(/\(\d+\)/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 const DOWNLOAD_UA = "vid-skills/0.1 (https://github.com/codewithveek/vid-skills)";
 
 async function download(url: string, signal?: AbortSignal, attempts = 4): Promise<{ bytes: Uint8Array; mime: string }> {
@@ -505,7 +517,7 @@ export async function stageAssets(
     }
     // 3. Deterministic placeholder (never fails)
     const key = `${ctx.base}assets/${id}.svg`;
-    await ctx.storage.put(key, svgBytes(placeholderCard(query || hint, { accent: style.palette.accent })), "image/svg+xml");
+    await ctx.storage.put(key, svgBytes(placeholderCard(placeholderLabel(query) || hint, { accent: style.palette.accent })), "image/svg+xml");
     return { id, kind: "image", uri: storeUri(key), mime: "image/svg+xml", width: 1088, height: 752, provider: "placeholder", query, license: { name: "generated", commercialUse: true, requiresAttribution: false }, role: "visual" };
   };
 

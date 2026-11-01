@@ -22,6 +22,7 @@ import {
   VideoBrief,
   ICONS,
   iconSvg,
+  placeholderLabel,
   posterFor,
   rankCandidates,
   resolveIcon,
@@ -216,6 +217,11 @@ describe("pipeline (offline, mock providers)", () => {
     } finally {
       vi.unstubAllGlobals();
     }
+  });
+  it("labels placeholder cards with readable words, not search syntax", () => {
+    expect(placeholderLabel('intitle:"Guy Fawkes night at Chirk"')).toBe("Guy Fawkes night at Chirk");
+    expect(placeholderLabel('filetype:bitmap intitle:"Wea00610 (9672651296).jpg"')).toBe("Wea00610");
+    expect(placeholderLabel("tv remote couch night")).toBe("tv remote couch night");
   });
   it("ranks tiny stock images last", () => {
     const lic = { name: "CC0", commercialUse: true, requiresAttribution: false };
