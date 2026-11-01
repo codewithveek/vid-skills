@@ -1,0 +1,493 @@
+{
+  "ResearchDossier": {
+    "topic": "why people wear poppies for Remembrance Day",
+    "summary": "The remembrance poppy comes from John McCrae's poem In Flanders Fields (3 May 1915), about poppies growing among war graves in Belgium. Moina Michael vowed on 9 November 1918 to wear a red poppy and campaigned for it; Anna Guérin started Poppy Days; Britain's first Poppy Day was 11 November 1921.",
+    "angle": "Every poppy on a coat is a line from a poem written in a war.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "In Flanders Fields was written by Canadian physician John McCrae on 3 May 1915, the day after his friend Alexis Helmer was killed at the Second Battle of Ypres.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Remembrance_poppy",
+            "title": "Remembrance poppy - Wikipedia",
+            "quote": "The poem was written by Canadian physician John McCrae on 3 May 1915."
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/In_Flanders_Fields",
+            "title": "In Flanders Fields - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The poem opens: 'In Flanders fields the poppies blow / Between the crosses, row on row'.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/In_Flanders_Fields",
+            "title": "In Flanders Fields - Wikipedia",
+            "quote": "In Flanders fields, the poppies blow / Between the crosses, row on row,"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "The poem refers to Flanders poppies growing among the graves of war victims in a region of Belgium.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Remembrance_poppy",
+            "title": "Remembrance poppy - Wikipedia",
+            "quote": "Flanders poppies growing among the graves of war victims in a region of Belgium"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "On 9 November 1918 Moina Michael, an American professor from Georgia, pledged to wear a red poppy, then campaigned to have it adopted as a national symbol of remembrance.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Moina_Michael",
+            "title": "Moina Michael - Wikipedia"
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Remembrance_poppy",
+            "title": "Remembrance poppy - Wikipedia",
+            "quote": "she vowed to always wear a red poppy as a symbol of remembrance"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "Anna Guérin established the first Poppy Days to raise funds for veterans, widows and orphans; Britain's first Poppy Day was on 11 November 1921.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Remembrance_poppy",
+            "title": "Remembrance poppy - Wikipedia",
+            "quote": "established the first 'Poppy' Days to raise funds for veterans, widows, orphans"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Why We Wear Poppies",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Every November, people pin a red poppy to their coats.",
+            "emphasis": [
+              "poppy"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l2",
+            "text": "It all started with one poem.",
+            "emphasis": [
+              "poem."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "In May 1915, a day after losing a close friend, Canadian doctor John McCrae wrote In Flanders Fields.",
+            "emphasis": [
+              "McCrae"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l4",
+            "text": "In Flanders fields the poppies blow, between the crosses, row on row.",
+            "emphasis": [
+              "poppies"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          },
+          {
+            "id": "l5",
+            "text": "Wild poppies really were growing among the graves in Belgium.",
+            "emphasis": [
+              "graves"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l6",
+            "text": "Two days before the war ended, an American professor, Moina Michael, vowed to always wear a red poppy.",
+            "emphasis": [
+              "vowed"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l7",
+            "text": "Then she campaigned to make it a symbol of remembrance.",
+            "emphasis": [
+              "remembrance."
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l8",
+            "text": "In France, Anna Guérin started Poppy Days to raise money for veterans and widows.",
+            "emphasis": [
+              "widows."
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l9",
+            "text": "Britain held its first Poppy Day on November 11th, 1921.",
+            "emphasis": [
+              "1921."
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l10",
+            "text": "So every poppy on a coat is a line from a poem, written in a war.",
+            "emphasis": [
+              "poem,"
+            ],
+            "claimIds": [
+              "c1",
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Blood Swept Lands and Seas of Red - geograph.org.uk - 6155082\"",
+            "prompt": "ceramic poppies pouring from the Tower of London",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l2",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "feather",
+            "label": "ONE POEM",
+            "color": "#E50914",
+            "glow": "yes"
+          }
+        },
+        "anchor": "poem."
+      },
+      {
+        "id": "sh3",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Lieut.-Col. John McCrae, M.D.\"",
+            "prompt": "portrait of John McCrae",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "John McCrae",
+          "focusY": 0.2
+        },
+        "anchor": "Canadian"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "typewriter",
+          "lead": "May 1915:",
+          "highlight": "In Flanders Fields",
+          "cps": 16
+        },
+        "anchor": "wrote"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Papaver rhoeas LC0050\"",
+            "prompt": "red poppies in a field",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Flanders poppies"
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Wooden Cross with Remembrance Poppy\"",
+            "prompt": "a wooden cross with a remembrance poppy",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Row on row"
+        },
+        "anchor": "between"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "flower",
+            "label": "AMONG THE GRAVES",
+            "color": "#E50914",
+            "glow": "yes"
+          }
+        },
+        "anchor": "graves"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "user",
+            "label": "MOINA MICHAEL · 9 NOV 1918",
+            "color": "#F4F5F7",
+            "glow": "yes"
+          }
+        },
+        "anchor": "American"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "megaphone",
+            "label": "A SYMBOL OF REMEMBRANCE",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "campaigned"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l8",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "hand-heart",
+            "label": "POPPY DAYS · ANNA GUÉRIN",
+            "color": "#E50914",
+            "glow": "yes"
+          }
+        },
+        "anchor": "Anna"
+      },
+      {
+        "id": "sh11",
+        "lineId": "l9",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"A vintage Canadian Vetcraft Remembrance Poppy\"",
+            "prompt": "a vintage remembrance poppy pin",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Poppy Day"
+        },
+        "anchor": "Britain"
+      },
+      {
+        "id": "sh12",
+        "lineId": "l10",
+        "scene": {
+          "type": "diagram",
+          "template": "timeline",
+          "data": {
+            "events": [
+              {
+                "year": "1915",
+                "label": "The poem"
+              },
+              {
+                "year": "1918",
+                "label": "The vow"
+              },
+              {
+                "year": "1921",
+                "label": "Poppy Day"
+              },
+              {
+                "year": "Today",
+                "label": "Every coat"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "sh13",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh14",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Why we wear poppies in November",
+    "description": "Every November, people pin a red poppy to their coats. It started with one poem.\nIn May 1915, Canadian doctor John McCrae wrote In Flanders Fields about poppies growing between the war graves. Moina Michael vowed to wear one, Anna Guérin started Poppy Days for veterans and widows, and Britain held its first Poppy Day on 11 November 1921.",
+    "hashtags": [
+      "remembranceday",
+      "poppy",
+      "history",
+      "didyouknow"
+    ],
+    "keywords": [
+      "why do we wear poppies",
+      "In Flanders Fields",
+      "John McCrae",
+      "Remembrance poppy history",
+      "Armistice Day"
+    ],
+    "hook": "Every November, people pin a red poppy to their coats. It started with one poem.",
+    "altText": "Motion-graphics explainer on why the poppy became the symbol of remembrance.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Remembrance_poppy",
+        "title": "Remembrance poppy"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/In_Flanders_Fields",
+        "title": "In Flanders Fields"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

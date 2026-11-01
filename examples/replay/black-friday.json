@@ -1,0 +1,363 @@
+{
+  "ResearchDossier": {
+    "topic": "where the name Black Friday comes from",
+    "summary": "Around 1951–52 police in Philadelphia and Rochester used 'Black Friday' for the congestion the day after Thanksgiving. In 1961 Philadelphia tried 'Big Friday', which was quickly forgotten. The 'in the black' profit explanation first appears in print in 1981.",
+    "angle": "Black Friday was named for the traffic, not the profits.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Around 1951–52 the terms Black Friday and Black Saturday came to be used by the police in Philadelphia and Rochester to describe congestion.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Black_Friday_(shopping)",
+            "title": "Black Friday (shopping) - Wikipedia",
+            "quote": "came to be used by the police in Philadelphia and Rochester"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "In 1961 the city and merchants of Philadelphia tried to rebrand the days as 'Big Friday' and 'Big Saturday', names that were quickly forgotten.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Black_Friday_(shopping)",
+            "title": "Black Friday (shopping) - Wikipedia",
+            "quote": "In 1961, the city and merchants of Philadelphia attempted to improve conditions."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "The explanation that retailers turn a profit ('go into the black') after Thanksgiving was proposed by merchants objecting to the term; its earliest known published reference is the Philadelphia Inquirer of 28 November 1981.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Black_Friday_(shopping)",
+            "title": "Black Friday (shopping) - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Black Friday Wasn't About Profit",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Black Friday is the day stores finally go into the black. Right?",
+            "emphasis": [
+              "black."
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l2",
+            "text": "Not quite. The name came first, and it wasn't a compliment.",
+            "emphasis": [
+              "compliment."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "In the early 1950s, police in Philadelphia started calling the day after Thanksgiving Black Friday.",
+            "emphasis": [
+              "police"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "Shoppers jammed the streets, and for traffic cops it was a nightmare.",
+            "emphasis": [
+              "nightmare."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "In 1961, the city tried to rebrand it Big Friday. Nobody bought it.",
+            "emphasis": [
+              "Nobody"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          },
+          {
+            "id": "l6",
+            "text": "The into the black story? It first shows up in print in 1981.",
+            "emphasis": [
+              "1981."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "So Black Friday was named for the traffic, not the profits.",
+            "emphasis": [
+              "traffic,"
+            ],
+            "claimIds": [
+              "c1",
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Black Friday at the Apple Store on Fifth Avenue, New York City, 2011\"",
+            "prompt": "crowds of Black Friday shoppers",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l2",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "x",
+            "title": "MYTH",
+            "label": "Stores go into the black"
+          },
+          "right": {
+            "icon": "check",
+            "title": "FACT",
+            "label": "Police named the chaos"
+          },
+          "winner": "right"
+        },
+        "anchor": "Not"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Greetings from Philadelphia, Pennsylvania - Large Letter Postcard (53499567796)\"",
+            "prompt": "a vintage Philadelphia postcard",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Philadelphia"
+        },
+        "anchor": "Philadelphia"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "siren",
+            "label": "POLICE SLANG · 1950s",
+            "color": "#E50914",
+            "glow": "yes"
+          }
+        },
+        "anchor": "Black"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "car",
+            "label": "GRIDLOCK",
+            "color": "#FF9F1C",
+            "glow": "yes"
+          }
+        },
+        "anchor": "jammed"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "title": "BLACK FRIDAY",
+            "label": "What police said"
+          },
+          "right": {
+            "title": "BIG FRIDAY",
+            "label": "The 1961 rebrand"
+          },
+          "winner": "left"
+        },
+        "anchor": "rebrand"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l6",
+        "scene": {
+          "type": "typewriter",
+          "lead": "'in the black' in print:",
+          "highlight": "1981",
+          "cps": 14
+        },
+        "anchor": "print"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "timeline",
+          "data": {
+            "events": [
+              {
+                "year": "1951",
+                "label": "Police slang"
+              },
+              {
+                "year": "1961",
+                "label": "'Big Friday' flops"
+              },
+              {
+                "year": "1981",
+                "label": "Profit story"
+              },
+              {
+                "year": "Today",
+                "label": "Black Friday"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Black Friday wasn't named for profits",
+    "description": "Black Friday is when stores go into the black. Right? Not quite.\nIn the early 1950s, Philadelphia police called the day after Thanksgiving Black Friday because of the crowds and traffic. A 1961 rebrand to 'Big Friday' flopped, and the 'in the black' story only shows up in print in 1981.",
+    "hashtags": [
+      "blackfriday",
+      "mythbusting",
+      "history",
+      "didyouknow"
+    ],
+    "keywords": [
+      "why is it called Black Friday",
+      "Black Friday origin",
+      "Philadelphia police Black Friday",
+      "in the black myth",
+      "shopping history"
+    ],
+    "hook": "Black Friday is the day stores finally go into the black. Right? Not quite.",
+    "altText": "Motion-graphics explainer on the real origin of the name Black Friday.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Black_Friday_(shopping)",
+        "title": "Black Friday (shopping)"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}
