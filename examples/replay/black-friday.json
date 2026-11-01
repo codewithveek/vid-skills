@@ -222,7 +222,7 @@
           "move": "pushIn",
           "label": "Philadelphia"
         },
-        "anchor": "Philadelphia"
+        "anchor": "police"
       },
       {
         "id": "sh4",
@@ -237,7 +237,7 @@
             "glow": "yes"
           }
         },
-        "anchor": "Black"
+        "anchor": "day"
       },
       {
         "id": "sh5",
@@ -269,7 +269,22 @@
           },
           "winner": "left"
         },
-        "anchor": "rebrand"
+        "anchor": "1961,"
+      },
+      {
+        "id": "sh6b",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "trending-up",
+            "label": "THE PROFIT STORY",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "into"
       },
       {
         "id": "sh7",
