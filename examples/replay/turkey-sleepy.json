@@ -249,7 +249,7 @@
           },
           "winner": "none"
         },
-        "anchor": "chicken,"
+        "anchor": "But"
       },
       {
         "id": "sh5",
@@ -266,7 +266,7 @@
           "move": "pushIn",
           "label": "The rest of the plate"
         },
-        "anchor": "plate."
+        "anchor": "So"
       },
       {
         "id": "sh6",
