@@ -270,6 +270,16 @@
         "anchor": "poem."
       },
       {
+        "id": "sh3a",
+        "lineId": "l3",
+        "scene": {
+          "type": "typewriter",
+          "lead": "May",
+          "highlight": "1915",
+          "cps": 10
+        }
+      },
+      {
         "id": "sh3",
         "lineId": "l3",
         "scene": {
@@ -292,7 +302,7 @@
         "lineId": "l3",
         "scene": {
           "type": "typewriter",
-          "lead": "May 1915:",
+          "lead": "the poem:",
           "highlight": "In Flanders Fields",
           "cps": 16
         },
