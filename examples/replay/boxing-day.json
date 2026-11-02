@@ -1,0 +1,438 @@
+{
+  "ResearchDossier": {
+    "topic": "why it's called Boxing Day",
+    "summary": "Boxing Day's name is linked to Christmas boxes: in Britain tradesmen collected 'Christmas boxes' of money or presents after Christmas as thanks for good service (Pepys mentions the custom in 1663), and servants of the wealthy were given the next day off to visit their families with a box of gifts, bonuses and sometimes leftover food. The origin is not definitive.",
+    "angle": "Boxing Day was a thank-you, not a fight.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "In Britain, it was a custom for tradesmen to collect 'Christmas boxes' of money or presents on the first weekday after Christmas, as thanks for good service; the term dates back to the 17th century.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Boxing_Day",
+            "title": "Boxing Day - Wikipedia",
+            "quote": "it was a custom for tradesmen to collect \"Christmas boxes\" of money or presents"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "Samuel Pepys's diary entry for 19 December 1663 mentions the custom.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Boxing_Day",
+            "title": "Boxing Day - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Servants of the wealthy were allowed the next day to visit their families; employers gave each servant a box containing gifts, bonuses and sometimes leftover food.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Boxing_Day",
+            "title": "Boxing Day - Wikipedia",
+            "quote": "The employers would give each servant a box to take home containing gifts, bonuses, and sometimes leftover food."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "The origin of the term itself is not definitive.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Boxing_Day",
+            "title": "Boxing Day - Wikipedia",
+            "quote": "the origin of the term itself is not definitive"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "The Oxford English Dictionary gives the earliest British attestation of Boxing Day as 1743.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Boxing_Day",
+            "title": "Boxing Day - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Boxing Day Isn't About Boxing",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Boxing Day has nothing to do with boxing.",
+            "emphasis": [
+              "nothing"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l2",
+            "text": "It's about boxes. Christmas boxes.",
+            "emphasis": [
+              "boxes."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "In Britain, tradesmen collected Christmas boxes of money or gifts, as thanks for a year of good service.",
+            "emphasis": [
+              "thanks"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "Samuel Pepys mentions the custom in his diary, in 1663.",
+            "emphasis": [
+              "1663."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "Rich households gave their servants the next day off to visit family.",
+            "emphasis": [
+              "servants"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l6",
+            "text": "Each went home with a box of gifts, a bonus, and sometimes the leftovers.",
+            "emphasis": [
+              "leftovers."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "twist",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "Historians still argue about the exact origin. But every version comes back to the boxes.",
+            "emphasis": [
+              "boxes."
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l8",
+            "text": "So Boxing Day was a thank-you, not a fight.",
+            "emphasis": [
+              "thank-you,"
+            ],
+            "claimIds": [
+              "c1",
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"A Christmas tree with gifts underneath\"",
+            "prompt": "boxes under a Christmas tree",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "x",
+            "title": "BOXING",
+            "label": "The sport"
+          },
+          "right": {
+            "icon": "gift",
+            "title": "BOXES",
+            "label": "Christmas boxes"
+          },
+          "winner": "right"
+        },
+        "anchor": "boxing."
+      },
+      {
+        "id": "sh3",
+        "lineId": "l3",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "hand-coins",
+            "label": "THANKS FOR GOOD SERVICE",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "tradesmen"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Samuel Pepys.jpg\"",
+            "prompt": "portrait of Samuel Pepys",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Samuel Pepys",
+          "focusY": 0.2
+        },
+        "anchor": "Pepys"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Pepys's diary:",
+          "highlight": "1663",
+          "cps": 10
+        },
+        "anchor": "diary,"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Making Plum Pudding - McLoughlin Bros\"",
+            "prompt": "a Victorian kitchen illustration with servants",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Servants' day off"
+        },
+        "anchor": "servants"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "checklist",
+          "data": {
+            "items": [
+              "Gifts",
+              "A bonus",
+              "Leftovers"
+            ]
+          }
+        },
+        "anchor": "gifts,"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "circle-help",
+            "label": "ORIGIN DEBATED",
+            "color": "#F4F5F7",
+            "glow": "yes"
+          }
+        },
+        "anchor": "Historians"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "gift",
+            "label": "IT'S ALWAYS THE BOXES",
+            "color": "#E50914",
+            "glow": "yes"
+          }
+        },
+        "anchor": "every"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l8",
+        "scene": {
+          "type": "diagram",
+          "template": "timeline",
+          "data": {
+            "events": [
+              {
+                "year": "1600s",
+                "label": "Christmas boxes"
+              },
+              {
+                "year": "1663",
+                "label": "Pepys"
+              },
+              {
+                "year": "1743",
+                "label": "'Boxing Day'"
+              },
+              {
+                "year": "Today",
+                "label": "Dec 26"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Boxing Day has nothing to do with boxing",
+    "description": "Boxing Day has nothing to do with boxing. It's about Christmas boxes.\nIn Britain, tradesmen collected Christmas boxes of money or gifts as thanks for good service; Samuel Pepys mentions it in 1663. Servants got the next day off and went home with a box of gifts, a bonus and leftovers. The exact origin is still debated, but it always comes back to the boxes.",
+    "hashtags": [
+      "boxingday",
+      "christmas",
+      "etymology",
+      "didyouknow"
+    ],
+    "keywords": [
+      "why is it called Boxing Day",
+      "Boxing Day origin",
+      "Christmas box tradition",
+      "December 26",
+      "Boxing Day history"
+    ],
+    "hook": "Boxing Day has nothing to do with boxing.",
+    "altText": "Motion-graphics explainer on where the name Boxing Day comes from.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Boxing_Day",
+        "title": "Boxing Day"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

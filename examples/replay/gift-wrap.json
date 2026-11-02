@@ -1,0 +1,373 @@
+{
+  "ResearchDossier": {
+    "topic": "how Hallmark accidentally started modern gift wrap",
+    "summary": "Modern patterned wrapping paper was introduced to the American market by the Hall Brothers in 1917, when their Kansas City stationery store ran out of plain white, red and green tissue and put out imported French envelope liners instead. Joyce Hall said the decorative gift-wrap business was born that day.",
+    "angle": "Every wrapped present started with an empty shelf.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Modern patterned wrapping paper was introduced to the American market by the Hall Brothers in 1917.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Wrapping_paper",
+            "title": "Wrapping paper - Wikipedia",
+            "quote": "Modern patterned wrapping paper was introduced to the American market by the Hall Brothers in 1917."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The Kansas City stationery store had run out of traditional white, red and green monocolor tissue papers and stocked imported French envelope liners instead.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Wrapping_paper",
+            "title": "Wrapping paper - Wikipedia",
+            "quote": "had run out of traditional white, red, and green monocolor tissue papers"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Joyce Hall said the decorative gift-wrapping business was born the day Rollie placed those French envelope linings on top of the showcase.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Wrapping_paper",
+            "title": "Wrapping paper - Wikipedia",
+            "quote": "the decorative gift-wrapping business was born the day Rollie placed those French envelope linings on top of that showcase"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "The Hall Brothers company became Hallmark Cards.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Hallmark_Cards",
+            "title": "Hallmark Cards - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Gift Wrap Was an Accident",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Modern gift wrap exists because a shop ran out of tissue paper.",
+            "emphasis": [
+              "tissue"
+            ],
+            "claimIds": [
+              "c1",
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "In 1917, the Hall brothers ran a stationery store in Kansas City.",
+            "emphasis": [
+              "Kansas"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l3",
+            "text": "At Christmas, they sold out of their plain white, red and green tissue.",
+            "emphasis": [
+              "sold"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "So Rollie Hall put out fancy French envelope liners instead.",
+            "emphasis": [
+              "French"
+            ],
+            "claimIds": [
+              "c2",
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "His brother Joyce later said the gift wrap business was born that day.",
+            "emphasis": [
+              "born"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "Their company became Hallmark.",
+            "emphasis": [
+              "Hallmark."
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "So every wrapped present started with an empty shelf.",
+            "emphasis": [
+              "empty"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Christmas gifts or presents\"",
+            "prompt": "wrapped Christmas presents",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "package-x",
+            "label": "OUT OF TISSUE PAPER",
+            "color": "#E50914",
+            "glow": "yes"
+          }
+        },
+        "anchor": "ran"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"KansasCityWalnutStreetPostcardHallBros\"",
+            "prompt": "a vintage Kansas City street postcard",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Kansas City"
+        },
+        "anchor": "Hall"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l2",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Kansas City,",
+          "highlight": "1917",
+          "cps": 10
+        },
+        "anchor": "stationery"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "diagram",
+          "template": "checklist",
+          "data": {
+            "items": [
+              "White tissue: sold out",
+              "Red tissue: sold out",
+              "Green tissue: sold out"
+            ]
+          }
+        },
+        "anchor": "sold"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "mail",
+            "label": "FRENCH ENVELOPE LINERS",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "French"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Joyce Hall:",
+          "highlight": "\"the business was born\"",
+          "cps": 16
+        },
+        "anchor": "Joyce"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Crown Center 5 Kansas City MO\"",
+            "prompt": "Hallmark's headquarters in Kansas City",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Hallmark, Kansas City"
+        },
+        "anchor": "Hallmark."
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"A Christmas tree with gifts underneath\"",
+            "prompt": "wrapped presents under a Christmas tree",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Gift wrap exists because a shop ran out of tissue paper",
+    "description": "Modern gift wrap exists because a shop ran out of tissue paper.\nAt Christmas 1917 the Hall brothers' Kansas City store sold out of plain tissue, so Rollie Hall put out fancy French envelope liners instead. Joyce Hall later said the gift-wrap business was born that day. Their company became Hallmark.",
+    "hashtags": [
+      "christmas",
+      "giftwrap",
+      "history",
+      "didyouknow"
+    ],
+    "keywords": [
+      "who invented wrapping paper",
+      "gift wrap history",
+      "Hallmark 1917",
+      "Hall brothers",
+      "Christmas facts"
+    ],
+    "hook": "Modern gift wrap exists because a shop ran out of tissue paper.",
+    "altText": "Motion-graphics explainer on how Hallmark's founders started modern gift wrap.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Wrapping_paper",
+        "title": "Wrapping paper"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

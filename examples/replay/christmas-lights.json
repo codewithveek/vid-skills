@@ -1,0 +1,415 @@
+{
+  "ResearchDossier": {
+    "topic": "who invented electric Christmas lights",
+    "summary": "The first known electrically lit Christmas tree was created in December 1882 by Edward H. Johnson, an associate of Thomas Edison and vice president of the Edison Electric Light Company, who had bulbs specially made and hand-wired 80 red, white and blue bulbs. Local newspapers ignored it as a publicity stunt, but a Detroit reporter wrote it up. Trees had been lit with candles.",
+    "angle": "Every lit-up tree started as one man showing off electricity.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "The first known electrically illuminated Christmas tree was the creation of Edward H. Johnson, an associate of inventor Thomas Edison, in December 1882 in New York City.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Christmas_lights",
+            "title": "Christmas lights - Wikipedia",
+            "quote": "the creation of Edward H. Johnson, an associate of inventor Thomas Edison"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "While vice president of the Edison Electric Light Company, Johnson had Christmas tree light bulbs especially made for him.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Christmas_lights",
+            "title": "Christmas lights - Wikipedia",
+            "quote": "he had Christmas tree light bulbs especially made for him"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "The tree was hand-wired with 80 red, white and blue electric incandescent light bulbs.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Christmas_lights",
+            "title": "Christmas lights - Wikipedia",
+            "quote": "hand-wired with 80 red, white and blue electric incandescent light bulbs"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "Local newspapers ignored the story as a publicity stunt, but a Detroit newspaper reporter published it.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Christmas_lights",
+            "title": "Christmas lights - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "Before electric lights, Christmas trees were lit with candles.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Christmas_lights",
+            "title": "Christmas lights - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Christmas Lights Were a Stunt",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "The first electric Christmas lights were brushed off as a publicity stunt.",
+            "emphasis": [
+              "stunt."
+            ],
+            "claimIds": [
+              "c1",
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "Until then, Christmas trees were lit with real candles.",
+            "emphasis": [
+              "candles."
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "In 1882, Edward Johnson, a business associate of Thomas Edison, lit his tree with electricity.",
+            "emphasis": [
+              "electricity."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "He was vice president of the Edison Electric Light Company, and had the bulbs made specially.",
+            "emphasis": [
+              "specially."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "Eighty red, white and blue bulbs, all wired by hand.",
+            "emphasis": [
+              "hand."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "twist",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l6",
+            "text": "Most newspapers ignored it. A reporter from Detroit wrote it up anyway.",
+            "emphasis": [
+              "Detroit"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "So every lit-up tree started as one man showing off electricity.",
+            "emphasis": [
+              "electricity."
+            ],
+            "claimIds": [
+              "c1",
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Christmas lights on a house in New Street\"",
+            "prompt": "a house covered in Christmas lights",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "megaphone",
+            "label": "\"A PUBLICITY STUNT\"",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "publicity"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Candle on Christmas tree 2\"",
+            "prompt": "a real candle on a Christmas tree",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Candles on the tree",
+          "focusY": 0.4
+        },
+        "anchor": "candles."
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "typewriter",
+          "lead": "New York,",
+          "highlight": "1882",
+          "cps": 10
+        },
+        "anchor": "1882,"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "user",
+            "label": "EDWARD H. JOHNSON",
+            "color": "#F4F5F7",
+            "glow": "yes"
+          }
+        },
+        "anchor": "Edward"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Edison carbon filament light bulb\"",
+            "prompt": "an early Edison carbon filament light bulb",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Edison's bulb"
+        },
+        "anchor": "Thomas"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "zap",
+            "label": "EDISON ELECTRIC LIGHT CO.",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "vice"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l5",
+        "scene": {
+          "type": "stat",
+          "value": "80",
+          "caption": "bulbs, wired by hand",
+          "sourceClaimId": "c3"
+        },
+        "anchor": "Eighty"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "newspaper",
+            "label": "IGNORED · EXCEPT DETROIT",
+            "color": "#E50914",
+            "glow": "yes"
+          }
+        },
+        "anchor": "Most"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "timeline",
+          "data": {
+            "events": [
+              {
+                "year": "Before",
+                "label": "Candles"
+              },
+              {
+                "year": "1882",
+                "label": "80 bulbs"
+              },
+              {
+                "year": "Today",
+                "label": "Every street"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "The first Christmas lights were called a publicity stunt",
+    "description": "The first electric Christmas lights were brushed off as a publicity stunt.\nIn 1882 Edward Johnson, Thomas Edison's associate and vice president of the Edison Electric Light Company, hand-wired 80 red, white and blue bulbs onto his tree in New York. Most newspapers ignored it, but a Detroit reporter wrote it up. Until then, trees were lit with candles.",
+    "hashtags": [
+      "christmas",
+      "christmaslights",
+      "history",
+      "didyouknow"
+    ],
+    "keywords": [
+      "who invented Christmas lights",
+      "first electric Christmas tree",
+      "Edward H. Johnson",
+      "Edison Christmas lights",
+      "Christmas history"
+    ],
+    "hook": "The first electric Christmas lights were brushed off as a publicity stunt.",
+    "altText": "Motion-graphics explainer on the first electric Christmas tree in 1882.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Christmas_lights",
+        "title": "Christmas lights"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

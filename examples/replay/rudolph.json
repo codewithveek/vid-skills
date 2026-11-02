@@ -1,0 +1,422 @@
+{
+  "ResearchDossier": {
+    "topic": "Rudolph was created for a department store",
+    "summary": "Robert L. May created Rudolph in 1939 as an assignment for Montgomery Ward, which had been giving away Christmas booklets and decided writing its own would save money; 2.4 million copies went out in its first year. May considered Rollo or Reginald. His brother-in-law Johnny Marks wrote the song; Gene Autry's recording hit No. 1 at Christmas 1949.",
+    "angle": "The most famous reindeer started as a store giveaway.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Robert L. May created Rudolph in 1939 as an assignment for Chicago-based Montgomery Ward, which had been giving away Christmas booklets; creating its own would save money.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Rudolph_the_Red-Nosed_Reindeer",
+            "title": "Rudolph the Red-Nosed Reindeer - Wikipedia",
+            "quote": "Robert L. May created Rudolph in 1939 as an assignment for Chicago-based Montgomery Ward."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "In its first year of publication, Montgomery Ward distributed 2.4 million copies of Rudolph's story.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Rudolph_the_Red-Nosed_Reindeer",
+            "title": "Rudolph the Red-Nosed Reindeer - Wikipedia",
+            "quote": "Montgomery Ward distributed 2.4 million copies of Rudolph's story"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "May considered naming the reindeer Rollo or Reginald.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Rudolph_the_Red-Nosed_Reindeer",
+            "title": "Rudolph the Red-Nosed Reindeer - Wikipedia",
+            "quote": "May considered naming the reindeer Rollo or Reginald before deciding upon using the name Rudolph."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "May's brother-in-law, Johnny Marks, adapted the story into a song; Gene Autry's recording hit No. 1 on the Billboard pop chart the week of Christmas 1949.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Rudolph_the_Red-Nosed_Reindeer",
+            "title": "Rudolph the Red-Nosed Reindeer - Wikipedia",
+            "quote": "May's brother-in-law, Johnny Marks, adapted the story of Rudolph into a song."
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Rudolph Was a Store Giveaway",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Rudolph the Red-Nosed Reindeer was invented to save a store money.",
+            "emphasis": [
+              "money."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "In 1939, the retailer Montgomery Ward was giving away Christmas booklets.",
+            "emphasis": [
+              "booklets."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l3",
+            "text": "Writing its own would be cheaper. So an employee, Robert May, got the job.",
+            "emphasis": [
+              "cheaper."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "He almost named the reindeer Rollo. Or Reginald.",
+            "emphasis": [
+              "Reginald."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "In the first year, the store handed out 2.4 million copies.",
+            "emphasis": [
+              "million"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "twist",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l6",
+            "text": "Then May's brother-in-law, Johnny Marks, turned the story into a song.",
+            "emphasis": [
+              "song."
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l7",
+            "text": "Gene Autry's recording hit number one at Christmas 1949.",
+            "emphasis": [
+              "one"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l8",
+            "text": "So the most famous reindeer of all started as a store giveaway.",
+            "emphasis": [
+              "giveaway."
+            ],
+            "claimIds": [
+              "c1",
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Rudolph the Red-Nosed Reindeer (1948) Rudolph\"",
+            "prompt": "Rudolph in the 1948 cartoon",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "focusY": 0.4
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "piggy-bank",
+            "label": "TO SAVE MONEY",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "save"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "store",
+            "label": "MONTGOMERY WARD · 1939",
+            "color": "#F4F5F7",
+            "glow": "yes"
+          }
+        },
+        "anchor": "retailer"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l2",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "book-open",
+            "label": "FREE CHRISTMAS BOOKLETS",
+            "color": "#E50914",
+            "glow": "yes"
+          }
+        },
+        "anchor": "giving"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "typewriter",
+          "lead": "the writer:",
+          "highlight": "Robert L. May",
+          "cps": 14
+        },
+        "anchor": "employee,"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "title": "ROLLO",
+            "label": "Almost"
+          },
+          "right": {
+            "title": "REGINALD",
+            "label": "Also almost"
+          },
+          "winner": "none"
+        },
+        "anchor": "Rollo."
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "stat",
+          "value": "2.4M",
+          "caption": "copies, first year",
+          "sourceClaimId": "c2"
+        },
+        "anchor": "2.4"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Rudolph the Red-Nosed Reindeer (1948) title card\"",
+            "prompt": "the 1948 Rudolph cartoon title card",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "The 1948 cartoon"
+        },
+        "anchor": "Johnny"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Gene Autry, NPG 94 39\"",
+            "prompt": "portrait of Gene Autry",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Gene Autry",
+          "focusY": 0.25
+        },
+        "anchor": "Gene"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l8",
+        "scene": {
+          "type": "diagram",
+          "template": "timeline",
+          "data": {
+            "events": [
+              {
+                "year": "1939",
+                "label": "Store booklet"
+              },
+              {
+                "year": "Year 1",
+                "label": "2.4M copies"
+              },
+              {
+                "year": "1949",
+                "label": "No. 1 song"
+              },
+              {
+                "year": "Today",
+                "label": "Everywhere"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Rudolph was invented to save a store money",
+    "description": "Rudolph the Red-Nosed Reindeer was invented to save a store money.\nIn 1939 Montgomery Ward was giving away Christmas booklets and decided writing its own would be cheaper. Employee Robert May almost named him Rollo or Reginald. The store handed out 2.4 million copies in the first year, and Gene Autry's version of the song hit No. 1 in 1949.",
+    "hashtags": [
+      "christmas",
+      "rudolph",
+      "history",
+      "didyouknow"
+    ],
+    "keywords": [
+      "Rudolph the Red-Nosed Reindeer origin",
+      "Montgomery Ward Rudolph",
+      "Robert L. May",
+      "Rudolph 1939",
+      "Christmas history"
+    ],
+    "hook": "Rudolph the Red-Nosed Reindeer was invented to save a store money.",
+    "altText": "Motion-graphics explainer on how Rudolph was created for Montgomery Ward.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Rudolph_the_Red-Nosed_Reindeer",
+        "title": "Rudolph the Red-Nosed Reindeer"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

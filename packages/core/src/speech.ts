@@ -101,6 +101,8 @@ export const PRONUNCIATIONS: Record<string, string> = {
   samhain: "Souwin", // SOW-in (as in "cow")
   baldr: "Balder",
   "baldr's": "Balder's",
+  pepys: "Peeps",
+  "pepys's": "Peeps's",
 };
 
 function speakToken(tok: string, prev: string, next: string): string | null {
