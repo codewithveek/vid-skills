@@ -11,6 +11,8 @@ import {
   floatToWav,
   framedExplainer,
   generateStructured,
+  getJson,
+  putJson,
   guardHallucinations,
   jsonSchemas,
   mapLinesToWords,
@@ -228,6 +230,29 @@ describe("pipeline (offline, mock providers)", () => {
     expect(placeholderLabel('intitle:"Guy Fawkes night at Chirk"')).toBe("Guy Fawkes night at Chirk");
     expect(placeholderLabel('filetype:bitmap intitle:"Wea00610 (9672651296).jpg"')).toBe("Wea00610");
     expect(placeholderLabel("tv remote couch night")).toBe("tv remote couch night");
+  });
+  it("drops assets of shots removed on a re-run", async () => {
+    const storage = new MemoryStorage();
+    const stock: StockProvider = {
+      id: "fake-stock",
+      kinds: ["image"],
+      search: async ({ query }) => [{ id: query, kind: "image", url: `data:image/png;base64,${btoa(query)}`, width: 1600, height: 1100, provider: "fake-stock", license: { name: "CC BY 4.0", commercialUse: true, requiresAttribution: true, attribution: `by ${query}` } }],
+    };
+    const run = (force?: ("assets")[]) => runPipeline({ topic: "the floppy disk save icon", durationSec: 25 }, { providers: { llm: fakeLLM(), tts: fakeTTS(), stock: [stock] }, storage, jobId: "t5", stopAfter: "assets", force });
+    const first = await run();
+    const visuals = first.manifest.assets.filter((a) => a.role === "visual");
+    expect(visuals.length).toBeGreaterThan(1);
+    // Keep only the first shot that had an image, as if a re-edit removed the rest.
+    const key = "jobs/t5/stages/storyboard.json";
+    const sb = (await getJson<{ shots: { id: string }[] }>(storage, key))!;
+    const keep = visuals[0]!.id.replace(/-[a-z]+\d*$/, "");
+    sb.shots = sb.shots.filter((s) => !visuals.some((v) => v.id.startsWith(`${s.id}-`)) || s.id === keep);
+    await putJson(storage, key, sb);
+    const second = await run(["assets"]);
+    const left = second.manifest.assets.filter((a) => a.role === "visual").map((a) => a.id);
+    expect(left).toContain(visuals[0]!.id);
+    expect(left.every((id) => id.startsWith(`${keep}-`))).toBe(true);
+    expect(left.length).toBeLessThan(visuals.length);
   });
   it("ranks tiny stock images last", () => {
     const lic = { name: "CC0", commercialUse: true, requiresAttribution: false };

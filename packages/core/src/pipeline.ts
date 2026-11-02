@@ -696,24 +696,27 @@ export async function runPipeline(briefInput: VideoBriefInput, opts: PipelineOpt
   const storyboard = await stage("storyboard", Storyboard, () => stageStoryboard(ctx, brief, script));
   if (stop("storyboard")) return result;
   const voiceOut = await stage("voice", null, () => stageVoice(ctx, brief, script));
-  const upsertAssets = (list: Asset[]) => {
+  // Each stage owns some asset roles: its output replaces what an earlier run recorded for those
+  // roles, so a shot removed on a re-run doesn't linger in the manifest (or in the credits).
+  const upsertAssets = (list: Asset[], roles: Asset["role"][]) => {
+    manifest.assets = manifest.assets.filter((x) => !roles.includes(x.role) || list.some((a) => a.id === x.id));
     for (const a of list) {
       const i = manifest.assets.findIndex((x) => x.id === a.id);
       if (i >= 0) manifest.assets[i] = a;
       else manifest.assets.push(a);
     }
   };
-  upsertAssets(voiceOut.assets);
+  upsertAssets(voiceOut.assets, ["voice"]);
   if (stop("voice")) return result;
   const visual = await stage("assets", null, async () => {
     const previous = (await getJson<{ assets: Asset[] }>(opts.storage, `${base}stages/assets.json`))?.assets ?? [];
     return stageAssets(ctx, brief, storyboard, script, previous);
   });
-  upsertAssets(visual.assets);
+  upsertAssets(visual.assets, ["visual"]);
   if (stop("assets")) return result;
   let timeline = await stage("timeline", null, async () => buildTimeline({ brief, script, storyboard, voice: voiceOut.voice, style, shotAssets: visual.shotAssets }));
   const sound = await stage("sound", null, () => stageSound(ctx, brief, script, voiceOut.voice, timeline));
-  upsertAssets(sound.assets);
+  upsertAssets(sound.assets, ["sfx", "music"]);
   timeline = sound.timeline;
   result.timeline = timeline;
   await saveManifest();
