@@ -203,20 +203,6 @@
         }
       },
       {
-        "id": "sh2",
-        "lineId": "l2",
-        "scene": {
-          "type": "diagram",
-          "template": "icon-draw",
-          "data": {
-            "icon": "save",
-            "label": "THE SAVE ICON",
-            "color": "#20FFF6",
-            "glow": "yes"
-          }
-        }
-      },
-      {
         "id": "sh3",
         "lineId": "l2",
         "scene": {
@@ -231,8 +217,7 @@
           "move": "pushIn",
           "label": "3.5-inch floppy",
           "focusY": 0.2
-        },
-        "anchor": "It's"
+        }
       },
       {
         "id": "sh4",
