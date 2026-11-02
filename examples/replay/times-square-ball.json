@@ -252,7 +252,7 @@
             "glow": "yes"
           }
         },
-        "anchor": "tool"
+        "anchor": "copies"
       },
       {
         "id": "sh3",
@@ -354,7 +354,7 @@
             "glow": "yes"
           }
         },
-        "anchor": "Western"
+        "anchor": "electrician"
       },
       {
         "id": "sh9",
