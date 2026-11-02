@@ -148,19 +148,26 @@ export function mapLinesToWords(
 export function findAnchor(spoken: WordTiming[], anchor: string, from: number, to: number): number | null {
   const target = splitWords(anchor).map(normWord).filter(Boolean);
   if (!target.length) return null;
-  for (let i = from; i <= to; i++) {
-    let ok = true;
-    for (let k = 0; k < target.length; k++) {
-      const w = spoken[i + k] ? normWord(spoken[i + k]!.text) : "";
-      const t = target[k]!;
-      if (!(w === t || (t.length > 3 && w.startsWith(t.slice(0, Math.max(4, t.length - 2)))))) {
-        ok = false;
-        break;
+  // An anchor ending in punctuation ("boxing.") names a specific occurrence: prefer the word that
+  // carries the same punctuation over an earlier bare one ("Boxing Day has nothing to do with boxing.").
+  const punct = /[.,;:!?…]+$/.exec(anchor.trim())?.[0];
+  const scan = (needPunct: boolean): number | null => {
+    for (let i = from; i <= to; i++) {
+      let ok = true;
+      for (let k = 0; k < target.length; k++) {
+        const w = spoken[i + k] ? normWord(spoken[i + k]!.text) : "";
+        const t = target[k]!;
+        if (!(w === t || (t.length > 3 && w.startsWith(t.slice(0, Math.max(4, t.length - 2)))))) {
+          ok = false;
+          break;
+        }
       }
+      if (ok && needPunct && !spoken[i + target.length - 1]!.text.trimEnd().endsWith(punct!)) ok = false;
+      if (ok) return spoken[i]!.start;
     }
-    if (ok) return spoken[i]!.start;
-  }
-  return null;
+    return null;
+  };
+  return (punct ? scan(true) : null) ?? scan(false);
 }
 
 /** SRT/VTT import for transcripts produced elsewhere. Produces cue-level pseudo words. */

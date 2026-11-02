@@ -8,6 +8,7 @@ import {
   compileHyperFrames,
   estimateWordTimings,
   extractJson,
+  findAnchor,
   floatToWav,
   framedExplainer,
   generateStructured,
@@ -52,6 +53,12 @@ describe("structured generation", () => {
 });
 
 describe("transcript utilities", () => {
+  it("anchors with punctuation pick the matching occurrence", () => {
+    const words = estimateWordTimings("Boxing Day has nothing to do with boxing. It's about boxes.", 4);
+    const last = words.findIndex((w) => w.text === "boxing.");
+    expect(findAnchor(words, "boxing.", 0, words.length - 1)).toBe(words[last]!.start);
+    expect(findAnchor(words, "boxing", 0, words.length - 1)).toBe(words[0]!.start);
+  });
   it("converts char alignment to words", () => {
     const chars = [..."hi there"];
     const ws = charsToWords(chars, chars.map((_, i) => i * 0.1), chars.map((_, i) => i * 0.1 + 0.1));
