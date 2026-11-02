@@ -183,7 +183,7 @@
           "type": "broll",
           "asset": {
             "kind": "image",
-            "query": "intitle:\"\"Christmas wishes\" - Christmas card. Nellie Murrell Collection\"",
+            "query": "intitle:\"Christmas wishes\" intitle:\"Nellie Murrell\"",
             "prompt": "a vintage Christmas card",
             "prefer": "stock"
           },
