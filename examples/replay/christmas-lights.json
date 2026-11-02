@@ -251,19 +251,7 @@
           "move": "pushIn",
           "label": "Candles on the tree",
           "focusY": 0.4
-        },
-        "anchor": "candles."
-      },
-      {
-        "id": "sh4",
-        "lineId": "l3",
-        "scene": {
-          "type": "typewriter",
-          "lead": "New York,",
-          "highlight": "1882",
-          "cps": 10
-        },
-        "anchor": "1882,"
+        }
       },
       {
         "id": "sh5",
@@ -273,12 +261,11 @@
           "template": "icon-draw",
           "data": {
             "icon": "user",
-            "label": "EDWARD H. JOHNSON",
+            "label": "EDWARD H. JOHNSON · 1882",
             "color": "#F4F5F7",
             "glow": "yes"
           }
-        },
-        "anchor": "Edward"
+        }
       },
       {
         "id": "sh6",
