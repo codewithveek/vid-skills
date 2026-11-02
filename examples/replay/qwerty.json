@@ -1,0 +1,412 @@
+{
+  "ResearchDossier": {
+    "topic": "why keyboards use QWERTY",
+    "summary": "QWERTY was devised in the early 1870s by newspaper editor Christopher Latham Sholes; the Sholes & Glidden Type-Writer was sold to E. Remington and Sons in 1873. The popular typebar-jamming explanation is possibly invented; another theory credits telegraph operators; the 'TYPE WRITER' top-row story is unsubstantiated.",
+    "angle": "You type every day on a mystery from 1873.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "QWERTY was devised and created in the early 1870s by Christopher Latham Sholes, a newspaper editor and printer in Kenosha, Wisconsin.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/QWERTY",
+            "title": "QWERTY - Wikipedia",
+            "quote": "devised and created in the early 1870s by Christopher Latham Sholes"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "In 1873 James Densmore sold the manufacturing rights for the Sholes & Glidden Type-Writer to E. Remington and Sons.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/QWERTY",
+            "title": "QWERTY - Wikipedia",
+            "quote": "successfully sold the manufacturing rights for the Sholes & Glidden Type-Writer to E. Remington and Sons"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "The popular explanation that the layout reduced clashing of typebars is possibly invented or incorrect.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/QWERTY",
+            "title": "QWERTY - Wikipedia",
+            "quote": "popular but possibly invented (or even incorrect)"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "id": "c4",
+        "text": "Another account says the letter groupings evolved from American Morse telegraph operators' feedback.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/QWERTY",
+            "title": "QWERTY - Wikipedia",
+            "quote": "evolved from American Morse telegraph operators' feedback"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "id": "c5",
+        "text": "A story that moving R let salesmen type TYPE WRITER from one row is not formally substantiated.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/QWERTY",
+            "title": "QWERTY - Wikipedia",
+            "quote": "this is not formally substantiated"
+          }
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Nobody Knows Why QWERTY",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Your keyboard's layout is over 150 years old.",
+            "emphasis": [
+              "150"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l2",
+            "text": "And nobody's completely sure why it's in this order.",
+            "emphasis": [
+              "sure"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "A newspaper editor, Christopher Latham Sholes, designed it in the early 1870s.",
+            "emphasis": [
+              "Sholes,"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "In 1873, his typewriter was sold to Remington.",
+            "emphasis": [
+              "Remington."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "The famous story says it kept the metal typebars from jamming.",
+            "emphasis": [
+              "jamming."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "Another says telegraph operators shaped it.",
+            "emphasis": [
+              "telegraph"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l7",
+            "text": "There's even a tale that salesmen could type the word typewriter using just the top row. Nobody's proven it.",
+            "emphasis": [
+              "proven"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l8",
+            "text": "So you type every day on a mystery from 1873.",
+            "emphasis": [
+              "mystery"
+            ],
+            "claimIds": [
+              "c1",
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Sholes-Glidden 1874.jpg\"",
+            "prompt": "an 1874 Sholes and Glidden typewriter",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "typewriter",
+          "lead": "QWERTY:",
+          "highlight": "150+ years",
+          "cps": 12
+        },
+        "anchor": "150"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "circle-help",
+            "label": "NOBODY'S SURE WHY",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "nobody's"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "newspaper",
+            "label": "C. L. SHOLES · EDITOR",
+            "color": "#F4F5F7",
+            "glow": "yes"
+          }
+        },
+        "anchor": "Sholes,"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Sholes and Glidden typewriter prototype, c. 1870\"",
+            "prompt": "Sholes's typewriter prototype",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Prototype, c. 1870"
+        },
+        "anchor": "designed"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Remington No. 1 typewriter, made by Remington & Songs, Ilion, NY, 1873-1878, the first Sholes & Glidden model typewriter made by Remington - Wisconsin Historical Museum - DSC02806\"",
+            "prompt": "the Remington No. 1 typewriter",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Remington No. 1"
+        },
+        "anchor": "Remington."
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "diagram",
+          "template": "checklist",
+          "data": {
+            "items": [
+              "Stop typebar jams?",
+              "Telegraph operators?",
+              "Sales trick?"
+            ]
+          }
+        },
+        "anchor": "famous"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l7",
+        "scene": {
+          "type": "typewriter",
+          "lead": "top row:",
+          "highlight": "TYPEWRITER",
+          "cps": 14
+        },
+        "anchor": "salesmen"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "circle-x",
+            "label": "NEVER PROVEN",
+            "color": "#E50914",
+            "glow": "yes"
+          }
+        },
+        "anchor": "Nobody's"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l8",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Adler Typewriter Keyboard Close-up\"",
+            "prompt": "a QWERTY keyboard close-up",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Still QWERTY"
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Nobody knows exactly why keyboards are QWERTY",
+    "description": "Your keyboard's layout is over 150 years old, and nobody's completely sure why it's in this order.\nNewspaper editor Christopher Latham Sholes designed it in the early 1870s, and his typewriter was sold to Remington in 1873. The typebar-jamming story, the telegraph-operator theory and the 'TYPEWRITER on the top row' tale are all still debated.",
+    "hashtags": [
+      "tech",
+      "history",
+      "qwerty",
+      "didyouknow"
+    ],
+    "keywords": [
+      "why are keyboards QWERTY",
+      "QWERTY history",
+      "Christopher Latham Sholes",
+      "typewriter history",
+      "keyboard layout"
+    ],
+    "hook": "Your keyboard's layout is over 150 years old.",
+    "altText": "Motion-graphics explainer on the uncertain origin of the QWERTY keyboard layout.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/QWERTY",
+        "title": "QWERTY"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

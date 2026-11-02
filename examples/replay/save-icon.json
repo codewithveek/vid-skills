@@ -1,0 +1,419 @@
+{
+  "ResearchDossier": {
+    "topic": "why the save icon is a floppy disk",
+    "summary": "IBM invented the floppy disk in 1971 (8-inch); the 3.5-inch disk became standard, the 1.44 MB version shipping from 1986. Sony ended domestic sales of 3.5-inch floppies in March 2011, yet save icons still depict a floppy, a skeuomorph.",
+    "angle": "You click a picture of an extinct disk every day.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Many programs continue to use save icons that look like floppy disks well into the 21st century, a form of skeuomorphic design.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Floppy_disk",
+            "title": "Floppy disk - Wikipedia",
+            "quote": "continue to use save icons that look like floppy disks well into the 21st century"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The first floppy disks, invented and made by IBM in 1971, had a disk diameter of 8 inches.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Floppy_disk",
+            "title": "Floppy disk - Wikipedia",
+            "quote": "The first floppy disks, invented and made by IBM in 1971, had a disk diameter of 8 inches"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "The double-sided, high-density 1.44 MB 3.5-inch disk drive first shipped in 1986 and became the most popular.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Floppy_disk",
+            "title": "Floppy disk - Wikipedia",
+            "quote": "The double-sided, high-density 1.44 MB"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "Sony ended domestic sales of all six 3.5-inch floppy disk models as of March 2011.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Floppy_disk",
+            "title": "Floppy disk - Wikipedia",
+            "quote": "ended domestic sales of all six 3½-inch floppy disk models as of March 2011"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "The Save Icon Is a Fossil",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "You click a picture of a dead technology every day.",
+            "emphasis": [
+              "dead"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l2",
+            "text": "The save icon. It's a floppy disk.",
+            "emphasis": [
+              "floppy"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "IBM made the first floppy disks in 1971, and they were 8 inches wide.",
+            "emphasis": [
+              "8"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "They shrank to the hard plastic 3.5-inch disk, which held 1.44 megabytes.",
+            "emphasis": [
+              "1.44"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "Sony stopped selling them in Japan in 2011.",
+            "emphasis": [
+              "2011."
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "But the icon stayed. Designers call that a skeuomorph, a design that copies an old object.",
+            "emphasis": [
+              "skeuomorph,"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "So every time you save, you're clicking a fossil.",
+            "emphasis": [
+              "fossil."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"365.45- Remember these?\"",
+            "prompt": "a pile of colourful floppy disks",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l2",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "save",
+            "label": "THE SAVE ICON",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "save"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Samsung 3.5 inch floppy disk 20110519\"",
+            "prompt": "a 3.5-inch floppy disk",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "3.5-inch floppy",
+          "focusY": 0.4
+        },
+        "anchor": "floppy"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"8-inch floppy disk - IZOT, Bulgaria\"",
+            "prompt": "an 8-inch floppy disk next to a ruler",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "8-inch floppy"
+        },
+        "anchor": "IBM"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "stat",
+          "value": "8\"",
+          "caption": "the first floppy, 1971",
+          "sourceClaimId": "c2"
+        },
+        "anchor": "8"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Floppy disk 2009 G1\"",
+            "prompt": "8-inch, 5.25-inch and 3.5-inch floppy disks side by side",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "8\" → 5¼\" → 3½\""
+        },
+        "anchor": "shrank"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Package of twenty 3.5-inch floppy disks (2HD) from Maxell\"",
+            "prompt": "a box of 1.44 MB floppy disks",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "1.44 MB"
+        },
+        "anchor": "1.44"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l5",
+        "scene": {
+          "type": "typewriter",
+          "lead": "last Sony floppies:",
+          "highlight": "2011",
+          "cps": 10
+        },
+        "anchor": "Sony"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l6",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "save",
+            "title": "ICON",
+            "label": "Still everywhere"
+          },
+          "right": {
+            "icon": "archive",
+            "title": "DISK",
+            "label": "Gone since 2011"
+          },
+          "winner": "none"
+        },
+        "anchor": "icon"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l6",
+        "scene": {
+          "type": "typewriter",
+          "lead": "skeuomorph:",
+          "highlight": "copies an old object",
+          "cps": 16
+        },
+        "anchor": "skeuomorph,"
+      },
+      {
+        "id": "sh11",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "timeline",
+          "data": {
+            "events": [
+              {
+                "year": "1971",
+                "label": "8-inch"
+              },
+              {
+                "year": "1986",
+                "label": "1.44 MB"
+              },
+              {
+                "year": "2011",
+                "label": "Sony stops"
+              },
+              {
+                "year": "Today",
+                "label": "Still the icon"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh13",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "The save icon is a fossil",
+    "description": "You click a picture of a dead technology every day: the floppy disk.\nIBM made the first ones in 1971, 8 inches wide. They shrank to the 3.5-inch 1.44 MB disk, and Sony stopped selling them in 2011. The icon stayed, a skeuomorph copying an object most people no longer use.",
+    "hashtags": [
+      "tech",
+      "history",
+      "saveicon",
+      "didyouknow"
+    ],
+    "keywords": [
+      "why is the save icon a floppy disk",
+      "floppy disk history",
+      "skeuomorph",
+      "save icon",
+      "IBM floppy 1971"
+    ],
+    "hook": "You click a picture of a dead technology every day.",
+    "altText": "Motion-graphics explainer on why the save icon is a floppy disk.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Floppy_disk",
+        "title": "Floppy disk"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

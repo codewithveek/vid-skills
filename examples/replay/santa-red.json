@@ -1,0 +1,406 @@
+{
+  "ResearchDossier": {
+    "topic": "did Coca-Cola make Santa red",
+    "summary": "Santa appeared in red and white on several Puck magazine covers in the first years of the 20th century, and White Rock Beverages used Santa in ads from 1915 (colour images in 1923–25). Haddon Sundblom's Coca-Cola Santa came in the 1930s; legends that Coca-Cola invented Santa are unfounded.",
+    "angle": "Santa's red is older than the ads.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "There is an urban legend that Santa Claus (and his red-and-white look) was invented by The Coca-Cola Company.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Santa_Claus",
+            "title": "Santa Claus - Wikipedia",
+            "quote": "The image made urban legends that Santa Claus was invented by The Coca-Cola Company"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "Santa Claus had appeared dressed in red and white on several Puck magazine covers in the first few years of the 20th century.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Santa_Claus",
+            "title": "Santa Claus - Wikipedia",
+            "quote": "Santa Claus had appeared dressed in red and white"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "White Rock Beverages used a Santa figure in advertisements from 1915, and colour Santa images for drink mixers in 1923–25.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Santa_Claus",
+            "title": "Santa Claus - Wikipedia",
+            "quote": "White Rock Beverages had used a Santa figure in monochrome advertisements for mineral water in 1915"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "Haddon Sundblom's Santa for Coca-Cola's Christmas advertising dates to the 1930s.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Santa_Claus",
+            "title": "Santa Claus - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Coke Didn't Make Santa Red",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Coca-Cola put Santa in a red suit. Right?",
+            "emphasis": [
+              "red"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l2",
+            "text": "Wrong. Santa was wearing red decades before the ads.",
+            "emphasis": [
+              "decades"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "proof",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "Puck magazine put him in red and white on its covers in the early 1900s.",
+            "emphasis": [
+              "Puck"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "White Rock, a mineral water brand, used Santa in its ads by 1915.",
+            "emphasis": [
+              "1915."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l5",
+            "text": "And by 1923, White Rock's Santa was in full color, in red.",
+            "emphasis": [
+              "red."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l6",
+            "text": "Coca-Cola's famous Santa paintings came in the 1930s.",
+            "emphasis": [
+              "1930s."
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l7",
+            "text": "They made that Santa famous. They didn't invent the suit.",
+            "emphasis": [
+              "invent"
+            ],
+            "claimIds": [
+              "c1",
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l8",
+            "text": "Santa's red is older than the ads.",
+            "emphasis": [
+              "older"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Santa1904PuckCover (cropped)\"",
+            "prompt": "Santa Claus in red on a 1904 Puck cover",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l2",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "x",
+            "title": "MYTH",
+            "label": "Coca-Cola made him red"
+          },
+          "right": {
+            "icon": "check",
+            "title": "FACT",
+            "label": "Red decades earlier"
+          },
+          "winner": "right"
+        },
+        "anchor": "Wrong."
+      },
+      {
+        "id": "sh3",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Puck Christmas 1902 - Frank A. Nankivell\"",
+            "prompt": "Santa on the cover of Puck, Christmas 1902",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Puck, 1902",
+          "focusY": 0.3
+        },
+        "anchor": "Puck"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Puck Christmas 1896 - C.J. Taylor\"",
+            "prompt": "Santa on the cover of Puck, Christmas 1896",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Puck, 1896",
+          "focusY": 0.2
+        },
+        "anchor": "covers"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "typewriter",
+          "lead": "White Rock Santa:",
+          "highlight": "1915",
+          "cps": 10
+        },
+        "anchor": "White"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Santa Claus with White Rock Ginger Ale, December 1923.jpg\"",
+            "prompt": "a 1923 White Rock ad with Santa in red",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "White Rock ad, 1923",
+          "focusY": 0.25
+        },
+        "anchor": "1923,"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l6",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Coca-Cola's Santa:",
+          "highlight": "1930s",
+          "cps": 12
+        },
+        "anchor": "Coca-Cola's"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l7",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "title": "FAMOUS",
+            "label": "What the ads did"
+          },
+          "right": {
+            "title": "INVENTED",
+            "label": "What they didn't"
+          },
+          "winner": "left"
+        },
+        "anchor": "They"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l8",
+        "scene": {
+          "type": "diagram",
+          "template": "timeline",
+          "data": {
+            "events": [
+              {
+                "year": "1896",
+                "label": "Puck cover"
+              },
+              {
+                "year": "1902",
+                "label": "Puck cover"
+              },
+              {
+                "year": "1923",
+                "label": "White Rock"
+              },
+              {
+                "year": "1930s",
+                "label": "Coca-Cola"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Coca-Cola didn't make Santa red",
+    "description": "Coca-Cola put Santa in a red suit. Right? Wrong.\nPuck magazine put Santa in red and white on its covers in the early 1900s, and White Rock mineral water used a full-colour red Santa by 1923. Coca-Cola's famous Santa paintings came in the 1930s. They made that Santa famous; they didn't invent the suit.",
+    "hashtags": [
+      "christmas",
+      "santa",
+      "mythbusting",
+      "didyouknow"
+    ],
+    "keywords": [
+      "did Coca-Cola make Santa red",
+      "Santa red suit origin",
+      "Puck magazine Santa",
+      "White Rock Santa 1923",
+      "Christmas myths"
+    ],
+    "hook": "Coca-Cola put Santa in a red suit. Right? Wrong.",
+    "altText": "Motion-graphics explainer busting the myth that Coca-Cola made Santa red.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Santa_Claus",
+        "title": "Santa Claus"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

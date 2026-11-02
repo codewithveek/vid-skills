@@ -1,0 +1,380 @@
+{
+  "ResearchDossier": {
+    "topic": "why Christmas is written Xmas",
+    "summary": "The X in Xmas is the Greek letter chi, the first letter of Christ in Greek. X was a scribal abbreviation for Christ in English from 1100; X'temmas is recorded in 1551 and Xmas in 1721. The idea that Xmas secularises Christmas is a common misconception.",
+    "angle": "Xmas doesn't cross Christ out. The X is Christ.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "The X in Xmas comes from the Greek letter chi, the first letter of the Greek word for Christ (Χριστός).",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Xmas",
+            "title": "Xmas - Wikipedia",
+            "quote": "The 'X' comes from the Greek letter Chi"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "In English, X was first used as a scribal abbreviation for Christ in 1100; X'temmas is recorded in 1551 and Xmas in 1721.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Xmas",
+            "title": "Xmas - Wikipedia",
+            "quote": "In English, \"X\" was first used as a scribal abbreviation for \"Christ\" in 1100."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "There is a common misconception that Xmas stems from a secularizing tendency to de-emphasize the religious tradition of Christmas.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Xmas",
+            "title": "Xmas - Wikipedia",
+            "quote": "There is a common misconception that the word Xmas stems from a secularizing tendency"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Xmas Doesn't Cross Christ Out",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Writing Xmas isn't taking Christ out of Christmas.",
+            "emphasis": [
+              "Christ"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l2",
+            "text": "The X is Christ.",
+            "emphasis": [
+              "is"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "mechanism",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "It's a Greek letter called chi, and it looks exactly like an X.",
+            "emphasis": [
+              "Greek"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l4",
+            "text": "It's the first letter of Christ, in Greek.",
+            "emphasis": [
+              "first"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "English scribes were using X as shorthand for Christ as early as 1100.",
+            "emphasis": [
+              "1100."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "The spelling Xmas shows up in 1721. That's older than the United States.",
+            "emphasis": [
+              "older"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "So Xmas doesn't cross Christ out. It just abbreviates him.",
+            "emphasis": [
+              "abbreviates"
+            ],
+            "claimIds": [
+              "c1",
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"\"Christmas wishes\" - Christmas card. Nellie Murrell Collection\"",
+            "prompt": "a vintage Christmas card",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "x",
+            "title": "MYTH",
+            "label": "Xmas removes Christ"
+          },
+          "right": {
+            "icon": "check",
+            "title": "FACT",
+            "label": "The X is Christ"
+          },
+          "winner": "right"
+        },
+        "anchor": "taking"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "typewriter",
+          "lead": "X =",
+          "highlight": "Christ",
+          "cps": 10
+        },
+        "anchor": "X"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "typewriter",
+          "lead": "X =",
+          "highlight": "chi (Greek)",
+          "cps": 12
+        },
+        "anchor": "Greek"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "typewriter",
+          "lead": "ΧΡΙΣΤΟΣ =",
+          "highlight": "Christos",
+          "cps": 14
+        },
+        "anchor": "first"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Chrisme Colosseum Rome Italy\"",
+            "prompt": "an ancient Christ monogram carved in stone",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Christ monogram, Rome"
+        },
+        "anchor": "scribes"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "typewriter",
+          "lead": "X for Christ:",
+          "highlight": "1100",
+          "cps": 10
+        },
+        "anchor": "1100."
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Xmas in print:",
+          "highlight": "1721",
+          "cps": 10
+        },
+        "anchor": "spelling"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l6",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "title": "1721",
+            "label": "Xmas"
+          },
+          "right": {
+            "title": "1776",
+            "label": "The USA"
+          },
+          "winner": "left"
+        },
+        "anchor": "older"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "timeline",
+          "data": {
+            "events": [
+              {
+                "year": "1100",
+                "label": "X for Christ"
+              },
+              {
+                "year": "1551",
+                "label": "X'temmas"
+              },
+              {
+                "year": "1721",
+                "label": "Xmas"
+              },
+              {
+                "year": "Today",
+                "label": "Still Christ"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Xmas doesn't take Christ out of Christmas",
+    "description": "Writing Xmas isn't taking Christ out of Christmas. The X is Christ.\nIt's the Greek letter chi, the first letter of Christ in Greek. English scribes used X as shorthand for Christ as early as 1100, and the spelling Xmas shows up in 1721, older than the United States.",
+    "hashtags": [
+      "christmas",
+      "etymology",
+      "xmas",
+      "didyouknow"
+    ],
+    "keywords": [
+      "why is Christmas written Xmas",
+      "Xmas meaning",
+      "chi Greek letter Christ",
+      "Xmas origin",
+      "Christmas facts"
+    ],
+    "hook": "Writing Xmas isn't taking Christ out of Christmas.",
+    "altText": "Motion-graphics explainer on why Christmas is abbreviated Xmas.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Xmas",
+        "title": "Xmas"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

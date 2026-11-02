@@ -1,0 +1,480 @@
+{
+  "ResearchDossier": {
+    "topic": "why we kiss under the mistletoe",
+    "summary": "In Norse myth Frigg made every object vow never to hurt Baldr except mistletoe; Loki made a spear of it and Baldr's blind brother Höðr killed him by accident. Mistletoe is a hemiparasite; Pliny the Elder described its use in a Druid ceremony. Kissing under it was popular among servants in late 18th-century England.",
+    "angle": "The Christmas kiss hangs on a plant that killed a god.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Frigg made every object on earth vow never to hurt Baldr, except the mistletoe.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Baldr",
+            "title": "Baldr - Wikipedia",
+            "quote": "Frigg made every object on earth vow never to hurt Baldr."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "Loki made a spear from mistletoe and gave it to Baldr's blind brother Höðr, who inadvertently killed Baldr with it.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Baldr",
+            "title": "Baldr - Wikipedia",
+            "quote": "who then inadvertently killed his brother with it"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "All mistletoe species are hemiparasites.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Mistletoe",
+            "title": "Mistletoe - Wikipedia",
+            "quote": "All mistletoe species are hemiparasites"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "The only ancient writer to mention the use of mistletoe in a Druid ceremony was Pliny the Elder.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Mistletoe",
+            "title": "Mistletoe - Wikipedia",
+            "quote": "the only ancient writer to mention the use of mistletoe in this ceremony was Pliny the Elder"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "The custom of kissing under the mistletoe is referred to as popular among servants in late eighteenth-century England.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Mistletoe",
+            "title": "Mistletoe - Wikipedia",
+            "quote": "The custom of kissing under the mistletoe is referred to as popular among servants in late eighteenth-century England."
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Why We Kiss Under Mistletoe",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "In a Norse myth, mistletoe killed a god.",
+            "emphasis": [
+              "killed"
+            ],
+            "claimIds": [
+              "c1",
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "Frigg made everything on Earth promise never to hurt her son, Baldr.",
+            "emphasis": [
+              "everything"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l3",
+            "text": "Everything except mistletoe.",
+            "emphasis": [
+              "except"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l4",
+            "text": "Loki made a spear from it, and Baldr's blind brother killed him by accident.",
+            "emphasis": [
+              "accident."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "Mistletoe is strange anyway. It's a parasite that grows on other trees.",
+            "emphasis": [
+              "parasite"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "The Roman writer Pliny described Druids using it in a ritual.",
+            "emphasis": [
+              "Druids"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "twist",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "The kissing came much later. In the late 1700s, it was popular with servants in England.",
+            "emphasis": [
+              "servants"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l8",
+            "text": "So the Christmas kiss hangs on a plant that once killed a god.",
+            "emphasis": [
+              "god."
+            ],
+            "claimIds": [
+              "c1",
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Baldr dead by Eckersberg\"",
+            "prompt": "a painting of the dead god Baldr",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "skull",
+            "label": "IT KILLED A GOD",
+            "color": "#E50914",
+            "glow": "yes"
+          }
+        },
+        "anchor": "killed"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "crown",
+            "label": "FRIGG'S PROMISE",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "Frigg"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l2",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "shield",
+            "label": "NOTHING CAN HURT BALDR",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "never"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Viscum album apple-tree 2011 G1\"",
+            "prompt": "mistletoe growing in a tree",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Except mistletoe"
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "flow",
+          "data": {
+            "nodes": [
+              {
+                "label": "LOKI",
+                "icon": "flame"
+              },
+              {
+                "label": "MISTLETOE SPEAR",
+                "icon": "sword"
+              },
+              {
+                "label": "BALDR",
+                "icon": "skull"
+              }
+            ]
+          }
+        },
+        "anchor": "Loki"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Baldr dead by Eckersberg\"",
+            "prompt": "the death of Baldr",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Baldr's death"
+        },
+        "anchor": "blind"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l5",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "sprout",
+            "label": "A PARASITE",
+            "color": "#7CFF6B",
+            "glow": "yes"
+          }
+        },
+        "anchor": "parasite"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l6",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Motte Druide coupant le gui\"",
+            "prompt": "Druids cutting mistletoe from a tree",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Druids and mistletoe"
+        },
+        "anchor": "Pliny"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l7",
+        "scene": {
+          "type": "typewriter",
+          "lead": "the kissing:",
+          "highlight": "late 1700s",
+          "cps": 12
+        },
+        "anchor": "kissing"
+      },
+      {
+        "id": "sh11",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "heart",
+            "label": "POPULAR WITH SERVANTS",
+            "color": "#FF4FD8",
+            "glow": "yes"
+          }
+        },
+        "anchor": "servants"
+      },
+      {
+        "id": "sh12",
+        "lineId": "l8",
+        "scene": {
+          "type": "diagram",
+          "template": "timeline",
+          "data": {
+            "events": [
+              {
+                "year": "Myth",
+                "label": "Baldr's death"
+              },
+              {
+                "year": "Rome",
+                "label": "Pliny's Druids"
+              },
+              {
+                "year": "1700s",
+                "label": "The kiss"
+              },
+              {
+                "year": "Today",
+                "label": "Every doorway"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "sh13",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh14",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Why we kiss under mistletoe",
+    "description": "In a Norse myth, mistletoe killed a god.\nFrigg made everything promise never to hurt her son Baldr, except mistletoe, and Loki turned it into a spear. Pliny described Druids using it in rituals, and kissing under it was popular with servants in late-1700s England.",
+    "hashtags": [
+      "christmas",
+      "mistletoe",
+      "mythology",
+      "didyouknow"
+    ],
+    "keywords": [
+      "why do we kiss under mistletoe",
+      "mistletoe Baldr myth",
+      "mistletoe history",
+      "Norse mythology Christmas",
+      "Christmas traditions origin"
+    ],
+    "hook": "In a Norse myth, mistletoe killed a god.",
+    "altText": "Motion-graphics explainer on the history of kissing under mistletoe.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mistletoe",
+        "title": "Mistletoe"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Baldr",
+        "title": "Baldr"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}
