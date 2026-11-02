@@ -249,8 +249,7 @@
             "color": "#F4F5F7",
             "glow": "yes"
           }
-        },
-        "anchor": "retailer"
+        }
       },
       {
         "id": "sh4",
@@ -265,7 +264,7 @@
             "glow": "yes"
           }
         },
-        "anchor": "giving"
+        "anchor": "booklets."
       },
       {
         "id": "sh5",
