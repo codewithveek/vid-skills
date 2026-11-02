@@ -252,7 +252,7 @@
             "glow": "yes"
           }
         },
-        "anchor": "ships"
+        "anchor": "tool"
       },
       {
         "id": "sh3",
@@ -283,7 +283,7 @@
             "glow": "yes"
           }
         },
-        "anchor": "longitude"
+        "anchor": "Sailors"
       },
       {
         "id": "sh5",
@@ -339,8 +339,7 @@
             "color": "#E50914",
             "glow": "yes"
           }
-        },
-        "anchor": "banned"
+        }
       },
       {
         "id": "sh8",
@@ -365,8 +364,7 @@
           "lead": "first ball drop:",
           "highlight": "Dec 31, 1907",
           "cps": 14
-        },
-        "anchor": "first"
+        }
       },
       {
         "id": "sh10",
