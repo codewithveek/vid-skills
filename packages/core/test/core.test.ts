@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from "vitest";
 import { z } from "zod";
 import {
   audioDuration,
+  autoStoryboard,
   buildCaptionCues,
   charsToWords,
   compileHyperFrames,
@@ -217,6 +218,11 @@ describe("pipeline (offline, mock providers)", () => {
     } finally {
       vi.unstubAllGlobals();
     }
+  });
+  it("builds gap-fill stock queries from content words, not fillers", () => {
+    const script = { headline: "QWERTY", cta: "Follow", beats: [{ id: "b1", kind: "hook" as const, musicCue: "none" as const, lines: [{ id: "l1", text: "Another says telegraph operators shaped it.", emphasis: [], claimIds: [], pauseAfterSec: 0.2 }] }] };
+    const shot = autoStoryboard(script, VideoBrief.parse({ topic: "qwerty" })).shots.find((s) => s.lineId === "l1")!;
+    expect(shot.scene.type === "broll" && shot.scene.asset.query).toBe("telegraph operators shaped");
   });
   it("labels placeholder cards with readable words, not search syntax", () => {
     expect(placeholderLabel('intitle:"Guy Fawkes night at Chirk"')).toBe("Guy Fawkes night at Chirk");

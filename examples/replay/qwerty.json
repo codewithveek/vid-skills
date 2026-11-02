@@ -318,6 +318,20 @@
         "anchor": "famous"
       },
       {
+        "id": "sh7b",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "radio-tower",
+            "label": "TELEGRAPH OPERATORS?",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        }
+      },
+      {
         "id": "sh8",
         "lineId": "l7",
         "scene": {

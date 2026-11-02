@@ -203,7 +203,11 @@ export async function stageScript(ctx: PipelineContext, brief: VideoBrief, dossi
   return script;
 }
 
-const STOP = new Set("the a an and or but of to in on at for with from by is are was were be been it its this that these those you your we our they their there here what when where which who how why not no just even still every all any some more most very can could would should will into over under than then so as if about".split(" "));
+const STOP = new Set(
+  ("the a an and or but of to in on at for with from by is are was were be been it its this that these those you your we our they their there here what when where which who how why not no just even still every all any some more most very can could would should will into over under than then so as if about " +
+    // Fillers and common verbs: a stock search built from "Another says telegraph" finds nothing useful.
+    "another other says said say tells told like also much many only really called came come comes went goes going gets got took take takes used uses using made make makes because after before while there's it's that's").split(" "),
+);
 
 /** Deterministic storyboard used when the model can't produce a valid one. */
 export function autoStoryboard(script: Script, brief: VideoBrief): Storyboard {
