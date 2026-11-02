@@ -214,8 +214,7 @@
             "color": "#20FFF6",
             "glow": "yes"
           }
-        },
-        "anchor": "save"
+        }
       },
       {
         "id": "sh3",
@@ -233,7 +232,7 @@
           "label": "3.5-inch floppy",
           "focusY": 0.4
         },
-        "anchor": "floppy"
+        "anchor": "It's"
       },
       {
         "id": "sh4",
@@ -258,7 +257,7 @@
         "scene": {
           "type": "stat",
           "value": "8\"",
-          "caption": "the first floppy, 1971",
+          "caption": "inches wide",
           "sourceClaimId": "c2"
         },
         "anchor": "8"
