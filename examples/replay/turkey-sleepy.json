@@ -1,0 +1,352 @@
+{
+  "ResearchDossier": {
+    "topic": "does turkey make you sleepy",
+    "summary": "Turkey's tryptophan content is comparable with other meats and typical of poultry; drowsiness after the meal is more likely from the other foods eaten with it, particularly carbohydrates.",
+    "angle": "Blame the stuffing, not the turkey.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "A common assertion is that heavy turkey consumption causes drowsiness due to high levels of tryptophan.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Tryptophan",
+            "title": "Tryptophan - Wikipedia",
+            "quote": "results in drowsiness, due to high levels of tryptophan contained in turkey"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The amount of tryptophan in turkey is comparable with that of other meats; the tryptophan content of turkey is typical of poultry.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Tryptophan",
+            "title": "Tryptophan - Wikipedia",
+            "quote": "the amount of tryptophan in turkey is comparable with that of other meats"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Drowsiness after eating may be caused by other foods eaten with the turkey, particularly carbohydrates.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Tryptophan",
+            "title": "Tryptophan - Wikipedia",
+            "quote": "Drowsiness after eating may be caused by other foods eaten with the turkey, particularly carbohydrates."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "Tryptophan is an amino acid.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Tryptophan",
+            "title": "Tryptophan - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Turkey Isn't Why You're Sleepy",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Turkey makes you sleepy. Right?",
+            "emphasis": [
+              "sleepy."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l2",
+            "text": "Wrong. The turkey's innocent.",
+            "emphasis": [
+              "innocent."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "mechanism",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "The usual suspect is tryptophan, an amino acid in turkey.",
+            "emphasis": [
+              "tryptophan,"
+            ],
+            "claimIds": [
+              "c1",
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "But turkey has about as much tryptophan as chicken, or most other meats.",
+            "emphasis": [
+              "chicken,"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "So why the nap? Look at the rest of the plate.",
+            "emphasis": [
+              "plate."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "Stuffing, potatoes, rolls and pie. A mountain of carbs.",
+            "emphasis": [
+              "carbs."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "Blame the stuffing, not the turkey.",
+            "emphasis": [
+              "stuffing,"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"2021 roast turkey\"",
+            "prompt": "a roast turkey on a platter",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l2",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "x",
+            "title": "MYTH",
+            "label": "Turkey makes you sleepy"
+          },
+          "right": {
+            "icon": "check",
+            "title": "FACT",
+            "label": "It's the rest of the plate"
+          },
+          "winner": "right"
+        },
+        "anchor": "Wrong."
+      },
+      {
+        "id": "sh3",
+        "lineId": "l3",
+        "scene": {
+          "type": "typewriter",
+          "lead": "the usual suspect:",
+          "highlight": "tryptophan",
+          "cps": 14
+        },
+        "anchor": "usual"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l4",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "drumstick",
+            "title": "TURKEY",
+            "label": "Typical for poultry"
+          },
+          "right": {
+            "icon": "egg",
+            "title": "CHICKEN",
+            "label": "About the same"
+          },
+          "winner": "none"
+        },
+        "anchor": "But"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Liat Portal for Foodie Disorder - Thanksgiving dinner spread\"",
+            "prompt": "a Thanksgiving spread of side dishes",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "The rest of the plate"
+        },
+        "anchor": "So"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "checklist",
+          "data": {
+            "items": [
+              "Stuffing",
+              "Potatoes",
+              "Rolls",
+              "Pie"
+            ]
+          }
+        },
+        "anchor": "Stuffing,"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "bed",
+            "label": "BLAME THE CARBS",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh8",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Turkey isn't why you're sleepy after Thanksgiving",
+    "description": "Turkey makes you sleepy. Right? Wrong.\nTurkey has about as much tryptophan as chicken or most other meats. The post-dinner slump is more likely the rest of the plate: stuffing, potatoes, rolls and pie, all those carbs.",
+    "hashtags": [
+      "thanksgiving",
+      "mythbusting",
+      "food",
+      "didyouknow"
+    ],
+    "keywords": [
+      "does turkey make you sleepy",
+      "tryptophan myth",
+      "Thanksgiving nap",
+      "turkey tryptophan",
+      "food myths"
+    ],
+    "hook": "Turkey makes you sleepy. Right? Wrong.",
+    "altText": "Motion-graphics explainer busting the myth that turkey's tryptophan makes you sleepy.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Tryptophan",
+        "title": "Tryptophan"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

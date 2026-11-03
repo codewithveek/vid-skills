@@ -1,0 +1,8 @@
+{
+  "name": "vid-skills",
+  "version": "0.1.0",
+  "contextFileName": "AGENTS.md",
+  "mcpServers": {
+    "vid-skills": { "command": "node", "args": ["${extensionPath}/packages/cli/bin/vidsk.mjs", "mcp"] }
+  }
+}

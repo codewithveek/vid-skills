@@ -1,0 +1,657 @@
+{
+  "ResearchDossier": {
+    "topic": "why software errors are called bugs",
+    "summary": "The famous 1947 Harvard Mark II moth was taped into the logbook as the 'First actual case of bug being found' — a joke, because engineers had called faults 'bugs' since at least Edison's 1878 letter.",
+    "angle": "The moth was not the first bug; it was the first actual one.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Around 1947, operators of the Harvard Mark II, where Grace Hopper worked, traced an error to a moth trapped in a relay.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Bug_(engineering)",
+            "title": "Bug (engineering) - Wikipedia"
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Grace_Hopper",
+            "title": "Grace Hopper - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The moth was taped into the logbook with the note 'First actual case of bug being found.'",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Software_bug",
+            "title": "Software bug - Wikipedia",
+            "quote": "First actual case of bug being found"
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Bug_(engineering)",
+            "title": "Bug (engineering) - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Grace Hopper popularized the moth story; her associates, not Hopper herself, found the moth.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Grace_Hopper",
+            "title": "Grace Hopper - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "In an 1878 letter to an associate, Thomas Edison wrote of 'Bugs' — as such little faults and difficulties are called.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Software_bug",
+            "title": "Software bug - Wikipedia",
+            "quote": "\"Bugs\"—as such little faults and difficulties are called"
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Bug_(engineering)",
+            "title": "Bug (engineering) - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "'Bug' has been engineering jargon since at least the 1870s, long before electronic computers.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Software_bug",
+            "title": "Software bug - Wikipedia",
+            "quote": "engineering jargon since at least as far back as the 1870s"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c6",
+        "text": "The logbook with the moth is at the Smithsonian's National Museum of American History in Washington, D.C.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Grace_Hopper",
+            "title": "Grace Hopper - Wikipedia"
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Bug_(engineering)",
+            "title": "Bug (engineering) - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1878",
+        "event": "Edison's 'bugs' letter",
+        "claimId": "c4"
+      },
+      {
+        "year": "1947",
+        "event": "Mark II moth",
+        "claimId": "c1"
+      }
+    ],
+    "analogies": [
+      "a pun written into a lab notebook"
+    ],
+    "visualIdeas": [
+      "logbook page with taped moth",
+      "Grace Hopper portrait",
+      "Edison 1878"
+    ],
+    "openQuestions": [
+      "Exact day of the moth (logbook shows 9/9); sources used say about 1947"
+    ]
+  },
+  "Script": {
+    "headline": "The Moth Wasn't the First Bug",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Why do we call computer errors bugs?",
+            "emphasis": [
+              "bugs"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l2",
+            "text": "You've probably heard the moth story.",
+            "emphasis": [
+              "moth"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "In 1947, engineers on the Harvard Mark II found a moth stuck in a relay.",
+            "emphasis": [
+              "relay"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l4",
+            "text": "They taped it into the logbook.",
+            "emphasis": [
+              "logbook"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l5",
+            "text": "With a note: first actual case of bug being found.",
+            "emphasis": [
+              "found"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "Grace Hopper made the story famous.",
+            "emphasis": [
+              "Hopper"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "But read that note again. First actual case.",
+            "emphasis": [
+              "actual"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l8",
+            "text": "The joke only works because engineers already called glitches bugs.",
+            "emphasis": [
+              "already"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l9",
+            "text": "Back in 1878, Thomas Edison wrote about the bugs in his inventions.",
+            "emphasis": [
+              "Edison"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l10",
+            "text": "Little faults and difficulties, he called them.",
+            "emphasis": [
+              "faults"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l11",
+            "text": "That's nearly 70 years before the moth.",
+            "emphasis": [
+              "70"
+            ],
+            "claimIds": [
+              "c4",
+              "c1"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l12",
+            "text": "The moth is still taped in that logbook, at the Smithsonian.",
+            "emphasis": [
+              "Smithsonian"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l13",
+            "text": "The most famous bug in history wasn't the first. Just the first actual one.",
+            "emphasis": [
+              "actual"
+            ],
+            "claimIds": [
+              "c2",
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b6",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l14",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Poplar hawk-moth (Laothoe populi populi) male\"",
+            "prompt": "close-up of a moth",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "bug",
+            "label": "BUG",
+            "color": "#E50914",
+            "glow": "yes"
+          },
+          "sfx": "pop"
+        },
+        "anchor": "bugs"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"African Moon Moth (Argema mimosae) resting on a wall 08\"",
+            "prompt": "a moth resting on a wall",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        },
+        "anchor": "moth"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "typewriter",
+          "lead": "In",
+          "highlight": "1947",
+          "cps": 12
+        }
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"IBM Automatic Sequence Controlled Calculator Detail1\"",
+            "prompt": "1940s relay computer panel",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Relay computer, 1940s"
+        },
+        "anchor": "Harvard"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"OEG SDT-SS-112M - case removed\"",
+            "prompt": "an electromechanical relay",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "A relay",
+          "sfx": "tick"
+        },
+        "anchor": "relay"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l4",
+        "scene": {
+          "type": "document",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"First Computer Bug, 1947\"",
+            "prompt": "Harvard Mark II logbook page with taped moth",
+            "prefer": "stock"
+          },
+          "highlights": [
+            {
+              "x": 0.12,
+              "y": 0.55,
+              "w": 0.33,
+              "h": 0.16
+            }
+          ],
+          "pageTurn": true,
+          "zoomTo": {
+            "x": 0.42,
+            "y": 0.64,
+            "scale": 1.7
+          },
+          "label": "Mark II logbook"
+        },
+        "anchor": "logbook"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l5",
+        "scene": {
+          "type": "quote",
+          "text": "First actual case of bug being found.",
+          "attribution": "Harvard Mark II logbook, 1947"
+        },
+        "anchor": "note"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l6",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Commodore Grace M. Hopper, USN (covered)\"",
+            "prompt": "portrait of Grace Hopper",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Grace Hopper"
+        },
+        "anchor": "Hopper"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l7",
+        "scene": {
+          "type": "typewriter",
+          "lead": "First",
+          "highlight": "actual case",
+          "cps": 12
+        },
+        "anchor": "First"
+      },
+      {
+        "id": "sh11",
+        "lineId": "l8",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "asset": {
+              "kind": "image",
+              "query": "intitle:\"Thomas Edison2\"",
+              "prompt": "portrait of Thomas Edison",
+              "prefer": "stock"
+            },
+            "title": "1878",
+            "label": "Edison's “bugs”"
+          },
+          "right": {
+            "asset": {
+              "kind": "image",
+              "query": "intitle:\"African Moon Moth (Argema mimosae) resting on a wall 09\"",
+              "prompt": "a moth",
+              "prefer": "stock"
+            },
+            "title": "1947",
+            "label": "The first “actual” bug"
+          },
+          "winner": "left"
+        },
+        "anchor": "joke"
+      },
+      {
+        "id": "sh12",
+        "lineId": "l9",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Back in",
+          "highlight": "1878",
+          "cps": 12
+        }
+      },
+      {
+        "id": "sh13",
+        "lineId": "l9",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Edison and phonograph edit2\"",
+            "prompt": "Thomas Edison with his phonograph, 1878",
+            "prefer": "stock"
+          },
+          "treatment": "vintage",
+          "move": "pushIn",
+          "label": "Thomas Edison, 1878"
+        },
+        "anchor": "Edison"
+      },
+      {
+        "id": "sh14",
+        "lineId": "l10",
+        "scene": {
+          "type": "quote",
+          "text": "Bugs — as such little faults and difficulties are called",
+          "attribution": "Thomas Edison, 1878"
+        },
+        "anchor": "faults"
+      },
+      {
+        "id": "sh15",
+        "lineId": "l11",
+        "scene": {
+          "type": "diagram",
+          "template": "timeline",
+          "data": {
+            "events": [
+              {
+                "year": "1878",
+                "label": "Edison's bugs"
+              },
+              {
+                "year": "1947",
+                "label": "The moth"
+              }
+            ]
+          }
+        },
+        "anchor": "70"
+      },
+      {
+        "id": "sh16",
+        "lineId": "l12",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Smithsonian National Museum of American History building\"",
+            "prompt": "Smithsonian National Museum of American History",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Smithsonian, Washington"
+        },
+        "anchor": "Smithsonian"
+      },
+      {
+        "id": "sh17",
+        "lineId": "l13",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "check",
+            "label": "FIRST ACTUAL BUG",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "famous"
+      },
+      {
+        "id": "sh18",
+        "lineId": "l14",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh19",
+        "lineId": "l14",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "The famous computer moth wasn't the first bug",
+    "description": "Why do we call computer errors bugs?\nIn 1947 engineers on the Harvard Mark II taped a moth into their logbook: 'First actual case of bug being found.' It was a joke. Thomas Edison was already writing about 'bugs' in 1878, nearly 70 years earlier. The logbook is at the Smithsonian.",
+    "hashtags": [
+      "history",
+      "programming",
+      "technology",
+      "didyouknow"
+    ],
+    "keywords": [
+      "first computer bug",
+      "Grace Hopper moth",
+      "Harvard Mark II",
+      "Edison bug 1878",
+      "origin of bug"
+    ],
+    "hook": "Why do we call computer errors bugs?",
+    "altText": "Motion-graphics explainer on the origin of the word bug in computing.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Bug_(engineering)",
+        "title": "Bug (engineering)"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Software_bug",
+        "title": "Software bug"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Grace_Hopper",
+        "title": "Grace Hopper"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

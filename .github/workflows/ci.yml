@@ -1,0 +1,39 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm test
+      - run: pnpm lint:skills
+      - name: Generated files are up to date
+        run: pnpm gen && git diff --exit-code -- packages/core/src/prompts.generated.ts packages/mcp/src/docs.generated.ts docs/provider-limits.md
+  render-smoke:
+    runs-on: ubuntu-latest
+    needs: check
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: pnpm install --frozen-lockfile
+      - run: cd packages/renderer && npx hyperframes browser ensure
+      - name: Offline end-to-end (replay LLM, silent dry-run voice, placeholder visuals)
+        run: |
+          VIDSK_LLM=static:examples/replay/power-button.json VIDSK_TTS=dry-run VIDSK_RESEARCH=none VIDSK_STOCK=none VIDSK_SFX=procedural VIDSK_LOCAL_STT=0 \
+            node packages/cli/bin/vidsk.mjs make "the power button symbol" --duration 50 --out ./out --job ci
+          node packages/cli/bin/vidsk.mjs check ./out/ci/project

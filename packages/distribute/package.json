@@ -1,0 +1,26 @@
+{
+  "name": "@vid-skills/distribute",
+  "version": "0.1.0",
+  "description": "Plug-and-play publishers for YouTube, TikTok, Instagram, Facebook, X, LinkedIn, Threads, Pinterest, Bluesky and webhooks. fetch-only, Workers-safe.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@vid-skills/core": "workspace:*",
+    "@vid-skills/providers": "workspace:*"
+  }
+}

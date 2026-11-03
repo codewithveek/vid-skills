@@ -1,0 +1,450 @@
+{
+  "ResearchDossier": {
+    "topic": "why a ball drops in Times Square",
+    "summary": "Time balls were dropped at a set time each day so ship navigators could set their clocks for finding longitude; the first modern one was at Portsmouth in 1829 and Greenwich's has dropped at 1 p.m. daily since 1833. After the city banned fireworks over the crowd, the New York Times' chief electrician suggested a time ball, having seen one on the Western Union Building; the first drop was on 31 December 1907.",
+    "angle": "The New Year countdown is a ship's clock.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "A time ball is a large ball that moves down a pole and is dropped at a predetermined time of day, so ship navigators could set their clocks for finding longitude at sea.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Time_ball",
+            "title": "Time ball - Wikipedia",
+            "quote": "dropped at a predetermined time of day"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The time ball installed in 1833 at the Greenwich Observatory has dropped at 1 p.m. every day since then.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Time_ball",
+            "title": "Time ball - Wikipedia",
+            "quote": "the time ball has dropped at 1 p.m. every day since then"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "The city banned fireworks launched directly over the Times Square crowd due to safety concerns; Adolph Ochs wanted a bigger spectacle.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Times_Square_Ball",
+            "title": "Times Square Ball - Wikipedia",
+            "quote": "banning the fireworks from being launched directly over the crowd"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "The Times' chief electrician, Walter F. Palmer, suggested a time ball after seeing one on the Western Union Telegraph Building.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Times_Square_Ball",
+            "title": "Times Square Ball - Wikipedia",
+            "quote": "after seeing one used on the Western Union Telegraph Building"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "The first ball drop was held on December 31, 1907; the ball was built from iron and wood and lit by a hundred incandescent bulbs.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Times_Square_Ball",
+            "title": "Times Square Ball - Wikipedia",
+            "quote": "built from iron and wood, illuminated by a hundred incandescent light bulbs"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "The Ball Drop Was a Ship's Clock",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "The Times Square ball copies a tool for telling ships the time.",
+            "emphasis": [
+              "ships"
+            ],
+            "claimIds": [
+              "c1",
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l2",
+            "text": "It's called a time ball.",
+            "emphasis": [
+              "time"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "mechanism",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "Sailors needed the exact time to work out their longitude at sea.",
+            "emphasis": [
+              "longitude"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l4",
+            "text": "So ports put a ball on a pole, and dropped it at the same moment every day.",
+            "emphasis": [
+              "dropped"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l5",
+            "text": "In Greenwich, one has dropped at 1 p.m. every day since 1833.",
+            "emphasis": [
+              "1833."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l6",
+            "text": "In New York, the city banned the fireworks over the Times Square crowd.",
+            "emphasis": [
+              "banned"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l7",
+            "text": "The New York Times' electrician had seen a time ball on the Western Union Building.",
+            "emphasis": [
+              "time"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l8",
+            "text": "So on New Year's Eve, 1907, the first ball dropped. Iron and wood, with a hundred light bulbs.",
+            "emphasis": [
+              "hundred"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l9",
+            "text": "So the New Year countdown is really a ship's clock.",
+            "emphasis": [
+              "ship's"
+            ],
+            "claimIds": [
+              "c1",
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"New Year Ball Drop Event for 2012 at Times Square\"",
+            "prompt": "the Times Square ball with fireworks",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "focusY": 0.15
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "ship",
+            "label": "A CLOCK FOR SHIPS",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "copies"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Time Ball, Greenwich - geograph.org.uk - 4024867\"",
+            "prompt": "the red time ball at Greenwich",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "A time ball"
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "compass",
+            "label": "LONGITUDE NEEDS EXACT TIME",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "Sailors"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "flow",
+          "data": {
+            "nodes": [
+              {
+                "label": "BALL GOES UP",
+                "icon": "arrow-up"
+              },
+              {
+                "label": "DROPS ON TIME",
+                "icon": "arrow-down"
+              },
+              {
+                "label": "SHIPS SET CLOCKS",
+                "icon": "clock"
+              }
+            ]
+          }
+        },
+        "anchor": "ports"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Greenwich time ball 2014\"",
+            "prompt": "the time ball on the Royal Observatory, Greenwich",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Greenwich, since 1833"
+        },
+        "anchor": "Greenwich,"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "ban",
+            "label": "FIREWORKS BANNED",
+            "color": "#E50914",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh8",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "building-2",
+            "label": "WESTERN UNION BUILDING",
+            "color": "#F4F5F7",
+            "glow": "yes"
+          }
+        },
+        "anchor": "electrician"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l8",
+        "scene": {
+          "type": "typewriter",
+          "lead": "first ball drop:",
+          "highlight": "Dec 31, 1907",
+          "cps": 14
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "l8",
+        "scene": {
+          "type": "stat",
+          "value": "100",
+          "caption": "light bulbs",
+          "sourceClaimId": "c5"
+        },
+        "anchor": "Iron"
+      },
+      {
+        "id": "sh11",
+        "lineId": "l9",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Times Square New Year's Eve 2023 Numbers Ball drop (52579744724)\"",
+            "prompt": "the Times Square New Year crowd",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Times Square"
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh13",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "The Times Square ball drop is a ship's clock",
+    "description": "The Times Square ball copies a tool for telling ships the time: the time ball.\nPorts dropped a ball at the same moment every day so sailors could set their clocks and find their longitude. Greenwich's has dropped at 1 p.m. since 1833. When New York banned the fireworks, the Times' electrician remembered a time ball on the Western Union Building, and the first ball dropped on New Year's Eve 1907.",
+    "hashtags": [
+      "newyearseve",
+      "timessquare",
+      "history",
+      "didyouknow"
+    ],
+    "keywords": [
+      "why does a ball drop on New Year's Eve",
+      "Times Square ball history",
+      "time ball",
+      "ball drop origin",
+      "New Year's Eve facts"
+    ],
+    "hook": "The Times Square ball copies a tool for telling ships the time.",
+    "altText": "Motion-graphics explainer on how the Times Square ball drop came from nautical time balls.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Time_ball",
+        "title": "Time ball"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Times_Square_Ball",
+        "title": "Times Square Ball"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

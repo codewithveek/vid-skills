@@ -1,0 +1,473 @@
+{
+  "ResearchDossier": {
+    "topic": "where the word guy comes from",
+    "summary": "'Guy' comes from Guy Fawkes, caught guarding the gunpowder in the 1605 plot to blow up the House of Lords and kill King James. Children's effigies of him burned on 5 November were called guys; by 1845 a guy was an oddly dressed person, and by 1873 any man.",
+    "angle": "Every 'hey guys' names a failed bomb plot.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "The Gunpowder Plot was a conspiracy to assassinate King James and members of Parliament; Fawkes admitted his intention to blow up the House of Lords and was found guarding the explosives.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Guy_Fawkes",
+            "title": "Guy Fawkes - Wikipedia",
+            "quote": "Fawkes admitted his intention to blow up the House of Lords"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "Celebrating that the king had survived, people lit bonfires around London; 5 November became an annual day of thanksgiving.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Guy_Fawkes_Night",
+            "title": "Guy Fawkes Night - Wikipedia",
+            "quote": "Celebrating that the king had survived, people lit bonfires around London."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "The 'guy' is normally created by children from old clothes, newspapers and a mask; children begged for a 'penny for the guy'.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Guy_Fawkes",
+            "title": "Guy Fawkes - Wikipedia",
+            "quote": "The \"guy\" is normally created by children from old clothes, newspapers, and a mask."
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Guy_Fawkes_Night",
+            "title": "Guy Fawkes Night - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "'Guy' was coined from the name of Guy Fawkes and came to refer to the effigies burned on Guy Fawkes Night.",
+        "sources": [
+          {
+            "url": "https://en.wiktionary.org/wiki/guy",
+            "title": "guy - Wiktionary",
+            "quote": "coined by semantic widening from the name of Guy Fawkes"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "By 1845 'a guy' meant a person of odd appearance or dress; by 1873 it meant a man or fellow.",
+        "sources": [
+          {
+            "url": "https://en.wiktionary.org/wiki/guy",
+            "title": "guy - Wiktionary"
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Guy_Fawkes",
+            "title": "Guy Fawkes - Wikipedia",
+            "quote": "came to mean an oddly dressed person"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "'Guy' Was Guy Fawkes",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Every hey guys names a man who tried to blow up Parliament.",
+            "emphasis": [
+              "Parliament"
+            ],
+            "claimIds": [
+              "c1",
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l2",
+            "text": "Guy Fawkes.",
+            "emphasis": [
+              "Fawkes."
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "In 1605, he was caught guarding the gunpowder meant to blow up the House of Lords.",
+            "emphasis": [
+              "gunpowder"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "The plan was to kill King James. It failed.",
+            "emphasis": [
+              "failed."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l5",
+            "text": "Londoners lit bonfires to celebrate the king's survival.",
+            "emphasis": [
+              "bonfires"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l6",
+            "text": "Every November 5th, kids built a stuffed Fawkes from old clothes, and called it a guy.",
+            "emphasis": [
+              "guy."
+            ],
+            "claimIds": [
+              "c3",
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l7",
+            "text": "Penny for the guy?",
+            "emphasis": [
+              "penny"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "twist",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l8",
+            "text": "By the 1840s, a guy meant anyone who dressed oddly.",
+            "emphasis": [
+              "oddly."
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l9",
+            "text": "By the 1870s, it meant any man at all.",
+            "emphasis": [
+              "man"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l10",
+            "text": "So hey guys is named after a failed bomb plot.",
+            "emphasis": [
+              "bomb"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Guy Fawkes effigy by William Warby from Flickr\"",
+            "prompt": "a Guy Fawkes effigy burning on a bonfire",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "focusY": 0.3
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "typewriter",
+          "lead": "hey",
+          "highlight": "guys",
+          "cps": 10
+        },
+        "anchor": "names"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Gunpowder Plot conspirators.jpg\"",
+            "prompt": "engraving of the Gunpowder Plot conspirators",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "The plotters, 1605"
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "bomb",
+            "label": "THE GUNPOWDER PLOT",
+            "color": "#FF9F1C",
+            "glow": "yes"
+          }
+        },
+        "anchor": "gunpowder"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "crown",
+            "label": "KILL KING JAMES",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "kill"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Dornoch Fireworks Display, Bonfire Night 2021\"",
+            "prompt": "a bonfire and fireworks on Bonfire Night",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Bonfire Night"
+        },
+        "anchor": "bonfires"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l6",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Guy Fawkes night at Chirk\"",
+            "prompt": "children with their guy before Bonfire Night",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Kids and their guy"
+        },
+        "anchor": "kids"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l7",
+        "scene": {
+          "type": "typewriter",
+          "lead": "penny for the",
+          "highlight": "guy?",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "l8",
+        "scene": {
+          "type": "typewriter",
+          "lead": "1840s: guy =",
+          "highlight": "oddly dressed",
+          "cps": 14
+        },
+        "anchor": "1840s,"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l9",
+        "scene": {
+          "type": "typewriter",
+          "lead": "1870s: guy =",
+          "highlight": "any man",
+          "cps": 12
+        },
+        "anchor": "1870s,"
+      },
+      {
+        "id": "sh11",
+        "lineId": "l10",
+        "scene": {
+          "type": "diagram",
+          "template": "timeline",
+          "data": {
+            "events": [
+              {
+                "year": "1605",
+                "label": "The plot"
+              },
+              {
+                "year": "1800s",
+                "label": "Effigy"
+              },
+              {
+                "year": "1870s",
+                "label": "Any man"
+              },
+              {
+                "year": "Today",
+                "label": "Hey guys"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh13",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "'Hey guys' is named after a failed bomb plot",
+    "description": "Every 'hey guys' names a man who tried to blow up Parliament: Guy Fawkes.\nAfter the 1605 Gunpowder Plot failed, kids built stuffed effigies of Fawkes for Bonfire Night and called them guys. By the 1840s a guy was anyone oddly dressed, and by the 1870s, any man at all.",
+    "hashtags": [
+      "etymology",
+      "bonfirenight",
+      "history",
+      "didyouknow"
+    ],
+    "keywords": [
+      "where does the word guy come from",
+      "Guy Fawkes",
+      "Gunpowder Plot",
+      "Bonfire Night",
+      "penny for the guy"
+    ],
+    "hook": "Every 'hey guys' names a man who tried to blow up Parliament.",
+    "altText": "Motion-graphics explainer on how the word guy came from Guy Fawkes.",
+    "sources": [
+      {
+        "url": "https://en.wiktionary.org/wiki/guy",
+        "title": "guy (Wiktionary)"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Guy_Fawkes",
+        "title": "Guy Fawkes"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

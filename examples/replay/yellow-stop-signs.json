@@ -1,0 +1,623 @@
+{
+  "ResearchDossier": {
+    "topic": "why stop signs are red",
+    "summary": "US stop signs began in Detroit in 1914 as black-on-white squares, got the octagon in 1922, were yellow from 1924 because red faded, and turned red only in 1954 to match traffic lights.",
+    "angle": "The red, the most recognisable thing about a stop sign, is its newest part.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "The first stop sign was created in 1914 by Detroit police sergeant Harold 'Harry' Jackson; the first signs had black lettering on a white background and were 24 by 24 inches.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Stop_sign",
+            "title": "Stop sign - Wikipedia",
+            "quote": "The first signs had black lettering on a white background and were 24 by 24 inches."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "An AASHO committee meeting in 1922 chose the octagonal shape.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Stop_sign",
+            "title": "Stop sign - Wikipedia"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "id": "c3",
+        "text": "The eight-sided shape allows drivers facing the back of the sign to identify that oncoming drivers have a stop sign.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Stop_sign",
+            "title": "Stop sign - Wikipedia",
+            "quote": "allows drivers facing the back of the sign to identify that oncoming drivers have a stop sign"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "From 1924 to 1954 US stop signs bore a red or black legend on a yellow field; yellow was chosen because fade-resistant red materials were not available.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Stop_sign",
+            "title": "Stop sign - Wikipedia",
+            "quote": "Yellow was chosen because fade-resistant red materials were not available."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "The 1954 MUTCD specified a white stop legend on a red field, so red signalled stop whether from a sign or a traffic light.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Stop_sign",
+            "title": "Stop sign - Wikipedia",
+            "quote": "The 1954 MUTCD newly specified a white stop legend on a red field"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1914",
+        "event": "First stop sign, Detroit",
+        "claimId": "c1"
+      },
+      {
+        "year": "1922",
+        "event": "Octagon chosen",
+        "claimId": "c2"
+      },
+      {
+        "year": "1924",
+        "event": "Yellow",
+        "claimId": "c4"
+      },
+      {
+        "year": "1954",
+        "event": "Red",
+        "claimId": "c5"
+      }
+    ],
+    "analogies": [],
+    "visualIdeas": [
+      "old yellow stop sign",
+      "Detroit 1910",
+      "modern red stop sign"
+    ],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Stop Signs Used to Be Yellow",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Picture a stop sign.",
+            "emphasis": [
+              "stop"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l2",
+            "text": "Red, eight sides, impossible to miss.",
+            "emphasis": [
+              "Red"
+            ],
+            "claimIds": [
+              "c5",
+              "c2"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "For 30 years, American stop signs were yellow.",
+            "emphasis": [
+              "yellow"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l4",
+            "text": "The first one went up in Detroit in 1914.",
+            "emphasis": [
+              "Detroit"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l5",
+            "text": "Black letters on a white square.",
+            "emphasis": [
+              "white"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l6",
+            "text": "In 1922, highway officials picked the eight-sided shape.",
+            "emphasis": [
+              "eight-sided"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l7",
+            "text": "So drivers facing its back still know it's a stop sign.",
+            "emphasis": [
+              "back"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l8",
+            "text": "But why not red?",
+            "emphasis": [
+              "red"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l9",
+            "text": "Nobody had a red that wouldn't fade in the sun.",
+            "emphasis": [
+              "fade"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l10",
+            "text": "So from 1924, stop signs were yellow.",
+            "emphasis": [
+              "yellow"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l11",
+            "text": "Only in 1954 did the official manual switch them to red.",
+            "emphasis": [
+              "1954"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l12",
+            "text": "To match the red traffic light.",
+            "emphasis": [
+              "match"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b6",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l13",
+            "text": "So the red you can't miss is the newest part of the stop sign.",
+            "emphasis": [
+              "newest"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b7",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l14",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Stop sign and street sign at the intersection of South 9th Street and Carlin Court\"",
+            "prompt": "a red stop sign at an intersection",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l2",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "octagon",
+            "label": "8 SIDES",
+            "color": "#E50914",
+            "glow": "yes"
+          }
+        },
+        "anchor": "eight"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l3",
+        "scene": {
+          "type": "diagram",
+          "template": "counter",
+          "data": {
+            "from": 0,
+            "to": 30,
+            "unit": "years",
+            "label": "1924–1954"
+          }
+        },
+        "anchor": "30"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Stop, Yellow Sign (7497078030)\"",
+            "prompt": "an old yellow stop sign",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Yellow stop sign",
+          "sfx": "pop"
+        },
+        "anchor": "yellow"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Woodward Avenue Grand Circus Park 1910\"",
+            "prompt": "Detroit street in 1910",
+            "prefer": "stock"
+          },
+          "treatment": "vintage",
+          "move": "kenBurns",
+          "label": "Detroit, 1910"
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Detroit,",
+          "highlight": "1914",
+          "cps": 12
+        },
+        "anchor": "1914"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "square",
+            "label": "BLACK LETTERS · WHITE SQUARE",
+            "color": "#F4F5F7",
+            "glow": "yes"
+          }
+        },
+        "anchor": "white"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "landmark",
+            "label": "HIGHWAY OFFICIALS · 1922",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "octagon",
+            "label": "THE OCTAGON",
+            "color": "#F4F5F7"
+          }
+        },
+        "anchor": "eight-sided"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "flow",
+          "data": {
+            "nodes": [
+              {
+                "label": "BACK OF THE SIGN",
+                "icon": "octagon"
+              },
+              {
+                "label": "THEY STOP",
+                "icon": "car-front"
+              }
+            ]
+          }
+        },
+        "anchor": "back"
+      },
+      {
+        "id": "sh11",
+        "lineId": "l8",
+        "scene": {
+          "type": "typewriter",
+          "lead": "why not",
+          "highlight": "red?",
+          "cps": 12
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "l9",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "sun",
+            "label": "RED PAINT FADED",
+            "color": "#FF9F1C",
+            "glow": "yes"
+          }
+        },
+        "anchor": "fade"
+      },
+      {
+        "id": "sh13",
+        "lineId": "l10",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "octagon",
+            "label": "YELLOW",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "yellow"
+      },
+      {
+        "id": "sh14",
+        "lineId": "l11",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "asset": {
+              "kind": "image",
+              "query": "intitle:\"Yellow stop sign in Cedar Mill, Oregon\"",
+              "prompt": "a faded yellow stop sign",
+              "prefer": "stock"
+            },
+            "title": "1924",
+            "label": "Yellow"
+          },
+          "right": {
+            "asset": {
+              "kind": "image",
+              "query": "intitle:\"Blinking Stop Sign; East Church Ave\"",
+              "prompt": "a red stop sign",
+              "prefer": "stock"
+            },
+            "title": "1954",
+            "label": "Red"
+          },
+          "winner": "right"
+        },
+        "anchor": "1954"
+      },
+      {
+        "id": "sh15",
+        "lineId": "l12",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Traffic lights at Manchester St, Christchurch, New Zealand 04\"",
+            "prompt": "a red traffic light",
+            "prefer": "stock"
+          },
+          "treatment": "dark",
+          "move": "pushIn",
+          "label": "Red means stop"
+        },
+        "anchor": "traffic"
+      },
+      {
+        "id": "sh16",
+        "lineId": "l13",
+        "scene": {
+          "type": "diagram",
+          "template": "timeline",
+          "data": {
+            "events": [
+              {
+                "year": "1914",
+                "label": "White"
+              },
+              {
+                "year": "1922",
+                "label": "Octagon"
+              },
+              {
+                "year": "1924",
+                "label": "Yellow"
+              },
+              {
+                "year": "1954",
+                "label": "Red"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "sh17",
+        "lineId": "l14",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh18",
+        "lineId": "l14",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Stop signs used to be yellow (for 30 years)",
+    "description": "Picture a stop sign. Red, eight sides, impossible to miss.\nFor 30 years, American stop signs were yellow. The first one went up in Detroit in 1914 as black letters on a white square; the octagon came in 1922; and from 1924 they were yellow because no red paint could survive the sun. Only in 1954 did they turn red, to match the traffic light.",
+    "hashtags": [
+      "history",
+      "roadsigns",
+      "didyouknow",
+      "driving"
+    ],
+    "keywords": [
+      "stop sign history",
+      "yellow stop sign",
+      "why stop signs are red",
+      "octagon stop sign",
+      "MUTCD 1954"
+    ],
+    "hook": "For 30 years, American stop signs were yellow.",
+    "altText": "Motion-graphics explainer on the history of the stop sign.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Stop_sign",
+        "title": "Stop sign"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

@@ -1,0 +1,543 @@
+{
+  "ResearchDossier": {
+    "topic": "where the word OK comes from",
+    "summary": "OK began in an 1830s newspaper fad of misspelled abbreviations: 'oll korrect' in the Boston Morning Post, March 1839. The 1840 Van Buren 'Old Kinderhook' campaign kept it alive; Allen Walker Read traced it in 1963–64.",
+    "angle": "The world's most used word is a misspelling joke.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "OK has been described as the most frequently spoken or written word on the planet.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/OK",
+            "title": "OK - Wikipedia",
+            "quote": "the most frequently spoken or written word on the planet"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "id": "c2",
+        "text": "OK originated in an 1830s fad of comical misspellings and acronyms; OW ('oll wright') was a predecessor.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/OK",
+            "title": "OK - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "The earliest known printed O.K. is in the 23 March 1839 edition of the Boston Morning Post, as an initialism of 'oll korrect' (all correct).",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/OK",
+            "title": "OK - Wikipedia",
+            "quote": "the edition of 23 March of the Boston Morning Post"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "During the 1840 election, Democratic supporters claimed OK stood for 'Old Kinderhook', a nickname for Martin Van Buren.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/OK",
+            "title": "OK - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "Allen Walker Read's six articles in American Speech (1963–64) established the etymology most reference works now give.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/OK",
+            "title": "OK - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "OK Started as a Joke",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "OK might be the most used word on the planet.",
+            "emphasis": [
+              "planet"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l2",
+            "text": "And it started as a joke.",
+            "emphasis": [
+              "joke"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "In the 1830s, newspapers had a craze for funny, misspelled abbreviations.",
+            "emphasis": [
+              "misspelled"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l4",
+            "text": "O.W. meant oll wright.",
+            "emphasis": [
+              "wright"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l5",
+            "text": "Then in March 1839, the Boston Morning Post printed O.K.",
+            "emphasis": [
+              "O.K."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l6",
+            "text": "Oll korrect. All correct, spelled wrong on purpose.",
+            "emphasis": [
+              "korrect"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "Most of those jokes died out. OK should have too.",
+            "emphasis": [
+              "died"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l8",
+            "text": "Then came the 1840 election.",
+            "emphasis": [
+              "election"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l9",
+            "text": "President Martin Van Buren was nicknamed Old Kinderhook.",
+            "emphasis": [
+              "Kinderhook"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l10",
+            "text": "His supporters claimed OK stood for him.",
+            "emphasis": [
+              "supporters"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l11",
+            "text": "It took a linguist, Allen Walker Read, to trace it back, in the 1960s.",
+            "emphasis": [
+              "linguist"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l12",
+            "text": "So every OK you send is a spelling joke almost 190 years old.",
+            "emphasis": [
+              "joke"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Martin Van Buren.jpg\"",
+            "prompt": "portrait of Martin Van Buren",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "He's the K in OK"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l2",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "laugh",
+            "label": "A JOKE",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "joke."
+      },
+      {
+        "id": "sh3",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Frances (Appleton) Longfellow to Thomas Gold Appleton, 5 July 1839 (fe2fe587\"",
+            "prompt": "an 1839 handwritten letter",
+            "prefer": "stock"
+          },
+          "treatment": "vintage",
+          "move": "kenBurns",
+          "label": "Writing in 1839"
+        },
+        "anchor": "craze"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l4",
+        "scene": {
+          "type": "typewriter",
+          "lead": "O.W. =",
+          "highlight": "oll wright",
+          "cps": 14
+        },
+        "anchor": "O.W."
+      },
+      {
+        "id": "sh5",
+        "lineId": "l5",
+        "scene": {
+          "type": "typewriter",
+          "lead": "March",
+          "highlight": "1839",
+          "cps": 12
+        },
+        "anchor": "March"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "newspaper",
+            "label": "BOSTON MORNING POST",
+            "color": "#F4F5F7",
+            "glow": "yes"
+          }
+        },
+        "anchor": "Boston"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l6",
+        "scene": {
+          "type": "typewriter",
+          "lead": "O.K. =",
+          "highlight": "oll korrect",
+          "cps": 14
+        },
+        "anchor": "korrect."
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "title": "ALL",
+            "label": "Spelled right"
+          },
+          "right": {
+            "title": "OLL",
+            "label": "Spelled wrong on purpose"
+          },
+          "winner": "right"
+        },
+        "anchor": "spelled"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "skull",
+            "label": "DIED OUT",
+            "color": "#9a9daa"
+          }
+        },
+        "anchor": "died"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l8",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"William Henry Harrison Campaign Flag\"",
+            "prompt": "an 1840 presidential campaign flag",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "The 1840 campaign"
+        },
+        "anchor": "election."
+      },
+      {
+        "id": "sh11",
+        "lineId": "l9",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Martin Van Buren.jpg\"",
+            "prompt": "portrait of Martin Van Buren",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Martin Van Buren"
+        },
+        "anchor": "Martin"
+      },
+      {
+        "id": "sh12",
+        "lineId": "l9",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Lindenwald, 1013 Old Post Road, Kinderhook\" \"1-17\"",
+            "prompt": "Lindenwald, Van Buren's home in Kinderhook",
+            "prefer": "stock"
+          },
+          "treatment": "bw",
+          "move": "pushIn",
+          "label": "Kinderhook, New York"
+        },
+        "anchor": "Kinderhook."
+      },
+      {
+        "id": "sh13",
+        "lineId": "l10",
+        "scene": {
+          "type": "typewriter",
+          "lead": "O.K. =",
+          "highlight": "Old Kinderhook",
+          "cps": 16
+        },
+        "anchor": "stood"
+      },
+      {
+        "id": "sh14",
+        "lineId": "l11",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "book-open-text",
+            "label": "AMERICAN SPEECH · 1963–64",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "linguist,"
+      },
+      {
+        "id": "sh15",
+        "lineId": "l12",
+        "scene": {
+          "type": "diagram",
+          "template": "timeline",
+          "data": {
+            "events": [
+              {
+                "year": "1839",
+                "label": "The joke"
+              },
+              {
+                "year": "1840",
+                "label": "The campaign"
+              },
+              {
+                "year": "1963",
+                "label": "Traced"
+              },
+              {
+                "year": "Today",
+                "label": "Everywhere"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "sh16",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh17",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "OK started as a spelling joke in 1839",
+    "description": "OK might be the most used word on the planet. And it started as a joke.\nIn March 1839 the Boston Morning Post printed O.K. for 'oll korrect', part of a craze for misspelled abbreviations. Van Buren's 1840 campaign kept it alive as 'Old Kinderhook'.",
+    "hashtags": [
+      "language",
+      "history",
+      "etymology",
+      "didyouknow"
+    ],
+    "keywords": [
+      "origin of OK",
+      "oll korrect",
+      "Old Kinderhook",
+      "Allen Walker Read",
+      "word origins"
+    ],
+    "hook": "OK started as a joke.",
+    "altText": "Motion-graphics explainer on the origin of the word OK.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/OK",
+        "title": "OK"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

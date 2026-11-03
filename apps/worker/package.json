@@ -1,0 +1,24 @@
+{
+  "name": "@vid-skills/worker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Cloudflare deployment: MCP + REST API on Workers, durable pipeline on Workflows, assets on R2, tokens in KV, HyperFrames rendering + Kokoro TTS in a Cloudflare Container, scheduled hands-free publishing.",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "pnpm -w run build && wrangler deploy",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "cf-typegen": "wrangler types"
+  },
+  "dependencies": {
+    "@cloudflare/containers": "^0.3.7",
+    "@vid-skills/core": "workspace:*",
+    "@vid-skills/distribute": "workspace:*",
+    "@vid-skills/mcp": "workspace:*",
+    "@vid-skills/providers": "workspace:*"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260601.0",
+    "wrangler": "^4.154.0"
+  }
+}

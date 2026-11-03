@@ -1,0 +1,440 @@
+{
+  "ResearchDossier": {
+    "topic": "why the turkey bird is named after Turkey",
+    "summary": "'Turkey' first denoted the guineafowl, an African bird imported to Europe via the Ottoman Empire; English colonists transferred the name to the similar-looking North American bird. French called it poule d'Inde (now dinde); Norwegian and Swedish name it after Calicut, India.",
+    "angle": "America's bird is named after Turkey, India and an African bird.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Turkeys are indigenous to the Americas.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Turkey_(bird)",
+            "title": "Turkey (bird) - Wikipedia",
+            "quote": "indigenous to the Americas"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The name turkey originated as a shortening of turkey cock and initially denoted the guineafowl, an African bird.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Turkey_(bird)",
+            "title": "Turkey (bird) - Wikipedia",
+            "quote": "initially denoted the guineafowl, an African bird"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Guineafowl were first imported to Europe via Turkey, hence the name.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Turkey_(bird)",
+            "title": "Turkey (bird) - Wikipedia",
+            "quote": "Guineafowl were first imported to Europe via Turkey, hence the name."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "After English colonies were established in the New World, the name was transferred to the superficially similar North American bird.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Turkey_(bird)",
+            "title": "Turkey (bird) - Wikipedia",
+            "quote": "the name was transferred to the superficially similar North American bird"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "In French the bird was originally called poule d'inde, chicken of India, later dinde; in Norwegian and Swedish it is named after Calicut, India.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Turkey_(bird)",
+            "title": "Turkey (bird) - Wikipedia",
+            "quote": "originally called poule d'inde or chicken of India later becoming dinde"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Why Is It Called a Turkey?",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "The turkey comes from North America. So why is it named after Turkey?",
+            "emphasis": [
+              "Turkey?"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l2",
+            "text": "Blame a completely different bird.",
+            "emphasis": [
+              "different"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "The name first meant the guineafowl, an African bird.",
+            "emphasis": [
+              "guineafowl,"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "Guineafowl reached Europe through Turkey, so the English called them turkey-cocks.",
+            "emphasis": [
+              "turkey-cocks."
+            ],
+            "claimIds": [
+              "c2",
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "Then English settlers met a similar-looking bird in the Americas, and the name moved over.",
+            "emphasis": [
+              "moved"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "twist",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l6",
+            "text": "The French called it the chicken of India. Today, it's dinde.",
+            "emphasis": [
+              "India."
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l7",
+            "text": "In Norway and Sweden, it's named after Calicut, in India.",
+            "emphasis": [
+              "Calicut,"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l8",
+            "text": "So America's bird is named after Turkey, India, and a bird from Africa.",
+            "emphasis": [
+              "Africa."
+            ],
+            "claimIds": [
+              "c2",
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Male wild turkey (Meleagris gallopavo) strutting\"",
+            "prompt": "a wild turkey strutting",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "focusY": 0.4
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "typewriter",
+          "lead": "named after",
+          "highlight": "Turkey?",
+          "cps": 12
+        },
+        "anchor": "named"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "bird",
+            "label": "A DIFFERENT BIRD",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "Blame"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Helmeted guineafowl (Numida meleagris), Kenya\"",
+            "prompt": "a helmeted guineafowl",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Guineafowl, Africa",
+          "focusY": 0.35
+        },
+        "anchor": "guineafowl,"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "flow",
+          "data": {
+            "nodes": [
+              {
+                "label": "AFRICA",
+                "icon": "bird"
+              },
+              {
+                "label": "TURKEY",
+                "icon": "ship"
+              },
+              {
+                "label": "EUROPE",
+                "icon": "castle"
+              }
+            ]
+          }
+        },
+        "anchor": "Guineafowl"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "typewriter",
+          "lead": "their name:",
+          "highlight": "turkey-cocks",
+          "cps": 14
+        },
+        "anchor": "English"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Wild turkey crossing the road by Trustom Pond\"",
+            "prompt": "a wild turkey in North America",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "North America"
+        },
+        "anchor": "settlers"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l5",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "title": "GUINEAFOWL",
+            "label": "The first 'turkey'"
+          },
+          "right": {
+            "title": "TURKEY",
+            "label": "Got the name"
+          },
+          "winner": "right"
+        },
+        "anchor": "moved"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l6",
+        "scene": {
+          "type": "typewriter",
+          "lead": "French:",
+          "highlight": "poule d'Inde",
+          "cps": 12
+        },
+        "anchor": "French"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l7",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Norway & Sweden:",
+          "highlight": "kalkun · kalkon",
+          "cps": 14
+        },
+        "anchor": "Norway"
+      },
+      {
+        "id": "sh11",
+        "lineId": "l8",
+        "scene": {
+          "type": "diagram",
+          "template": "checklist",
+          "data": {
+            "items": [
+              "Turkey",
+              "India",
+              "Africa"
+            ]
+          }
+        },
+        "anchor": "Turkey,"
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh13",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Why is a turkey named after Turkey?",
+    "description": "The turkey comes from North America. So why is it named after Turkey?\nThe name first meant the guineafowl, an African bird that reached Europe through Turkey. English settlers moved the name onto the similar-looking American bird. The French called it the chicken of India (now dinde), and Norway and Sweden named it after Calicut.",
+    "hashtags": [
+      "etymology",
+      "thanksgiving",
+      "turkey",
+      "didyouknow"
+    ],
+    "keywords": [
+      "why is turkey called turkey",
+      "turkey bird name origin",
+      "guineafowl",
+      "dinde meaning",
+      "Thanksgiving facts"
+    ],
+    "hook": "The turkey comes from North America. So why is it named after Turkey?",
+    "altText": "Motion-graphics explainer on why the turkey is named after the country.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Turkey_(bird)",
+        "title": "Turkey (bird)"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

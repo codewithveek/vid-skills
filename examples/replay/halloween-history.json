@@ -1,0 +1,584 @@
+{
+  "ResearchDossier": {
+    "topic": "the history of Halloween",
+    "summary": "Halloween grew from the Gaelic festival Samhain, when the boundary with the Otherworld was thought to thin. The Church's All Saints' Day on 1 November made 31 October All Hallows' Eve. Souling and guising became trick-or-treating, carried to North America by Irish and Scottish immigrants in the 19th century.",
+    "angle": "Trick-or-treating is a very old night in a new costume.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Samhain was a liminal time when the boundary between this world and the Otherworld thinned.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Halloween",
+            "title": "Halloween - Wikipedia",
+            "quote": "when the boundary between this world and the Otherworld thinned"
+          },
+          {
+            "url": "https://en.wikipedia.org/wiki/Samhain",
+            "title": "Samhain - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "Samhain marked the end of the harvest season and the beginning of winter, the 'darker half' of the year.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Halloween",
+            "title": "Halloween - Wikipedia",
+            "quote": "Samhain marked the end of the harvest season in autumn and beginning of winter or the 'darker half' of the year."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Samhain celebrations began on the evening of 31 October, since the Celtic day began and ended at sunset.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Samhain",
+            "title": "Samhain - Wikipedia",
+            "quote": "Celebrations began on the evening of 31 October, since the Celtic day began and ended at sunset."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "Special bonfires were lit, deemed to have protective and purifying powers.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Samhain",
+            "title": "Samhain - Wikipedia",
+            "quote": "Special bonfires were lit, which were deemed to have protective and purifying powers."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "Spirits (the aos sí) were appeased with offerings of food and drink.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Samhain",
+            "title": "Samhain - Wikipedia",
+            "quote": "they were appeased with offerings of food and drink"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c6",
+        "text": "Costumes may have been a way of disguising oneself from the aos sí.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Samhain",
+            "title": "Samhain - Wikipedia",
+            "quote": "The costumes may have been a way of imitating and disguising oneself from the aos sí."
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "id": "c7",
+        "text": "1 November was adopted as All Saints' Day in the Frankish Empire in 835, endorsed by Pope Gregory IV; Halloween comes from All Hallows' Eve, meaning Saints' evening.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Halloween",
+            "title": "Halloween - Wikipedia",
+            "quote": "which was endorsed by Pope Gregory IV"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c8",
+        "text": "On All Souls' Day people went door to door collecting soul cakes in exchange for praying for the dead (souling).",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Halloween",
+            "title": "Halloween - Wikipedia",
+            "quote": "would go door to door on All Souls' Day, collecting soul cakes in exchange for praying for the dead"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c9",
+        "text": "Dressing up in costumes and going guising was prevalent in Scotland and Ireland at Halloween by the late 19th century.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Halloween",
+            "title": "Halloween - Wikipedia",
+            "quote": "Dressing up in costumes and going guising was prevalent in Scotland and Ireland at Halloween by the late 19th century."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c10",
+        "text": "Irish and Scottish immigrants brought many Halloween customs to North America in the 19th century.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Halloween",
+            "title": "Halloween - Wikipedia",
+            "quote": "Irish and Scottish immigrants brought many Halloween customs to North America in the 19th century"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Halloween Began as Samhain",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Halloween started as a night when the wall between worlds got thin.",
+            "emphasis": [
+              "thin"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l2",
+            "text": "The Gaels called it Samhain. The end of harvest, and the start of the dark half of the year.",
+            "emphasis": [
+              "dark"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "It began at sunset on October 31st, because the Celtic day began at sunset.",
+            "emphasis": [
+              "sunset"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "People lit bonfires for protection, and left out food and drink for the spirits.",
+            "emphasis": [
+              "bonfires"
+            ],
+            "claimIds": [
+              "c4",
+              "c5"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l5",
+            "text": "Some wore costumes, maybe to hide from them.",
+            "emphasis": [
+              "hide"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l6",
+            "text": "Later, the Church made November 1st All Saints' Day.",
+            "emphasis": [
+              "Saints'"
+            ],
+            "claimIds": [
+              "c7"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l7",
+            "text": "So the night before became All Hallows' Eve. Hallowe'en.",
+            "emphasis": [
+              "Hallowe'en."
+            ],
+            "claimIds": [
+              "c7"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "twist",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l8",
+            "text": "People went door to door for soul cakes, and prayed for the dead in return.",
+            "emphasis": [
+              "soul"
+            ],
+            "claimIds": [
+              "c8"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l9",
+            "text": "In Scotland and Ireland, people dressed up and went guising.",
+            "emphasis": [
+              "guising"
+            ],
+            "claimIds": [
+              "c9"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l10",
+            "text": "Then Irish and Scottish immigrants brought it all to America in the 1800s.",
+            "emphasis": [
+              "America"
+            ],
+            "claimIds": [
+              "c10"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l11",
+            "text": "So every trick-or-treater is keeping a very old night alive.",
+            "emphasis": [
+              "old"
+            ],
+            "claimIds": [
+              "c1",
+              "c8",
+              "c9"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Halloween guisers or grölicks, Baltasound\"",
+            "prompt": "masked Halloween guisers in Shetland",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "ghost",
+            "label": "THE VEIL GETS THIN",
+            "color": "#F4F5F7",
+            "glow": "yes"
+          }
+        },
+        "anchor": "thin."
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "typewriter",
+          "lead": "the Gaels called it",
+          "highlight": "Samhain",
+          "cps": 12
+        },
+        "anchor": "Gaels"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l2",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "moon",
+            "label": "THE DARK HALF OF THE YEAR",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "dark"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "sunset",
+            "label": "OCT 31 · AT SUNSET",
+            "color": "#FF9F1C",
+            "glow": "yes"
+          }
+        },
+        "anchor": "sunset"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Irish bonfire at Samhain\"",
+            "prompt": "an Irish Samhain bonfire being built",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Bonfire, Ireland"
+        },
+        "anchor": "bonfires"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "utensils",
+            "label": "FOOD FOR THE SPIRITS",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "food"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l5",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "venetian-mask",
+            "label": "DISGUISED",
+            "color": "#E50914",
+            "glow": "yes"
+          }
+        },
+        "anchor": "costumes,"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l6",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Nov 1 =",
+          "highlight": "All Saints' Day",
+          "cps": 14
+        },
+        "anchor": "Church"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l7",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"1915 Halloween Postcard (52175320483)\"",
+            "prompt": "a 1915 Hallowe'en postcard",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Hallowe'en, 1915"
+        },
+        "anchor": "night"
+      },
+      {
+        "id": "sh11",
+        "lineId": "l8",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Soul cakes for Samhain! (5159453650)\"",
+            "prompt": "soul cakes",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Soul cakes"
+        },
+        "anchor": "soul"
+      },
+      {
+        "id": "sh12",
+        "lineId": "l9",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Snap-Apple Night globalphilosophy\"",
+            "prompt": "Snap-Apple Night, a Halloween party in Ireland",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Halloween in Ireland"
+        },
+        "anchor": "Scotland"
+      },
+      {
+        "id": "sh13",
+        "lineId": "l10",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "ship",
+            "label": "TO AMERICA · 1800s",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "immigrants"
+      },
+      {
+        "id": "sh14",
+        "lineId": "l11",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Trick or treat in sweden\"",
+            "prompt": "two trick-or-treaters in costume at night",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh15",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh16",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Halloween is older than you think",
+    "description": "Halloween started as Samhain, the Gaelic night when the wall between worlds got thin.\nBonfires, food for the spirits and costumes to hide in. The Church's All Saints' Day on 1 November made the night before All Hallows' Eve. Soul cakes and guising became trick-or-treating, carried to America by Irish and Scottish immigrants in the 1800s.",
+    "hashtags": [
+      "halloween",
+      "samhain",
+      "history",
+      "didyouknow"
+    ],
+    "keywords": [
+      "history of Halloween",
+      "Samhain",
+      "All Hallows' Eve",
+      "trick or treat origin",
+      "guising"
+    ],
+    "hook": "Halloween started as a night when the wall between worlds got thin.",
+    "altText": "Motion-graphics explainer on the history of Halloween from Samhain to trick-or-treating.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Halloween",
+        "title": "Halloween"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Samhain",
+        "title": "Samhain"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

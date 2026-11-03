@@ -1,0 +1,11 @@
+{
+  "name": "vid-skills",
+  "owner": { "name": "codewithveek" },
+  "plugins": [
+    {
+      "name": "vid-skills",
+      "source": "./",
+      "description": "Hands-free short-form video production with HyperFrames (skills, video-producer agent and MCP server)."
+    }
+  ]
+}

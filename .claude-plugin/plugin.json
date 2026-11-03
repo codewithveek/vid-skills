@@ -1,0 +1,10 @@
+{
+  "name": "vid-skills",
+  "version": "0.1.0",
+  "description": "Hands-free short-form video production with HyperFrames: research, script, voice (Kokoro/ElevenLabs/…), sound design, motion graphics, render, QA and publishing to YouTube, TikTok, Instagram, Facebook, X, LinkedIn, Threads, Pinterest and Bluesky.",
+  "author": { "name": "codewithveek" },
+  "homepage": "https://github.com/codewithveek/vid-skills",
+  "repository": "https://github.com/codewithveek/vid-skills",
+  "license": "Apache-2.0",
+  "keywords": ["video", "hyperframes", "shorts", "tiktok", "reels", "tts", "mcp"]
+}

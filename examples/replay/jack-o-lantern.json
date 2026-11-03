@@ -1,0 +1,507 @@
+{
+  "ResearchDossier": {
+    "topic": "jack-o'-lanterns were originally turnips",
+    "summary": "Halloween lanterns in Ireland and Britain were hollowed turnips or mangel wurzels carved with grotesque faces. The name first meant a man with a lantern and the ignis fatuus; carved pumpkins took the name in America by 1837.",
+    "angle": "Your pumpkin is standing in for a turnip.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Turnips or mangel wurzels, hollowed out to act as lanterns and often carved with grotesque faces, were used on Halloween in parts of England, Ireland, Wales and Scotland.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Jack-o%27-lantern",
+            "title": "Jack-o'-lantern - Wikipedia",
+            "quote": "turnips or mangel wurzels, hollowed out to act as lanterns and often carved with grotesque faces"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The custom of making jack-o'-lanterns at Halloween is believed to have begun in Ireland and Britain.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Jack-o%27-lantern",
+            "title": "Jack-o'-lantern - Wikipedia",
+            "quote": "It is believed that the custom of making jack-o'-lanterns at Halloween time began in Ireland and Britain."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "The term jack-o'-lantern was used from 1663 to 1704 for a man with a lantern or a night watchman, and originally described the ignis fatuus (will-o'-the-wisp).",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Jack-o%27-lantern",
+            "title": "Jack-o'-lantern - Wikipedia",
+            "quote": "from 1663 to 1704 in reference to a man with a lantern or to a night watchman"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "A mid-18th-century Irish folk tale tells of Stingy Jack, a lazy but shrewd blacksmith who uses a cross to trap Satan.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Jack-o%27-lantern",
+            "title": "Jack-o'-lantern - Wikipedia",
+            "quote": "An old Irish folk tale from the mid-18th century tells of Stingy Jack, a lazy yet shrewd blacksmith who uses a cross to trap Satan."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "The term is first applied to carved pumpkins in American English in 1837.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Jack-o%27-lantern",
+            "title": "Jack-o'-lantern - Wikipedia",
+            "quote": "The application of the term to carved pumpkins in American English is first seen in 1837."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c6",
+        "text": "The carved pumpkin was first associated with the harvest season in general before it became a symbol of Halloween.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Jack-o%27-lantern",
+            "title": "Jack-o'-lantern - Wikipedia",
+            "quote": "the carved pumpkin was first associated with the harvest season in general before it became a symbol of Halloween"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Jack-o'-Lanterns Were Turnips",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "The first jack-o'-lanterns weren't pumpkins.",
+            "emphasis": [
+              "pumpkins"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l2",
+            "text": "They were turnips.",
+            "emphasis": [
+              "turnips"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "In Ireland and Britain, people hollowed out turnips for Halloween and carved them with grotesque faces.",
+            "emphasis": [
+              "grotesque"
+            ],
+            "claimIds": [
+              "c1",
+              "c2"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l4",
+            "text": "The name is even older. A jack-o'-lantern was a man with a lantern. A night watchman.",
+            "emphasis": [
+              "watchman"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l5",
+            "text": "It also meant the eerie lights that flicker over marshes.",
+            "emphasis": [
+              "lights"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "Then came the tale of Stingy Jack, a blacksmith who trapped the Devil.",
+            "emphasis": [
+              "Devil"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "twist",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "In America, the name jumped to carved pumpkins. It's in print by 1837.",
+            "emphasis": [
+              "pumpkins"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l8",
+            "text": "And at first, pumpkins meant harvest, not Halloween.",
+            "emphasis": [
+              "harvest"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l9",
+            "text": "So every pumpkin on a porch is standing in for a turnip.",
+            "emphasis": [
+              "turnip"
+            ],
+            "claimIds": [
+              "c1",
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Turnip Jack-o'-lantern 2019 01\"",
+            "prompt": "a glowing carved turnip lantern",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l2",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "x",
+            "title": "PUMPKIN",
+            "label": "What you carve"
+          },
+          "right": {
+            "icon": "check",
+            "title": "TURNIP",
+            "label": "The original"
+          },
+          "winner": "right"
+        },
+        "anchor": "turnips."
+      },
+      {
+        "id": "sh3",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Traditional Irish halloween Jack-o'-lantern\"",
+            "prompt": "a traditional Irish turnip jack-o'-lantern",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Traditional Irish lantern"
+        },
+        "anchor": "Ireland"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "ghost",
+            "label": "GROTESQUE FACES",
+            "color": "#FF9F1C",
+            "glow": "yes"
+          }
+        },
+        "anchor": "grotesque"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "typewriter",
+          "lead": "jack-o'-lantern =",
+          "highlight": "a man with a lantern",
+          "cps": 16
+        },
+        "anchor": "man"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"The night constable. (BM J,7.19)\"",
+            "prompt": "an 18th-century engraving of a night watchman",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "A night watchman"
+        },
+        "anchor": "watchman."
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Will-o-the-wisp and snake by Hermann Hendrich\"",
+            "prompt": "painting of will-o'-the-wisp lights over a marsh",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Will-o'-the-wisp"
+        },
+        "anchor": "lights"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Stingy Jack, Oíche Shamhna, Jack O'Lantern Turnip\"",
+            "prompt": "a carved turnip lantern for Stingy Jack",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Stingy Jack"
+        },
+        "anchor": "Stingy"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "flame",
+            "label": "TRAPPED THE DEVIL",
+            "color": "#E50914",
+            "glow": "yes"
+          }
+        },
+        "anchor": "who"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l7",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Jack-o'-lantern 2.jpg\"",
+            "prompt": "a glowing carved pumpkin at night",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "America"
+        },
+        "anchor": "America,"
+      },
+      {
+        "id": "sh11",
+        "lineId": "l7",
+        "scene": {
+          "type": "typewriter",
+          "lead": "in print by",
+          "highlight": "1837",
+          "cps": 12
+        },
+        "anchor": "print"
+      },
+      {
+        "id": "sh12",
+        "lineId": "l8",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "wheat",
+            "label": "HARVEST FIRST",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "harvest,"
+      },
+      {
+        "id": "sh13",
+        "lineId": "l9",
+        "scene": {
+          "type": "diagram",
+          "template": "timeline",
+          "data": {
+            "events": [
+              {
+                "year": "1600s",
+                "label": "Night watchman"
+              },
+              {
+                "year": "1700s",
+                "label": "Turnips"
+              },
+              {
+                "year": "1837",
+                "label": "Pumpkins"
+              },
+              {
+                "year": "Today",
+                "label": "Every porch"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "sh14",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh15",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "The first jack-o'-lanterns weren't pumpkins",
+    "description": "The first jack-o'-lanterns weren't pumpkins. They were turnips.\nIn Ireland and Britain, people hollowed out turnips (and mangel wurzels) for Halloween and carved grotesque faces into them. The name is older still: it meant a man with a lantern, or the will-o'-the-wisp. Carved pumpkins only took the name in America, in print by 1837.",
+    "hashtags": [
+      "halloween",
+      "jackolantern",
+      "history",
+      "didyouknow"
+    ],
+    "keywords": [
+      "jack-o'-lantern history",
+      "turnip jack-o'-lantern",
+      "Stingy Jack",
+      "Halloween origins",
+      "why we carve pumpkins"
+    ],
+    "hook": "The first jack-o'-lanterns weren't pumpkins.",
+    "altText": "Motion-graphics explainer on how jack-o'-lanterns started as carved turnips.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Jack-o%27-lantern",
+        "title": "Jack-o'-lantern"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}
