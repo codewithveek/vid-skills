@@ -1,0 +1,459 @@
+{
+  "ResearchDossier": {
+    "topic": "people used to sleep in two shifts",
+    "summary": "Historian A. Roger Ekirch argues that before the Industrial Revolution, interrupted sleep was dominant in the West: a first sleep, about an hour awake around midnight ('the watch') used to pray, reflect, visit neighbours, have sex or commit petty crime, then a second sleep. He suggests electric lighting ended it. In Thomas Wehr's 1992 study, seven men given fourteen hours of darkness daily for a month slept about four hours, woke for two to three, then slept four more.",
+    "angle": "Waking in the night may just be sleeping the old way.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Before the Industrial Revolution, it was most common to sleep early ('first sleep'), wake around midnight, and return to bed later ('second sleep'); historian A. Roger Ekirch argues interrupted sleep was dominant in Western civilization.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Segmented_sleep",
+            "title": "Segmented sleep - Wikipedia",
+            "quote": "wake around midnight, and return to bed later"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The two sleeps were separated by about an hour of wakefulness, which Ekirch called 'the watch'.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Segmented_sleep",
+            "title": "Segmented sleep - Wikipedia",
+            "quote": "separated by about an hour of wakefulness"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "The waking period was used to pray and reflect; others visited neighbors, engaged in sexual activity, or committed petty crime.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Segmented_sleep",
+            "title": "Segmented sleep - Wikipedia",
+            "quote": "visited neighbors, engaged in sexual activity, or committed petty crime"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "Ekirch suggests the modern use of electric lighting is why most people no longer sleep this way.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Segmented_sleep",
+            "title": "Segmented sleep - Wikipedia",
+            "quote": "the modern use of electric lighting"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "id": "c5",
+        "text": "In a 1992 study, seven healthy men confined to fourteen hours of darkness daily for a month came to sleep about four hours, wake for two to three hours, then sleep another four.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Segmented_sleep",
+            "title": "Segmented sleep - Wikipedia",
+            "quote": "sleep for about four hours, wake up for two to three hours, then go back to bed for another four hours"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "We Used to Sleep Twice",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "For centuries, people didn't sleep through the night. They slept twice.",
+            "emphasis": [
+              "twice."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "A first sleep. Then about an hour awake around midnight. Then a second sleep.",
+            "emphasis": [
+              "second"
+            ],
+            "claimIds": [
+              "c1",
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "One historian found it was normal across the West, before the Industrial Revolution.",
+            "emphasis": [
+              "normal"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "That hour awake even had a name. The watch.",
+            "emphasis": [
+              "watch."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "People prayed, thought, chatted, visited neighbors, made love. A few committed petty crimes.",
+            "emphasis": [
+              "crimes."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "He thinks electric light is what ended it.",
+            "emphasis": [
+              "light"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "In 1992, a scientist gave seven men fourteen hours of darkness every night, for a month.",
+            "emphasis": [
+              "darkness"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l8",
+            "text": "They started sleeping about four hours, waking for two or three, then sleeping four more.",
+            "emphasis": [
+              "waking"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l9",
+            "text": "So if you wake up in the middle of the night, you might just be sleeping the old way.",
+            "emphasis": [
+              "old"
+            ],
+            "claimIds": [
+              "c1",
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Aert van der Neer - Moonlight at a Dutch River\"",
+            "prompt": "a moonlit Dutch river at night",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "moon",
+            "label": "TWO SLEEPS A NIGHT",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "slept"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "diagram",
+          "template": "flow",
+          "data": {
+            "nodes": [
+              {
+                "label": "FIRST SLEEP",
+                "icon": "bed"
+              },
+              {
+                "label": "AWAKE ~1 HOUR",
+                "icon": "eye"
+              },
+              {
+                "label": "SECOND SLEEP",
+                "icon": "bed"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "book-open",
+            "label": "HISTORIAN A. ROGER EKIRCH",
+            "color": "#F4F5F7",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "typewriter",
+          "lead": "the hour awake:",
+          "highlight": "\"the watch\"",
+          "cps": 12
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"La Tour - La Madeleine à la veilleuse dite La Madeleine Terff\"",
+            "prompt": "a woman reflecting by candlelight",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Awake by candlelight",
+          "focusY": 0.3
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Gerard van Honthorst - Musical Group by Candlelight - KMSsp378\"",
+            "prompt": "people gathered by candlelight at night",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Up at night"
+        },
+        "anchor": "visited"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "lightbulb",
+            "label": "ENDED BY ELECTRIC LIGHT?",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "stat",
+          "value": "14",
+          "caption": "hours of darkness a night",
+          "sourceClaimId": "c5"
+        },
+        "anchor": "seven"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l8",
+        "scene": {
+          "type": "diagram",
+          "template": "flow",
+          "data": {
+            "nodes": [
+              {
+                "label": "4 H SLEEP",
+                "icon": "bed"
+              },
+              {
+                "label": "2–3 H AWAKE",
+                "icon": "eye"
+              },
+              {
+                "label": "4 H SLEEP",
+                "icon": "bed"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "l9",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Aert van der Neer - Moonlight on a Canal Cat555\"",
+            "prompt": "a moonlit canal at night",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh13",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "People used to sleep twice a night",
+    "description": "For centuries, people didn't sleep through the night. They slept twice.\nA first sleep, about an hour awake around midnight (called 'the watch'), then a second sleep. Historian Roger Ekirch found it was normal in the West before the Industrial Revolution. In a 1992 study, men given 14 hours of darkness a night fell back into the same pattern.",
+    "hashtags": [
+      "sleep",
+      "history",
+      "science",
+      "didyouknow"
+    ],
+    "keywords": [
+      "segmented sleep",
+      "first sleep second sleep",
+      "biphasic sleep history",
+      "Roger Ekirch",
+      "waking up at night"
+    ],
+    "hook": "For centuries, people didn't sleep through the night. They slept twice.",
+    "altText": "Motion-graphics explainer on segmented sleep before electric light.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Segmented_sleep",
+        "title": "Segmented sleep"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

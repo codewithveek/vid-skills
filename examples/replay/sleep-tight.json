@@ -1,0 +1,371 @@
+{
+  "ResearchDossier": {
+    "topic": "what sleep tight really means",
+    "summary": "The popular story that 'sleep tight' comes from tightening the ropes that supported old mattresses doesn't stand up to scrutiny: the phrase was rare when rope-strung beds were common. 'Tight' meant soundly or properly, so 'sleep tight' meant 'sleep soundly'. The earliest citation found is an 1866 diary entry ('Sleep tight and wake bright'); the OED lists none until 1933.",
+    "angle": "Sleep tight just means sleep well.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "The most common suggestion is that the phrase dates from when mattresses were supported by ropes; this explanation is a plausible guess but doesn't stand up to scrutiny, because the phrase was rare when rope-strung beds were common.",
+        "sources": [
+          {
+            "url": "https://www.phrases.org.uk/meanings/sleep-tight.html",
+            "title": "Sleep tight - The Phrase Finder",
+            "quote": "This explanation is a plausible guess but doesn't stand up to scrutiny."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "'Tight' just means 'soundly/properly', and 'sleep tight' just means 'sleep soundly'.",
+        "sources": [
+          {
+            "url": "https://www.phrases.org.uk/meanings/sleep-tight.html",
+            "title": "Sleep tight - The Phrase Finder",
+            "quote": "'sleep tight' just means 'sleep soundly'"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "The first citation found is from 1866, in Susan Bradford Eppes's diary: 'Sleep tight and wake bright'.",
+        "sources": [
+          {
+            "url": "https://www.phrases.org.uk/meanings/sleep-tight.html",
+            "title": "Sleep tight - The Phrase Finder",
+            "quote": "Sleep tight and wake bright"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "The OED lists no example until 1933.",
+        "sources": [
+          {
+            "url": "https://www.phrases.org.uk/meanings/sleep-tight.html",
+            "title": "Sleep tight - The Phrase Finder",
+            "quote": "lists none until 1933"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "'Sleep Tight' Isn't About Ropes",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "You've heard sleep tight comes from tightening the ropes on old beds.",
+            "emphasis": [
+              "ropes"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l2",
+            "text": "It probably doesn't.",
+            "emphasis": [
+              "doesn't."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "mechanism",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "Old mattresses really did sit on ropes, so the story sounds right.",
+            "emphasis": [
+              "right."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l4",
+            "text": "But the phrase was rare back when rope beds were common.",
+            "emphasis": [
+              "rare"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "Tight used to mean soundly. Sleep tight just meant sleep well.",
+            "emphasis": [
+              "soundly."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l6",
+            "text": "The earliest example found is in a diary from 1866. Sleep tight and wake bright.",
+            "emphasis": [
+              "bright."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l7",
+            "text": "The Oxford English Dictionary has nothing until 1933.",
+            "emphasis": [
+              "1933."
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l8",
+            "text": "So sleep tight was never about the bed. It just means, sleep well.",
+            "emphasis": [
+              "well."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Walter G. Capuozzo, Rope Bed, c. 1939, NGA 16204\"",
+            "prompt": "a drawing of an old rope-strung bed",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l2",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "x",
+            "title": "MYTH",
+            "label": "Tightening bed ropes"
+          },
+          "right": {
+            "icon": "check",
+            "title": "FACT",
+            "label": "Tight meant soundly"
+          },
+          "winner": "right"
+        }
+      },
+      {
+        "id": "sh3",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Shakespeare's Second Bed.JPG\"",
+            "prompt": "an old four-poster bed",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Beds on ropes",
+          "focusY": 0.6
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "circle-x",
+            "label": "RARE IN THE ROPE-BED ERA",
+            "color": "#E50914",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh5",
+        "lineId": "l5",
+        "scene": {
+          "type": "typewriter",
+          "lead": "tight =",
+          "highlight": "soundly",
+          "cps": 12
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l6",
+        "scene": {
+          "type": "typewriter",
+          "lead": "1866 diary:",
+          "highlight": "\"Sleep tight and wake bright\"",
+          "cps": 18
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "book-open",
+            "label": "OXFORD DICTIONARY · 1933",
+            "color": "#F4F5F7",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh8",
+        "lineId": "l8",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"The Victorian Bedroom at Dalgarven.JPG\"",
+            "prompt": "a Victorian bedroom",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "'Sleep tight' has nothing to do with bed ropes",
+    "description": "You've heard 'sleep tight' comes from tightening the ropes on old beds. It probably doesn't.\nThe phrase was rare back when rope beds were common. 'Tight' used to mean soundly, so 'sleep tight' just meant 'sleep well'. The earliest example found is an 1866 diary: 'Sleep tight and wake bright.'",
+    "hashtags": [
+      "sleep",
+      "etymology",
+      "mythbusting",
+      "didyouknow"
+    ],
+    "keywords": [
+      "sleep tight meaning",
+      "sleep tight origin",
+      "rope bed myth",
+      "sleep tight don't let the bed bugs bite",
+      "word origins"
+    ],
+    "hook": "You've heard sleep tight comes from tightening the ropes on old beds.",
+    "altText": "Motion-graphics explainer busting the rope-bed myth behind 'sleep tight'.",
+    "sources": [
+      {
+        "url": "https://www.phrases.org.uk/meanings/sleep-tight.html",
+        "title": "The Phrase Finder: Sleep tight"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}
