@@ -1,0 +1,406 @@
+{
+  "ResearchDossier": {
+    "topic": "how bacon and eggs became breakfast",
+    "summary": "Edward Bernays, called the father of public relations and Sigmund Freud's nephew, had a doctor write to 5,000 physicians asking whether a heavier breakfast was healthier; about 4,500 agreed, newspapers ran '4,500 physicians urge bigger breakfast', and bacon sales went up.",
+    "angle": "America's classic breakfast was a PR campaign.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Edward Bernays was called the father of public relations in his obituary; he cited his uncle Sigmund Freud as an influence on the bacon-and-eggs campaign.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Edward_Bernays",
+            "title": "Edward Bernays - Wikipedia",
+            "quote": "the father of public relations"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "Bernays had his doctor write to 5,000 physicians asking whether they agreed a heavier breakfast was healthier; about 4,500 answered back, all concurring.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Edward_Bernays",
+            "title": "Edward Bernays - Wikipedia",
+            "quote": "About 4,500 answered back"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Newspapers published the headline '4,500 physicians urge bigger breakfast', concluding a more significant breakfast was better for health than a light one.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Edward_Bernays",
+            "title": "Edward Bernays - Wikipedia",
+            "quote": "4,500 physicians urge bigger breakfast"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "After the campaign, the sale of bacon went up.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Edward_Bernays",
+            "title": "Edward Bernays - Wikipedia",
+            "quote": "the sale of bacon went up"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Bacon & Eggs Was a PR Campaign",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Bacon and eggs for breakfast was a PR campaign.",
+            "emphasis": [
+              "PR"
+            ],
+            "claimIds": [
+              "c1",
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "It was run by Edward Bernays, the father of public relations.",
+            "emphasis": [
+              "Bernays,"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l3",
+            "text": "He was also Sigmund Freud's nephew.",
+            "emphasis": [
+              "Freud's"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l4",
+            "text": "The goal was to sell more bacon.",
+            "emphasis": [
+              "bacon."
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l5",
+            "text": "So he had a doctor write to 5,000 physicians, asking if a big breakfast was healthier than a light one.",
+            "emphasis": [
+              "5,000"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "About 4,500 said yes.",
+            "emphasis": [
+              "yes."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l7",
+            "text": "Newspapers ran the headline: 4,500 physicians urge bigger breakfast.",
+            "emphasis": [
+              "bigger"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "twist",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l8",
+            "text": "And bacon sales went up.",
+            "emphasis": [
+              "up."
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l9",
+            "text": "So America's classic breakfast was an ad that looked like medical advice.",
+            "emphasis": [
+              "advice."
+            ],
+            "claimIds": [
+              "c2",
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Breakfast in Australia; bacon and fried eggs on toast\"",
+            "prompt": "bacon and fried eggs on a plate",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "megaphone",
+            "label": "A PR CAMPAIGN",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "was"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Edward Bernays and Doris E. Fleischman.jpg\"",
+            "prompt": "Edward Bernays with Doris Fleischman",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Edward Bernays (right)",
+          "focusY": 0.25
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "brain",
+            "label": "FREUD'S NEPHEW",
+            "color": "#FF4FD8",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "target",
+            "label": "GOAL: SELL BACON",
+            "color": "#E50914",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "stat",
+          "value": "5,000",
+          "caption": "doctors asked",
+          "sourceClaimId": "c2"
+        },
+        "anchor": "doctor"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l6",
+        "scene": {
+          "type": "stat",
+          "value": "4,500",
+          "caption": "said yes",
+          "sourceClaimId": "c2"
+        }
+      },
+      {
+        "id": "sh8",
+        "lineId": "l7",
+        "scene": {
+          "type": "typewriter",
+          "lead": "the headline:",
+          "highlight": "\"Physicians urge bigger breakfast\"",
+          "cps": 20
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "l8",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "trending-up",
+            "label": "BACON SALES: UP",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "l9",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Eggs and bacon and home fries face 1\"",
+            "prompt": "a skillet breakfast of bacon and eggs",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Bacon and eggs for breakfast was a PR campaign",
+    "description": "Bacon and eggs for breakfast was a PR campaign.\nEdward Bernays, the father of public relations and Sigmund Freud's nephew, had a doctor ask 5,000 physicians whether a big breakfast was healthier. About 4,500 said yes, newspapers ran '4,500 physicians urge bigger breakfast', and bacon sales went up.",
+    "hashtags": [
+      "breakfast",
+      "history",
+      "marketing",
+      "didyouknow"
+    ],
+    "keywords": [
+      "why do we eat bacon and eggs for breakfast",
+      "Edward Bernays bacon",
+      "bacon and eggs history",
+      "PR history",
+      "breakfast marketing"
+    ],
+    "hook": "Bacon and eggs for breakfast was a PR campaign.",
+    "altText": "Motion-graphics explainer on Edward Bernays's bacon-and-eggs breakfast campaign.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Edward_Bernays",
+        "title": "Edward Bernays"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

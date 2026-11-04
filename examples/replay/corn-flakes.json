@@ -1,0 +1,463 @@
+{
+  "ResearchDossier": {
+    "topic": "corn flakes were invented as sanitarium health food",
+    "summary": "Will Kellogg created flaked cereal in 1894 for patients at the Battle Creek Sanitarium, where his brother John was superintendent, as a breakfast food to counter indigestion; the patent was issued in 1896. The claim that it was meant to suppress desire is disputed and unsupported by the patent or marketing. In 1906 Will added sugar to mass-market it, causing a rift with John.",
+    "angle": "Your cereal began as a hospital diet, until someone added sugar.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Will Kellogg created the cereal in 1894 for patients at the Battle Creek Sanitarium, where his brother John was superintendent.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Corn_flakes",
+            "title": "Corn flakes - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "By one account, a batch of dough was left out overnight and, run through rollers the next morning, produced flakes that could be baked; accounts vary.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Corn_flakes",
+            "title": "Corn flakes - Wikipedia"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "id": "c3",
+        "text": "Corn flakes were originally invented as a breakfast food to counter indigestion, part of a simple, pure and unstimulating diet.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Corn_flakes",
+            "title": "Corn flakes - Wikipedia",
+            "quote": "Originally invented as a breakfast food to counter indigestion"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "The claim that corn flakes were meant to suppress sexual desire is disputed; the patent and marketing never mentioned it.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Corn_flakes",
+            "title": "Corn flakes - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "The flaked-cereal patent was issued on April 14, 1896.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Corn_flakes",
+            "title": "Corn flakes - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c6",
+        "text": "In 1906 Will Keith Kellogg added sugar to mass-market the flakes, which caused a rift with John.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Corn_flakes",
+            "title": "Corn flakes - Wikipedia"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Corn Flakes Were Hospital Food",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Corn flakes were invented as health food for patients.",
+            "emphasis": [
+              "patients."
+            ],
+            "claimIds": [
+              "c1",
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "In 1894, Will Kellogg made them at the Battle Creek Sanitarium, where his brother John was in charge.",
+            "emphasis": [
+              "Sanitarium,"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "The story goes, some dough was left out overnight. Rolled out the next morning, it turned into flakes.",
+            "emphasis": [
+              "flakes."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "The point was plain, gentle food to fight indigestion.",
+            "emphasis": [
+              "indigestion."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "You might have heard they were meant to curb desire. That claim doesn't hold up. The patent and the ads never mention it.",
+            "emphasis": [
+              "hold"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l6",
+            "text": "Then in 1906, Will added sugar, to sell them to everyone.",
+            "emphasis": [
+              "sugar,"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.25
+          },
+          {
+            "id": "l7",
+            "text": "It caused a rift between the brothers.",
+            "emphasis": [
+              "rift"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l8",
+            "text": "So your cereal began as a hospital diet, until someone added sugar.",
+            "emphasis": [
+              "sugar."
+            ],
+            "claimIds": [
+              "c3",
+              "c6"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Corn flakes in a bowl.jpg\"",
+            "prompt": "a bowl of corn flakes",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "hospital",
+            "label": "HEALTH FOOD FOR PATIENTS",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "invented"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Battle Creek Sanitarium before fire\"",
+            "prompt": "the Battle Creek Sanitarium",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Battle Creek Sanitarium"
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"John Harvey Kellogg ggbain.15047\"",
+            "prompt": "portrait of Dr. John Harvey Kellogg",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Dr. John Harvey Kellogg",
+          "focusY": 0.2
+        },
+        "anchor": "brother"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "wheat",
+            "label": "DOUGH LEFT OVERNIGHT",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "heart-pulse",
+            "label": "TO FIGHT INDIGESTION",
+            "color": "#7CFF6B",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "x",
+            "title": "MYTH",
+            "label": "Made to curb desire"
+          },
+          "right": {
+            "icon": "check",
+            "title": "FACT",
+            "label": "Never in the patent or ads"
+          },
+          "winner": "right"
+        }
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"1919 Kellogg's Toasted Corn Flakes ad\"",
+            "prompt": "a 1919 Kellogg's Toasted Corn Flakes advertisement",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Kellogg's ad, 1919",
+          "focusY": 0.3
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "candy",
+            "label": "+ SUGAR",
+            "color": "#FF4FD8",
+            "glow": "yes"
+          }
+        },
+        "anchor": "sugar,"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "split",
+            "label": "A RIFT BETWEEN BROTHERS",
+            "color": "#E50914",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "l8",
+        "scene": {
+          "type": "diagram",
+          "template": "timeline",
+          "data": {
+            "events": [
+              {
+                "year": "1894",
+                "label": "Patient food"
+              },
+              {
+                "year": "1896",
+                "label": "Patent"
+              },
+              {
+                "year": "1906",
+                "label": "+ Sugar"
+              },
+              {
+                "year": "Today",
+                "label": "Every table"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh13",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Corn flakes were invented as hospital food",
+    "description": "Corn flakes were invented as health food for patients.\nIn 1894 Will Kellogg made them at the Battle Creek Sanitarium, run by his brother John, as plain food to fight indigestion. The popular claim that they were meant to curb desire doesn't hold up. In 1906 Will added sugar to sell them to everyone, and the brothers fell out.",
+    "hashtags": [
+      "breakfast",
+      "history",
+      "food",
+      "didyouknow"
+    ],
+    "keywords": [
+      "corn flakes history",
+      "why were corn flakes invented",
+      "Kellogg brothers",
+      "Battle Creek Sanitarium",
+      "cereal history"
+    ],
+    "hook": "Corn flakes were invented as health food for patients.",
+    "altText": "Motion-graphics explainer on the sanitarium origins of corn flakes.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Corn_flakes",
+        "title": "Corn flakes"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}
