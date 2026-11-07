@@ -277,7 +277,7 @@
             "glow": "yes"
           }
         },
-        "anchor": "It's"
+        "anchor": "Hawaii."
       },
       {
         "id": "sh3",
@@ -380,7 +380,7 @@
           "type": "broll",
           "asset": {
             "kind": "image",
-            "query": "intitle:\"Justin Trudeau 2016\"",
+            "query": "intitle:\"Justin Trudeau June 2016\"",
             "prompt": "Canadian prime minister Justin Trudeau",
             "prefer": "stock"
           },
@@ -430,8 +430,8 @@
             "label": "Team pineapple",
             "asset": {
               "kind": "image",
-              "query": "intitle:\"Hawaiian pizza 1\"",
-              "prompt": "a slice of ham and pineapple pizza",
+              "query": "intitle:\"Hawaiian pizza in Toronto (2024-04-07)\"",
+              "prompt": "a ham and pineapple pizza",
               "prefer": "stock"
             }
           },
