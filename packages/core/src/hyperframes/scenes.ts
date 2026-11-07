@@ -522,7 +522,7 @@ body{font-family:"${f.ui}",sans-serif;color:var(--vs-ink);}
 .vs-fill{position:absolute;inset:0;overflow:hidden;background:#000;}
 .vs-blur{position:absolute;inset:0;}
 /* Darker where the headline sits (top quarter) so the outlined title keeps contrast over pale media. */
-.vs-dim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.58) 0%,rgba(0,0,0,.52) 26%,rgba(0,0,0,.25) 42%,rgba(0,0,0,.5) 100%);}
+.vs-dim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.58) 0%,rgba(0,0,0,.52) 26%,rgba(0,0,0,.25) 42%,rgba(0,0,0,.72) 64%,rgba(0,0,0,.6) 100%);}
 .vs-window{position:absolute;left:var(--win-x);top:var(--win-y);width:var(--win-w);height:var(--win-h);overflow:hidden;background:#000;}
 .vs-window-dark{background:transparent;}
 .vs-window-light{background:#f4f4f2;}

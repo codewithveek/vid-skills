@@ -301,14 +301,14 @@
           "type": "broll",
           "asset": {
             "kind": "image",
-            "query": "intitle:\"Oprah Winfrey (2004) cropped\"",
+            "query": "intitle:\"Oprah Winfrey (2004)\"",
             "prompt": "Oprah Winfrey smiling",
             "prefer": "stock"
           },
           "treatment": "natural",
           "move": "pushIn",
           "label": "Oprah: an over girl",
-          "focusY": 0.25
+          "focusY": 0.15
         }
       },
       {
