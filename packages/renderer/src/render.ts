@@ -143,8 +143,10 @@ export async function checkProject(dir: string): Promise<CheckResult> {
     // `check --json` groups findings by section (lint, runtime, layout, motion, contrast, craft, audio…).
     const findings: { severity?: string; code?: string; message?: string; section: string }[] = [];
     for (const [section, v] of Object.entries(j)) {
-      const f = (v as { findings?: { severity?: string; code?: string; message?: string }[] } | null)?.findings;
-      if (Array.isArray(f)) for (const x of f) findings.push({ section, severity: x.severity, code: x.code, message: x.message });
+      const f = (v as { findings?: { severity?: string; code?: string; message?: string; text?: string; time?: number; sourceFile?: string }[] } | null)?.findings;
+      // Say where: the bare message ("Contrast is 1.75:1") doesn't name the element, time or scene.
+      const where = (x: { text?: string; time?: number; sourceFile?: string }) => [x.text ? `"${x.text.slice(0, 40)}"` : "", typeof x.time === "number" ? `at ${x.time.toFixed(2)} s` : "", x.sourceFile ? `in ${x.sourceFile}` : ""].filter(Boolean).join(" ");
+      if (Array.isArray(f)) for (const x of f) findings.push({ section, severity: x.severity, code: x.code, message: [x.message, where(x) && `(${where(x)})`].filter(Boolean).join(" ") });
     }
     const errors = findings.filter((f) => f.severity === "error");
     const warnings = findings.filter((f) => f.severity === "warning");
