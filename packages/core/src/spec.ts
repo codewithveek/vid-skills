@@ -453,6 +453,11 @@ export const PublishCopy = z.object({
   keywords: z.array(z.string()).default([]),
   hook: z.string().optional().describe("First line for caption-led platforms"),
   altText: z.string().optional(),
+  pinnedComment: z
+    .string()
+    .max(500)
+    .optional()
+    .describe("First comment to post and pin: an honest, specific either/or question that invites viewers to pick a side"),
   sources: z.array(Source).default([]),
 });
 export type PublishCopy = z.infer<typeof PublishCopy>;
