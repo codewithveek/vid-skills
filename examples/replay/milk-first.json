@@ -1,0 +1,494 @@
+{
+  "ResearchDossier": {
+    "topic": "milk first or tea first",
+    "summary": "George Orwell's 1946 essay 'A Nice Cup of Tea' lists eleven golden rules; he calls milk-or-tea-first 'one of the most controversial points of all' and insists on tea first so you can regulate the milk. In June 2003, for his centenary, the Royal Society of Chemistry issued 'How to make a Perfect Cup of Tea', with Loughborough chemical engineer Dr Andrew Stapley: pour milk in FIRST, because milk added to hot tea heats unevenly and its proteins denature. The same guide warms the pot in a microwave.",
+    "angle": "Orwell said tea first. The chemists said milk first.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Orwell's essay 'A Nice Cup of Tea' was first published in the London Evening Standard on 12 January 1946 and gives eleven rules he regarded as golden.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/A_Nice_Cup_of_Tea",
+            "title": "A Nice Cup of Tea - Wikipedia",
+            "quote": "Here are my own eleven rules, every one of which I regard as golden."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "Orwell calls milk-or-tea-first 'one of the most controversial points of all', saying every family in Britain probably has two schools of thought.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/A_Nice_Cup_of_Tea",
+            "title": "A Nice Cup of Tea - Wikipedia",
+            "quote": "one of the most controversial points of all"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Orwell put tea first because one can exactly regulate the amount of milk.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/A_Nice_Cup_of_Tea",
+            "title": "A Nice Cup of Tea - Wikipedia",
+            "quote": "one can exactly regulate the amount of milk"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "In June 2003, to mark Orwell's centenary, the Royal Society of Chemistry released 'How to make a Perfect Cup of Tea'.",
+        "sources": [
+          {
+            "url": "https://www.hmssurprise.org/sites/default/files/pictures/lissunsgalley/tea.pdf",
+            "title": "Royal Society of Chemistry news release: How to make a Perfect Cup of Tea (2003)",
+            "quote": "How to make a Perfect Cup of Tea"
+          },
+          {
+            "url": "https://www.nzherald.co.nz/world/science-solves-issue-of-milk-or-tea-first/NH2JVCYN5XZN2GSKWYMA42SNQA",
+            "title": "Science solves issue of milk or tea first - NZ Herald, 25 June 2003",
+            "quote": "to coincide with the centenary of his birth"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "The guide says: 'Pour milk into the cup FIRST, followed by the tea.'",
+        "sources": [
+          {
+            "url": "https://www.hmssurprise.org/sites/default/files/pictures/lissunsgalley/tea.pdf",
+            "title": "Royal Society of Chemistry news release: How to make a Perfect Cup of Tea (2003)",
+            "quote": "Pour milk into the cup FIRST, followed by the tea"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c6",
+        "text": "Dr Andrew Stapley of Loughborough University said milk added to hot tea is more likely to have its proteins denature, tasting slightly stale.",
+        "sources": [
+          {
+            "url": "https://www.nzherald.co.nz/world/science-solves-issue-of-milk-or-tea-first/NH2JVCYN5XZN2GSKWYMA42SNQA",
+            "title": "Science solves issue of milk or tea first - NZ Herald, 25 June 2003",
+            "quote": "denaturation of milk proteins"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c7",
+        "text": "The guide says to warm the ceramic teapot with a little water in a microwave for one minute.",
+        "sources": [
+          {
+            "url": "https://www.hmssurprise.org/sites/default/files/pictures/lissunsgalley/tea.pdf",
+            "title": "Royal Society of Chemistry news release: How to make a Perfect Cup of Tea (2003)",
+            "quote": "in a microwave oven on full power for one minute"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Science Says Milk First",
+    "cta": "Team Orwell or team chemistry?",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Milk first or tea first? Scientists actually picked a side.",
+            "emphasis": [
+              "side."
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "Back in 1946, George Orwell wrote eleven golden rules for a nice cup of tea.",
+            "emphasis": [
+              "1946,"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "He called this one of the most controversial points of all.",
+            "emphasis": [
+              "controversial"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "His rule was tea first, so you can judge exactly how much milk to add.",
+            "emphasis": [
+              "tea"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "But in 2003, for his 100th birthday, Britain's Royal Society of Chemistry disagreed.",
+            "emphasis": [
+              "disagreed."
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "Their rule: pour the milk in first.",
+            "emphasis": [
+              "milk"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "A chemical engineer explained why. Milk splashed into hot tea overheats, and its proteins break down.",
+            "emphasis": [
+              "proteins"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l8",
+            "text": "That can make it taste a little stale.",
+            "emphasis": [
+              "stale."
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l9",
+            "text": "Their same guide also says to warm the teapot in a microwave.",
+            "emphasis": [
+              "microwave."
+            ],
+            "claimIds": [
+              "c7"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "So, team Orwell or team chemistry? Tell me in the comments.",
+            "emphasis": [
+              "comments."
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.3
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"A Cup of Milk Tea\"",
+            "prompt": "a mug of milky tea",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "title": "TEA FIRST",
+            "label": "Orwell, 1946",
+            "icon": "coffee"
+          },
+          "right": {
+            "title": "MILK FIRST",
+            "label": "Chemists, 2003",
+            "icon": "milk"
+          },
+          "winner": "none"
+        },
+        "anchor": "Scientists"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Back in",
+          "highlight": "1946",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"George Orwell press photo\"",
+            "prompt": "George Orwell portrait",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "George Orwell",
+          "focusY": 0.3
+        },
+        "anchor": "George"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Orwell:",
+          "highlight": "\"most controversial\"",
+          "cps": 14
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "coffee",
+            "label": "TEA FIRST, THEN MILK",
+            "color": "#F4F5F7",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Royal Society of Chemistry, Burlington House\"",
+            "prompt": "Royal Society of Chemistry building in London",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Royal Society of Chemistry"
+        }
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "milk",
+            "label": "MILK IN FIRST",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "flask-conical",
+            "label": "PROTEINS BREAK DOWN",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "Milk"
+      },
+      {
+        "id": "sh10",
+        "lineId": "l8",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "thumbs-down",
+            "label": "TASTES STALE",
+            "color": "#FF3B30",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "l9",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Brown Betty teapot by Sadler 03\"",
+            "prompt": "a brown betty teapot",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Warm the pot… in a microwave"
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "title": "ORWELL",
+            "label": "Tea first",
+            "asset": {
+              "kind": "image",
+              "query": "intitle:\"George Orwell press photo\"",
+              "prompt": "George Orwell portrait",
+              "prefer": "stock"
+            }
+          },
+          "right": {
+            "title": "CHEMISTRY",
+            "label": "Milk first",
+            "asset": {
+              "kind": "image",
+              "query": "intitle:\"Cup of Milk Tea\"",
+              "prompt": "a mug of milky tea",
+              "prefer": "stock"
+            }
+          },
+          "winner": "none"
+        }
+      },
+      {
+        "id": "sh13",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv",
+          "text": "COMMENT YOUR SIDE"
+        },
+        "anchor": "comments."
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Orwell said tea first. Scientists said milk first.",
+    "description": "Milk first or tea first? Scientists actually picked a side.\nIn 1946 George Orwell called it one of the most controversial points of all and insisted on tea first. In 2003, for his 100th birthday, the Royal Society of Chemistry said milk first, so the milk proteins don't overheat. Their guide also says to warm the pot in a microwave.\n\nTeam Orwell or team chemistry? Comment your side.",
+    "hashtags": [
+      "tea",
+      "milkfirst",
+      "britishtea",
+      "science",
+      "debate"
+    ],
+    "keywords": [
+      "milk first or tea first",
+      "perfect cup of tea",
+      "George Orwell A Nice Cup of Tea",
+      "Royal Society of Chemistry tea",
+      "milk in first"
+    ],
+    "hook": "Milk first or tea first? Scientists actually picked a side.",
+    "altText": "Motion-graphics explainer on Orwell's tea-first rule and the Royal Society of Chemistry's milk-first answer.",
+    "pinnedComment": "☕ Team ORWELL (tea first) or team CHEMISTRY (milk first)? And be honest: have you ever microwaved a teapot?",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/A_Nice_Cup_of_Tea",
+        "title": "A Nice Cup of Tea"
+      },
+      {
+        "url": "https://www.hmssurprise.org/sites/default/files/pictures/lissunsgalley/tea.pdf",
+        "title": "RSC: How to make a Perfect Cup of Tea (2003)"
+      },
+      {
+        "url": "https://www.nzherald.co.nz/world/science-solves-issue-of-milk-or-tea-first/NH2JVCYN5XZN2GSKWYMA42SNQA",
+        "title": "NZ Herald: Science solves issue of milk or tea first"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

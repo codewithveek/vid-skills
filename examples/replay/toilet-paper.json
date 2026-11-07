@@ -1,0 +1,499 @@
+{
+  "ResearchDossier": {
+    "topic": "which way toilet paper should hang",
+    "summary": "Seth Wheeler's 1891 US patent 465,588 for a perforated toilet-paper roll shows the paper hanging over the front of the roll. In various surveys around 70% prefer 'over'. A 1977 Ann Landers column on the question drew, she said, 15,000 letters. Oprah Winfrey says she is 'an over girl'. 'Under' is said to look tidier and stop cats or toddlers unrolling it.",
+    "angle": "The man who patented the roll drew it hanging over.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "US patent 465,588, 'Toilet-Paper Roll', was issued to Seth Wheeler of Albany, New York, dated December 22, 1891; it claims a roll of sheets with incisions (perforations) at intervals.",
+        "sources": [
+          {
+            "url": "https://patents.google.com/patent/US465588",
+            "title": "US465588A - Toilet-paper roll - Google Patents",
+            "quote": "Toilet-paper roll"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The 1891 patent illustration shows the roll oriented as 'over'.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toilet_paper_orientation",
+            "title": "Toilet paper orientation - Wikipedia",
+            "quote": "showing the roll oriented as \"over\""
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "In various surveys, around 70% of people prefer the over position.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toilet_paper_orientation",
+            "title": "Toilet paper orientation - Wikipedia",
+            "quote": "around 70% of people prefer the over position"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "id": "c4",
+        "text": "The issue was the topic of a 1977 Ask Ann Landers column; Landers later said it was her most popular column, attracting 15,000 letters.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toilet_paper_orientation",
+            "title": "Toilet paper orientation - Wikipedia",
+            "quote": "attracting 15,000 letters"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "Oprah Winfrey said she was 'an over girl'; on her show the audience members who favoured 'under' were booed.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toilet_paper_orientation",
+            "title": "Toilet paper orientation - Wikipedia",
+            "quote": "were booed"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c6",
+        "text": "Under is said to look tidier, hiding the loose end, and to reduce the risk of a toddler or a cat unrolling the paper.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toilet_paper_orientation",
+            "title": "Toilet paper orientation - Wikipedia",
+            "quote": "reduces the risk of a toddler or a house pet such as a cat unrolling the toilet paper"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c7",
+        "text": "Over makes the loose end easier to see and grab, and keeps knuckles off the wall.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Toilet_paper_orientation",
+            "title": "Toilet paper orientation - Wikipedia",
+            "quote": "makes it easier to visually locate and to grasp the loose end"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "The Inventor Hung It Over",
+    "cta": "Over or under? Tell me in the comments.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "There's a right way to hang toilet paper. And there's proof.",
+            "emphasis": [
+              "proof."
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "stakes",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "Ann Landers said one column about it got 15,000 letters.",
+            "emphasis": [
+              "15,000"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "On Oprah's show, the under crowd got booed.",
+            "emphasis": [
+              "booed."
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l4",
+            "text": "But the man who patented the roll already drew the answer.",
+            "emphasis": [
+              "answer."
+            ],
+            "claimIds": [
+              "c1",
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "Back in 1891, Seth Wheeler patented toilet paper on a roll, with tear-off sheets.",
+            "emphasis": [
+              "1891,"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "And in his drawing, the paper hangs over the top. Not under.",
+            "emphasis": [
+              "over"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "Most people side with him. In surveys, about 70 percent pick over.",
+            "emphasis": [
+              "70"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l8",
+            "text": "Overs say the end is easier to grab, and your knuckles stay off the wall.",
+            "emphasis": [
+              "grab,"
+            ],
+            "claimIds": [
+              "c7"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l9",
+            "text": "Unders say it looks neater, and the cat can't unroll it.",
+            "emphasis": [
+              "cat"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "So, over or under? Tell me in the comments.",
+            "emphasis": [
+              "comments."
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.3
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Toilet paper orientation over-under\"",
+            "prompt": "two toilet rolls side by side, one over one under",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Ann Landers 1983\"",
+            "prompt": "advice columnist Ann Landers",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Ann Landers",
+          "focusY": 0.25
+        }
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "stat",
+          "value": "15,000",
+          "caption": "letters about one column",
+          "sourceClaimId": "c4"
+        },
+        "anchor": "15,000"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Oprah Winfrey (2004) cropped\"",
+            "prompt": "Oprah Winfrey smiling",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Oprah: an over girl",
+          "focusY": 0.25
+        }
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "scroll-text",
+            "label": "THE ORIGINAL PATENT",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Back in",
+          "highlight": "1891",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Toilet-paper-roll-patent-US465588-0\"",
+            "prompt": "1891 patent drawing of a toilet paper roll",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "S. Wheeler, 1891"
+        },
+        "anchor": "Seth"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Toilet paper orientation over\"",
+            "prompt": "toilet roll hung over the top",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Over"
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "stat",
+          "value": "70%",
+          "caption": "pick over in surveys",
+          "sourceClaimId": "c3"
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "l8",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "title": "OVER",
+            "label": "Easy to grab",
+            "asset": {
+              "kind": "image",
+              "query": "intitle:\"Toilet paper orientation over\"",
+              "prompt": "toilet roll hung over the top",
+              "prefer": "stock"
+            }
+          },
+          "right": {
+            "title": "UNDER",
+            "label": "Looks neater",
+            "asset": {
+              "kind": "image",
+              "query": "intitle:\"Toilet paper orientation under\"",
+              "prompt": "toilet roll hung underneath",
+              "prefer": "stock"
+            }
+          },
+          "winner": "left"
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "l9",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "cat",
+            "label": "CAT-PROOF?",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "title": "OVER",
+            "label": "Team Wheeler",
+            "asset": {
+              "kind": "image",
+              "query": "intitle:\"Toilet paper orientation over\"",
+              "prompt": "toilet roll hung over the top",
+              "prefer": "stock"
+            }
+          },
+          "right": {
+            "title": "UNDER",
+            "label": "Team tidy",
+            "asset": {
+              "kind": "image",
+              "query": "intitle:\"Toilet paper orientation under\"",
+              "prompt": "toilet roll hung underneath",
+              "prefer": "stock"
+            }
+          },
+          "winner": "none"
+        }
+      },
+      {
+        "id": "sh13",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv",
+          "text": "COMMENT YOUR SIDE"
+        },
+        "anchor": "comments."
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "The man who patented toilet paper drew it hanging over",
+    "description": "There's a right way to hang toilet paper, and there's proof.\nSeth Wheeler's 1891 patent for perforated toilet paper on a roll shows the sheet hanging over the top. About 70% of people agree with him in surveys, but unders say their way looks neater and stops the cat unrolling it.\n\nOver or under? Comment your side.",
+    "hashtags": [
+      "toiletpaper",
+      "overorunder",
+      "debate",
+      "history",
+      "didyouknow"
+    ],
+    "keywords": [
+      "toilet paper over or under",
+      "toilet paper orientation",
+      "Seth Wheeler patent",
+      "1891 toilet paper patent",
+      "right way to hang toilet paper"
+    ],
+    "hook": "There's a right way to hang toilet paper. And there's proof.",
+    "altText": "Motion-graphics explainer on the 1891 toilet paper patent and the over-versus-under debate.",
+    "pinnedComment": "Settle it: OVER 🔝 or UNDER 🔽? Reply with your side, and whether you've ever flipped a roll at someone else's house.",
+    "sources": [
+      {
+        "url": "https://patents.google.com/patent/US465588",
+        "title": "US465588A - Toilet-paper roll"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Toilet_paper_orientation",
+        "title": "Toilet paper orientation"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

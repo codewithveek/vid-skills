@@ -1,0 +1,494 @@
+{
+  "ResearchDossier": {
+    "topic": "where Hawaiian pizza really comes from",
+    "summary": "Sam Panopoulos, a Greek-born Canadian, is credited with creating the first Hawaiian pizza at the Satellite Restaurant in Chatham, Ontario, in 1962; he named it after the Hawaiian Pineapple Company's canned pineapple. In 2017 Iceland's president joked he'd ban pineapple on pizza if he could; Justin Trudeau tweeted that he stood behind 'this delicious Southwestern Ontario creation'. A 2016 Harris Poll put pineapple in the top three least-favourite toppings, yet in 1999 it was Australia's most popular pizza.",
+    "angle": "Hawaiian pizza is Canadian.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Sam Panopoulos, a Greek-born Canadian, is credited with creating the first Hawaiian pizza at the Satellite Restaurant in Chatham, Ontario, in 1962.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Hawaiian_pizza",
+            "title": "Hawaiian pizza - Wikipedia",
+            "quote": "credited with creating the first Hawaiian pizza at the Satellite Restaurant"
+          },
+          {
+            "url": "https://www.cbc.ca/news/canada/windsor/sam-panopoulos-hawaiian-pizza-inventor-dies-1.4155044",
+            "title": "Sam Panopoulos, Canadian inventor of Hawaiian pizza, dies at 82 - CBC"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "He chose the name Hawaiian because he used canned pineapple from the Hawaiian Pineapple Company.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Hawaiian_pizza",
+            "title": "Hawaiian pizza - Wikipedia",
+            "quote": "due to using canned pineapple from Hawaiian Pineapple Company"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Opinions towards Hawaiian pizza are generally divisive and polarizing.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Hawaiian_pizza",
+            "title": "Hawaiian pizza - Wikipedia",
+            "quote": "generally divisive and polarizing"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "In 2017, Iceland's president Guðni Jóhannesson told students he was fundamentally opposed to pineapple on pizza and would ban it if he could; he later said he was joking.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Hawaiian_pizza",
+            "title": "Hawaiian pizza - Wikipedia",
+            "quote": "would ban pineapple as a pizza topping if he could"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "Justin Trudeau tweeted: 'I have a pineapple. I have a pizza. And I stand behind this delicious Southwestern Ontario creation.'",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Hawaiian_pizza",
+            "title": "Hawaiian pizza - Wikipedia",
+            "quote": "I stand behind this delicious Southwestern Ontario creation"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c6",
+        "text": "A 2016 Harris Poll put pineapple in the top three least-favourite pizza toppings.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Hawaiian_pizza",
+            "title": "Hawaiian pizza - Wikipedia",
+            "quote": "top three least-favorite pizza toppings"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c7",
+        "text": "Hawaiian was the most popular pizza in Australia in 1999, with 15% of pizza sales.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Hawaiian_pizza",
+            "title": "Hawaiian pizza - Wikipedia",
+            "quote": "the most popular pizza in Australia in 1999"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Hawaiian Pizza Is Canadian",
+    "cta": "So, pineapple on pizza: yes or no?",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Hawaiian pizza isn't from Hawaii. It's from Canada.",
+            "emphasis": [
+              "Canada."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "Back in 1962, Sam Panopoulos, a Greek immigrant, ran a restaurant in Chatham, Ontario.",
+            "emphasis": [
+              "1962,"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "He tried something new. Canned pineapple, on a pizza.",
+            "emphasis": [
+              "pineapple,"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "The name? The pineapple came from the Hawaiian Pineapple Company.",
+            "emphasis": [
+              "Hawaiian"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "stakes",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "Today, it might be the most divisive pizza there is.",
+            "emphasis": [
+              "divisive"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "In 2017, Iceland's president joked he'd ban pineapple on pizza if he could.",
+            "emphasis": [
+              "ban"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l7",
+            "text": "Canada's prime minister fired back. He stands behind this delicious Southwestern Ontario creation.",
+            "emphasis": [
+              "stands"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l8",
+            "text": "One US poll put pineapple in the top three least-favorite toppings.",
+            "emphasis": [
+              "least-favorite"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l9",
+            "text": "But in 1999, it was Australia's most popular pizza.",
+            "emphasis": [
+              "popular"
+            ],
+            "claimIds": [
+              "c7"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "So, pineapple on pizza: yes or no? Tell me in the comments.",
+            "emphasis": [
+              "comments."
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.3
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Hawaiian pizza 1\"",
+            "prompt": "a slice of ham and pineapple pizza",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "map-pin",
+            "label": "MADE IN CANADA",
+            "color": "#FF3B30",
+            "glow": "yes"
+          }
+        },
+        "anchor": "It's"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Back in",
+          "highlight": "1962",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Downtown Chatham (Ontario)\"",
+            "prompt": "downtown Chatham, Ontario",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Chatham, Ontario"
+        },
+        "anchor": "Chatham,"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Canned Pineapple Chunks\"",
+            "prompt": "an open can of pineapple chunks",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Canned pineapple"
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Hawaiian canned pineapple, 1914\"",
+            "prompt": "vintage Hawaiian canned pineapple advert",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Hawaiian Pineapple Co."
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "title": "LOVE IT",
+            "label": "Sweet and salty",
+            "icon": "heart"
+          },
+          "right": {
+            "title": "HATE IT",
+            "label": "Fruit is not a topping",
+            "icon": "thumbs-down"
+          },
+          "winner": "none"
+        }
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Guðni Th. Jóhannesson (2017)\"",
+            "prompt": "Iceland's president Guðni Jóhannesson",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Iceland's president, 2017",
+          "focusY": 0.3
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Justin Trudeau 2016\"",
+            "prompt": "Canadian prime minister Justin Trudeau",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Justin Trudeau",
+          "focusY": 0.3
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "l7",
+        "scene": {
+          "type": "quote",
+          "text": "I stand behind this delicious Southwestern Ontario creation.",
+          "attribution": "Justin Trudeau"
+        },
+        "anchor": "stands"
+      },
+      {
+        "id": "sh11",
+        "lineId": "l8",
+        "scene": {
+          "type": "stat",
+          "value": "TOP 3",
+          "caption": "least-favorite toppings, US poll",
+          "sourceClaimId": "c6"
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "l9",
+        "scene": {
+          "type": "stat",
+          "value": "#1",
+          "caption": "pizza in Australia, 1999",
+          "sourceClaimId": "c7"
+        }
+      },
+      {
+        "id": "sh13",
+        "lineId": "lz",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "title": "YES",
+            "label": "Team pineapple",
+            "asset": {
+              "kind": "image",
+              "query": "intitle:\"Hawaiian pizza 1\"",
+              "prompt": "a slice of ham and pineapple pizza",
+              "prefer": "stock"
+            }
+          },
+          "right": {
+            "title": "NO",
+            "label": "Never on pizza",
+            "icon": "ban"
+          },
+          "winner": "none"
+        }
+      },
+      {
+        "id": "sh14",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv",
+          "text": "COMMENT YOUR SIDE"
+        },
+        "anchor": "comments."
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Hawaiian pizza isn't from Hawaii. It's Canadian.",
+    "description": "Hawaiian pizza isn't from Hawaii. It's from Canada.\nIn 1962, Greek immigrant Sam Panopoulos put canned pineapple on a pizza at his restaurant in Chatham, Ontario, and named it after the Hawaiian Pineapple Company. Since then Iceland's president has joked about banning it, and Canada's prime minister has defended it.\n\nPineapple on pizza: yes or no? Comment your side.",
+    "hashtags": [
+      "pizza",
+      "pineapplepizza",
+      "hawaiianpizza",
+      "foodhistory",
+      "debate"
+    ],
+    "keywords": [
+      "Hawaiian pizza origin",
+      "pineapple on pizza",
+      "Sam Panopoulos",
+      "who invented Hawaiian pizza",
+      "pineapple pizza debate"
+    ],
+    "hook": "Hawaiian pizza isn't from Hawaii. It's from Canada.",
+    "altText": "Motion-graphics explainer on the Canadian origin of Hawaiian pizza and the pineapple debate.",
+    "pinnedComment": "Pineapple on pizza 🍍🍕: YES or NO? One word. Go.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Hawaiian_pizza",
+        "title": "Hawaiian pizza"
+      },
+      {
+        "url": "https://www.cbc.ca/news/canada/windsor/sam-panopoulos-hawaiian-pizza-inventor-dies-1.4155044",
+        "title": "CBC: Sam Panopoulos, inventor of Hawaiian pizza, dies at 82"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}
