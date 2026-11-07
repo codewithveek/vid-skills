@@ -261,6 +261,35 @@ describe("pipeline (offline, mock providers)", () => {
     expect(left.every((id) => id.startsWith(`${keep}-`))).toBe(true);
     expect(left.length).toBeLessThan(visuals.length);
   });
+  it("shots that ask for the same photo share it instead of getting a placeholder", async () => {
+    const storage = new MemoryStorage();
+    let searches = 0;
+    const stock: StockProvider = {
+      id: "fake-stock",
+      kinds: ["image"],
+      search: async ({ query }) => {
+        searches++;
+        return [{ id: query, kind: "image", url: `data:image/png;base64,${btoa(query)}`, width: 1600, height: 1100, provider: "fake-stock", license: { name: "CC0", commercialUse: true, requiresAttribution: false } }];
+      },
+    };
+    const run = (force?: ("assets")[]) => runPipeline({ topic: "the floppy disk save icon", durationSec: 25 }, { providers: { llm: fakeLLM(), tts: fakeTTS(), stock: [stock] }, storage, jobId: "t6", stopAfter: "assets", force });
+    await run();
+    const key = "jobs/t6/stages/storyboard.json";
+    type Shot = { id: string; scene: { type: string; asset?: { query?: string } } };
+    const sb = (await getJson<{ shots: Shot[] }>(storage, key))!;
+    const one = sb.shots.find((s) => s.scene.type === "broll" && s.scene.asset)!;
+    sb.shots.push(JSON.parse(JSON.stringify({ ...one, id: `${one.id}b` })) as Shot);
+    const brolls = sb.shots.filter((s) => s.scene.type === "broll" && s.scene.asset);
+    expect(brolls.length).toBeGreaterThan(1);
+    for (const s of brolls) s.scene.asset!.query = 'intitle:"Floppy disk"';
+    await putJson(storage, key, sb);
+    searches = 0;
+    const res = await run(["assets"]);
+    const visuals = res.manifest.assets.filter((a) => a.role === "visual" && a.query === 'intitle:"Floppy disk"');
+    expect(visuals.length).toBe(brolls.length);
+    expect(visuals.every((a) => a.provider === "fake-stock")).toBe(true);
+    expect(searches).toBe(1);
+  });
   it("ranks tiny stock images last", () => {
     const lic = { name: "CC0", commercialUse: true, requiresAttribution: false };
     const c = (id: string, w: number) => ({ id, kind: "image" as const, url: `https://x.test/${id}`, width: w, height: Math.round(w * 0.7), description: `File:Ray Tomlinson ${id}.jpg`, provider: "t", license: lic });

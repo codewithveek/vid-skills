@@ -337,6 +337,16 @@
         }
       },
       {
+        "id": "sh7a",
+        "lineId": "l5",
+        "scene": {
+          "type": "typewriter",
+          "lead": "In",
+          "highlight": "2003",
+          "cps": 10
+        }
+      },
+      {
         "id": "sh7",
         "lineId": "l5",
         "scene": {
@@ -350,7 +360,8 @@
           "treatment": "natural",
           "move": "pushIn",
           "label": "Royal Society of Chemistry"
-        }
+        },
+        "anchor": "Britain's"
       },
       {
         "id": "sh8",

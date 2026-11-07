@@ -467,7 +467,24 @@ export async function stageAssets(
   const shotAssets: Record<string, string[]> = {};
   const lineText = new Map(script.beats.flatMap((b) => b.lines.map((l) => [l.id, l.text] as const)));
 
+  // Shots that ask for the very same query (e.g. a photo reused on a closing versus card) share one
+  // pick: otherwise the no-repeat rule hands the second shot a placeholder.
+  const byQuery = new Map<string, Promise<Asset>>();
   const resolve = async (req: AssetRequest, id: string, hint: string): Promise<Asset> => {
+    const q = req.assetId || req.prefer === "generate" ? undefined : req.query;
+    if (!q) return resolveFresh(req, id, hint);
+    const pending = byQuery.get(q);
+    if (pending) {
+      const first = await pending;
+      if (first.provider !== "placeholder") return { ...first, id };
+      return resolveFresh(req, id, hint);
+    }
+    const p = resolveFresh(req, id, hint);
+    byQuery.set(q, p);
+    return p;
+  };
+
+  const resolveFresh = async (req: AssetRequest, id: string, hint: string): Promise<Asset> => {
     if (req.assetId) {
       const existing = assets.find((a) => a.id === req.assetId);
       if (existing) return existing;
