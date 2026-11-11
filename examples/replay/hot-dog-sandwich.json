@@ -1,0 +1,440 @@
+{
+  "ResearchDossier": {
+    "topic": "whether a hot dog is a sandwich",
+    "summary": "Merriam-Webster defines a sandwich as 'two or more slices of bread or a split roll having a filling in between' and has stated that a hot dog is a sandwich. In 2015 the National Hot Dog and Sausage Council declared that a hot dog is not a sandwich; competitive eaters Joey Chestnut and Takeru Kobayashi agree with the council. On The Late Show in 2018, Justice Ruth Bader Ginsburg said a hot dog might be categorized as a sandwich, but that it comes down to the definition.",
+    "angle": "The dictionary says yes. The hot dog council says no.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Merriam-Webster has stated that a hot dog is indeed a sandwich.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Hot_dog",
+            "title": "Hot dog - Wikipedia",
+            "quote": "has stated that a hot dog is indeed a sandwich"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "Merriam-Webster defines a sandwich as two or more slices of bread or a split roll having a filling in between.",
+        "sources": [
+          {
+            "url": "https://www.merriam-webster.com/dictionary/sandwich",
+            "title": "Sandwich - Merriam-Webster",
+            "quote": "two or more slices of bread or a split roll having a filling in between"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "In 2015 the National Hot Dog and Sausage Council declared that a hot dog is not a sandwich.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Hot_dog",
+            "title": "Hot dog - Wikipedia",
+            "quote": "declared that a hot dog is not a sandwich"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "Hot dog eating champions Joey Chestnut and Takeru Kobayashi agree with the council.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Hot_dog",
+            "title": "Hot dog - Wikipedia",
+            "quote": "agree with the NHDSC"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "Ruth Bader Ginsburg said a hot dog might be categorized as a sandwich, but that ultimately it comes down to the definition of a sandwich (The Late Show with Stephen Colbert, 2018).",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Hot_dog",
+            "title": "Hot dog - Wikipedia",
+            "quote": "ultimately it comes down to the definition of a sandwich"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "The Dictionary Says Sandwich",
+    "cta": "Is a hot dog a sandwich?",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Is a hot dog a sandwich? The dictionary says yes.",
+            "emphasis": [
+              "yes."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "Merriam-Webster defines a sandwich as sliced bread, or a split roll, with a filling in between.",
+            "emphasis": [
+              "split"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "A bun is a split roll. So a hot dog counts.",
+            "emphasis": [
+              "counts."
+            ],
+            "claimIds": [
+              "c1",
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l4",
+            "text": "But the hot dog industry refuses.",
+            "emphasis": [
+              "refuses."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l5",
+            "text": "In 2015, the National Hot Dog and Sausage Council declared it: a hot dog is not a sandwich.",
+            "emphasis": [
+              "not"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l6",
+            "text": "Eating champion Joey Chestnut agrees with the council.",
+            "emphasis": [
+              "Chestnut"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l7",
+            "text": "Then a Supreme Court justice weighed in.",
+            "emphasis": [
+              "Supreme"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l8",
+            "text": "In 2018, Ruth Bader Ginsburg said it might be one. It depends how you define a sandwich.",
+            "emphasis": [
+              "define"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "So, is a hot dog a sandwich? Yes or no. Tell me in the comments.",
+            "emphasis": [
+              "comments."
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.3
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Hot Dogs on a Bun\"",
+            "prompt": "a hot dog in a bun with mustard",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "book-open",
+            "label": "DICTIONARY: YES",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "The"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "quote",
+          "text": "…or a split roll having a filling in between",
+          "attribution": "Merriam-Webster, \"sandwich\""
+        },
+        "anchor": "sliced"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "title": "SANDWICH",
+            "label": "Sliced bread",
+            "asset": {
+              "kind": "image",
+              "query": "intitle:\"Club-sandwich\"",
+              "prompt": "a club sandwich",
+              "prefer": "stock"
+            }
+          },
+          "right": {
+            "title": "HOT DOG",
+            "label": "Split roll",
+            "asset": {
+              "kind": "image",
+              "query": "intitle:\"Hot Dogs on a Bun\"",
+              "prompt": "a hot dog in a bun with mustard",
+              "prefer": "stock"
+            }
+          },
+          "winner": "none"
+        }
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "ban",
+            "label": "THE INDUSTRY SAYS NO",
+            "color": "#FF3B30",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "typewriter",
+          "lead": "In",
+          "highlight": "2015",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "quote",
+          "text": "A hot dog is not a sandwich.",
+          "attribution": "National Hot Dog and Sausage Council"
+        },
+        "anchor": "National"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Nathan's Famous Coney Island New York September 2016\"",
+            "prompt": "Nathan's Famous hot dog stand at Coney Island",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Home of the hot dog eating contest"
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "scale",
+            "label": "THE SUPREME COURT?",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "l8",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Ruth Bader Ginsburg 2016 portrait\"",
+            "prompt": "Justice Ruth Bader Ginsburg",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Ruth Bader Ginsburg",
+          "focusY": 0.2
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "l8",
+        "scene": {
+          "type": "typewriter",
+          "lead": "it depends on",
+          "highlight": "the definition",
+          "cps": 12
+        },
+        "anchor": "It"
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "title": "YES",
+            "label": "It's a sandwich",
+            "icon": "check"
+          },
+          "right": {
+            "title": "NO",
+            "label": "It's a hot dog",
+            "icon": "x"
+          },
+          "winner": "none"
+        }
+      },
+      {
+        "id": "sh13",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv",
+          "text": "COMMENT YOUR SIDE"
+        },
+        "anchor": "comments."
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Is a hot dog a sandwich? The dictionary says yes",
+    "description": "Is a hot dog a sandwich? The dictionary says yes.\nMerriam-Webster says a sandwich can be \"a split roll having a filling in between\", so a hot dog counts. The National Hot Dog and Sausage Council declared in 2015 that it does not. Even Ruth Bader Ginsburg weighed in: it depends on your definition.\n\nIs a hot dog a sandwich? Comment yes or no.",
+    "hashtags": [
+      "hotdog",
+      "sandwich",
+      "debate",
+      "food",
+      "didyouknow"
+    ],
+    "keywords": [
+      "is a hot dog a sandwich",
+      "hot dog sandwich debate",
+      "Merriam-Webster hot dog",
+      "National Hot Dog and Sausage Council",
+      "Ruth Bader Ginsburg hot dog"
+    ],
+    "hook": "Is a hot dog a sandwich? The dictionary says yes.",
+    "altText": "Motion-graphics explainer on the hot dog sandwich debate.",
+    "pinnedComment": "Is a hot dog a sandwich? YES or NO. Bonus round: is a taco?",
+    "sources": [
+      {
+        "url": "https://www.merriam-webster.com/dictionary/sandwich",
+        "title": "Merriam-Webster: sandwich"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Hot_dog",
+        "title": "Hot dog"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

@@ -1,0 +1,469 @@
+{
+  "ResearchDossier": {
+    "topic": "how to pronounce GIF",
+    "summary": "The GIF was developed in 1987 by Steve Wilhite at CompuServe. Wilhite insisted on a soft g ('jif'); the spec joked 'choosy programmers choose ... jif', after Jif peanut butter's slogan. At the 2013 Webby Awards his slide read 'It's pronounced jif not gif', and he told the New York Times the OED accepting both was wrong. Yet a 2013 Mashable poll of 30,706 people found seven in ten prefer the hard g, a 2017 Stack Overflow survey found 65.6% hard g, and in 2014 Obama said hard g. Dictionaries accept both.",
+    "angle": "The inventor says jif. Most people say gif.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "The GIF was developed in 1987 by Steve Wilhite at the American online service provider CompuServe.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Pronunciation_of_GIF",
+            "title": "Pronunciation of GIF - Wikipedia",
+            "quote": "developed in 1987 by Steve Wilhite at the American online service provider CompuServe"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The specification said 'choosy programmers choose ... jif', after the peanut butter slogan 'choosy moms choose Jif'.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Pronunciation_of_GIF",
+            "title": "Pronunciation of GIF - Wikipedia",
+            "quote": "choosy moms choose Jif"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "At the 2013 Webby Awards, Wilhite's slide read: It's pronounced 'jif' not 'gif'.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Pronunciation_of_GIF",
+            "title": "Pronunciation of GIF - Wikipedia",
+            "quote": "It's pronounced 'jif' not 'gif'"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "Wilhite told The New York Times: 'The Oxford English Dictionary accepts both pronunciations. They are wrong. It is a soft g ... End of story.'",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Pronunciation_of_GIF",
+            "title": "Pronunciation of GIF - Wikipedia",
+            "quote": "They are wrong. It is a soft g"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "A 2013 Mashable poll of 30,706 people found seven in ten preferred the hard g.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Pronunciation_of_GIF",
+            "title": "Pronunciation of GIF - Wikipedia",
+            "quote": "seven in ten preferred the hard g over the soft g"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c6",
+        "text": "In June 2014, Barack Obama said the hard g was correct.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Pronunciation_of_GIF",
+            "title": "Pronunciation of GIF - Wikipedia",
+            "quote": "Obama"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c7",
+        "text": "English dictionaries generally accept both pronunciations.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Pronunciation_of_GIF",
+            "title": "Pronunciation of GIF - Wikipedia",
+            "quote": "English dictionaries generally accept both main alternatives as valid"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "The Inventor Says JIF",
+    "cta": "GIF or JIF?",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "The man who invented the GIF says you're saying it wrong.",
+            "emphasis": [
+              "wrong."
+            ],
+            "claimIds": [
+              "c1",
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "Back in 1987, Steve Wilhite created it at a company called CompuServe.",
+            "emphasis": [
+              "1987,"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "And he always said it with a soft G. JIF.",
+            "emphasis": [
+              "JIF."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "His team even joked: choosy programmers choose JIF. Like the peanut butter.",
+            "emphasis": [
+              "peanut"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "But the internet never listened.",
+            "emphasis": [
+              "never"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "In a poll of 30,000 people, seven in ten said GIF, with a hard G.",
+            "emphasis": [
+              "seven"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l7",
+            "text": "In 2014, even President Obama picked the hard G.",
+            "emphasis": [
+              "Obama"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l8",
+            "text": "So in 2013, Wilhite accepted an award with one slide. It's pronounced JIF, not GIF.",
+            "emphasis": [
+              "slide."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l9",
+            "text": "He said the dictionaries that accept both are wrong. End of story.",
+            "emphasis": [
+              "wrong."
+            ],
+            "claimIds": [
+              "c4",
+              "c7"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "So, GIF or JIF? Tell me in the comments.",
+            "emphasis": [
+              "comments."
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.3
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"CompuServe Washington Post\"",
+            "prompt": "a 1980s computer terminal showing CompuServe",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "title": "GIF",
+            "label": "Hard G",
+            "icon": "image"
+          },
+          "right": {
+            "title": "JIF",
+            "label": "Soft G",
+            "icon": "image"
+          },
+          "winner": "none"
+        },
+        "anchor": "says"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Back in",
+          "highlight": "1987",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Old Compuserve HQ1\"",
+            "prompt": "the old CompuServe headquarters building",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "CompuServe HQ"
+        },
+        "anchor": "created"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "typewriter",
+          "lead": "the creator said:",
+          "highlight": "\"JIF\"",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "quote",
+          "text": "Choosy programmers choose JIF.",
+          "attribution": "the GIF spec"
+        },
+        "anchor": "choosy"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "globe",
+            "label": "THE INTERNET DISAGREED",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "stat",
+          "value": "7 in 10",
+          "caption": "say GIF with a hard G",
+          "sourceClaimId": "c5"
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "landmark",
+            "label": "OBAMA: HARD G",
+            "color": "#F4F5F7",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "l8",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "trophy",
+            "label": "WEBBY AWARDS, 2013",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "l8",
+        "scene": {
+          "type": "quote",
+          "text": "It's pronounced JIF, not GIF.",
+          "attribution": "Steve Wilhite, 2013"
+        },
+        "anchor": "It's"
+      },
+      {
+        "id": "sh12",
+        "lineId": "l9",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "book-open",
+            "label": "\"THEY ARE WRONG\"",
+            "color": "#FF3B30",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh13",
+        "lineId": "lz",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "title": "GIF",
+            "label": "Team hard G",
+            "icon": "users"
+          },
+          "right": {
+            "title": "JIF",
+            "label": "Team inventor",
+            "icon": "user"
+          },
+          "winner": "none"
+        }
+      },
+      {
+        "id": "sh14",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv",
+          "text": "COMMENT YOUR SIDE"
+        },
+        "anchor": "comments."
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "The man who invented the GIF says you're saying it wrong",
+    "description": "The man who invented the GIF says you're saying it wrong.\nSteve Wilhite created the GIF at CompuServe in 1987 and always said it with a soft G: JIF. In 2013 he accepted a Webby Award with a single slide: \"It's pronounced JIF, not GIF.\" But in a poll of 30,000 people, seven in ten said GIF with a hard G.\n\nGIF or JIF? Comment your side.",
+    "hashtags": [
+      "gif",
+      "jif",
+      "debate",
+      "internethistory",
+      "didyouknow"
+    ],
+    "keywords": [
+      "how to pronounce GIF",
+      "gif or jif",
+      "Steve Wilhite",
+      "GIF inventor",
+      "GIF pronunciation"
+    ],
+    "hook": "The man who invented the GIF says you're saying it wrong.",
+    "altText": "Motion-graphics explainer on the GIF versus JIF pronunciation debate.",
+    "pinnedComment": "GIF (hard G) or JIF (like the inventor)? One word. And does the inventor get the final say?",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Pronunciation_of_GIF",
+        "title": "Pronunciation of GIF"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

@@ -1,0 +1,471 @@
+{
+  "ResearchDossier": {
+    "topic": "the Oxford comma that cost 5 million dollars",
+    "summary": "The serial (Oxford) comma comes before the conjunction in a list of three or more. Chicago recommends it and Oxford University Press uses it; the AP Stylebook and New York Times generally omit it. Maine's overtime law exempted 'canning, processing, preserving, freezing, drying, marketing, storing, packing for shipment or distribution of' certain foods. Oakhurst Dairy's delivery drivers argued that without a comma after 'shipment', 'distribution' was part of packing, so they were owed overtime. In March 2017 the First Circuit found the law ambiguous and sided with the drivers; Judge Barron opened: 'For want of a comma, we have this case.' In 2018 Oakhurst agreed to pay $5 million to settle, admitting no fault.",
+    "angle": "One missing comma, 5 million dollars.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "The serial comma is a comma placed after the penultimate term in a list, just before the conjunction; it's called the Oxford comma after Oxford University Press, where it is house style.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Serial_comma",
+            "title": "Serial comma - Wikipedia",
+            "quote": "a comma placed after the penultimate term in a list"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The Chicago Manual of Style strongly recommends it; the AP Stylebook says not to put a comma before the conjunction in a simple series, and the New York Times generally omits it.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Serial_comma",
+            "title": "Serial comma - Wikipedia",
+            "quote": "do not put a comma before the conjunction in a simple series"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Maine's overtime exemption covered 'packing for shipment or distribution', with no comma after 'shipment'; Oakhurst Dairy's delivery drivers argued this was one activity, packing, which they don't do.",
+        "sources": [
+          {
+            "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca1-16-01901/pdf/USCOURTS-ca1-16-01901-0.pdf",
+            "title": "O'Connor v. Oakhurst Dairy, 1st Cir., March 13, 2017",
+            "quote": "packing for shipment or distribution"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "On March 13, 2017, the First Circuit found the statute ambiguous and ruled for the drivers; the opinion opens 'For want of a comma, we have this case.'",
+        "sources": [
+          {
+            "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca1-16-01901/pdf/USCOURTS-ca1-16-01901-0.pdf",
+            "title": "O'Connor v. Oakhurst Dairy, 1st Cir., March 13, 2017",
+            "quote": "For want of a comma, we have this case"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "In 2018, Oakhurst Dairy agreed to pay $5 million to settle the drivers' overtime claims, admitting no fault.",
+        "sources": [
+          {
+            "url": "https://news.bloomberglaw.com/litigation/oakhurst-dairys-5m-settlement-driven-by-grammar-rules",
+            "title": "Oakhurst Dairy's $5M Settlement Driven by Grammar Rules - Bloomberg Law, 2018",
+            "quote": "agrees to pay $5 million to settle drivers' overtime claims"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "The 5 Million Dollar Comma",
+    "cta": "Oxford comma: essential or pointless?",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "One missing comma cost a company 5 million dollars.",
+            "emphasis": [
+              "comma"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "stakes",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "It's the Oxford comma. The one before the word and, in a list.",
+            "emphasis": [
+              "Oxford"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "Oxford and Chicago style want it. The AP and the New York Times leave it out.",
+            "emphasis": [
+              "out."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l4",
+            "text": "Then a dairy in Maine got sued by its own delivery drivers.",
+            "emphasis": [
+              "sued"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "State law said no overtime for packing for shipment or distribution.",
+            "emphasis": [
+              "distribution."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "No comma after shipment. So was distribution exempt, or only packing?",
+            "emphasis": [
+              "comma"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l7",
+            "text": "The drivers said they deliver. They don't pack.",
+            "emphasis": [
+              "pack."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l8",
+            "text": "In 2017, a federal court agreed with them.",
+            "emphasis": [
+              "agreed"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l9",
+            "text": "The judge's first line: For want of a comma, we have this case.",
+            "emphasis": [
+              "comma,"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l10",
+            "text": "The dairy agreed to pay 5 million dollars to settle.",
+            "emphasis": [
+              "5"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "So, the Oxford comma: essential or pointless? Tell me in the comments.",
+            "emphasis": [
+              "comments."
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.3
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Milk home delivery truck\"",
+            "prompt": "a milk delivery truck",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "stat",
+          "value": "$5M",
+          "caption": "for one missing comma",
+          "sourceClaimId": "c5"
+        },
+        "anchor": "cost"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "typewriter",
+          "lead": "eggs, milk",
+          "highlight": ", and cheese",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"The Chicago Manual of Style, Seventeenth Edition\"",
+            "prompt": "The Chicago Manual of Style book",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Chicago: use it"
+        }
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "newspaper",
+            "label": "AP STYLE: SKIP IT",
+            "color": "#F4F5F7",
+            "glow": "yes"
+          }
+        },
+        "anchor": "The"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Oakhurst Dairy, Portland ME\"",
+            "prompt": "Oakhurst Dairy building in Portland, Maine",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Oakhurst Dairy, Maine"
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "quote",
+          "text": "packing for shipment or distribution",
+          "attribution": "Maine overtime law"
+        },
+        "anchor": "packing"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "title": "ONE THING",
+            "label": "Packing only",
+            "icon": "package"
+          },
+          "right": {
+            "title": "TWO THINGS",
+            "label": "Packing, delivering",
+            "icon": "truck"
+          },
+          "winner": "none"
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "truck",
+            "label": "DRIVERS DON'T PACK",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "l8",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "scale",
+            "label": "THE COURT AGREED",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "l9",
+        "scene": {
+          "type": "quote",
+          "text": "For want of a comma, we have this case.",
+          "attribution": "Judge David Barron, 2017"
+        },
+        "anchor": "For"
+      },
+      {
+        "id": "sh12",
+        "lineId": "l10",
+        "scene": {
+          "type": "stat",
+          "value": "$5,000,000",
+          "caption": "settlement, 2018",
+          "sourceClaimId": "c5"
+        }
+      },
+      {
+        "id": "sh13",
+        "lineId": "lz",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "title": "ESSENTIAL",
+            "label": "Team comma",
+            "icon": "check"
+          },
+          "right": {
+            "title": "POINTLESS",
+            "label": "Team AP",
+            "icon": "x"
+          },
+          "winner": "none"
+        }
+      },
+      {
+        "id": "sh14",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv",
+          "text": "COMMENT YOUR SIDE"
+        },
+        "anchor": "comments."
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "One missing comma cost this company $5 million",
+    "description": "One missing comma cost a company 5 million dollars.\nMaine law denied overtime for \"packing for shipment or distribution\". With no Oxford comma after \"shipment\", delivery drivers at Oakhurst Dairy argued the law only covered packing. In 2017 a federal court agreed (\"For want of a comma, we have this case\"), and the dairy agreed to pay $5 million to settle.\n\nOxford comma: essential or pointless? Comment your side.",
+    "hashtags": [
+      "oxfordcomma",
+      "grammar",
+      "debate",
+      "law",
+      "didyouknow"
+    ],
+    "keywords": [
+      "Oxford comma lawsuit",
+      "Oakhurst Dairy comma",
+      "serial comma",
+      "5 million dollar comma",
+      "Oxford comma debate"
+    ],
+    "hook": "One missing comma cost a company 5 million dollars.",
+    "altText": "Motion-graphics explainer on the Oakhurst Dairy Oxford comma case.",
+    "pinnedComment": "Oxford comma: ESSENTIAL or POINTLESS? Pick a side, and write your answer in a list of three so we can judge your commas.",
+    "sources": [
+      {
+        "url": "https://www.govinfo.gov/content/pkg/USCOURTS-ca1-16-01901/pdf/USCOURTS-ca1-16-01901-0.pdf",
+        "title": "O'Connor v. Oakhurst Dairy (1st Cir. 2017)"
+      },
+      {
+        "url": "https://news.bloomberglaw.com/litigation/oakhurst-dairys-5m-settlement-driven-by-grammar-rules",
+        "title": "Bloomberg Law: Oakhurst Dairy's $5M settlement"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Serial_comma",
+        "title": "Serial comma"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}
