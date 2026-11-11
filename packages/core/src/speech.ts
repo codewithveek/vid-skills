@@ -103,6 +103,10 @@ export const PRONUNCIATIONS: Record<string, string> = {
   "baldr's": "Balder's",
   pepys: "Peeps",
   "pepys's": "Peeps's",
+  // Spoken as words, never spelled out: hard g for GIF, soft for the creator's "JIF".
+  gif: "giff",
+  gifs: "giffs",
+  jif: "jiff",
 };
 
 function speakToken(tok: string, prev: string, next: string): string | null {

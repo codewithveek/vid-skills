@@ -51,6 +51,9 @@ describe("speech normalization", () => {
     expect(sp.spoken).toBe("The Gaels called it Souwin, the end of harvest.");
     expect(sp.map.find((m) => m.display === "Samhain,")?.spoken).toBe(1);
   });
+  it("says GIF and JIF as words with the intended g", () => {
+    expect(toSpeech("He made the GIF. He said JIF.").spoken).toBe("He made the giff. He said jiff.");
+  });
 });
 
 describe("pipeline voice stage", () => {
