@@ -385,16 +385,15 @@
           "type": "quote",
           "text": "For want of a comma, we have this case.",
           "attribution": "Judge David Barron, 2017"
-        },
-        "anchor": "For"
+        }
       },
       {
         "id": "sh12",
         "lineId": "l10",
         "scene": {
           "type": "stat",
-          "value": "$5,000,000",
-          "caption": "settlement, 2018",
+          "value": "$5M",
+          "caption": "to settle, 2018",
           "sourceClaimId": "c5"
         }
       },
