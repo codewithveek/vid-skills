@@ -479,7 +479,8 @@
         "scene": {
           "type": "statement",
           "lines": [
-            "They rated their own\nvoice more *attractive*."
+            "Their own voice?",
+            "More *attractive*."
           ],
           "asset": {
             "kind": "video",
@@ -521,6 +522,23 @@
           },
           "headline": "Plug your ears and talk.",
           "subline": "That's the voice only you hear."
+        }
+      },
+      {
+        "id": "sh13",
+        "lineId": "lz2",
+        "scene": {
+          "type": "statement",
+          "lines": [
+            "Do you like your\nrecorded *voice*?"
+          ],
+          "align": "center",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:6096339",
+            "prompt": "",
+            "prefer": "stock"
+          }
         }
       }
     ]

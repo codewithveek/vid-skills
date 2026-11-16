@@ -524,7 +524,7 @@
           "type": "statement",
           "lines": [
             "When the prediction\n*misfires*…",
-            "your own touch feels\nlike someone else's."
+            "your own touch\nfeels like a stranger's."
           ],
           "asset": {
             "kind": "image",
@@ -540,7 +540,7 @@
         "scene": {
           "type": "statement",
           "lines": [
-            "Tickling works only when\nyou can't see it *coming*."
+            "Tickling only works\nwhen you can't\nsee it *coming*."
           ],
           "align": "center",
           "asset": {

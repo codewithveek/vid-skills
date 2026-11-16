@@ -289,7 +289,13 @@ export async function stageStoryboard(ctx: PipelineContext, brief: VideoBrief, s
   sb.shots = sb.shots.filter((s) => lineIds.has(s.lineId));
   const covered = new Set(sb.shots.map((s) => s.lineId));
   const auto = autoStoryboard(script, brief);
-  for (const s of auto.shots) if (!covered.has(s.lineId) && s.scene.type !== "endcard") sb.shots.push({ ...s, id: `${s.id}a` });
+  // Calm styles hold the previous layout through an uncovered line instead of cutting to a
+  // keyword-matched stock shot (a guessed image under a reading layout looks random). The first
+  // line still needs a shot: frame 0 is the cover.
+  const holdThrough = brief.style === "editorial";
+  const firstLine = script.beats[0]?.lines[0]?.id;
+  for (const s of auto.shots)
+    if (!covered.has(s.lineId) && s.scene.type !== "endcard" && (!holdThrough || s.lineId === firstLine)) sb.shots.push({ ...s, id: `${s.id}a` });
   const ids = new Set<string>();
   sb.shots.forEach((s, k) => {
     if (ids.has(s.id)) s.id = `${s.id}-${k}`;
