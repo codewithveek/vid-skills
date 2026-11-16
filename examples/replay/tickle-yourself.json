@@ -1,0 +1,608 @@
+{
+  "ResearchDossier": {
+    "topic": "why you can't tickle yourself",
+    "summary": "The brain's forward model predicts the sensory consequences of self-produced movement and attenuates them, so self-tickling feels weak. In a 1999 UCL robot study (16 people), tickliness rose with delay between movement and touch; at 200–300 ms it no longer differed significantly from external touch. Self-produced touch activates somatosensory cortex and anterior cingulate less; the cerebellum may generate the prediction. The mechanism appears abnormal in some patients with auditory hallucinations or passivity experiences.",
+    "angle": "Your brain cancels the touch it sees coming.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "A forward model in the motor system predicts the sensory consequences of a movement; when a movement is self-produced, the prediction is used to attenuate its sensory effects.",
+        "sources": [
+          {
+            "url": "https://pubmed.ncbi.nlm.nih.gov/10943682/",
+            "title": "Blakemore, Wolpert & Frith (2000) Why can't you tickle yourself? Neuroreport",
+            "quote": "this prediction can be used to attenuate the sensory effects of the movement"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "At University College London, 16 people moved a robot arm with one hand, which moved a soft stimulus across the other palm via a second robot; self-produced touch was rated less tickly than the same touch produced externally.",
+        "sources": [
+          {
+            "url": "https://doi.org/10.1162/089892999563607",
+            "title": "Blakemore, Frith & Wolpert (1999) Spatio-temporal prediction modulates the perception of self-produced stimuli. J Cogn Neurosci",
+            "quote": "consistently rated self-produced tactile stimuli as less tickly"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Tickliness rose with the delay between the hand movement and the touch; at 200–300 ms delay ratings no longer differed significantly from externally produced touch.",
+        "sources": [
+          {
+            "url": "https://doi.org/10.1162/089892999563607",
+            "title": "Blakemore, Frith & Wolpert (1999) Spatio-temporal prediction modulates the perception of self-produced stimuli. J Cogn Neurosci",
+            "quote": "The tickliness rating increased significantly with increasing delay"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "id": "c4",
+        "text": "Brain imaging shows somatosensory cortex and anterior cingulate are activated less by self-produced touch, and the cerebellum may generate the prediction.",
+        "sources": [
+          {
+            "url": "https://pubmed.ncbi.nlm.nih.gov/10943682/",
+            "title": "Blakemore, Wolpert & Frith (2000) Why can't you tickle yourself? Neuroreport",
+            "quote": "the cerebellum might be involved in generating the prediction"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c6",
+        "text": "14 of the 16 subjects said they were unaware of the delays.",
+        "sources": [
+          {
+            "url": "https://doi.org/10.1162/089892999563607",
+            "title": "Blakemore, Frith & Wolpert (1999) Spatio-temporal prediction modulates the perception of self-produced stimuli. J Cogn Neurosci",
+            "quote": "14 subjects claimed to be unaware of the delays"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c7",
+        "text": "Self-produced touch was rated significantly less tickly, less intense and less pleasant than the same touch produced externally.",
+        "sources": [
+          {
+            "url": "https://doi.org/10.1162/089892999563607",
+            "title": "Blakemore, Frith & Wolpert (1999) Spatio-temporal prediction modulates the perception of self-produced stimuli. J Cogn Neurosci",
+            "quote": "less tickly, intense, and pleasant"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "This predictive mechanism appears abnormal in patients with auditory hallucinations and/or passivity experiences.",
+        "sources": [
+          {
+            "url": "https://pubmed.ncbi.nlm.nih.gov/10943682/",
+            "title": "Blakemore, Wolpert & Frith (2000) Why can't you tickle yourself? Neuroreport",
+            "quote": "this predictive mechanism is abnormal in patients with auditory hallucinations"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Why You Can't Tickle Yourself",
+    "cta": "Try to tickle yourself right now.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Try to tickle yourself. It doesn't work. And your brain is the reason.",
+            "emphasis": [
+              "brain"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.45
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "Every time you move, your brain predicts exactly what you're about to feel.",
+            "emphasis": [
+              "predicts"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l3",
+            "text": "When the touch matches that prediction, your brain turns the feeling down.",
+            "emphasis": [
+              "down."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l4",
+            "text": "So your own fingers can never surprise you.",
+            "emphasis": [
+              "surprise"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l4b",
+            "text": "Your own touch even feels less intense, and less pleasant.",
+            "emphasis": [
+              "pleasant."
+            ],
+            "claimIds": [
+              "c7"
+            ],
+            "pauseAfterSec": 0.5
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "history",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "In 1999, scientists in London built a tickle robot.",
+            "emphasis": [
+              "robot."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "People moved one hand, and the robot stroked the other.",
+            "emphasis": [
+              "stroked"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l7",
+            "text": "With no delay, it barely tickled.",
+            "emphasis": [
+              "barely"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l8",
+            "text": "But add a fifth of a second of delay, and it tickled like someone else's touch.",
+            "emphasis": [
+              "fifth"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          },
+          {
+            "id": "l8b",
+            "text": "Most of them never even noticed the delay. Their brains did.",
+            "emphasis": [
+              "brains"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.5
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l9",
+            "text": "Brain scans agree. Touch areas react less when the touch is your own.",
+            "emphasis": [
+              "less"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l10",
+            "text": "And the cerebellum, at the back of your brain, seems to make the prediction.",
+            "emphasis": [
+              "cerebellum,"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.45
+          },
+          {
+            "id": "l11",
+            "text": "In some people who hear voices, that prediction misfires, and their own touch feels like someone else's.",
+            "emphasis": [
+              "misfires,"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.5
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l12",
+            "text": "So tickling only works when your brain can't see it coming.",
+            "emphasis": [
+              "coming."
+            ],
+            "claimIds": [
+              "c1",
+              "c3"
+            ],
+            "pauseAfterSec": 0.55
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Try it right now. Then tell me: can you tickle yourself?",
+            "emphasis": [
+              "tickle"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.6
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "hero",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:4545611",
+            "prompt": "a father tickling his laughing son",
+            "prefer": "stock"
+          },
+          "eyebrow": "THE SCIENCE OF YOU",
+          "headline": "Why you can't\n*tickle* yourself",
+          "focusY": 0.3
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l2",
+        "scene": {
+          "type": "statement",
+          "lines": [
+            "Your brain predicts\nevery *touch*."
+          ],
+          "asset": {
+            "kind": "image",
+            "query": "pexels:18782639",
+            "prompt": "a hand in soft light on black",
+            "prefer": "stock"
+          }
+        }
+      },
+      {
+        "id": "sh3",
+        "lineId": "l3",
+        "scene": {
+          "type": "statement",
+          "lines": [
+            "Your brain predicts\nevery *touch*.",
+            "Then turns it *down*."
+          ],
+          "newFrom": 1,
+          "asset": {
+            "kind": "image",
+            "query": "pexels:18782639",
+            "prompt": "",
+            "prefer": "stock"
+          },
+          "join": true
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l4",
+        "scene": {
+          "type": "checklist",
+          "items": [
+            {
+              "label": "Your own fingers",
+              "ok": false
+            },
+            {
+              "label": "Someone else's",
+              "ok": true
+            }
+          ],
+          "show": 1,
+          "asset": {
+            "kind": "image",
+            "query": "pexels:6764121",
+            "prompt": "a feather touching skin",
+            "prefer": "stock"
+          }
+        }
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "checklist",
+          "items": [
+            {
+              "label": "Your own fingers",
+              "ok": false
+            },
+            {
+              "label": "Someone else's",
+              "ok": true
+            }
+          ],
+          "show": 2,
+          "from": 1,
+          "asset": {
+            "kind": "image",
+            "query": "pexels:6764121",
+            "prompt": "",
+            "prefer": "stock"
+          },
+          "join": true
+        },
+        "anchor": "surprise"
+      },
+      {
+        "id": "sh5b",
+        "lineId": "l4b",
+        "scene": {
+          "type": "statement",
+          "lines": [
+            "Less *tickly*.\nLess intense.\nLess pleasant."
+          ],
+          "align": "center"
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "hero",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:8439000",
+            "prompt": "a robot arm on a dark background",
+            "prefer": "stock"
+          },
+          "eyebrow": "LONDON, 1999",
+          "headline": "The *tickle* robot",
+          "focusY": 0.4
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l7",
+        "scene": {
+          "type": "bignum",
+          "value": "0 s",
+          "label": "of delay: it barely tickled",
+          "cite": "BLAKEMORE, FRITH & WOLPERT · J COGN NEUROSCI (1999)",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:8439000",
+            "prompt": "a robot arm on a dark background",
+            "prefer": "stock"
+          },
+          "sourceClaimId": "c2"
+        }
+      },
+      {
+        "id": "sh8",
+        "lineId": "l8",
+        "scene": {
+          "type": "bignum",
+          "value": "0.2 s",
+          "label": "of delay: it tickled like someone else's touch",
+          "cite": "BLAKEMORE, FRITH & WOLPERT · J COGN NEUROSCI (1999)",
+          "asset": {
+            "kind": "video",
+            "query": "pexels:8907201",
+            "prompt": "a man tickling his girlfriend in bed",
+            "prefer": "stock"
+          },
+          "sourceClaimId": "c3"
+        }
+      },
+      {
+        "id": "sh8b",
+        "lineId": "l8b",
+        "scene": {
+          "type": "bignum",
+          "value": "14 of 16",
+          "label": "never noticed the delay. Their brains did.",
+          "cite": "BLAKEMORE, FRITH & WOLPERT · J COGN NEUROSCI (1999)",
+          "sourceClaimId": "c6"
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "l9",
+        "scene": {
+          "type": "statement",
+          "lines": [
+            "Your own touch\nlights up *less*."
+          ],
+          "asset": {
+            "kind": "image",
+            "query": "pexels:4226119",
+            "prompt": "brain MRI scans on a lightbox",
+            "prefer": "stock"
+          }
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "l10",
+        "scene": {
+          "type": "statement",
+          "lines": [
+            "Your own touch\nlights up *less*.",
+            "The *cerebellum*\nmakes the guess."
+          ],
+          "newFrom": 1,
+          "asset": {
+            "kind": "image",
+            "query": "pexels:4226119",
+            "prompt": "brain MRI scans on a lightbox",
+            "prefer": "stock"
+          },
+          "join": true
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "l11",
+        "scene": {
+          "type": "statement",
+          "lines": [
+            "When the prediction\n*misfires*…",
+            "your own touch feels\nlike someone else's."
+          ],
+          "asset": {
+            "kind": "image",
+            "query": "pexels:6096339",
+            "prompt": "a woman in shadow touching her face",
+            "prefer": "stock"
+          }
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "l12",
+        "scene": {
+          "type": "statement",
+          "lines": [
+            "Tickling works only when\nyou can't see it *coming*."
+          ],
+          "align": "center",
+          "asset": {
+            "kind": "video",
+            "query": "pexels:7938991",
+            "prompt": "a mother tickling her daughter",
+            "prefer": "stock"
+          }
+        }
+      },
+      {
+        "id": "sh13",
+        "lineId": "lz",
+        "scene": {
+          "type": "hero",
+          "variant": "dim",
+          "asset": {
+            "kind": "video",
+            "query": "pexels:8502592",
+            "prompt": "a woman tickling a boy",
+            "prefer": "stock"
+          },
+          "headline": "Try it right now.",
+          "subline": "Can you tickle yourself?"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Why you can't tickle yourself",
+    "description": "Try to tickle yourself. It doesn't work, and your brain is the reason.\nYour brain predicts what every movement will feel like and turns the feeling down. In a 1999 experiment at University College London, a tickle robot barely tickled when people controlled it themselves. Add a fifth of a second of delay, and it tickled like someone else's touch.\n\nTry it now. Can you tickle yourself?",
+    "hashtags": [
+      "tickle",
+      "brain",
+      "neuroscience",
+      "science",
+      "didyouknow"
+    ],
+    "keywords": [
+      "why can't you tickle yourself",
+      "tickle yourself",
+      "cerebellum prediction",
+      "tickle robot experiment",
+      "sensory attenuation"
+    ],
+    "hook": "Try to tickle yourself. It doesn't work. And your brain is the reason.",
+    "altText": "Editorial explainer on why self-tickling doesn't work: the brain predicts and dampens self-produced touch.",
+    "pinnedComment": "Be honest: did you just try to tickle yourself? 😂 Did it work at all?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/10943682/",
+        "title": "Blakemore, Wolpert & Frith (2000) Why can't you tickle yourself? Neuroreport"
+      },
+      {
+        "url": "https://doi.org/10.1162/089892999563607",
+        "title": "Blakemore, Frith & Wolpert (1999) Spatio-temporal prediction modulates the perception of self-produced stimuli. J Cogn Neurosci"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

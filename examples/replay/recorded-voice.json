@@ -1,0 +1,564 @@
+{
+  "ResearchDossier": {
+    "topic": "why your recorded voice sounds weird",
+    "summary": "You hear your own voice through air and bone conduction; the head enhances low frequencies, so your voice sounds deeper to you. Recordings capture only the air-conducted part. In Hughes & Harrison (2013), 80 people rated voice samples that secretly included their own and rated their own voice as more attractive than other raters did.",
+    "angle": "The recording is the real you; you just prefer it anonymously.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "When you speak you hear your voice through air conduction and through bone conduction: bone-conducted sound reaches the cochlea directly through the tissues of the head.",
+        "sources": [
+          {
+            "url": "https://www.scientificamerican.com/article/why-does-my-voice-sound-different/",
+            "title": "Hullar, Why does my voice sound different on a recording? Scientific American",
+            "quote": "Bone-conducted sound reaches the cochlea directly through the tissues of the head."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The mechanical properties of the head enhance the deeper, lower-frequency vibrations of your voice.",
+        "sources": [
+          {
+            "url": "https://www.scientificamerican.com/article/why-does-my-voice-sound-different/",
+            "title": "Hullar, Why does my voice sound different on a recording? Scientific American",
+            "quote": "the mechanical properties of your head enhance its deeper, lower-frequency vibrations"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "A recording captures only the air-conducted component, which you then hear in unfamiliar isolation.",
+        "sources": [
+          {
+            "url": "https://www.scientificamerican.com/article/why-does-my-voice-sound-different/",
+            "title": "Hullar, Why does my voice sound different on a recording? Scientific American",
+            "quote": "you hear only the air-conducted component in unfamiliar isolation"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "In a 2013 study, 80 people rated voice recordings that secretly included their own; they rated their own voices as more attractive than other raters did, apparently without recognising them.",
+        "sources": [
+          {
+            "url": "https://doi.org/10.1068/p7526",
+            "title": "Hughes & Harrison (2013) I like my voice better: self-enhancement bias in perceptions of voice attractiveness. Perception",
+            "quote": "self-enhancement bias"
+          }
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Why Your Recorded Voice Sounds Weird",
+    "cta": "Plug your ears and talk.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Hate the sound of your recorded voice? You're not hearing it wrong.",
+            "emphasis": [
+              "wrong."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l2",
+            "text": "You're hearing yourself the way everyone else does.",
+            "emphasis": [
+              "everyone"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.5
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "When you talk, your voice reaches your ears two ways.",
+            "emphasis": [
+              "two"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "Through the air, like everyone else hears it. And through the bones of your skull.",
+            "emphasis": [
+              "skull."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l5",
+            "text": "Your skull boosts the deep, low vibrations.",
+            "emphasis": [
+              "low"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "So inside your head, your voice sounds fuller and deeper.",
+            "emphasis": [
+              "deeper."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l6b",
+            "text": "You've heard that deeper version your whole life. So that's the one that feels like you.",
+            "emphasis": [
+              "you."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.5
+          },
+          {
+            "id": "l7",
+            "text": "A recording only catches the air part. The thinner version.",
+            "emphasis": [
+              "thinner"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l8",
+            "text": "That's the voice everyone around you has heard all along.",
+            "emphasis": [
+              "all"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.5
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l9",
+            "text": "But here's the twist. In 2013, researchers had 80 people rate voice recordings.",
+            "emphasis": [
+              "80"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l10",
+            "text": "Hidden among them were their own voices. Most never realised it.",
+            "emphasis": [
+              "own"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l11",
+            "text": "Without realising it, people rated their own voice as more attractive than others did.",
+            "emphasis": [
+              "attractive"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.5
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l12",
+            "text": "So you probably like your voice. Just not when you know it's you.",
+            "emphasis": [
+              "know"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.55
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Try it: plug your ears and talk. That's the deep version only you hear.",
+            "emphasis": [
+              "only"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "lz2",
+            "text": "Do you like your recorded voice? Tell me.",
+            "emphasis": [
+              "like"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.6
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "hero",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:6096339",
+            "prompt": "a woman covering her ear in dim light",
+            "prefer": "stock"
+          },
+          "eyebrow": "THE SCIENCE OF YOU",
+          "headline": "Why your recorded\nvoice sounds *weird*",
+          "focusY": 0.3
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l2",
+        "scene": {
+          "type": "statement",
+          "lines": [
+            "That's how *everyone*\nhears you."
+          ],
+          "asset": {
+            "kind": "video",
+            "query": "pexels:7171528",
+            "prompt": "a man recording a voice memo",
+            "prefer": "stock"
+          }
+        }
+      },
+      {
+        "id": "sh3",
+        "lineId": "l3",
+        "scene": {
+          "type": "ranked",
+          "title": "HOW YOU HEAR YOURSELF",
+          "items": [
+            {
+              "label": "Through the air"
+            },
+            {
+              "label": "Through your skull"
+            }
+          ],
+          "show": 1,
+          "asset": {
+            "kind": "video",
+            "query": "pexels:8135220",
+            "prompt": "a woman speaking into a microphone",
+            "prefer": "stock"
+          }
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l4",
+        "scene": {
+          "type": "ranked",
+          "title": "HOW YOU HEAR YOURSELF",
+          "items": [
+            {
+              "label": "Through the air"
+            },
+            {
+              "label": "Through your skull"
+            }
+          ],
+          "show": 2,
+          "from": 1,
+          "asset": {
+            "kind": "image",
+            "query": "pexels:8135220",
+            "prompt": "",
+            "prefer": "stock"
+          },
+          "join": true
+        },
+        "anchor": "through"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l5",
+        "scene": {
+          "type": "hero",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:5723881",
+            "prompt": "an x-ray of a human skull",
+            "prefer": "stock"
+          },
+          "eyebrow": "BONE CONDUCTION",
+          "headline": "Your skull boosts\nthe *low* notes",
+          "focusY": 0.35
+        }
+      },
+      {
+        "id": "sh5b",
+        "lineId": "l6b",
+        "scene": {
+          "type": "statement",
+          "lines": [
+            "The deeper version\nfeels like *you*."
+          ],
+          "asset": {
+            "kind": "image",
+            "query": "pexels:7229105",
+            "prompt": "",
+            "prefer": "stock"
+          }
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l7",
+        "scene": {
+          "type": "checklist",
+          "items": [
+            {
+              "label": "Air",
+              "ok": true
+            },
+            {
+              "label": "Skull",
+              "ok": false
+            }
+          ],
+          "show": 1,
+          "asset": {
+            "kind": "image",
+            "query": "pexels:6892700",
+            "prompt": "a microphone in a dark studio",
+            "prefer": "stock"
+          }
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l7",
+        "scene": {
+          "type": "checklist",
+          "items": [
+            {
+              "label": "Air",
+              "ok": true
+            },
+            {
+              "label": "Skull",
+              "ok": false
+            }
+          ],
+          "show": 2,
+          "from": 1,
+          "asset": {
+            "kind": "image",
+            "query": "pexels:6892700",
+            "prompt": "a microphone in a dark studio",
+            "prefer": "stock"
+          },
+          "join": true
+        },
+        "anchor": "The"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l8",
+        "scene": {
+          "type": "statement",
+          "lines": [
+            "The voice everyone\nhas heard *all along*."
+          ],
+          "align": "center",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:7229105",
+            "prompt": "a woman listening to her phone",
+            "prefer": "stock"
+          }
+        }
+      },
+      {
+        "id": "sh8b",
+        "lineId": "l8b",
+        "scene": {
+          "type": "bignum",
+          "value": "14 of 16",
+          "label": "never noticed the delay. Their brains did.",
+          "cite": "BLAKEMORE, FRITH & WOLPERT · J COGN NEUROSCI (1999)",
+          "sourceClaimId": "c6"
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "l9",
+        "scene": {
+          "type": "bignum",
+          "value": "80",
+          "label": "people rated voice recordings, their own hidden among them",
+          "cite": "HUGHES & HARRISON · PERCEPTION (2013)",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:5399026",
+            "prompt": "a woman with headphones at a microphone",
+            "prefer": "stock"
+          },
+          "sourceClaimId": "c4"
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "l11",
+        "scene": {
+          "type": "statement",
+          "lines": [
+            "They rated their own\nvoice more *attractive*."
+          ],
+          "asset": {
+            "kind": "video",
+            "query": "pexels:8135207",
+            "prompt": "a woman with headphones speaking",
+            "prefer": "stock"
+          }
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "l12",
+        "scene": {
+          "type": "statement",
+          "lines": [
+            "You like your voice.",
+            "Just not when you\n*know* it's you."
+          ],
+          "align": "center",
+          "asset": {
+            "kind": "video",
+            "query": "pexels:6952832",
+            "prompt": "a woman recording into a microphone",
+            "prefer": "stock"
+          }
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "hero",
+          "variant": "dim",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:6096339",
+            "prompt": "",
+            "prefer": "stock"
+          },
+          "headline": "Plug your ears and talk.",
+          "subline": "That's the voice only you hear."
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Why your recorded voice sounds so weird",
+    "description": "Hate the sound of your recorded voice? You're hearing yourself the way everyone else does.\nWhen you talk, your voice reaches your ears through the air and through the bones of your skull, which boost the low notes. A recording only catches the air part. And in a 2013 study, people unknowingly rated their own recorded voice as more attractive than others did.\n\nPlug your ears and talk. Do you like your recorded voice?",
+    "hashtags": [
+      "voice",
+      "science",
+      "psychology",
+      "didyouknow",
+      "brain"
+    ],
+    "keywords": [
+      "why does my voice sound different on recordings",
+      "recorded voice",
+      "bone conduction",
+      "hate my voice",
+      "voice confrontation"
+    ],
+    "hook": "Hate the sound of your recorded voice? You're not hearing it wrong.",
+    "altText": "Editorial explainer on why recorded voices sound strange: bone conduction makes your voice sound deeper in your head.",
+    "pinnedComment": "Be honest: do you cringe at your own voice notes? 🎙️ Yes or no.",
+    "sources": [
+      {
+        "url": "https://www.scientificamerican.com/article/why-does-my-voice-sound-different/",
+        "title": "Hullar, Why does my voice sound different on a recording? Scientific American"
+      },
+      {
+        "url": "https://doi.org/10.1068/p7526",
+        "title": "Hughes & Harrison (2013) I like my voice better: self-enhancement bias in perceptions of voice attractiveness. Perception"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}
