@@ -65,10 +65,10 @@ function pageCss(ctx: SceneCtx): string {
   return `${textCss(p.accent)}${GLOW_CSS}
 .ed-page{position:absolute;inset:0;background:radial-gradient(ellipse at 60% 35%,${p.card} 0%,${p.bg} 70%);}
 .ed-serif{font-family:"${f.display}",Georgia,serif;font-weight:600;letter-spacing:-.012em;color:var(--vs-ink);}
-.ed-eyebrow{font:500 ${px(26)}/1 "${f.mono}",monospace;letter-spacing:.22em;text-transform:uppercase;color:var(--vs-accent);}
+.ed-eyebrow{font:500 ${px(30)}/1 "${f.mono}",monospace;letter-spacing:.22em;text-transform:uppercase;color:var(--vs-accent);}
 .ed-rule{width:${px(64)};height:${px(5)};border-radius:${px(3)};background:var(--vs-accent);}
 .ed-body{font:500 ${px(34)}/1.3 "${f.ui}",sans-serif;color:var(--vs-ink);}
-.ed-cite{font:500 ${px(24)}/1.3 "${f.mono}",monospace;letter-spacing:.04em;color:var(--vs-muted);}
+.ed-cite{font:500 ${px(27)}/1.3 "${f.mono}",monospace;letter-spacing:.04em;color:var(--vs-muted);}
 .ed-italic{font-style:italic;color:var(--vs-accent);}
 .ed-media{position:absolute;overflow:hidden;}
 .ed-media .vs-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
@@ -122,7 +122,7 @@ function hero(ctx: SceneCtx): SceneOutput {
   const gutter = Math.round(72 * K);
   if (s.variant === "dim") {
     const media = mediaBox(ctx, "hm", a, { x: 0, y: 0, w: W, h: H }, { focusY: s.focusY, move: "pullOut" });
-    const size = fitSerif(s.headline, W - gutter * 2, 84 * K, 3);
+    const size = fitSerif(s.headline, W - gutter * 2, 104 * K, 3);
     const html = `<div class="ed-page"></div>${media.html}<div class="vs-layer" style="background:linear-gradient(180deg,${p.bg}cc 0%,${p.bg}b3 45%,${p.bg}e6 100%);"></div>
 <div class="vs-layer" style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 ${gutter}px ${Math.round(H * 0.18)}px;text-align:center;gap:${Math.round(28 * K)}px;">
 ${splitText(`${sid}-h`, s.headline, { unit: "word", cls: "ed-serif" }).replace('class="vs-text ed-serif"', `class="vs-text ed-serif" style="font-size:${size}px;line-height:1.08;"`)}
@@ -135,7 +135,7 @@ ${s.subline ? splitText(`${sid}-sub`, s.subline, { unit: "word", cls: "ed-serif 
   }
   const mediaH = Math.round(H * 0.6);
   const media = mediaBox(ctx, "hm", a, { x: 0, y: 0, w: W, h: mediaH }, { focusY: s.focusY ?? 0.3 });
-  const size = fitSerif(s.headline, W - gutter * 2, 108 * K, 2);
+  const size = fitSerif(s.headline, W - gutter * 2, 128 * K, 2);
   const top = Math.round(H * 0.535);
   const html = `<div class="ed-page"></div>${media.html}
 <div class="vs-layer" style="background:linear-gradient(180deg,${p.bg}99 0%,transparent 14%,transparent 34%,${p.bg} ${Math.round((mediaH / H) * 100) - 2}%,${p.bg} 100%);"></div>
@@ -167,7 +167,7 @@ function statement(ctx: SceneCtx): SceneOutput {
   const bd = backdrop(ctx, ctx.assets[0], 0.78);
   const gl = sceneGlow(ctx, center ? 0.5 : 0.62, center ? 0.4 : 0.36, 1.1);
   const longest = Math.max(...s.lines.map((l) => l.replace(/\*/g, "").length));
-  const size = Math.round(Math.min((center ? 92 : 84) * K, (W - gutter * 2) / (Math.min(longest, 22) * 0.5)));
+  const size = Math.round(Math.min((center ? 108 : 104) * K, (W - gutter * 2) / (Math.min(longest, 20) * 0.5)));
   const lines = s.lines
     .map((l, i) => splitText(`${sid}-l${i}`, l, { unit: "word", cls: "ed-serif" }).replace('class="vs-text ed-serif"', `class="vs-text ed-serif" style="font-size:${size}px;line-height:1.08;"`))
     .join("");
@@ -195,12 +195,12 @@ function bignum(ctx: SceneCtx): SceneOutput {
   const strip = a ? mediaBox(ctx, "bs", a, { x: gutter, y: H * 0.1, w: W - gutter * 2, h: H * 0.3 }, { cls: "ed-card" }) : { html: "", js: "" };
   const gl = sceneGlow(ctx, 0.3, a ? 0.53 : 0.42, 0.95);
   const numTop = Math.round(H * (a ? 0.43 : 0.3));
-  const numSize = Math.round(Math.min(300 * K, (W - gutter * 2) / (Math.max(2, s.value.length) * 0.62)));
+  const numSize = Math.round(Math.min(340 * K, (W - gutter * 2) / (Math.max(2, s.value.length) * 0.62)));
   const digits = /^\d{1,7}$/.test(s.value) ? Number(s.value) : null;
   const html = `<div class="ed-page"></div>${gl.html}${strip.html}
 <div style="position:absolute;left:${gutter}px;right:${gutter}px;top:${numTop}px;display:flex;flex-direction:column;gap:${Math.round(18 * K)}px;">
 <div id="${sid}-num" class="ed-serif" style="font-size:${numSize}px;line-height:.95;color:var(--vs-accent);font-variant-numeric:tabular-nums lining-nums;">${e(digits !== null ? "0" : s.value)}</div>
-<div id="${sid}-lab" class="ed-serif" style="font-size:${Math.round(54 * K)}px;line-height:1.15;max-width:${Math.round(W * 0.8)}px;">${e(s.label)}</div>
+<div id="${sid}-lab" class="ed-serif" style="font-size:${Math.round(66 * K)}px;line-height:1.12;max-width:${Math.round(W * 0.86)}px;">${e(s.label)}</div>
 ${s.cite ? `<div id="${sid}-cite" class="ed-cite">${e(s.cite)}</div>` : ""}
 </div>`;
   let js = strip.js + gl.js;
@@ -226,14 +226,14 @@ function ranked(ctx: SceneCtx): SceneOutput {
   const show = Math.min(s.show ?? s.items.length, s.items.length);
   const card = a ? mediaBox(ctx, "rc", a, { x: gutter, y: H * 0.085, w: W - gutter * 2, h: H * 0.27 }, { cls: "ed-card" }) : { html: "", js: "" };
   const top = Math.round(H * (a ? 0.39 : 0.24));
-  const rowH = Math.round(H * 0.07);
+  const rowH = Math.round(H * 0.085);
   const rows = s.items
     .slice(0, show)
     .map((it, i) => {
-      const note = it.note ? `<span id="${sid}-n${i}" style="font:500 ${Math.round(30 * K)}px/1 '${ctx.style.fonts.ui}',sans-serif;color:var(--vs-danger);margin-left:${Math.round(18 * K)}px;white-space:nowrap;">${e(it.note)}</span>` : "";
+      const note = it.note ? `<span id="${sid}-n${i}" style="font:500 ${Math.round(34 * K)}px/1 '${ctx.style.fonts.ui}',sans-serif;color:var(--vs-danger);margin-left:${Math.round(18 * K)}px;white-space:nowrap;">${e(it.note)}</span>` : "";
       return `<div id="${sid}-r${i}" style="height:${rowH}px;display:flex;align-items:center;gap:${Math.round(30 * K)}px;opacity:${RANK_FADE[i] ?? 0.35};">
 <span class="ed-eyebrow" style="letter-spacing:.06em;width:${Math.round(52 * K)}px;">${String(i + 1).padStart(2, "0")}</span>
-<span class="ed-serif" style="font-size:${Math.round(70 * K)}px;line-height:1;white-space:nowrap;">${e(it.label)}</span>${note}</div>`;
+<span class="ed-serif" style="font-size:${Math.round(92 * K)}px;line-height:1;white-space:nowrap;">${e(it.label)}</span>${note}</div>`;
     })
     .join("");
   const html = `<div class="ed-page"></div>${card.html}
@@ -269,16 +269,16 @@ function checklist(ctx: SceneCtx): SceneOutput {
   const bd = backdrop(ctx, ctx.assets[0], 0.82);
   const okIdx = s.items.findIndex((it) => it.ok);
   const gl = okIdx >= 0 && okIdx < show ? sceneGlow(ctx, 0.3, 0.26 + okIdx * 0.09, 0.8) : { html: "", js: "" };
-  const mark = Math.round(84 * K);
+  const mark = Math.round(108 * K);
   const rows = s.items
     .slice(0, show)
     .map(
-      (it, i) => `<div id="${sid}-r${i}" style="display:flex;align-items:center;gap:${Math.round(34 * K)}px;height:${Math.round(H * 0.09)}px;${it.ok ? "" : "opacity:.6;"}">
+      (it, i) => `<div id="${sid}-r${i}" style="display:flex;align-items:center;gap:${Math.round(34 * K)}px;height:${Math.round(H * 0.105)}px;${it.ok ? "" : "opacity:.6;"}">
 ${brushMark(`${sid}-m${i}`, it.ok, it.ok ? p.accent : p.danger, mark)}
-<span class="ed-serif" style="font-size:${Math.round((it.ok ? 86 : 70) * K)}px;line-height:1;${it.ok ? "color:var(--vs-accent);" : ""}white-space:nowrap;">${e(it.label)}</span></div>`,
+<span class="ed-serif" style="font-size:${Math.round((it.ok ? 116 : 96) * K)}px;line-height:1;${it.ok ? "color:var(--vs-accent);" : ""}white-space:nowrap;">${e(it.label)}</span></div>`,
     )
     .join("");
-  const html = `<div class="ed-page"></div>${bd.html}${gl.html}<div style="position:absolute;left:${gutter}px;right:${gutter}px;top:${Math.round(H * 0.2)}px;max-width:${W - gutter * 2}px;">${rows}</div>`;
+  const html = `<div class="ed-page"></div>${bd.html}${gl.html}<div style="position:absolute;left:${gutter}px;right:${gutter}px;top:${Math.round(H * 0.22)}px;max-width:${W - gutter * 2}px;">${rows}</div>`;
   let js = bd.js + gl.js;
   let at = 0.15;
   s.items.slice(0, show).forEach((it, i) => {

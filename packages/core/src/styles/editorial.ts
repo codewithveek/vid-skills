@@ -51,7 +51,7 @@ export const editorial: StylePack = {
   fonts: { display: "Fraunces", ui: "DM Sans", mono: "Geist Mono", faces: EDITORIAL_FONT_FACES },
   title: { size: 104, weight: 600, strokePx: 0, uppercase: false, letterSpacing: "-0.01em" },
   captions: {
-    size: 44,
+    size: 48,
     weight: 700,
     maxWordsPerCue: 7,
     maxCharsPerCue: 42,

@@ -47,9 +47,9 @@ type PexelsPhoto = { id: number; url: string; width: number; height: number; alt
 type Lic = (url: string, who: string) => License;
 
 function pexelsVideo(v: PexelsVideo, lic: Lic): VisualCandidate[] {
-  // Pick the smallest rendition ≥ 1280 on its long side (keeps downloads small, sharp at 1080 wide).
-  const files = v.video_files.filter((f) => f.file_type === "video/mp4").sort((a, b) => a.width - b.width);
-  const f = files.find((x) => Math.max(x.width, x.height) >= 1280) ?? files[files.length - 1];
+  // Smallest rendition that is full HD on its short side (1080 wide for vertical), else the largest.
+  const files = v.video_files.filter((f) => f.file_type === "video/mp4").sort((a, b) => a.width * a.height - b.width * b.height);
+  const f = files.find((x) => Math.min(x.width, x.height) >= 1080) ?? files[files.length - 1];
   return f ? [{ id: `pexels-v${v.id}`, kind: "video", url: f.link, previewUrl: v.image, width: f.width, height: f.height, durationSec: v.duration, provider: "pexels", license: lic(v.url, v.user?.name ?? "Pexels") }] : [];
 }
 
