@@ -462,7 +462,7 @@
         "scene": {
           "type": "bignum",
           "value": "80",
-          "label": "people rated voice recordings, their own hidden among them",
+          "label": "people rated a set of voice recordings",
           "cite": "HUGHES & HARRISON · PERCEPTION (2013)",
           "asset": {
             "kind": "image",
@@ -471,6 +471,22 @@
             "prefer": "stock"
           },
           "sourceClaimId": "c4"
+        }
+      },
+      {
+        "id": "sh9b",
+        "lineId": "l10",
+        "scene": {
+          "type": "statement",
+          "lines": [
+            "Hidden among them:\ntheir *own* voices."
+          ],
+          "asset": {
+            "kind": "image",
+            "query": "pexels:5399026",
+            "prompt": "",
+            "prefer": "stock"
+          }
         }
       },
       {
