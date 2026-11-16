@@ -68,7 +68,7 @@ function pageCss(ctx: SceneCtx): string {
 .ed-eyebrow{font:500 ${px(30)}/1 "${f.mono}",monospace;letter-spacing:.22em;text-transform:uppercase;color:var(--vs-accent);}
 .ed-rule{width:${px(64)};height:${px(5)};border-radius:${px(3)};background:var(--vs-accent);}
 .ed-body{font:500 ${px(34)}/1.3 "${f.ui}",sans-serif;color:var(--vs-ink);}
-.ed-cite{font:500 ${px(27)}/1.3 "${f.mono}",monospace;letter-spacing:.04em;color:var(--vs-muted);}
+.ed-cite{font:500 ${px(28)}/1.3 "${f.mono}",monospace;letter-spacing:.04em;color:var(--vs-muted);}
 .ed-italic{font-style:italic;color:var(--vs-accent);}
 .ed-media{position:absolute;overflow:hidden;}
 .ed-media .vs-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
@@ -100,11 +100,11 @@ function sceneGlow(ctx: SceneCtx, x: number, y: number, size: number): { html: s
 }
 
 /** Font size that keeps a serif headline within `maxLines` at the given width (Fraunces ≈ 0.5 em per glyph). */
-function fitSerif(text: string, maxW: number, base: number, maxLines: number): number {
+function fitSerif(text: string, maxW: number, base: number, maxLines: number, glyph = 0.6): number {
   const longest = Math.max(...text.replace(/\*/g, "").split("\n").map((l) => l.length));
   const totalLines = text.split("\n").length;
   const perLine = Math.max(longest / Math.max(1, maxLines - totalLines + 1), 8);
-  return Math.round(Math.min(base, maxW / (perLine * 0.5)));
+  return Math.round(Math.min(base, maxW / (perLine * glyph)));
 }
 
 /* --------------------------------- scenes -------------------------------- */
@@ -135,8 +135,8 @@ ${s.subline ? splitText(`${sid}-sub`, s.subline, { unit: "word", cls: "ed-serif 
   }
   const mediaH = Math.round(H * 0.6);
   const media = mediaBox(ctx, "hm", a, { x: 0, y: 0, w: W, h: mediaH }, { focusY: s.focusY ?? 0.3 });
-  const size = fitSerif(s.headline, W - gutter * 2, 128 * K, 2);
-  const top = Math.round(H * 0.535);
+  const size = fitSerif(s.headline, W - gutter * 2, 120 * K, 2);
+  const top = Math.round(H * 0.5);
   const html = `<div class="ed-page"></div>${media.html}
 <div class="vs-layer" style="background:linear-gradient(180deg,${p.bg}99 0%,transparent 14%,transparent 34%,${p.bg} ${Math.round((mediaH / H) * 100) - 2}%,${p.bg} 100%);"></div>
 <div id="${sid}-tx" style="position:absolute;left:${gutter}px;right:${gutter}px;top:${top}px;display:flex;flex-direction:column;gap:${Math.round(22 * K)}px;">
@@ -167,7 +167,7 @@ function statement(ctx: SceneCtx): SceneOutput {
   const bd = backdrop(ctx, ctx.assets[0], 0.78);
   const gl = sceneGlow(ctx, center ? 0.5 : 0.62, center ? 0.4 : 0.36, 1.1);
   const longest = Math.max(...s.lines.map((l) => l.replace(/\*/g, "").length));
-  const size = Math.round(Math.min((center ? 108 : 104) * K, (W - gutter * 2) / (Math.min(longest, 20) * 0.5)));
+  const size = Math.round(Math.min((center ? 108 : 104) * K, (W - gutter * 2) / (Math.min(longest, 17) * 0.56)));
   const lines = s.lines
     .map((l, i) => splitText(`${sid}-l${i}`, l, { unit: "word", cls: "ed-serif" }).replace('class="vs-text ed-serif"', `class="vs-text ed-serif" style="font-size:${size}px;line-height:1.08;"`))
     .join("");
@@ -224,8 +224,8 @@ function ranked(ctx: SceneCtx): SceneOutput {
   const gutter = Math.round(72 * K);
   const a = ctx.assets[0];
   const show = Math.min(s.show ?? s.items.length, s.items.length);
-  const card = a ? mediaBox(ctx, "rc", a, { x: gutter, y: H * 0.085, w: W - gutter * 2, h: H * 0.27 }, { cls: "ed-card" }) : { html: "", js: "" };
-  const top = Math.round(H * (a ? 0.39 : 0.24));
+  const card = a ? mediaBox(ctx, "rc", a, { x: gutter, y: H * 0.075, w: W - gutter * 2, h: H * 0.235 }, { cls: "ed-card" }) : { html: "", js: "" };
+  const top = Math.round(H * (a ? 0.34 : 0.22));
   const rowH = Math.round(H * 0.085);
   const rows = s.items
     .slice(0, show)

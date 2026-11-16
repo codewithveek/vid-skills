@@ -141,6 +141,11 @@ export function compileHyperFrames(tl: Timeline, opts: CompileOptions): HyperFra
     );
   }
 
+  // Bundled fonts: each sub-composition declares the faces it may use, so it renders (and lints)
+  // correctly on its own as well as inside index.html.
+  if (style.fonts.faces)
+    for (const f of Object.keys(files)) if (f.startsWith("compositions/")) files[f] = files[f]!.replace("<style>", `<style>${style.fonts.faces}`);
+
   const audioTags = tl.audio.map((c, i) => audioTag(c, pathOf(c.assetId), i)).filter(Boolean);
 
   files["index.html"] = `<!doctype html>
@@ -241,7 +246,7 @@ function chromeFile(tl: Timeline, style: StylePack, layout: ReturnType<StylePack
     #chrome-title { margin: 0; max-width: 94%; text-align: center; font-family: "${style.fonts.display}", "Oswald", "Archivo Black", sans-serif; font-weight: ${style.title.weight}; font-size: ${size}px; line-height: ${twoLines ? 0.95 : 1}; letter-spacing: ${style.title.letterSpacing}; color: ${p.title}; -webkit-text-stroke: ${stroke}px ${p.titleStroke}; paint-order: stroke fill; ${twoLines ? "white-space: normal; text-wrap: balance;" : "white-space: nowrap;"} ${style.title.uppercase ? "text-transform: uppercase;" : ""} }
     ${
       style.captions.mode === "phrase"
-        ? `#chrome-handle { position: absolute; text-align: center; font: 500 ${Math.round(24 * k)}px "${style.fonts.mono}", monospace; letter-spacing: .08em; color: rgba(255,255,255,.72); text-shadow: 0 1px 6px rgba(0,0,0,.55); }`
+        ? `#chrome-handle { position: absolute; text-align: center; font: 500 ${Math.round(28 * k)}px "${style.fonts.mono}", monospace; letter-spacing: .08em; color: rgba(255,255,255,.72); text-shadow: 0 1px 6px rgba(0,0,0,.55); }`
         : `#chrome-handle { position: absolute; text-align: right; font: 700 ${Math.round(30 * k)}px "${style.fonts.ui}", sans-serif; color: rgba(255,255,255,.9); -webkit-text-stroke: ${Math.max(2, Math.round(4 * k))}px rgba(0,0,0,.55); paint-order: stroke fill; text-shadow: 0 1px 3px rgba(0,0,0,.6); }`
     }
   </style>
