@@ -59,6 +59,8 @@ export interface StylePack {
     montagePerItemSec: number;
     ease: string;
     drawOnSec: number;
+    /** How one scene hands over to the next. Default: hard cut. */
+    transition?: { type: "cut" | "blur-crossfade"; sec: number };
   };
   audio: {
     targetLufs: number;

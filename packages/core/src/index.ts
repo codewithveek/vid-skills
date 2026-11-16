@@ -13,6 +13,7 @@ export * from "./styles/index.js";
 export * from "./hyperframes/compile.js";
 export { renderScene, sharedCss } from "./hyperframes/scenes.js";
 export { ICONS, iconSvg, resolveIcon, hasIcon, iconNames } from "./hyperframes/icons.js";
+export * from "./hyperframes/motion.js";
 export * from "./visuals.js";
 export * from "./platforms.js";
 export * from "./qa.js";

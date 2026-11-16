@@ -11,6 +11,7 @@
 import type { Asset, AudioClip, Timeline } from "../spec.js";
 import type { StylePack } from "../styles/types.js";
 import { attrJson, escapeHtml as e, round3 } from "../util.js";
+import { MOTION_RULES, MOTION_RUNTIME, ease } from "./motion.js";
 import { renderScene, sharedCss, type SceneAsset } from "./scenes.js";
 
 export interface CompileOptions {
@@ -97,13 +98,20 @@ export function compileHyperFrames(tl: Timeline, opts: CompileOptions): HyperFra
     return out;
   };
 
+  // Blur crossfade: each scene runs on under the next one for `sec`, blurring back while the
+  // next fades in on top of it from a soft blur (Crewcut's blur-bridged crossfade).
+  const xf = style.motion.transition?.type === "blur-crossfade" ? style.motion.transition.sec : 0;
   tl.scenes.forEach((ts, i) => {
     const sid = sceneId(ts.id);
     const assets = ts.assets.map(pathOf).filter((x): x is SceneAsset => !!x);
-    const out = renderScene({ sid, ts, style, width, height, blurFill: layout.blurFill, win: layout.window, assets, fps: tl.fps, derive });
-    files[`compositions/${sid}.html`] = sceneFile(sid, width, height, out.css, out.html, out.js);
+    const last = i === tl.scenes.length - 1;
+    const over = xf && !last ? Math.min(xf, Math.max(0, tl.durationSec - ts.start - ts.duration)) : 0;
+    const run = over ? { ...ts, duration: ts.duration + over } : ts;
+    const out = renderScene({ sid, ts: run, style, width, height, blurFill: layout.blurFill, win: layout.window, assets, fps: tl.fps, derive });
+    const handover = xf ? crossfadeJs(sid, i > 0 ? xf : 0, over ? ts.duration : null, over) : "";
+    files[`compositions/${sid}.html`] = sceneFile(sid, width, height, out.css, xf ? `<div id="${sid}-xf" class="vs-xf">${out.html}</div>` : out.html, out.js + handover);
     hosts.push(
-      `<div id="${sid}" data-composition-id="${sid}" data-composition-src="compositions/${sid}.html" data-start="${round3(ts.start)}" data-duration="${round3(ts.duration)}" data-track-index="1" data-track-kind="graphics" data-width="${width}" data-height="${height}" style="z-index:${1 + (i % 2)}"></div>`,
+      `<div id="${sid}" data-composition-id="${sid}" data-composition-src="compositions/${sid}.html" data-start="${round3(ts.start)}" data-duration="${round3(run.duration)}" data-track-index="1" data-track-kind="graphics" data-width="${width}" data-height="${height}" style="z-index:${1 + (i % 2)}"></div>`,
     );
   });
 
@@ -139,6 +147,7 @@ export function compileHyperFrames(tl: Timeline, opts: CompileOptions): HyperFra
     <meta name="viewport" content="width=${width}, height=${height}" />
     <meta name="generator" content="vid-skills" />
     <script src="${e(gsap)}"></script>
+    <script>${MOTION_RUNTIME}</script>
     <style>${sharedCss(style, layout.window, width, height)}${style.fonts.faces ?? ""}</style>
   </head>
   <body>
@@ -171,12 +180,14 @@ function sceneFile(sid: string, w: number, h: number, css: string, html: string,
   return `<template>
   <style>
     #root { position: absolute; inset: 0; overflow: hidden; }
+    .vs-xf { position: absolute; inset: 0; }
     ${css}
   </style>
   <div id="root" data-composition-id="${sid}" data-width="${w}" data-height="${h}">
     ${html}
   </div>
   <script>
+    ${MOTION_RUNTIME}
     (function () {
       const tl = gsap.timeline({ paused: true });
       ${js}
@@ -186,6 +197,16 @@ function sceneFile(sid: string, w: number, h: number, css: string, html: string,
   </script>
 </template>
 `;
+}
+
+/** Scene hand-over tweens on the scene's wrapper: fade in from a blur, and blur back under the next scene. */
+export function crossfadeJs(sid: string, inSec: number, outAt: number | null, outSec: number): string {
+  const blur = Math.round(MOTION_RULES.crossfadeBlurMaxPx * 0.75);
+  let js = "";
+  if (inSec > 0) js += `tl.fromTo("#${sid}-xf", {opacity:0, filter:"blur(${blur}px)"}, {opacity:1, filter:"blur(0px)", duration:${round3(inSec)}, ease:"${ease("entrance")}"}, 0);`;
+  if (outAt !== null && outSec > 0)
+    js += `tl.fromTo("#${sid}-xf", {filter:"blur(0px)", opacity:1}, {filter:"blur(${blur}px)", opacity:0.65, duration:${round3(outSec)}, ease:"${ease("move")}", immediateRender:false}, ${round3(outAt)});`;
+  return js;
 }
 
 function chromeFile(tl: Timeline, style: StylePack, layout: ReturnType<StylePack["layout"]>, w: number, h: number): string {
