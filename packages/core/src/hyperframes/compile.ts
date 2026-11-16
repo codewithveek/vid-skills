@@ -274,7 +274,7 @@ function pickHero(tl: Timeline, byId: Map<string, Asset>): Asset | undefined {
   }
   const still = (a: Asset | undefined): a is Asset => !!a && a.kind === "image" && a.provider !== "placeholder" && !a.mime?.includes("svg") && !/\.svg(?:$|\?)/i.test(a.uri);
   const cands = tl.scenes
-    .filter((s) => s.scene.type === "broll" || s.scene.type === "analogy")
+    .filter((s) => s.scene.type === "broll" || s.scene.type === "analogy" || s.scene.type === "hero")
     .flatMap((s) => s.assets.map((id) => ({ a: byId.get(id), later: s.start >= poster.durationSec, at: s.start })))
     .filter((c): c is { a: Asset; later: boolean; at: number } => still(c.a));
   const px = (a: Asset) => Math.min(a.width ?? 0, a.height ?? 0);
