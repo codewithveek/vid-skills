@@ -13,7 +13,7 @@
  * Unset slots are auto-detected from whichever API keys are present.
  */
 import type { ImageProvider, LLMProvider, MusicProvider, ProviderSet, ResearchProvider, SfxProvider, StockProvider, STTProvider, TTSProvider, VideoGenProvider } from "@vid-skills/core";
-import { ElevenLabsMusic, ElevenLabsSfx, ElevenLabsSTT, FallbackSfx, FreesoundSfx, HostedMusic, OpenverseSfx, ProceduralSfx, StableAudioMusic, WhisperSTT, DeepgramSTT, WorkersAiSTT } from "./audio.js";
+import { ElevenLabsMusic, ElevenLabsSfx, ElevenLabsSTT, FallbackSfx, FreesoundSfx, HostedMusic, OpenverseSfx, ProceduralMusic, ProceduralSfx, StableAudioMusic, WhisperSTT, DeepgramSTT, WorkersAiSTT } from "./audio.js";
 import type { HostedModel } from "./hosted.js";
 import { AnthropicLLM, FallbackLLM, GeminiLLM, OpenAICompatibleLLM, StaticLLM, WorkersAiLLM, type AiBinding } from "./llm.js";
 import { HttpRenderBackend } from "./render-http.js";
@@ -227,7 +227,8 @@ export function providersFromEnv(env: Env, o: FactoryOptions = {}): ProviderSet 
   let music: MusicProvider | undefined = o.overrides?.music;
   const musicSpec = parseSpecs(env.VIDSK_MUSIC ?? (env.ELEVENLABS_API_KEY ? "elevenlabs" : env.STABILITY_API_KEY ? "stability" : undefined))[0];
   if (!music && musicSpec && musicSpec.provider !== "none") {
-    if (musicSpec.provider === "elevenlabs") music = new ElevenLabsMusic({ apiKey: need(env, "ELEVENLABS_API_KEY") });
+    if (musicSpec.provider === "procedural") music = new ProceduralMusic();
+    else if (musicSpec.provider === "elevenlabs") music = new ElevenLabsMusic({ apiKey: need(env, "ELEVENLABS_API_KEY") });
     else if (musicSpec.provider === "stability") music = new StableAudioMusic({ apiKey: need(env, "STABILITY_API_KEY"), model: musicSpec.model });
     else if (musicSpec.provider === "fal" || musicSpec.provider === "replicate")
       music = new HostedMusic(hosted(musicSpec, env, "VIDSK_MUSIC_INPUT", { prompt: "{{prompt}}", duration: "{{duration}}" }), Number(env.VIDSK_MUSIC_MAX_SEC ?? 30), env.VIDSK_MUSIC_COMMERCIAL === "true");

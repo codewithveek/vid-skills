@@ -39,19 +39,21 @@ export function runQa(i: {
   const first = tl.scenes[0];
   if (!first || first.start > 0.001) f.push({ severity: "blocker", code: "frame0_empty", message: "Frame 0 has no scene (it is the thumbnail and the hook)." });
   // Motion-graphic scenes animate in from an empty stage, so frame 0 (the cover) shows only the chrome.
-  else if (["diagram", "typewriter", "stat", "quote", "cta", "endcard", "versus"].includes(first.scene.type))
+  else if (["diagram", "typewriter", "stat", "quote", "cta", "endcard", "versus", "statement", "bignum", "ranked", "checklist"].includes(first.scene.type))
     f.push({ severity: "minor", code: "frame0_weak", where: first.id, message: `Frame 0 opens on a ${first.scene.type} that animates in from empty; the cover shows little.`, fix: "Open on b-roll (a striking still or clip) and move the graphic to the next beat." });
   const hook = i.script.beats[0]?.lines[0]?.text ?? "";
   if (hook.split(/\s+/).length > 14) f.push({ severity: "major", code: "hook_long", where: "l1", message: "First line is long; the viewer decides in ~1 s.", fix: "≤ 12 words." });
 
-  // Rhythm: longest hold on a media scene
+  // Rhythm: longest hold on a media scene. Editorial layouts are made to be read, so they hold longer.
+  const calm = tl.style === "editorial";
   for (const s of tl.scenes) {
     const holdOk = ["diagram", "typewriter", "document", "cta", "endcard", "stat", "quote", "versus"].includes(s.scene.type);
-    if (!holdOk && s.duration > 6) f.push({ severity: "minor", code: "long_hold", where: s.id, message: `${s.scene.type} shot holds ${s.duration.toFixed(1)} s.`, fix: "Split the shot on a new noun." });
+    const limit = calm ? 9 : 6;
+    if (!holdOk && s.duration > limit) f.push({ severity: "minor", code: "long_hold", where: s.id, message: `${s.scene.type} shot holds ${s.duration.toFixed(1)} s.`, fix: calm ? "Split it: add the next line or row as a joined shot." : "Split the shot on a new noun." });
   }
   const cuts = tl.scenes.length;
   const avgShot = tl.durationSec / Math.max(1, cuts);
-  if (avgShot > 4) f.push({ severity: "major", code: "slow_pacing", message: `Average shot ${avgShot.toFixed(1)} s; the format targets ~1–3 s.` });
+  if (avgShot > (calm ? 7 : 4)) f.push({ severity: "major", code: "slow_pacing", message: `Average shot ${avgShot.toFixed(1)} s; the format targets ${calm ? "~3–6" : "~1–3"} s.` });
 
   // Sources
   if (i.requireSources && i.dossier) {

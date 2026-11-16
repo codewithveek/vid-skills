@@ -23,24 +23,38 @@ export class PexelsStock implements StockProvider {
     const lic = (url: string, who: string): License => ({ name: "Pexels License", url: "https://www.pexels.com/license/", attribution: `${who} via Pexels (${url})`, commercialUse: true, requiresAttribution: false });
     const common = { provider: this.id, headers: { authorization: this.o.apiKey }, rateKey: "pexels", ratePerMinute: 3, signal: q.signal, retry: { retries: 1, timeoutMs: 20_000 } };
     const orient = q.orientation ? `&orientation=${q.orientation}` : "";
-    if (q.kind === "video") {
-      const j = await requestJson<{ videos?: { id: number; url: string; duration: number; user?: { name: string }; video_files: { link: string; width: number; height: number; quality?: string; file_type?: string }[]; image?: string }[] }>(
-        `https://api.pexels.com/videos/search?query=${encodeURIComponent(q.query)}&per_page=${q.limit ?? 8}${orient}&size=medium`,
-        common,
-      );
-      return (j.videos ?? []).flatMap((v) => {
-        // Pick the smallest rendition ≥ 1280 wide (keeps downloads small, quality fine for a 1080-wide window).
-        const files = v.video_files.filter((f) => f.file_type === "video/mp4").sort((a, b) => a.width - b.width);
-        const f = files.find((x) => Math.max(x.width, x.height) >= 1280) ?? files[files.length - 1];
-        return f ? [{ id: `pexels-v${v.id}`, kind: "video" as const, url: f.link, previewUrl: v.image, width: f.width, height: f.height, durationSec: v.duration, provider: this.id, license: lic(v.url, v.user?.name ?? "Pexels") }] : [];
-      });
+    // "pexels:12345" pins one exact photo or video (from a curated pick), skipping search ranking.
+    const pin = /^pexels:(\d+)$/.exec(q.query.trim());
+    if (pin) {
+      if (q.kind === "video") {
+        const v = await requestJson<PexelsVideo>(`https://api.pexels.com/videos/videos/${pin[1]}`, common);
+        return pexelsVideo(v, lic);
+      }
+      const ph = await requestJson<PexelsPhoto>(`https://api.pexels.com/v1/photos/${pin[1]}`, common);
+      return [pexelsPhoto(ph, lic)];
     }
-    const j = await requestJson<{ photos?: { id: number; url: string; width: number; height: number; alt?: string; photographer: string; src: Record<string, string> }[] }>(
-      `https://api.pexels.com/v1/search?query=${encodeURIComponent(q.query)}&per_page=${q.limit ?? 8}${orient}`,
-      common,
-    );
-    return (j.photos ?? []).map((p) => ({ id: `pexels-${p.id}`, kind: "image", url: p.src.large2x ?? p.src.original!, previewUrl: p.src.medium, width: p.width, height: p.height, description: p.alt, provider: this.id, license: lic(p.url, p.photographer) }));
+    if (q.kind === "video") {
+      const j = await requestJson<{ videos?: PexelsVideo[] }>(`https://api.pexels.com/videos/search?query=${encodeURIComponent(q.query)}&per_page=${q.limit ?? 8}${orient}&size=medium`, common);
+      return (j.videos ?? []).flatMap((v) => pexelsVideo(v, lic));
+    }
+    const j = await requestJson<{ photos?: PexelsPhoto[] }>(`https://api.pexels.com/v1/search?query=${encodeURIComponent(q.query)}&per_page=${q.limit ?? 8}${orient}`, common);
+    return (j.photos ?? []).map((p) => pexelsPhoto(p, lic));
   }
+}
+
+type PexelsVideo = { id: number; url: string; duration: number; user?: { name: string }; video_files: { link: string; width: number; height: number; quality?: string; file_type?: string }[]; image?: string };
+type PexelsPhoto = { id: number; url: string; width: number; height: number; alt?: string; photographer: string; src: Record<string, string> };
+type Lic = (url: string, who: string) => License;
+
+function pexelsVideo(v: PexelsVideo, lic: Lic): VisualCandidate[] {
+  // Pick the smallest rendition ≥ 1280 on its long side (keeps downloads small, sharp at 1080 wide).
+  const files = v.video_files.filter((f) => f.file_type === "video/mp4").sort((a, b) => a.width - b.width);
+  const f = files.find((x) => Math.max(x.width, x.height) >= 1280) ?? files[files.length - 1];
+  return f ? [{ id: `pexels-v${v.id}`, kind: "video", url: f.link, previewUrl: v.image, width: f.width, height: f.height, durationSec: v.duration, provider: "pexels", license: lic(v.url, v.user?.name ?? "Pexels") }] : [];
+}
+
+function pexelsPhoto(p: PexelsPhoto, lic: Lic): VisualCandidate {
+  return { id: `pexels-${p.id}`, kind: "image", url: p.src.large2x ?? p.src.original!, previewUrl: p.src.medium, width: p.width, height: p.height, description: p.alt, provider: "pexels", license: lic(p.url, p.photographer) };
 }
 
 /** Pixabay: commercial use OK; results must be cached ≤ 24 h and files served from your own storage (we download). */

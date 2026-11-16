@@ -2,7 +2,7 @@
   "name": "vid-skills",
   "private": true,
   "version": "0.1.0",
-  "description": "Model-agnostic, hands-free short-form video production: research → script → voice → HyperFrames motion graphics → sound design → render → publish. Usable as skills, MCP, CLI, library or a Cloudflare Worker.",
+  "description": "Model-agnostic, hands-free short-form video production: research \u2192 script \u2192 voice \u2192 HyperFrames motion graphics \u2192 sound design \u2192 render \u2192 publish. Usable as skills, MCP, CLI, library or a Cloudflare Worker.",
   "type": "module",
   "license": "Apache-2.0",
   "packageManager": "pnpm@10.20.0",
@@ -16,7 +16,8 @@
     "test": "pnpm run gen && vitest run",
     "lint:skills": "node scripts/lint-skills.mjs",
     "check": "pnpm run typecheck && pnpm run test && pnpm run lint:skills",
-    "vidsk": "node packages/cli/bin/vidsk.mjs"
+    "vidsk": "node packages/cli/bin/vidsk.mjs",
+    "gen:fonts": "node scripts/gen-fonts.mjs"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

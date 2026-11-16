@@ -556,6 +556,10 @@ export async function stageAssets(
         assets.push(a);
         ids.push(a.id);
       }
+    } else if ((sc.type === "hero" || sc.type === "statement" || sc.type === "bignum" || sc.type === "ranked" || sc.type === "checklist") && sc.asset) {
+      const a = await resolve(sc.asset, `${shot.id}-a`, sc.asset.query ?? hint);
+      assets.push(a);
+      ids.push(a.id);
     } else if (sc.type === "versus") {
       for (const [side, key] of [[sc.left, "L"], [sc.right, "R"]] as const) {
         if (!side.asset) continue;

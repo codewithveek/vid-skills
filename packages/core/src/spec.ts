@@ -304,7 +304,69 @@ export const VersusScene = SceneBase.extend({
   winner: z.enum(["left", "right", "none"]).default("right").describe("Side that gets the highlight ring"),
 });
 
+/* ---- Editorial scenes (layouts measured from a calm "science of you" reference) ---- */
+
+const Join = z
+  .boolean()
+  .optional()
+  .describe("Hard-join from the previous shot instead of crossfading (use when this shot continues the last layout, e.g. the next row of a list)");
+const Accent = "Use *stars* around the one accent word, \\n for a line break";
+
+export const HeroScene = SceneBase.extend({
+  type: z.literal("hero"),
+  asset: AssetRequest,
+  headline: z.string().max(80).describe(`Big serif headline. ${Accent}`),
+  eyebrow: z.string().max(40).optional().describe("Small tracked label above the headline, e.g. 'THE SCIENCE OF YOU'"),
+  subline: z.string().max(80).optional().describe("Second line in accent italics, e.g. 'See who answers.'"),
+  variant: z.enum(["top", "dim"]).default("top").describe("top: media fills the top and fades into the page; dim: media fills the frame, dimmed, text centred (outros)"),
+  focusY: z.number().min(0).max(1).optional(),
+  join: Join,
+});
+
+export const StatementScene = SceneBase.extend({
+  type: z.literal("statement"),
+  lines: z.array(z.string().max(90)).min(1).max(4).describe(`Lines stacked top to bottom. ${Accent}`),
+  newFrom: z.number().int().min(0).default(0).describe("Lines before this index are already on screen (no entrance): use with join to build a stack across shots"),
+  align: z.enum(["left", "center"]).default("left"),
+  asset: AssetRequest.optional().describe("Faint blurred photo/video behind the text"),
+  join: Join,
+});
+
+export const BigNumberScene = SceneBase.extend({
+  type: z.literal("bignum"),
+  value: z.string().max(10),
+  label: z.string().max(70),
+  cite: z.string().max(70).optional().describe("Source line, e.g. 'Norscia & Palagi, PLOS ONE (2011)'"),
+  asset: AssetRequest.optional().describe("Photo strip above the number"),
+  sourceClaimId: z.string().optional(),
+  join: Join,
+});
+
+export const RankedScene = SceneBase.extend({
+  type: z.literal("ranked"),
+  title: z.string().max(40).optional().describe("Tracked eyebrow, e.g. 'WHO CATCHES IT FIRST'"),
+  items: z.array(z.object({ label: z.string().max(24), note: z.string().max(32).optional() })).min(2).max(5),
+  show: z.number().int().min(1).optional().describe("Rows visible (default all). Rows before `from` are already on screen."),
+  from: z.number().int().min(0).default(0),
+  asset: AssetRequest.optional().describe("Rounded photo card above the list"),
+  join: Join,
+});
+
+export const ChecklistScene = SceneBase.extend({
+  type: z.literal("checklist"),
+  items: z.array(z.object({ label: z.string().max(28), ok: z.boolean() })).min(1).max(5),
+  show: z.number().int().min(1).optional(),
+  from: z.number().int().min(0).default(0),
+  asset: AssetRequest.optional().describe("Faint photo behind the list"),
+  join: Join,
+});
+
 export const Scene = z.discriminatedUnion("type", [
+  HeroScene,
+  StatementScene,
+  BigNumberScene,
+  RankedScene,
+  ChecklistScene,
   BrollScene,
   VersusScene,
   MontageScene,

@@ -1,8 +1,9 @@
+import { editorial } from "./editorial.js";
 import { framedExplainer } from "./framed-explainer.js";
 import type { StylePack } from "./types.js";
 
 export type { StylePack, Box } from "./types.js";
-export { framedExplainer };
+export { editorial, framedExplainer };
 
 /**
  * Full-bleed variant: the same scene vocabulary with media filling the canvas and
@@ -31,6 +32,7 @@ export const fullBleed: StylePack = {
 const registry = new Map<string, StylePack>([
   [framedExplainer.id, framedExplainer],
   [fullBleed.id, fullBleed],
+  [editorial.id, editorial],
 ]);
 
 export function registerStyle(style: StylePack): void {

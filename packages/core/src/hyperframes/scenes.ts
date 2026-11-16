@@ -42,7 +42,7 @@ const n = (v: number) => round3(v);
 
 /* ----------------------------- media helpers ---------------------- */
 
-function mediaTag(id: string, a: SceneAsset | undefined, dur: number, cls = "vs-media", mediaStart = 0, focusY?: number): string {
+export function mediaTag(id: string, a: SceneAsset | undefined, dur: number, cls = "vs-media", mediaStart = 0, focusY?: number): string {
   if (!a) return `<div id="${id}" class="${cls} vs-missing"></div>`;
   const st = focusY === undefined ? "" : ` style="object-position:50% ${Math.round(focusY * 100)}%"`;
   if (a.asset.kind === "video") {
@@ -68,7 +68,7 @@ function mediaLayer(ctx: SceneCtx, key: string, a: SceneAsset | undefined, dur: 
   return `${bg}<div class="vs-window"><div id="${id}-mw" class="vs-mw${t}" data-layout-allow-overflow>${mediaTag(`${id}-m`, a, dur, "vs-media", 0, opts.focusY)}</div>${tag}</div>`;
 }
 
-function moveTween(sel: string, move: string, dur: number, seed: number): string {
+export function moveTween(sel: string, move: string, dur: number, seed: number): string {
   const r = seededRandom(seed);
   const dir = r() > 0.5 ? 1 : -1;
   switch (move) {
@@ -447,6 +447,11 @@ const RENDERERS: Record<string, (ctx: SceneCtx) => SceneOutput> = {
   cta,
   endcard,
 };
+
+/** Lets other modules (e.g. the editorial scenes) add scene renderers without an import cycle. */
+export function registerRenderer(type: string, fn: (ctx: SceneCtx) => SceneOutput): void {
+  RENDERERS[type] = fn;
+}
 
 export function renderScene(ctx: SceneCtx): SceneOutput {
   const r = RENDERERS[ctx.ts.scene.type];

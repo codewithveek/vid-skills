@@ -3,6 +3,7 @@ import {
   audioDuration,
   base64FromBytes,
   guardHallucinations,
+  synthPad,
   synthSfx,
   type AudioResult,
   type License,
@@ -229,6 +230,17 @@ export class OpenverseSfx implements SfxProvider {
     if (!hit) throw new ProviderError(`openverse: nothing for ${req.cue}`, this.id, 404, false);
     const { bytes, mime } = await requestBytes(hit.url, { provider: this.id, signal: req.signal });
     return { bytes, mime, license: { name: `CC ${hit.license.toUpperCase()} ${hit.license_version ?? ""}`.trim(), url: hit.foreign_landing_url, attribution: `${hit.title ?? "sound"} by ${hit.creator ?? "unknown"}`, commercialUse: true, requiresAttribution: hit.license !== "cc0" && hit.license !== "pdm" } };
+  }
+}
+
+/** Procedural ambient pad: a quiet, deterministic bed for calm narration. Free, offline, no credits. */
+export class ProceduralMusic implements MusicProvider {
+  readonly id = "procedural-pad";
+  readonly maxDurationSec = 600;
+  readonly commercialUse = true;
+  async generate(req: MusicRequest): Promise<AudioResult> {
+    const s = synthPad(req.durationSec);
+    return { bytes: s.bytes, mime: s.mime, durationSec: s.durationSec, license: { name: "generated", commercialUse: true, requiresAttribution: false } };
   }
 }
 

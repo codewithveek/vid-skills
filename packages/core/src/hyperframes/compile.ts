@@ -13,6 +13,7 @@ import type { StylePack } from "../styles/types.js";
 import { attrJson, escapeHtml as e, round3 } from "../util.js";
 import { MOTION_RULES, MOTION_RUNTIME, ease } from "./motion.js";
 import { renderScene, sharedCss, type SceneAsset } from "./scenes.js";
+import "./editorial.js";
 
 export interface CompileOptions {
   /** GSAP script URL. Point at a vendored copy (assets/vendor/gsap.min.js) for hermetic renders. */
@@ -105,10 +106,12 @@ export function compileHyperFrames(tl: Timeline, opts: CompileOptions): HyperFra
     const sid = sceneId(ts.id);
     const assets = ts.assets.map(pathOf).filter((x): x is SceneAsset => !!x);
     const last = i === tl.scenes.length - 1;
-    const over = xf && !last ? Math.min(xf, Math.max(0, tl.durationSec - ts.start - ts.duration)) : 0;
+    // A shot marked `join` continues the previous layout (next row, next line): hard-join it.
+    const joined = (sc: (typeof tl.scenes)[number] | undefined) => !!sc && "join" in sc.scene && !!sc.scene.join;
+    const over = xf && !last && !joined(tl.scenes[i + 1]) ? Math.min(xf, Math.max(0, tl.durationSec - ts.start - ts.duration)) : 0;
     const run = over ? { ...ts, duration: ts.duration + over } : ts;
     const out = renderScene({ sid, ts: run, style, width, height, blurFill: layout.blurFill, win: layout.window, assets, fps: tl.fps, derive });
-    const handover = xf ? crossfadeJs(sid, i > 0 ? xf : 0, over ? ts.duration : null, over) : "";
+    const handover = xf ? crossfadeJs(sid, i > 0 && !joined(ts) ? xf : 0, over ? ts.duration : null, over) : "";
     files[`compositions/${sid}.html`] = sceneFile(sid, width, height, out.css, xf ? `<div id="${sid}-xf" class="vs-xf">${out.html}</div>` : out.html, out.js + handover);
     hosts.push(
       `<div id="${sid}" data-composition-id="${sid}" data-composition-src="compositions/${sid}.html" data-start="${round3(ts.start)}" data-duration="${round3(run.duration)}" data-track-index="1" data-track-kind="graphics" data-width="${width}" data-height="${height}" style="z-index:${1 + (i % 2)}"></div>`,
@@ -134,7 +137,7 @@ export function compileHyperFrames(tl: Timeline, opts: CompileOptions): HyperFra
     const bg = heroPath ? derive(heroPath, "blur-bg") : null;
     files["compositions/poster.html"] = posterFile(tl, tl.poster, style, width, height, heroPath?.path, bg);
     hosts.push(
-      `<div id="poster" data-composition-id="poster" data-composition-src="compositions/poster.html" data-start="0" data-duration="${round3(tl.poster.durationSec)}" data-track-index="5" data-track-kind="graphics" data-width="${width}" data-height="${height}" data-variable-values="${attrJson({ posterText: tl.poster.text, kicker: tl.poster.kicker })}" style="z-index:40"></div>`,
+      `<div id="poster" data-composition-id="poster" data-composition-src="compositions/poster.html" data-start="0" data-duration="${round3(tl.poster.durationSec)}" data-track-index="5" data-track-kind="graphics" data-width="${width}" data-height="${height}" data-variable-values="${attrJson({ posterText: tl.poster.text, kicker: style.poster?.kicker ?? tl.poster.kicker })}" style="z-index:40"></div>`,
     );
   }
 
@@ -236,7 +239,11 @@ function chromeFile(tl: Timeline, style: StylePack, layout: ReturnType<StylePack
     #root { position: absolute; inset: 0; pointer-events: none; }
     .vs-title-band { position: absolute; left: 0; right: 0; display: flex; align-items: center; justify-content: center; }
     #chrome-title { margin: 0; max-width: 94%; text-align: center; font-family: "${style.fonts.display}", "Oswald", "Archivo Black", sans-serif; font-weight: ${style.title.weight}; font-size: ${size}px; line-height: ${twoLines ? 0.95 : 1}; letter-spacing: ${style.title.letterSpacing}; color: ${p.title}; -webkit-text-stroke: ${stroke}px ${p.titleStroke}; paint-order: stroke fill; ${twoLines ? "white-space: normal; text-wrap: balance;" : "white-space: nowrap;"} ${style.title.uppercase ? "text-transform: uppercase;" : ""} }
-    #chrome-handle { position: absolute; text-align: right; font: 700 ${Math.round(30 * k)}px "${style.fonts.ui}", sans-serif; color: rgba(255,255,255,.9); -webkit-text-stroke: ${Math.max(2, Math.round(4 * k))}px rgba(0,0,0,.55); paint-order: stroke fill; text-shadow: 0 1px 3px rgba(0,0,0,.6); }
+    ${
+      style.captions.mode === "phrase"
+        ? `#chrome-handle { position: absolute; text-align: center; font: 500 ${Math.round(24 * k)}px "${style.fonts.mono}", monospace; letter-spacing: .08em; color: rgba(255,255,255,.72); text-shadow: 0 1px 6px rgba(0,0,0,.55); }`
+        : `#chrome-handle { position: absolute; text-align: right; font: 700 ${Math.round(30 * k)}px "${style.fonts.ui}", sans-serif; color: rgba(255,255,255,.9); -webkit-text-stroke: ${Math.max(2, Math.round(4 * k))}px rgba(0,0,0,.55); paint-order: stroke fill; text-shadow: 0 1px 3px rgba(0,0,0,.6); }`
+    }
   </style>
   <div id="root" data-composition-id="chrome" data-width="${w}" data-height="${h}" data-composition-variables="${attrJson(vars)}" data-layout-allow-overlap>
     ${title}
@@ -289,7 +296,9 @@ function posterFile(tl: Timeline, poster: NonNullable<Timeline["poster"]>, style
   const lines = n <= 12 ? 1 : n <= 28 ? 2 : 3;
   const boxW = portrait ? w * 0.9 : w * 0.5;
   const perLine = Math.ceil(n / lines) + 2;
-  const size = Math.round(Math.min((portrait ? 250 : 190) * k, boxW / (perLine * 0.4)));
+  const ps = style.poster ?? { uppercase: true, stroke: true, glyphEm: 0.4 };
+  const size = Math.round(Math.min((portrait ? (ps.uppercase ? 250 : 150) : 190) * k, boxW / (perLine * ps.glyphEm)));
+  const kicker = ps.kicker ?? poster.kicker;
   const cardW = Math.round(portrait ? w * 0.84 : w * 0.4);
   const cardH = Math.round(cardW * (portrait ? 0.68 : 0.75));
   const d = poster.durationSec;
@@ -297,12 +306,12 @@ function posterFile(tl: Timeline, poster: NonNullable<Timeline["poster"]>, style
   const bgLayer = bg ?? hero;
   const vars = [
     { id: "posterText", type: "string", label: "Poster text", default: poster.text, maxLength: 80 },
-    { id: "kicker", type: "string", label: "Poster kicker", default: poster.kicker },
+    { id: "kicker", type: "string", label: "Poster kicker", default: kicker },
   ];
   const card = hero
     ? `<div id="pst-card" class="pst-card"><img src="${e(hero)}" alt="" /></div>`
     : "";
-  const text = `${poster.kicker ? `<div id="pst-kicker" class="pst-kicker" data-var-text="kicker">${e(poster.kicker)}</div>` : ""}<h1 id="pst-title" class="pst-title">${titleHtml}</h1>`;
+  const text = `${kicker ? `<div id="pst-kicker" class="pst-kicker" data-var-text="kicker">${e(kicker)}</div>` : ""}<h1 id="pst-title" class="pst-title">${titleHtml}</h1>`;
   const handle = tl.handle ? `<div id="pst-handle" class="pst-handle">${e(tl.handle)}</div>` : "";
   const body = portrait
     ? `<div class="pst-stack">${text}${card}${handle}</div>`
@@ -316,8 +325,8 @@ function posterFile(tl: Timeline, poster: NonNullable<Timeline["poster"]>, style
     .pst-stack { position: absolute; left: 0; right: 0; top: ${Math.round(h * 0.07)}px; bottom: ${Math.round(h * 0.17)}px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: ${Math.round(40 * k)}px; }
     .pst-row { position: absolute; inset: ${Math.round(h * 0.1)}px ${Math.round(w * 0.05)}px; display: flex; align-items: center; justify-content: space-between; gap: ${Math.round(40 * k)}px; }
     .pst-col { width: ${Math.round(boxW)}px; display: flex; flex-direction: column; align-items: flex-start; gap: ${Math.round(28 * k)}px; }
-    .pst-kicker { font: 900 ${Math.round(40 * k)}px/1 "${style.fonts.ui}", sans-serif; letter-spacing: .06em; color: #fff; background: ${p.title}; padding: ${Math.round(14 * k)}px ${Math.round(26 * k)}px; border-radius: ${Math.round(10 * k)}px; transform: rotate(-2deg); box-shadow: 0 ${Math.round(8 * k)}px ${Math.round(24 * k)}px rgba(0,0,0,.45); }
-    .pst-title { margin: 0; width: ${Math.round(boxW)}px; text-align: ${portrait ? "center" : "left"}; text-wrap: balance; font-family: "${style.fonts.display}", "Oswald", "Archivo Black", sans-serif; font-weight: 400; font-size: ${size}px; line-height: .92; letter-spacing: .01em; text-transform: uppercase; color: #fff; -webkit-text-stroke: ${Math.max(3, Math.round(16 * k))}px #000; paint-order: stroke fill; text-shadow: 0 ${Math.round(10 * k)}px ${Math.round(30 * k)}px rgba(0,0,0,.7); }
+    .pst-kicker { font: 900 ${Math.round(40 * k)}px/1 "${style.fonts.ui}", sans-serif; letter-spacing: .06em; color: ${ps.uppercase ? "#fff" : p.bg}; background: ${p.title}; padding: ${Math.round(14 * k)}px ${Math.round(26 * k)}px; border-radius: ${Math.round(10 * k)}px; transform: rotate(-2deg); box-shadow: 0 ${Math.round(8 * k)}px ${Math.round(24 * k)}px rgba(0,0,0,.45); }
+    .pst-title { margin: 0; width: ${Math.round(boxW)}px; text-align: ${portrait ? "center" : "left"}; text-wrap: balance; font-family: "${style.fonts.display}", "Oswald", "Archivo Black", sans-serif; font-weight: ${ps.uppercase ? 400 : 600}; font-size: ${size}px; line-height: ${ps.uppercase ? 0.92 : 1.02}; letter-spacing: ${ps.uppercase ? ".01em" : "-.015em"}; ${ps.uppercase ? "text-transform: uppercase;" : ""} color: ${ps.uppercase ? "#fff" : p.ink}; ${ps.stroke ? `-webkit-text-stroke: ${Math.max(3, Math.round(16 * k))}px #000; paint-order: stroke fill;` : ""} text-shadow: 0 ${Math.round(10 * k)}px ${Math.round(30 * k)}px rgba(0,0,0,.7); }
     .pst-hl { color: ${p.highlight}; }
     .pst-card { width: ${cardW}px; height: ${cardH}px; flex: none; border: ${Math.max(4, Math.round(12 * k))}px solid #fff; border-radius: ${Math.round(18 * k)}px; overflow: hidden; transform: rotate(-2.5deg); box-shadow: 0 ${Math.round(24 * k)}px ${Math.round(60 * k)}px rgba(0,0,0,.6); background: ${p.card}; }
     .pst-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -347,15 +356,24 @@ function captionsFile(tl: Timeline, style: StylePack, box: { x: number; y: numbe
   const c = style.captions;
   const k = w / 1080;
   const size = Math.round(c.size * k);
+  const phrase = c.mode === "phrase";
   let html = "";
   let js = "";
   tl.captions.forEach((cue, i) => {
     const id = `cap-c${i}`;
     const words = cue.words
-      .map((wd, j) => `<span id="${id}-w${j}" class="vs-w${cue.emphasis.includes(j) ? " vs-w-em" : ""}">${e(c.uppercase ? wd.text.toUpperCase() : wd.text)}</span>`)
+      .map((wd, j) => `<span id="${id}-w${j}" class="vs-w${cue.emphasis.includes(j) && !phrase ? " vs-w-em" : ""}">${e(c.uppercase ? wd.text.toUpperCase() : wd.text)}</span>`)
       .join(" ");
     html += `<div id="${id}" class="clip vs-cue" data-start="${round3(cue.start)}" data-duration="${round3(Math.max(0.05, cue.end - cue.start))}"><div id="${id}-in" class="vs-cue-in">${words}</div></div>`;
     js += `tl.fromTo("#${id}-in", {y:${Math.round(10 * k)}, opacity:0}, {y:0, opacity:1, duration:0.1, ease:"power2.out"}, ${round3(cue.start)});`;
+    if (phrase) {
+      // Key words light up once they are said and stay lit; the rest of the phrase stays white.
+      cue.emphasis.forEach((j) => {
+        const wd = cue.words[j];
+        if (wd) js += `tl.fromTo("#${id}-w${j}", {color:"#FFFFFF"}, {color:"${c.highlight}", duration:0.12}, ${round3(wd.start)});`;
+      });
+      return;
+    }
     cue.words.forEach((wd, j) => {
       const emph = cue.emphasis.includes(j);
       js += `tl.fromTo("#${id}-w${j}", {color:"#FFFFFF", scale:1}, {color:"${c.highlight}", scale:1.08, duration:0.06}, ${round3(wd.start)});`;
@@ -369,7 +387,11 @@ function captionsFile(tl: Timeline, style: StylePack, box: { x: number; y: numbe
   <style>
     #root { position: absolute; inset: 0; pointer-events: none; }
     .vs-cue { position: absolute; left: ${box.x}px; top: ${box.y}px; width: ${box.w}px; height: ${box.h}px; display: flex; align-items: center; justify-content: center; }
-    .vs-cue-in { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; column-gap: ${c.wordGapEm ?? 0.32}em; row-gap: 0.08em; max-width: 100%; text-align: center; font: ${c.weight} ${size}px/1.1 "${style.fonts.ui}", sans-serif; color: #fff; -webkit-text-stroke: ${Math.max(2, Math.round(8 * k))}px #000; paint-order: stroke fill; text-shadow: 0 ${Math.round(4 * k)}px ${Math.round(10 * k)}px rgba(0,0,0,.55); }
+    .vs-cue-in { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; column-gap: ${c.wordGapEm ?? 0.32}em; row-gap: 0.08em; max-width: 100%; text-align: center; font: ${c.weight} ${size}px/1.1 "${style.fonts.ui}", sans-serif; color: #fff; ${
+      phrase
+        ? `text-shadow: 0 ${Math.round(2 * k)}px ${Math.round(14 * k)}px rgba(0,0,0,.75), 0 0 ${Math.round(2 * k)}px rgba(0,0,0,.6);`
+        : `-webkit-text-stroke: ${Math.max(2, Math.round(8 * k))}px #000; paint-order: stroke fill; text-shadow: 0 ${Math.round(4 * k)}px ${Math.round(10 * k)}px rgba(0,0,0,.55);`
+    } }
     .vs-w { display: inline-block; }
     .vs-w-em { color: ${c.highlight}; }
   </style>

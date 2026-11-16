@@ -50,6 +50,8 @@ export interface StylePack {
     uppercase: boolean;
     /** Gap between caption words, in em. Explicit because thick text strokes eat normal spaces. */
     wordGapEm?: number;
+    /** karaoke (default): each word flashes as it is spoken, outlined. phrase: clean phrases, key words light up and stay lit. */
+    mode?: "karaoke" | "phrase";
   };
   motion: {
     /** Seconds the cut leads the anchor word (negative = after). The reference lands visuals on the word. */
@@ -62,6 +64,8 @@ export interface StylePack {
     /** How one scene hands over to the next. Default: hard cut. */
     transition?: { type: "cut" | "blur-crossfade"; sec: number };
   };
+  /** Opening poster typography (defaults: condensed caps with a heavy outline). */
+  poster?: { uppercase: boolean; stroke: boolean; glyphEm: number; kicker?: string };
   audio: {
     targetLufs: number;
     truePeakDb: number;

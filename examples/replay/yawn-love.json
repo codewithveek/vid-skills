@@ -1,0 +1,860 @@
+{
+  "ResearchDossier": {
+    "topic": "your yawn knows who you love",
+    "summary": "Contagious yawning spreads most between kin, then friends, then acquaintances, then strangers (Norscia & Palagi 2011, 109 adults, 480 bouts, one year of observation); strangers are slower to yawn back; gender and nationality do not predict it; hearing a yawn works as well as seeing one. Dogs catch human yawns (21 of 29 in Joly-Mascheroni 2008). A larger 2014 study (328 people) found age, not empathy, predicted susceptibility. Reading or thinking about yawning can trigger yawns (Provine).",
+    "angle": "Who catches your yawn says how close you are.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Yawns are so infectious that simply reading or thinking about them can trigger a yawn.",
+        "sources": [
+          {
+            "url": "https://www.americanscientist.org/sites/americanscientist.org/files/200510314450_646.pdf",
+            "title": "Provine (2005) Yawning. American Scientist",
+            "quote": "simply reading or thinking about them can be the vector of an infectious response"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "Norscia and Palagi observed 109 adults (over 16) yawning in their natural settings over one year; 480 yawning bouts were analysed.",
+        "sources": [
+          {
+            "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0028472",
+            "title": "Norscia & Palagi (2011) Yawn Contagion and Empathy in Homo sapiens. PLOS ONE",
+            "quote": "involved 109 adults"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Yawn contagion was greatest in response to kin, then friends, then acquaintances, and lastly strangers.",
+        "sources": [
+          {
+            "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0028472",
+            "title": "Norscia & Palagi (2011) Yawn Contagion and Empathy in Homo sapiens. PLOS ONE",
+            "quote": "the rate of contagion was greatest in response to kin, then friends, then acquaintances, and lastly strangers"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "Strangers and acquaintances showed a longer delay in yawning back than friends and kin.",
+        "sources": [
+          {
+            "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0028472",
+            "title": "Norscia & Palagi (2011) Yawn Contagion and Empathy in Homo sapiens. PLOS ONE",
+            "quote": "Strangers and acquaintances showed a longer delay in the yawn response"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "Yawn contagion was driven by emotional closeness, not by gender or nationality.",
+        "sources": [
+          {
+            "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0028472",
+            "title": "Norscia & Palagi (2011) Yawn Contagion and Empathy in Homo sapiens. PLOS ONE",
+            "quote": "and not by other variables, such as gender and nationality"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c6",
+        "text": "Sensory modality (seeing or only hearing the yawn) did not affect contagion.",
+        "sources": [
+          {
+            "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0028472",
+            "title": "Norscia & Palagi (2011) Yawn Contagion and Empathy in Homo sapiens. PLOS ONE",
+            "quote": "sensory modality did not affect contagion"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c7",
+        "text": "In a 2008 experiment, 21 of 29 dogs yawned after watching a stranger yawn; none yawned in the control condition.",
+        "sources": [
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2610100",
+            "title": "Joly-Mascheroni, Senju & Shepherd (2008) Dogs catch human yawns. Biology Letters",
+            "quote": "21 out of 29 dogs"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c8",
+        "text": "A 2014 study of 328 people found age was the only factor that independently predicted contagious yawning; empathy did not.",
+        "sources": [
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3954725",
+            "title": "Bartholomew & Cirulli (2014) Individual variation in contagious yawning susceptibility. PLOS ONE",
+            "quote": "age"
+          }
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Your Yawn Knows Who You Love",
+    "cta": "Yawn at your friends tonight, and see who answers.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Who made you yawn last? It was probably someone you love.",
+            "emphasis": [
+              "love."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.45
+          },
+          {
+            "id": "l2",
+            "text": "And you might yawn before this video ends.",
+            "emphasis": [
+              "yawn"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.45
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "stakes",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l3",
+            "text": "Yawns are contagious. Seeing one, hearing one, even reading about one can set you off.",
+            "emphasis": [
+              "contagious."
+            ],
+            "claimIds": [
+              "c1",
+              "c6"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l4",
+            "text": "But some people catch them far more than others.",
+            "emphasis": [
+              "far"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.5
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "In 2011, two scientists in Italy watched 109 adults yawn in their everyday lives, for a whole year.",
+            "emphasis": [
+              "109"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l6",
+            "text": "They studied 480 yawns, and who yawned back.",
+            "emphasis": [
+              "480"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.45
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "Yawns spread most between family. Then friends. Then acquaintances.",
+            "emphasis": [
+              "family."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l8",
+            "text": "Strangers caught them least, and took the longest to yawn back.",
+            "emphasis": [
+              "Strangers"
+            ],
+            "claimIds": [
+              "c3",
+              "c4"
+            ],
+            "pauseAfterSec": 0.45
+          },
+          {
+            "id": "l9",
+            "text": "Gender didn't predict it. Neither did nationality.",
+            "emphasis": [
+              "Gender"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l10",
+            "text": "Only closeness did.",
+            "emphasis": [
+              "closeness"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.45
+          },
+          {
+            "id": "l11",
+            "text": "And it worked just as well when people only heard the yawn.",
+            "emphasis": [
+              "heard"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.5
+          }
+        ]
+      },
+      {
+        "id": "b5",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l12",
+            "text": "Here's the strangest part. Dogs catch our yawns too.",
+            "emphasis": [
+              "Dogs"
+            ],
+            "claimIds": [
+              "c7"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l13",
+            "text": "In one study, 21 of 29 dogs yawned after watching a stranger yawn.",
+            "emphasis": [
+              "21"
+            ],
+            "claimIds": [
+              "c7"
+            ],
+            "pauseAfterSec": 0.5
+          }
+        ]
+      },
+      {
+        "id": "b6",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l14",
+            "text": "Scientists still argue about why.",
+            "emphasis": [
+              "why."
+            ],
+            "claimIds": [
+              "c8"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l15",
+            "text": "One bigger study found age mattered more than empathy.",
+            "emphasis": [
+              "age"
+            ],
+            "claimIds": [
+              "c8"
+            ],
+            "pauseAfterSec": 0.5
+          }
+        ]
+      },
+      {
+        "id": "b7",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l16",
+            "text": "Still, who catches your yawn says a lot about how close you are.",
+            "emphasis": [
+              "close"
+            ],
+            "claimIds": [
+              "c3",
+              "c5"
+            ],
+            "pauseAfterSec": 0.55
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Yawn at your friends tonight, and see who answers.",
+            "emphasis": [
+              "answers."
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.4
+          },
+          {
+            "id": "lz2",
+            "text": "And be honest. Did you yawn yet?",
+            "emphasis": [
+              "yawn"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.6
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "hero",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:3416980",
+            "prompt": "a woman yawning in dim warm light",
+            "prefer": "stock"
+          },
+          "eyebrow": "THE SCIENCE OF YOU",
+          "headline": "Your *yawn* knows\nwho you love",
+          "focusY": 0.3
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l2",
+        "scene": {
+          "type": "statement",
+          "lines": [
+            "You might *yawn*\nbefore this ends."
+          ],
+          "asset": {
+            "kind": "video",
+            "query": "pexels:7033439",
+            "prompt": "a woman yawning while reading",
+            "prefer": "stock"
+          }
+        }
+      },
+      {
+        "id": "sh3",
+        "lineId": "l3",
+        "scene": {
+          "type": "statement",
+          "lines": [
+            "Yawns are\n*contagious*."
+          ],
+          "asset": {
+            "kind": "video",
+            "query": "pexels:6032135",
+            "prompt": "a woman yawning at her laptop",
+            "prefer": "stock"
+          }
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l4",
+        "scene": {
+          "type": "statement",
+          "lines": [
+            "Yawns are\n*contagious*.",
+            "Some catch them\n*far more* than others."
+          ],
+          "newFrom": 1,
+          "asset": {
+            "kind": "video",
+            "query": "pexels:6032135",
+            "prompt": "a woman yawning at her laptop",
+            "prefer": "stock"
+          },
+          "join": true
+        }
+      },
+      {
+        "id": "sh5",
+        "lineId": "l5",
+        "scene": {
+          "type": "bignum",
+          "value": "109",
+          "label": "adults, watched yawning in everyday life",
+          "cite": "NORSCIA & PALAGI · PLOS ONE (2011)",
+          "asset": {
+            "kind": "video",
+            "query": "pexels:27697943",
+            "prompt": "people walking on a busy street",
+            "prefer": "stock"
+          },
+          "sourceClaimId": "c2"
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l6",
+        "scene": {
+          "type": "bignum",
+          "value": "480",
+          "label": "yawns, and who yawned back",
+          "cite": "ONE YEAR OF OBSERVATION",
+          "sourceClaimId": "c2"
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l7",
+        "scene": {
+          "type": "ranked",
+          "title": "WHO CATCHES IT FIRST",
+          "items": [
+            {
+              "label": "Family"
+            },
+            {
+              "label": "Friends"
+            },
+            {
+              "label": "Acquaintances"
+            },
+            {
+              "label": "Strangers"
+            }
+          ],
+          "show": 1,
+          "asset": {
+            "kind": "image",
+            "query": "pexels:4868543",
+            "prompt": "a mother taking a selfie with her children",
+            "prefer": "stock"
+          }
+        }
+      },
+      {
+        "id": "sh8",
+        "lineId": "l7",
+        "scene": {
+          "type": "ranked",
+          "title": "WHO CATCHES IT FIRST",
+          "items": [
+            {
+              "label": "Family"
+            },
+            {
+              "label": "Friends"
+            },
+            {
+              "label": "Acquaintances"
+            },
+            {
+              "label": "Strangers"
+            }
+          ],
+          "show": 2,
+          "from": 1,
+          "asset": {
+            "kind": "image",
+            "query": "pexels:4868543",
+            "prompt": "",
+            "prefer": "stock"
+          },
+          "join": true
+        },
+        "anchor": "friends."
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "ranked",
+          "title": "WHO CATCHES IT FIRST",
+          "items": [
+            {
+              "label": "Family"
+            },
+            {
+              "label": "Friends"
+            },
+            {
+              "label": "Acquaintances"
+            },
+            {
+              "label": "Strangers"
+            }
+          ],
+          "show": 3,
+          "from": 2,
+          "asset": {
+            "kind": "image",
+            "query": "pexels:4868543",
+            "prompt": "",
+            "prefer": "stock"
+          },
+          "join": true
+        },
+        "anchor": "acquaintances."
+      },
+      {
+        "id": "sh10",
+        "lineId": "l8",
+        "scene": {
+          "type": "ranked",
+          "title": "WHO CATCHES IT FIRST",
+          "items": [
+            {
+              "label": "Family"
+            },
+            {
+              "label": "Friends"
+            },
+            {
+              "label": "Acquaintances"
+            },
+            {
+              "label": "Strangers",
+              "note": "least, and slowest"
+            }
+          ],
+          "show": 4,
+          "from": 3,
+          "asset": {
+            "kind": "image",
+            "query": "pexels:4868543",
+            "prompt": "",
+            "prefer": "stock"
+          },
+          "join": true
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "l9",
+        "scene": {
+          "type": "checklist",
+          "items": [
+            {
+              "label": "Gender",
+              "ok": false
+            },
+            {
+              "label": "Nationality",
+              "ok": false
+            },
+            {
+              "label": "Closeness",
+              "ok": true
+            }
+          ],
+          "show": 1,
+          "asset": {
+            "kind": "image",
+            "query": "pexels:12334707",
+            "prompt": "a busy crowd",
+            "prefer": "stock"
+          }
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "l9",
+        "scene": {
+          "type": "checklist",
+          "items": [
+            {
+              "label": "Gender",
+              "ok": false
+            },
+            {
+              "label": "Nationality",
+              "ok": false
+            },
+            {
+              "label": "Closeness",
+              "ok": true
+            }
+          ],
+          "show": 2,
+          "from": 1,
+          "asset": {
+            "kind": "image",
+            "query": "pexels:12334707",
+            "prompt": "",
+            "prefer": "stock"
+          },
+          "join": true
+        },
+        "anchor": "Neither"
+      },
+      {
+        "id": "sh13",
+        "lineId": "l10",
+        "scene": {
+          "type": "checklist",
+          "items": [
+            {
+              "label": "Gender",
+              "ok": false
+            },
+            {
+              "label": "Nationality",
+              "ok": false
+            },
+            {
+              "label": "Closeness",
+              "ok": true
+            }
+          ],
+          "show": 3,
+          "from": 2,
+          "asset": {
+            "kind": "image",
+            "query": "pexels:12334707",
+            "prompt": "",
+            "prefer": "stock"
+          },
+          "join": true
+        }
+      },
+      {
+        "id": "sh14",
+        "lineId": "l11",
+        "scene": {
+          "type": "statement",
+          "lines": [
+            "Even when they\nonly *heard* it."
+          ],
+          "asset": {
+            "kind": "image",
+            "query": "pexels:7382411",
+            "prompt": "a woman with her eyes closed",
+            "prefer": "stock"
+          }
+        }
+      },
+      {
+        "id": "sh15",
+        "lineId": "l12",
+        "scene": {
+          "type": "hero",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:35355383",
+            "prompt": "a golden dog yawning",
+            "prefer": "stock"
+          },
+          "eyebrow": "THE STRANGEST PART",
+          "headline": "Dogs catch\nour *yawns* too",
+          "focusY": 0.25
+        }
+      },
+      {
+        "id": "sh16",
+        "lineId": "l13",
+        "scene": {
+          "type": "bignum",
+          "value": "21 of 29",
+          "label": "dogs yawned after watching a stranger yawn",
+          "cite": "JOLY-MASCHERONI ET AL. · BIOLOGY LETTERS (2008)",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:30203525",
+            "prompt": "a dog yawning in warm sunlight",
+            "prefer": "stock"
+          },
+          "sourceClaimId": "c7"
+        }
+      },
+      {
+        "id": "sh17",
+        "lineId": "l14",
+        "scene": {
+          "type": "statement",
+          "lines": [
+            "Scientists still\nargue about *why*."
+          ],
+          "asset": {
+            "kind": "image",
+            "query": "pexels:6975192",
+            "prompt": "a senior couple smiling together",
+            "prefer": "stock"
+          }
+        }
+      },
+      {
+        "id": "sh18",
+        "lineId": "l15",
+        "scene": {
+          "type": "statement",
+          "lines": [
+            "Scientists still\nargue about *why*.",
+            "Age mattered more\nthan *empathy*."
+          ],
+          "newFrom": 1,
+          "asset": {
+            "kind": "image",
+            "query": "pexels:6975192",
+            "prompt": "a senior couple smiling together",
+            "prefer": "stock"
+          },
+          "join": true
+        }
+      },
+      {
+        "id": "sh19",
+        "lineId": "l16",
+        "scene": {
+          "type": "statement",
+          "lines": [
+            "Who catches your yawn\nsays how *close* you are."
+          ],
+          "align": "center",
+          "asset": {
+            "kind": "video",
+            "query": "pexels:9187880",
+            "prompt": "two friends laughing together",
+            "prefer": "stock"
+          }
+        }
+      },
+      {
+        "id": "sh20",
+        "lineId": "lz",
+        "scene": {
+          "type": "hero",
+          "variant": "dim",
+          "asset": {
+            "kind": "video",
+            "query": "pexels:7233631",
+            "prompt": "a couple on a sofa at night",
+            "prefer": "stock"
+          },
+          "headline": "Yawn at your friends tonight.",
+          "subline": "See who answers."
+        }
+      },
+      {
+        "id": "sh21",
+        "lineId": "lz2",
+        "scene": {
+          "type": "statement",
+          "lines": [
+            "Be honest.",
+            "Did you *yawn* yet?"
+          ],
+          "align": "center",
+          "asset": {
+            "kind": "video",
+            "query": "pexels:7233631",
+            "prompt": "a couple on a sofa at night",
+            "prefer": "stock"
+          }
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Your yawn knows who you love",
+    "description": "Who made you yawn last? It was probably someone you love.\nIn a year-long study of 109 adults, yawns spread most between family, then friends, then acquaintances, and least between strangers. Gender and nationality didn't matter; closeness did. Even dogs catch our yawns.\n\nYawn at your friends tonight and see who answers. Did you yawn while watching?",
+    "hashtags": [
+      "yawning",
+      "psychology",
+      "science",
+      "didyouknow",
+      "relationships"
+    ],
+    "keywords": [
+      "why are yawns contagious",
+      "contagious yawning",
+      "yawning and empathy",
+      "who catches your yawn",
+      "dogs catch human yawns"
+    ],
+    "hook": "Who made you yawn last? It was probably someone you love.",
+    "altText": "Editorial explainer on contagious yawning: the closer you are to someone, the more likely you are to catch their yawn.",
+    "pinnedComment": "Be honest: did you yawn while watching? 🥱 And who yawned back when you tried it tonight?",
+    "sources": [
+      {
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0028472",
+        "title": "Norscia & Palagi (2011) Yawn Contagion and Empathy in Homo sapiens. PLOS ONE"
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2610100",
+        "title": "Joly-Mascheroni, Senju & Shepherd (2008) Dogs catch human yawns. Biology Letters"
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3954725",
+        "title": "Bartholomew & Cirulli (2014) Individual variation in contagious yawning susceptibility. PLOS ONE"
+      },
+      {
+        "url": "https://www.americanscientist.org/sites/americanscientist.org/files/200510314450_646.pdf",
+        "title": "Provine (2005) Yawning. American Scientist"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}
