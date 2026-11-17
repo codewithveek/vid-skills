@@ -1,0 +1,394 @@
+{
+  "ResearchDossier": {
+    "topic": "the candy cane origin story is probably made up",
+    "summary": "A common story says a Cologne Cathedral choirmaster bent sugar sticks into canes in 1670, shaped like shepherd's crooks; references to it don't exist before the mid-20th century and it is likely apocryphal. The earliest documented 'candy cane' is in an 1866 story in Ballou's Monthly Magazine. A recipe for striped peppermint candy sticks appeared in 1844. Robert McCormack began making candy canes in Albany, Georgia in 1919; before machines, canes had to be bent by hand.",
+    "angle": "A Christmas legend nobody wrote down until the 1900s.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "A common story says a Cologne Cathedral choirmaster created candy canes in 1670, shaped like a shepherd's crook to remind children of the shepherds who visited the infant Jesus.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Candy_cane",
+            "title": "Candy cane - Wikipedia",
+            "quote": "A common story of the origin of candy canes says that in 1670"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The 1670 story is likely apocryphal; references to it don't exist before the mid-20th century.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Candy_cane",
+            "title": "Candy cane - Wikipedia",
+            "quote": "This story is likely apocryphal, with references to it not existing before the mid-20th century."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "The earliest documentation of a 'candy cane' is in the 1866 short story 'Tom Luther's Stockings' in Ballou's Monthly Magazine.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Candy_cane",
+            "title": "Candy cane - Wikipedia",
+            "quote": "The earliest documentation of a 'candy cane'"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "An 1844 recipe described straight peppermint candy sticks, white with coloured stripes.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Candy_cane",
+            "title": "Candy cane - Wikipedia",
+            "quote": "straight peppermint candy sticks, white with coloured stripes"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "In 1919 in Albany, Georgia, Robert McCormack began making candy canes for local children.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Candy_cane",
+            "title": "Candy cane - Wikipedia",
+            "quote": "In 1919, in Albany, Georgia, Robert McCormack began making candy canes"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c6",
+        "text": "Before machines, the canes had to be bent manually as they came off the line.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Candy_cane",
+            "title": "Candy cane - Wikipedia",
+            "quote": "the canes had to be bent manually"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "The Candy Cane Story Is Made Up",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "That story about where candy canes come from? It's probably made up.",
+            "emphasis": [
+              "made"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "stakes",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "It goes like this. In 1670, a choirmaster in Cologne bent sugar sticks into shepherd's crooks.",
+            "emphasis": [
+              "crooks."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "To remind children of the shepherds who visited baby Jesus.",
+            "emphasis": [
+              "shepherds"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l4",
+            "text": "Except nobody wrote that story down until the mid-1900s.",
+            "emphasis": [
+              "nobody"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "The first written candy cane shows up in 1866, in an American magazine story.",
+            "emphasis": [
+              "1866,"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "Striped peppermint sticks are older. A recipe from 1844 already had them.",
+            "emphasis": [
+              "1844"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l7",
+            "text": "And in 1919, a candy maker in Georgia started making canes for local kids, bending every hook by hand.",
+            "emphasis": [
+              "hand."
+            ],
+            "claimIds": [
+              "c5",
+              "c6"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Candy Cane inhand 643201122020\"",
+            "prompt": "candy canes held in a hand",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "scroll-text",
+            "title": "LEGEND",
+            "label": "Cologne, 1670"
+          },
+          "right": {
+            "icon": "search",
+            "title": "RECORDS",
+            "label": "None until the 1900s"
+          },
+          "winner": "right"
+        },
+        "anchor": "probably"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"The cathedral, side, Cologne, the Rhine, Germany-LCCN2002714084\"",
+            "prompt": "Cologne Cathedral",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Cologne Cathedral"
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "candy-cane",
+            "label": "A SHEPHERD'S CROOK?",
+            "color": "#FF3B30",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "typewriter",
+          "lead": "first told:",
+          "highlight": "mid-1900s",
+          "cps": 12
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"1880 Ballous Thomes Talbot HawleySt Boston\"",
+            "prompt": "Ballou's Monthly Magazine cover",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Ballou's Monthly Magazine"
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "typewriter",
+          "lead": "first written:",
+          "highlight": "1866",
+          "cps": 10
+        },
+        "anchor": "1866,"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Candy-Cane-Classic\"",
+            "prompt": "a striped candy cane",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Striped by 1844"
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "stat",
+          "value": "1919",
+          "caption": "Albany, Georgia: canes bent by hand",
+          "sourceClaimId": "c5"
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "The candy cane origin story is probably made up",
+    "description": "That story about where candy canes come from? It's probably made up.\nThe tale of a Cologne choirmaster bending sugar sticks into shepherd's crooks in 1670 doesn't appear in writing until the mid-1900s. The first written candy cane shows up in 1866; striped peppermint sticks were in an 1844 recipe.",
+    "hashtags": [
+      "candycane",
+      "christmas",
+      "history",
+      "mythbusting",
+      "didyouknow"
+    ],
+    "keywords": [
+      "candy cane origin",
+      "candy cane legend",
+      "history of candy canes",
+      "candy cane myth",
+      "why are candy canes shaped like a J"
+    ],
+    "hook": "That story about where candy canes come from? It's probably made up.",
+    "altText": "Motion-graphics explainer on the candy cane origin legend.",
+    "pinnedComment": "Candy canes: actually delicious, or just decoration? 🍬 Pick a side.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Candy_cane",
+        "title": "Candy cane"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

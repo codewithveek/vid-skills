@@ -1,0 +1,378 @@
+{
+  "ResearchDossier": {
+    "topic": "advent calendars started as chalk marks",
+    "summary": "Early advent counting in Germany included 24 chalk marks on a wall or door, one wiped off each day. The first documented advent calendar dates from 1839. Munich publisher Gerhard Lang, whose mother sewed 24 small baked goods onto cardboard for him each Advent, printed 'Im Lande des Christkinds' in 1903. Calendars with little opening windows spread after 1920. The first chocolate-filled advent calendar went on sale in 1958.",
+    "angle": "From chalk to chocolate.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "One early form of advent calendar was 24 chalk marks on a wall or door; children were allowed to wipe one away each day.",
+        "sources": [
+          {
+            "url": "https://de.wikipedia.org/wiki/Adventskalender",
+            "title": "Adventskalender - Wikipedia (de)",
+            "quote": "bei der die Kinder täglich einen Strich wegwischen durften"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The first documented advent calendar was made in 1839.",
+        "sources": [
+          {
+            "url": "https://de.wikipedia.org/wiki/Adventskalender",
+            "title": "Adventskalender - Wikipedia (de)",
+            "quote": "Den ersten dokumentierten Adventskalender schuf der evangelische Theologe Johann Hinrich Wichern 1839"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Gerhard Lang's mother sewed 24 small baked goods onto a piece of cardboard for him each Advent; he could eat one a day from December 1.",
+        "sources": [
+          {
+            "url": "https://de.wikipedia.org/wiki/Adventskalender",
+            "title": "Adventskalender - Wikipedia (de)",
+            "quote": "da ihm seine Mutter jedes Jahr in der Vorweihnachtszeit 24 Gebäckstücke"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "In 1903 the Munich publisher Gerhard Lang released a printed calendar called 'Im Lande des Christkinds'.",
+        "sources": [
+          {
+            "url": "https://de.wikipedia.org/wiki/Adventskalender",
+            "title": "Adventskalender - Wikipedia (de)",
+            "quote": "einen gedruckten Kalender mit dem Titel Im Lande des Christkinds"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "After 1920, calendars with little windows that could be opened spread.",
+        "sources": [
+          {
+            "url": "https://de.wikipedia.org/wiki/Adventskalender",
+            "title": "Adventskalender - Wikipedia (de)",
+            "quote": "Nach 1920 verbreiteten sich schließlich Kalender, deren Fensterchen man öffnen konnte."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c6",
+        "text": "The first advent calendar filled with chocolate went on sale in 1958.",
+        "sources": [
+          {
+            "url": "https://de.wikipedia.org/wiki/Adventskalender",
+            "title": "Adventskalender - Wikipedia (de)",
+            "quote": "Der erste mit Schokolade gefüllte Adventskalender wurde 1958 in den Handel gebracht."
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Advent Calendars Began as Chalk",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Before the chocolate, advent calendars were chalk marks on a door.",
+            "emphasis": [
+              "chalk"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "Some German families drew 24 lines, and the kids wiped one away each day.",
+            "emphasis": [
+              "wiped"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "The first documented advent calendar dates back to 1839.",
+            "emphasis": [
+              "1839."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l4",
+            "text": "Then a boy named Gerhard Lang got a tastier version. His mother sewed 24 little biscuits onto cardboard.",
+            "emphasis": [
+              "biscuits"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "He grew up to be a publisher. And in 1903, in Munich, he printed one.",
+            "emphasis": [
+              "printed"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l6",
+            "text": "After 1920, calendars with little doors took off.",
+            "emphasis": [
+              "doors"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l7",
+            "text": "And in 1958, someone finally put chocolate behind them.",
+            "emphasis": [
+              "chocolate"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Adventskalender, Gotlands museum\"",
+            "prompt": "an antique advent calendar",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l2",
+        "scene": {
+          "type": "diagram",
+          "template": "counter",
+          "data": {
+            "from": 24,
+            "to": 1,
+            "label": "CHALK LINES"
+          }
+        }
+      },
+      {
+        "id": "sh3",
+        "lineId": "l3",
+        "scene": {
+          "type": "typewriter",
+          "lead": "first documented:",
+          "highlight": "1839",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "cookie",
+            "label": "24 BISCUITS ON CARDBOARD",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "His"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"AK - München - Marienplatz - 1900\"",
+            "prompt": "Munich around 1900",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Munich, around 1900"
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Richard Ernst Kepler - Im Lande des Christkinds\"",
+            "prompt": "the 1903 printed advent calendar",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Im Lande des Christkinds, 1903"
+        },
+        "anchor": "printed"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l6",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Adventskalender eller julkalender, Gotlands museum\"",
+            "prompt": "an advent calendar with little doors",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Little doors"
+        }
+      },
+      {
+        "id": "sh8",
+        "lineId": "l7",
+        "scene": {
+          "type": "stat",
+          "value": "1958",
+          "caption": "the first chocolate advent calendar",
+          "sourceClaimId": "c6"
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Advent calendars started as chalk marks on a door",
+    "description": "Before the chocolate, advent calendars were chalk marks on a door.\nSome German families drew 24 lines and wiped one away each day. Gerhard Lang's mother sewed 24 biscuits onto cardboard for him; in 1903 he printed one in Munich. Little doors took off after 1920, and chocolate arrived in 1958.",
+    "hashtags": [
+      "adventcalendar",
+      "christmas",
+      "history",
+      "didyouknow",
+      "germany"
+    ],
+    "keywords": [
+      "advent calendar origin",
+      "first advent calendar",
+      "Gerhard Lang",
+      "history of advent calendars",
+      "chocolate advent calendar"
+    ],
+    "hook": "Before the chocolate, advent calendars were chalk marks on a door.",
+    "altText": "Motion-graphics explainer on the history of advent calendars.",
+    "pinnedComment": "Chocolate, toys, or beauty? 🎄 What's behind the doors of YOUR advent calendar this year?",
+    "sources": [
+      {
+        "url": "https://de.wikipedia.org/wiki/Adventskalender",
+        "title": "Adventskalender (German Wikipedia)"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

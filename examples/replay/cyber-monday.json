@@ -1,0 +1,403 @@
+{
+  "ResearchDossier": {
+    "topic": "Cyber Monday was invented by a press release",
+    "summary": "The term Cyber Monday was coined by Ellen Davis of the National Retail Federation's Shop.org in a press release on November 28, 2005, based on 2004 research that the Monday after Thanksgiving was one of the biggest online shopping days, as people returned to fast internet connections at work. Historically it had been about the 12th-biggest day. By 2020 it was the biggest online shopping day in US history, with $10.7 billion in online spending.",
+    "angle": "A marketing name that made itself true.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "The term Cyber Monday was coined by Ellen Davis of the National Retail Federation (Shop.org) in a press release on November 28, 2005.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Cyber_Monday",
+            "title": "Cyber Monday - Wikipedia",
+            "quote": "a press release on November 28, 2005"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The name grew out of the observation that millions of working Americans were returning to high-speed Internet connections at work on Monday and buying online.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Cyber_Monday",
+            "title": "Cyber Monday - Wikipedia",
+            "quote": "returning to high-speed Internet connections at work Monday"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "The Monday after Thanksgiving had historically been about the 12th-biggest online shopping day.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Cyber_Monday",
+            "title": "Cyber Monday - Wikipedia",
+            "quote": "12th-biggest"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "id": "c4",
+        "text": "In 2020, Cyber Monday was the biggest online shopping day in US history, with $10.7 billion in online spending.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Cyber_Monday",
+            "title": "Cyber Monday - Wikipedia",
+            "quote": "$10.7 billion in online spending"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Cyber Monday Was a Press Release",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Cyber Monday isn't a tradition. It started as a press release.",
+            "emphasis": [
+              "release."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "Back in 2005, a retail trade group noticed something about the Monday after Thanksgiving.",
+            "emphasis": [
+              "Monday"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "People were back at work, on fast office internet, quietly shopping online.",
+            "emphasis": [
+              "shopping"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "So on November 28th, they gave that Monday a name. Cyber Monday.",
+            "emphasis": [
+              "Cyber"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "Here's the thing. It wasn't even close to the biggest shopping day.",
+            "emphasis": [
+              "biggest"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "It was roughly the 12th.",
+            "emphasis": [
+              "12th."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "payoff",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "The name did the rest. By 2020, it was the biggest online shopping day in American history.",
+            "emphasis": [
+              "biggest"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l8",
+            "text": "More than 10 billion dollars in a single day.",
+            "emphasis": [
+              "billion"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:8788646",
+            "prompt": "a person shopping online with a credit card",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "focusY": 0.3
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "newspaper",
+            "label": "A PRESS RELEASE",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "started"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Back in",
+          "highlight": "2005",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:12903153",
+            "prompt": "an office worker at a laptop",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "The Monday after Thanksgiving"
+        },
+        "anchor": "noticed"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:12899199",
+            "prompt": "an office worker shopping on a laptop",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Shopping from work"
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Nov 28, 2005:",
+          "highlight": "\"Cyber Monday\"",
+          "cps": 12
+        },
+        "anchor": "they"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "megaphone",
+            "title": "THE NAME",
+            "label": "Sounds like the biggest day"
+          },
+          "right": {
+            "icon": "chart-column",
+            "title": "REALITY",
+            "label": "Not even close"
+          },
+          "winner": "right"
+        }
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "stat",
+          "value": "12th",
+          "caption": "biggest online shopping day",
+          "sourceClaimId": "c3"
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:7363103",
+            "prompt": "delivery boxes on a doorstep",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "The name stuck"
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "l7",
+        "scene": {
+          "type": "typewriter",
+          "lead": "By",
+          "highlight": "2020",
+          "cps": 10
+        },
+        "anchor": "By"
+      },
+      {
+        "id": "sh11",
+        "lineId": "l8",
+        "scene": {
+          "type": "stat",
+          "value": "$10.7B",
+          "caption": "spent online in one day (2020)",
+          "sourceClaimId": "c4"
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh13",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Cyber Monday started as a press release",
+    "description": "Cyber Monday isn't a tradition. It started as a press release.\nIn 2005, a retail trade group noticed people were shopping from work on fast office internet the Monday after Thanksgiving, and named it Cyber Monday on November 28, 2005. It was only about the 12th-biggest online shopping day. By 2020 it was the biggest in US history: $10.7 billion.",
+    "hashtags": [
+      "cybermonday",
+      "blackfriday",
+      "history",
+      "shopping",
+      "didyouknow"
+    ],
+    "keywords": [
+      "Cyber Monday origin",
+      "who invented Cyber Monday",
+      "Cyber Monday history",
+      "Shop.org 2005",
+      "Cyber Monday press release"
+    ],
+    "hook": "Cyber Monday isn't a tradition. It started as a press release.",
+    "altText": "Motion-graphics explainer on how Cyber Monday was named in a 2005 press release.",
+    "pinnedComment": "Be honest: do you actually shop on Cyber Monday, or is it just Black Friday part 2? 🛒",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Cyber_Monday",
+        "title": "Cyber Monday"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}
