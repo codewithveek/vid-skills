@@ -277,7 +277,8 @@
           },
           "treatment": "natural",
           "move": "pushIn",
-          "label": "Munich, around 1900"
+          "label": "Munich, around 1900",
+          "focusY": 0.0
         }
       },
       {
@@ -295,7 +296,7 @@
           "move": "pushIn",
           "label": "Im Lande des Christkinds, 1903"
         },
-        "anchor": "printed"
+        "anchor": "1903,"
       },
       {
         "id": "sh7",

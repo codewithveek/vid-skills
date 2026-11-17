@@ -247,6 +247,17 @@
         "anchor": "probably"
       },
       {
+        "id": "sh3a",
+        "lineId": "l2",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Cologne,",
+          "highlight": "1670",
+          "cps": 10
+        },
+        "anchor": "1670,"
+      },
+      {
         "id": "sh3",
         "lineId": "l2",
         "scene": {
@@ -260,7 +271,8 @@
           "treatment": "natural",
           "move": "pushIn",
           "label": "Cologne Cathedral"
-        }
+        },
+        "anchor": "choirmaster"
       },
       {
         "id": "sh4",
