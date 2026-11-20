@@ -1,0 +1,429 @@
+{
+  "ResearchDossier": {
+    "topic": "Jingle Bells isn't a Christmas song",
+    "summary": "Jingle Bells was written by James Lord Pierpont and copyrighted as 'The One Horse Open Sleigh' on September 16, 1857. It has no original connection to Christmas and became associated with winter and Christmas in the 1860s and 1870s; the lyrics never mention Christmas. A plaque in Medford, Massachusetts claims he wrote it there in 1850 at the Simpson Tavern, but where and when he composed it is unsettled. On December 16, 1965, Gemini 6 astronauts Wally Schirra and Tom Stafford played it in space on a smuggled harmonica and sleigh bells.",
+    "angle": "A sleigh-ride song that Christmas adopted.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Jingle Bells has no original connection to Christmas; it became associated with winter and Christmas in the 1860s and 1870s.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Jingle_Bells",
+            "title": "Jingle Bells - Wikipedia",
+            "quote": "Although it has no original connection to Christmas"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The song's lyrics (original and modern) do not contain the word Christmas.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Jingle_Bells",
+            "title": "Jingle Bells - Wikipedia",
+            "quote": "The One Horse Open Sleigh"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "id": "c3",
+        "text": "It was written by James Lord Pierpont and copyrighted as 'The One Horse Open Sleigh' on September 16, 1857.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Jingle_Bells",
+            "title": "Jingle Bells - Wikipedia",
+            "quote": "originally copyrighted the song with the name \"The One Horse Open Sleigh\" on September 16, 1857"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "A plaque in Medford, Massachusetts claims Pierpont wrote the song there in 1850, at what was then the Simpson Tavern.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Jingle_Bells",
+            "title": "Jingle Bells - Wikipedia",
+            "quote": "claims that Pierpont wrote the song there in 1850"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "It is an unsettled question where and when Pierpont originally composed the song.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Jingle_Bells",
+            "title": "Jingle Bells - Wikipedia",
+            "quote": "It is an unsettled question where and when Pierpont originally composed the song."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c6",
+        "text": "On December 16, 1965, Gemini 6 astronauts Tom Stafford and Wally Schirra played Jingle Bells on a smuggled harmonica and sleigh bells, one of the first songs broadcast from space.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Jingle_Bells",
+            "title": "Jingle Bells - Wikipedia",
+            "quote": "produced a smuggled harmonica and sleigh bells"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Jingle Bells Isn't About Christmas",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Jingle Bells isn't a Christmas song. It never even mentions Christmas.",
+            "emphasis": [
+              "never"
+            ],
+            "claimIds": [
+              "c1",
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "It was written by James Lord Pierpont, and published in 1857.",
+            "emphasis": [
+              "1857."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "And its real name was The One Horse Open Sleigh.",
+            "emphasis": [
+              "Sleigh."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "It's a song about a winter sleigh ride. That's it.",
+            "emphasis": [
+              "sleigh"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "A plaque in Medford, Massachusetts says he wrote it in a tavern there. Historians still aren't sure.",
+            "emphasis": [
+              "aren't"
+            ],
+            "claimIds": [
+              "c4",
+              "c5"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l6",
+            "text": "It only turned into a Christmas song in the 1860s and 1870s.",
+            "emphasis": [
+              "Christmas"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "And in 1965, it became one of the first songs ever played in space.",
+            "emphasis": [
+              "space."
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l8",
+            "text": "Two astronauts on Gemini 6 smuggled a tiny harmonica and sleigh bells on board.",
+            "emphasis": [
+              "harmonica"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"'Sleigh Scene', oil painting by Cornelius Krieghoff\"",
+            "prompt": "a 19th-century winter sleigh scene",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "tree-pine",
+            "title": "CHRISTMAS?",
+            "label": "Never mentioned"
+          },
+          "right": {
+            "icon": "snowflake",
+            "title": "WINTER",
+            "label": "A sleigh ride"
+          },
+          "winner": "right"
+        },
+        "anchor": "never"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"James Lord Pierpont\"",
+            "prompt": "portrait of James Lord Pierpont",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "James Lord Pierpont"
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l2",
+        "scene": {
+          "type": "typewriter",
+          "lead": "published",
+          "highlight": "1857",
+          "cps": 10
+        },
+        "anchor": "1857."
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"The One Horse Open Sleigh - 1\"",
+            "prompt": "1857 sheet music cover",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "The original title"
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Nikolai Sverchkov - The Sleigh Ride\"",
+            "prompt": "a horse-drawn sleigh in snow",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Just a sleigh ride"
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "map-pin",
+            "label": "MEDFORD, MASSACHUSETTS?",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Christmas song by the",
+          "highlight": "1870s",
+          "cps": 12
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Gemini 6 Crew (Stafford und Schirra)\"",
+            "prompt": "the Gemini 6 astronauts",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Gemini 6, December 1965"
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "l8",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Hohner harmonica ad, 1966\"",
+            "prompt": "a 1966 Hohner harmonica ad",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Hohner's ad, 1966"
+        },
+        "anchor": "harmonica"
+      },
+      {
+        "id": "sh11",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Jingle Bells was never a Christmas song",
+    "description": "Jingle Bells isn't a Christmas song. It never even mentions Christmas.\nJames Lord Pierpont published it in 1857 as The One Horse Open Sleigh, a song about a winter sleigh ride. It only became a Christmas song in the 1860s and 1870s. In 1965, Gemini 6 astronauts played it in space on a smuggled harmonica and sleigh bells.",
+    "hashtags": [
+      "jinglebells",
+      "christmas",
+      "christmasmusic",
+      "history",
+      "didyouknow"
+    ],
+    "keywords": [
+      "Jingle Bells history",
+      "Jingle Bells not a Christmas song",
+      "One Horse Open Sleigh",
+      "James Lord Pierpont",
+      "first song played in space"
+    ],
+    "hook": "Jingle Bells isn't a Christmas song. It never even mentions Christmas.",
+    "altText": "Motion-graphics explainer on the origins of Jingle Bells.",
+    "pinnedComment": "Is it too early for Christmas songs yet? 🎶 Yes or no, and what's your cutoff date?",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Jingle_Bells",
+        "title": "Jingle Bells"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

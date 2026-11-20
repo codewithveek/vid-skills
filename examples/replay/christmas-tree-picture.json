@@ -1,0 +1,389 @@
+{
+  "ResearchDossier": {
+    "topic": "one picture made Christmas trees mainstream",
+    "summary": "The Brotherhood of Blackheads put up holiday trees in their guild houses in Reval (Tallinn) and Riga in 1441, 1442, 1510 and 1514. In 1848 The Illustrated London News showed Queen Victoria and Prince Albert's family around a decorated tree at Windsor; within ten years the tradition was widespread in middle and upper-class British homes. In 1850 Godey's Lady's Book copied the picture exactly, except for removing the Queen's tiara and Prince Albert's moustache.",
+    "angle": "A royal photo-op that went viral twice.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "In 1441, 1442, 1510 and 1514, the Brotherhood of Blackheads erected a tree for the holidays in their guild houses in Reval (now Tallinn) and Riga.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Christmas_tree",
+            "title": "Christmas tree - Wikipedia",
+            "quote": "erected a tree for the holidays in their guild houses in Reval (now Tallinn) and Riga"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "In 1848 The Illustrated London News showed the main tree at Windsor, surrounded by the royal family, giving the trend a boost.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Christmas_tree",
+            "title": "Christmas tree - Wikipedia",
+            "quote": "A boost to the trend was given in 1848 when The Illustrated London News"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "In fewer than ten years, the tradition was widespread in middle and upper-class homes.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Christmas_tree",
+            "title": "Christmas tree - Wikipedia",
+            "quote": "In fewer than ten years, the adoption of the tradition in middle and upper-class homes was widespread."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "At Christmas 1850, Godey's Lady's Book in the United States copied the image exactly, except for the removal of the Queen's tiara and Prince Albert's moustache.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Christmas_tree",
+            "title": "Christmas tree - Wikipedia",
+            "quote": "except for the removal of the Queen's tiara and Prince Albert's moustache"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "One Picture Made Christmas Trees",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Christmas trees went mainstream because of one picture.",
+            "emphasis": [
+              "picture."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "Decorated trees go back centuries. Guilds in Tallinn and Riga put them up in the 1400s.",
+            "emphasis": [
+              "1400s."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "But then, in 1848, a London newspaper printed this.",
+            "emphasis": [
+              "this."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "Queen Victoria and Prince Albert, with their children, around a decorated tree at Windsor Castle.",
+            "emphasis": [
+              "Windsor"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "In fewer than ten years, middle and upper-class homes across Britain were doing the same.",
+            "emphasis": [
+              "same."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l6",
+            "text": "Two years later, an American magazine printed the exact same picture.",
+            "emphasis": [
+              "exact"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l7",
+            "text": "With two changes. They erased the Queen's tiara, and Prince Albert's moustache.",
+            "emphasis": [
+              "moustache."
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l8",
+            "text": "Suddenly, it wasn't the royal family. It could have been any family.",
+            "emphasis": [
+              "any"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Christmas Tree 1848\"",
+            "prompt": "the royal Christmas tree engraving, coloured",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"House of Blackheads and St. Peter's Church Tower, Riga\"",
+            "prompt": "House of the Blackheads in Riga",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Riga"
+        }
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "typewriter",
+          "lead": "trees in guild halls:",
+          "highlight": "1441",
+          "cps": 10
+        },
+        "anchor": "Guilds"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "typewriter",
+          "lead": "London,",
+          "highlight": "1848",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"The Christmas Tree at Windsor Castle, by J. L. Williams - ILN 1848 (cropped)\"",
+            "prompt": "the 1848 Windsor Castle Christmas tree engraving",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "The Illustrated London News, 1848",
+          "focusY": 0.3
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "stat",
+          "value": "<10 yrs",
+          "caption": "to spread across British homes",
+          "sourceClaimId": "c3"
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l6",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "asset": {
+              "kind": "image",
+              "query": "intitle:\"Victoria and Albert Christmas Tree\"",
+              "prefer": "stock"
+            },
+            "title": "1848",
+            "label": "London"
+          },
+          "right": {
+            "asset": {
+              "kind": "image",
+              "query": "intitle:\"The Christmas Tree - Godey's Lady's Book, 1850\"",
+              "prefer": "stock"
+            },
+            "title": "1850",
+            "label": "Godey's, USA"
+          },
+          "winner": "right"
+        }
+      },
+      {
+        "id": "sh8",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "eraser",
+            "label": "NO TIARA. NO MOUSTACHE.",
+            "color": "#FF3B30",
+            "glow": "yes"
+          }
+        },
+        "anchor": "They"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l8",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"The Christmas Tree - Godey's Lady's Book, 1850\"",
+            "prompt": "the 1850 Godey's engraving",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Godey's Lady's Book, 1850"
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "One picture made Christmas trees mainstream",
+    "description": "Christmas trees went mainstream because of one picture.\nIn 1848, The Illustrated London News printed Queen Victoria and Prince Albert's family around a decorated tree at Windsor. Within ten years, homes across Britain copied it. Two years later, an American magazine reprinted it, but erased the Queen's tiara and Albert's moustache.",
+    "hashtags": [
+      "christmastree",
+      "christmas",
+      "history",
+      "queenvictoria",
+      "didyouknow"
+    ],
+    "keywords": [
+      "Christmas tree history",
+      "Queen Victoria Christmas tree",
+      "1848 Christmas tree",
+      "Godey's Lady's Book",
+      "why we have Christmas trees"
+    ],
+    "hook": "Christmas trees went mainstream because of one picture.",
+    "altText": "Motion-graphics explainer on how an 1848 engraving popularised Christmas trees.",
+    "pinnedComment": "Real tree or fake tree? 🎄 Pick a side, and defend it.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Christmas_tree",
+        "title": "Christmas tree"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}
