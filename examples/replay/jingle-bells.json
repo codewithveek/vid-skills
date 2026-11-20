@@ -342,6 +342,16 @@
         }
       },
       {
+        "id": "sh9a",
+        "lineId": "l7",
+        "scene": {
+          "type": "typewriter",
+          "lead": "in space:",
+          "highlight": "1965",
+          "cps": 10
+        }
+      },
+      {
         "id": "sh9",
         "lineId": "l7",
         "scene": {
@@ -355,7 +365,8 @@
           "treatment": "natural",
           "move": "pushIn",
           "label": "Gemini 6, December 1965"
-        }
+        },
+        "anchor": "first"
       },
       {
         "id": "sh10",
@@ -372,7 +383,7 @@
           "move": "pushIn",
           "label": "Hohner's ad, 1966"
         },
-        "anchor": "harmonica"
+        "anchor": "smuggled"
       },
       {
         "id": "sh11",

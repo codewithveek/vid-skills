@@ -268,6 +268,23 @@
         }
       },
       {
+        "id": "sh5b",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Christmas tree at Windsor Castle - drawn by J.L. Williams\"",
+            "prompt": "the full 1848 engraving page",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Windsor Castle"
+        },
+        "anchor": "Windsor"
+      },
+      {
         "id": "sh6",
         "lineId": "l5",
         "scene": {
