@@ -95,7 +95,7 @@
     "openQuestions": []
   },
   "Script": {
-    "headline": "Crackers Were a Sweet-Shop Gimmick",
+    "headline": "Crackers Were Made to Sell Sweets",
     "cta": "Follow for more things hiding in plain sight.",
     "beats": [
       {
@@ -240,12 +240,12 @@
           "template": "icon-draw",
           "data": {
             "icon": "candy",
-            "label": "A SWEET-SHOP GIMMICK",
+            "label": "A SWEET SHOP GIMMICK",
             "color": "#FFD400",
             "glow": "yes"
           }
         },
-        "anchor": "invented"
+        "anchor": "were"
       },
       {
         "id": "sh3",

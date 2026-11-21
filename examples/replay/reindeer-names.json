@@ -230,6 +230,22 @@
         "anchor": "printed"
       },
       {
+        "id": "sh3b",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Visit From St Nicholas-broadside-image\"",
+            "prompt": "a 19th-century broadside of the poem with Santa's sleigh",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Eight tiny reindeer"
+        }
+      },
+      {
         "id": "sh4",
         "lineId": "l4",
         "scene": {
