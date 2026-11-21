@@ -107,6 +107,8 @@ export const PRONUNCIATIONS: Record<string, string> = {
   gif: "giff",
   gifs: "giffs",
   jif: "jiff",
+  cosaque: "Kozack", // French for Cossack (Tom Smith's first cracker brand)
+  blixem: "Blixum",
 };
 
 function speakToken(tok: string, prev: string, next: string): string | null {

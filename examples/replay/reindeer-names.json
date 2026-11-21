@@ -1,0 +1,353 @@
+{
+  "ResearchDossier": {
+    "topic": "two of Santa's reindeer had different names first",
+    "summary": "The 1823 poem 'A Visit from St. Nicholas', first published in the Sentinel of Troy, New York on 23 December 1823 and usually attributed to Clement Clarke Moore, named eight reindeer; the last two were 'Dunder' and 'Blixem', from a Dutch oath meaning 'thunder' and 'lightning'. Moore altered the names several times, to 'Donder' and 'Blitzen' as in his 1844 version; the German spelling 'Donner' became standard from the early 20th century, long after his death.",
+    "angle": "Thunder and lightning, renamed.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "'A Visit from St. Nicholas' was first published in the Sentinel of Troy, New York, on 23 December 1823, naming eight reindeer.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Santa_Claus%27s_reindeer",
+            "title": "Santa Claus's reindeer - Wikipedia",
+            "quote": "Sentinel of Troy"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "In the original, the last two reindeer were 'Dunder' and 'Blixem', from a Dutch oath meaning 'thunder' and 'lightning'.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Santa_Claus%27s_reindeer",
+            "title": "Santa Claus's reindeer - Wikipedia",
+            "quote": "from a Dutch oath meaning 'thunder' and 'lightning'"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "The poem is usually attributed to Clement Clarke Moore, who altered the last two names several times, to 'Donder' and 'Blitzen' as in his 1844 version.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Santa_Claus%27s_reindeer",
+            "title": "Santa Claus's reindeer - Wikipedia",
+            "quote": "Moore altered the names of the last two reindeer several times"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "The modern German spelling 'Donner' became standard from the early 20th century, long after Moore's death.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Santa_Claus%27s_reindeer",
+            "title": "Santa Claus's reindeer - Wikipedia",
+            "quote": "long after Moore's death"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Santa's Reindeer Got Renamed",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Two of Santa's reindeer had different names first.",
+            "emphasis": [
+              "different"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "In 1823, a New York newspaper printed a poem. A Visit from Saint Nicholas.",
+            "emphasis": [
+              "poem."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "It named eight reindeer. Dasher, Dancer, Prancer, Vixen, Comet, Cupid.",
+            "emphasis": [
+              "eight"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "And the last two? Dunder, and Blixem.",
+            "emphasis": [
+              "Blixem."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "That's from an old Dutch oath. Thunder and lightning.",
+            "emphasis": [
+              "Thunder"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l6",
+            "text": "The poem is usually credited to Clement Clarke Moore. He kept changing the names, to Donder and Blitzen.",
+            "emphasis": [
+              "Blitzen."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "And Donner, the spelling you know? It only caught on in the early 1900s, long after Moore died.",
+            "emphasis": [
+              "Donner,"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Santa with toys in a sleigh, drawn by reindeer, with a church on the right\"",
+            "prompt": "Santa's sleigh pulled by reindeer",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l2",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Troy, New York,",
+          "highlight": "1823",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"A Visit From St Nicholas - Troy Sentinel (cropped)\"",
+            "prompt": "the 1823 Troy Sentinel printing",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Troy Sentinel, 1823"
+        },
+        "anchor": "printed"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l4",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "cloud-lightning",
+            "title": "DUNDER",
+            "label": "Thunder"
+          },
+          "right": {
+            "icon": "zap",
+            "title": "BLIXEM",
+            "label": "Lightning"
+          },
+          "winner": "none"
+        }
+      },
+      {
+        "id": "sh5",
+        "lineId": "l5",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "languages",
+            "label": "DUTCH: THUNDER + LIGHTNING",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l6",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"The Author of 'A Visit from St. Nicholas' - Clement C. Moore\"",
+            "prompt": "portrait of Clement Clarke Moore",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Clement Clarke Moore"
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l6",
+        "scene": {
+          "type": "typewriter",
+          "lead": "renamed:",
+          "highlight": "Donder & Blitzen",
+          "cps": 14
+        },
+        "anchor": "names,"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l7",
+        "scene": {
+          "type": "typewriter",
+          "lead": "\"Donner\" caught on:",
+          "highlight": "early 1900s",
+          "cps": 14
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Two of Santa's reindeer had different names first",
+    "description": "Two of Santa's reindeer had different names first.\nIn the 1823 poem A Visit from St. Nicholas, the last two were Dunder and Blixem, from a Dutch oath meaning thunder and lightning. Clement Clarke Moore, usually credited as the author, changed them to Donder and Blitzen. 'Donner' only caught on in the early 1900s.",
+    "hashtags": [
+      "santa",
+      "reindeer",
+      "christmas",
+      "history",
+      "didyouknow"
+    ],
+    "keywords": [
+      "Santa's reindeer names",
+      "Dunder and Blixem",
+      "Donner or Donder",
+      "A Visit from St Nicholas",
+      "Twas the night before Christmas"
+    ],
+    "hook": "Two of Santa's reindeer had different names first.",
+    "altText": "Motion-graphics explainer on the original names of Santa's reindeer.",
+    "pinnedComment": "Without looking it up: can you name all of Santa's reindeer? 🦌 Go.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Santa_Claus%27s_reindeer",
+        "title": "Santa Claus's reindeer"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

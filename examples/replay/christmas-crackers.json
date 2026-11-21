@@ -1,0 +1,420 @@
+{
+  "ResearchDossier": {
+    "topic": "Christmas crackers were invented to sell sweets",
+    "summary": "Tradition says London confectioner Tom Smith invented crackers in 1847 as a development of his bon-bon sweets, sold in a twist of paper. As bon-bon sales slumped he looked for promotional ideas; he was inspired to add a 'crackle' after hearing a log crackle on his fire. The product was first marketed as the Cosaque (French for Cossack). The sweet was eventually dropped for a trinket, and his son Walter Smith introduced the gifts, paper hats and varied designs.",
+    "angle": "A sweet-shop gimmick that lost the sweet.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Tradition tells of how Tom Smith of London invented crackers in 1847.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Christmas_cracker",
+            "title": "Christmas cracker - Wikipedia",
+            "quote": "Tradition tells of how Tom Smith (1823–1869) of London invented crackers in 1847."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "He created crackers as a development of his bon-bon sweets, which he sold in a twist of paper.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Christmas_cracker",
+            "title": "Christmas cracker - Wikipedia",
+            "quote": "a development of his bon-bon sweets, which he sold in a twist of paper"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "As sales of bon-bons slumped, Smith began to come up with new promotional ideas.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Christmas_cracker",
+            "title": "Christmas cracker - Wikipedia",
+            "quote": "As sales of bon-bons slumped"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "Smith was inspired to add a 'crackle' element after hearing the crackle of a log he had just put on a fire.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Christmas_cracker",
+            "title": "Christmas cracker - Wikipedia",
+            "quote": "after hearing the crackle of a log he had just put on a fire"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "The new product was initially marketed as the Cosaque (French for Cossack).",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Christmas_cracker",
+            "title": "Christmas cracker - Wikipedia",
+            "quote": "initially marketed as the Cosaque"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c6",
+        "text": "The sweet itself was eventually dropped, replaced by a trinket.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Christmas_cracker",
+            "title": "Christmas cracker - Wikipedia",
+            "quote": "the sweet itself was eventually dropped"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c7",
+        "text": "The gifts, paper hats and varied designs were introduced by Tom Smith's son, Walter Smith.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Christmas_cracker",
+            "title": "Christmas cracker - Wikipedia",
+            "quote": "were all introduced by Tom Smith's son, Walter Smith"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Crackers Were a Sweet-Shop Gimmick",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Christmas crackers were invented to sell sweets.",
+            "emphasis": [
+              "sweets."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "The story goes, in 1847, a London sweet maker named Tom Smith sold bon-bons wrapped in a twist of paper.",
+            "emphasis": [
+              "twist"
+            ],
+            "claimIds": [
+              "c1",
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "Sales were slumping, so he needed a gimmick.",
+            "emphasis": [
+              "gimmick."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "Then he heard a log crackle on his fire.",
+            "emphasis": [
+              "crackle"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l5",
+            "text": "So he added a bang. He called it the Cosaque. French for Cossack.",
+            "emphasis": [
+              "bang."
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l6",
+            "text": "Here's the funny part. Eventually, the sweet got dropped altogether.",
+            "emphasis": [
+              "dropped"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l7",
+            "text": "His son Walter added the paper hats and the gifts. The bits we actually pull them for today.",
+            "emphasis": [
+              "hats"
+            ],
+            "claimIds": [
+              "c7"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:9524060",
+            "prompt": "gold Christmas crackers",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "candy",
+            "label": "A SWEET-SHOP GIMMICK",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "invented"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "typewriter",
+          "lead": "London,",
+          "highlight": "1847",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:31249243",
+            "prompt": "wrapped sweets in a glass bowl",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Bon-bons in a twist of paper"
+        },
+        "anchor": "sweet"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "trending-down",
+            "label": "SALES SLUMPING",
+            "color": "#FF3B30",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "video",
+            "query": "pexels:34230599",
+            "prompt": "a log crackling in a fire",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Crackle"
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Tom Smith's Lyceum Crackers\"",
+            "prompt": "a Victorian Tom Smith's crackers poster",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Tom Smith's crackers"
+        }
+      },
+      {
+        "id": "sh8",
+        "lineId": "l5",
+        "scene": {
+          "type": "typewriter",
+          "lead": "first sold as:",
+          "highlight": "\"Cosaque\"",
+          "cps": 12
+        },
+        "anchor": "called"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l6",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "candy",
+            "title": "1847",
+            "label": "Sweets inside"
+          },
+          "right": {
+            "icon": "crown",
+            "title": "TODAY",
+            "label": "Hats and jokes"
+          },
+          "winner": "right"
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "l7",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:6826286",
+            "prompt": "colourful paper crowns and confetti",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Walter Smith's paper hats"
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Christmas crackers were invented to sell sweets",
+    "description": "Christmas crackers were invented to sell sweets.\nThe story goes that in 1847 London sweet maker Tom Smith, with bon-bon sales slumping, heard a log crackle on his fire and added a bang to his paper-wrapped sweets. He sold them as the Cosaque. The sweet was eventually dropped; his son Walter added the paper hats and gifts.",
+    "hashtags": [
+      "christmascrackers",
+      "christmas",
+      "history",
+      "britishchristmas",
+      "didyouknow"
+    ],
+    "keywords": [
+      "Christmas cracker origin",
+      "Tom Smith crackers",
+      "who invented Christmas crackers",
+      "history of Christmas crackers",
+      "Christmas cracker paper hat"
+    ],
+    "hook": "Christmas crackers were invented to sell sweets.",
+    "altText": "Motion-graphics explainer on how Tom Smith invented the Christmas cracker.",
+    "pinnedComment": "Paper hat: do you actually wear it, or does it go straight in the bin? 👑",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Christmas_cracker",
+        "title": "Christmas cracker"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}
