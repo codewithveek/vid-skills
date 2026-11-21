@@ -246,6 +246,17 @@
         }
       },
       {
+        "id": "sh3c",
+        "lineId": "l3",
+        "scene": {
+          "type": "stat",
+          "value": "8",
+          "caption": "reindeer, named for the first time",
+          "sourceClaimId": "c1"
+        },
+        "anchor": "Prancer,"
+      },
+      {
         "id": "sh4",
         "lineId": "l4",
         "scene": {
