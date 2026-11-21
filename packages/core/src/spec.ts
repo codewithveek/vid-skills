@@ -70,7 +70,7 @@ export const PosterPreference = z.object({
   mode: z
     .enum(["off", "on", "both"])
     .optional()
-    .describe("off: no poster; on: the video opens on the poster; both (default): the main video has none and a poster variant is rendered alongside for A/B tests"),
+    .describe("on (default): the video opens on the poster; off: no poster; both: a clean main video plus a poster variant, for A/B tests"),
   /** Legacy switch: true = "on", false = "off" (used when `mode` is absent). */
   enabled: z.boolean().optional(),
   durationSec: z.number().min(0.1).max(3).default(0.6).describe("How long the poster holds before revealing the video (the voice starts underneath)"),
@@ -79,9 +79,9 @@ export const PosterPreference = z.object({
 });
 export type PosterPreference = z.infer<typeof PosterPreference>;
 
-/** Resolve the poster mode (the main video opened straight into the hook performed better, so "both" keeps it clean and adds a variant). */
+/** Resolve the poster mode. Default "on": one video that opens on its poster (the channel's choice after A/B testing both cuts). */
 export function posterMode(p: Partial<PosterPreference> | undefined): "off" | "on" | "both" {
-  return p?.mode ?? (p?.enabled === true ? "on" : p?.enabled === false ? "off" : "both");
+  return p?.mode ?? (p?.enabled === true ? "on" : p?.enabled === false ? "off" : "on");
 }
 
 export const VideoBrief = z.object({

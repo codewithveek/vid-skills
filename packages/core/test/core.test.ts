@@ -308,9 +308,14 @@ describe("poster", () => {
     expect(posterFor("The @ Sign Is 500 Years Old", "", ["wine"], 0.6, 30).highlight).toEqual(["500"]);
     expect(posterFor("Barcodes Began in the Sand", "", [], 0.6, 30).highlight).toEqual(["Sand"]);
   });
-  it("renders a clean main cut plus a poster variant by default", async () => {
+  it("opens on the poster by default, with no second cut", async () => {
+    const res = await runPipeline({ topic: "the floppy disk save icon", durationSec: 25 }, { providers: { llm: fakeLLM(), tts: fakeTTS() }, storage: new MemoryStorage(), jobId: "p0", stopAfter: "compose" });
+    expect(res.project!.files["compositions/poster.html"]).toBeDefined();
+    expect(res.manifest.outputs.variants?.poster).toBeUndefined();
+  });
+  it("renders a clean main cut plus a poster variant in 'both' mode", async () => {
     const storage = new MemoryStorage();
-    const res = await runPipeline({ topic: "the floppy disk save icon", durationSec: 25, handle: "@hiddeninplainsight.tv" }, { providers: { llm: fakeLLM(), tts: fakeTTS() }, storage, jobId: "p1", stopAfter: "compose" });
+    const res = await runPipeline({ topic: "the floppy disk save icon", durationSec: 25, handle: "@hiddeninplainsight.tv", poster: { mode: "both" } }, { providers: { llm: fakeLLM(), tts: fakeTTS() }, storage, jobId: "p1", stopAfter: "compose" });
     // main cut opens straight into the hook
     expect(res.project!.files["compositions/poster.html"]).toBeUndefined();
     expect(res.project!.files["index.html"]).not.toContain('id="poster"');
