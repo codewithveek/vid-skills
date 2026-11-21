@@ -166,7 +166,8 @@ export class WikimediaStock implements StockProvider {
       const licName = m.LicenseShortName?.value ?? "unknown";
       const nc = /nc|non-?commercial/i.test(licName) || licName === "unknown";
       const pd = /public domain|cc0|pd/i.test(licName);
-      const artist = (m.Artist?.value ?? "").replace(/<[^>]+>/g, "").trim();
+      // Commons often renders "Unknown author" twice (a hidden label plus the visible one): collapse exact repeats.
+      const artist = (m.Artist?.value ?? "").replace(/<[^>]+>/g, "").trim().replace(/^(.+?)\s*\1$/, "$1");
       return [{ id: `wm-${p.title}`, kind: "image" as const, url: ii.thumburl ?? ii.url, width: ii.width, height: ii.height, description: p.title, provider: this.id, license: { name: licName, url: ii.descriptionurl, attribution: `${artist || "Unknown"}, ${licName}, via Wikimedia Commons`, commercialUse: !nc, requiresAttribution: !pd } }];
     });
   }

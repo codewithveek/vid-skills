@@ -44,6 +44,17 @@ describe("wikimedia", () => {
   });
 });
 
+describe("wikimedia credits", () => {
+  it("collapses a doubled artist name", async () => {
+    vi.stubGlobal("fetch", async () =>
+      json({ query: { pages: { "1": { title: "File:X.jpg", imageinfo: [{ url: "https://u.test/x.jpg", width: 900, height: 900, descriptionurl: "https://c.test/File:X.jpg", extmetadata: { LicenseShortName: { value: "CC BY-SA 4.0" }, Artist: { value: '<span class="a">Unknown author</span>Unknown author' } } }] } } } }),
+    );
+    const [c] = await new WikimediaStock().search({ query: "x", kind: "image" });
+    vi.unstubAllGlobals();
+    expect(c!.license.attribution).toBe("Unknown author, CC BY-SA 4.0, via Wikimedia Commons");
+  });
+});
+
 describe("llm adapters", () => {
   it("adapts max_tokens dialect and drops temperature when rejected", async () => {
     const bodies: Record<string, unknown>[] = [];
