@@ -1,0 +1,375 @@
+{
+  "ResearchDossier": {
+    "topic": "why we say bless you when someone sneezes",
+    "summary": "A popular story says that during a plague in Rome Pope Gregory I ordered unceasing prayer, but the Pope Gregory story appears to be apocryphal. Saying 'God bless you' was customary by about AD 750. One offered explanation is a folk belief that a sneeze could throw a person's soul from their body. Around 400 BC, Xenophon recorded a chance sneeze as a good omen from the gods.",
+    "angle": "The famous origin story is probably made up.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "A popular story says that during a plague, Pope Gregory I ordered unceasing prayer for divine intercession.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/God_bless_you",
+            "title": "God bless you - Wikipedia",
+            "quote": "Pope Gregory I ordered unceasing prayer for divine intercession"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The Pope Gregory story appears to be apocryphal.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/God_bless_you",
+            "title": "God bless you - Wikipedia",
+            "quote": "However, the Pope Gregory story appears to be apocryphal."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "By AD 750 it became customary to say 'God bless you'.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/God_bless_you",
+            "title": "God bless you - Wikipedia",
+            "quote": "By AD 750, it became customary to say 'God bless you'"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "id": "c4",
+        "text": "One explanation is a folk belief that a person's soul could be thrown from their body when they sneezed.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/God_bless_you",
+            "title": "God bless you - Wikipedia",
+            "quote": "a person's soul could be thrown from their body when they sneezed"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "id": "c5",
+        "text": "Writing around 400 BC, Xenophon recorded a chance sneeze as a good omen from god.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/God_bless_you",
+            "title": "God bless you - Wikipedia",
+            "quote": "Xenophon records a chance sneeze as being seen as a good omen from god"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "The 'Bless You' Story Is Probably Wrong",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Why do we say bless you after a sneeze? The famous answer is probably wrong.",
+            "emphasis": [
+              "wrong."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "stakes",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "The story goes, a plague hit Rome, and Pope Gregory the First ordered nonstop prayer.",
+            "emphasis": [
+              "prayer."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "And so, the story says, people started blessing every sneeze.",
+            "emphasis": [
+              "blessing"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l4",
+            "text": "But historians say that story appears to be made up.",
+            "emphasis": [
+              "made"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "We do know the habit was common by around the year 750.",
+            "emphasis": [
+              "750."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "One explanation is an old folk belief that a sneeze could knock your soul out of your body.",
+            "emphasis": [
+              "soul"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l7",
+            "text": "But sneezes weren't always bad news. Around 400 BC, Xenophon called one a good omen from the gods.",
+            "emphasis": [
+              "omen"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Sneeze.JPG\"",
+            "prompt": "a high-speed photo of a sneeze",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "circle-help",
+            "label": "THE FAMOUS STORY?",
+            "color": "#FF3B30",
+            "glow": "yes"
+          }
+        },
+        "anchor": "famous"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Pope Gregory I illustration\"",
+            "prompt": "a medieval illustration of Pope Gregory I",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Pope Gregory I"
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Woman sneezing minot\"",
+            "prompt": "a woman sneezing",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Bless every sneeze"
+        }
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "scroll-text",
+            "title": "STORY",
+            "label": "Pope Gregory's plague"
+          },
+          "right": {
+            "icon": "search",
+            "title": "HISTORIANS",
+            "label": "Probably made up"
+          },
+          "winner": "right"
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "typewriter",
+          "lead": "customary by around",
+          "highlight": "AD 750",
+          "cps": 12
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "ghost",
+            "label": "A SOUL KNOCKED OUT?",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh8",
+        "lineId": "l7",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Bust of Xenophon\"",
+            "prompt": "a marble bust of Xenophon",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Xenophon, around 400 BC"
+        },
+        "anchor": "Xenophon"
+      },
+      {
+        "id": "sh9",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "The famous 'bless you' story is probably wrong",
+    "description": "Why do we say bless you after a sneeze? The famous answer is probably wrong.\nThe story of Pope Gregory blessing sneezes during a plague appears to be made up. The habit was common by around 750, maybe from a folk belief that a sneeze could knock your soul out. And around 400 BC, Xenophon called a sneeze a good omen.",
+    "hashtags": [
+      "blessyou",
+      "sneeze",
+      "history",
+      "mythbusting",
+      "didyouknow"
+    ],
+    "keywords": [
+      "why do we say bless you",
+      "bless you origin",
+      "Pope Gregory sneeze",
+      "why bless you after sneezing",
+      "gesundheit"
+    ],
+    "hook": "Why do we say bless you after a sneeze? The famous answer is probably wrong.",
+    "altText": "Motion-graphics explainer on the origins of saying 'bless you'.",
+    "pinnedComment": "Bless you, gesundheit, or say nothing at all? 🤧 What do you say?",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/God_bless_you",
+        "title": "God bless you"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

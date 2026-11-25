@@ -1,0 +1,385 @@
+{
+  "ResearchDossier": {
+    "topic": "New Year's resolutions are 4,000 years old",
+    "summary": "Around 2000 BC the Babylonians celebrated the new year in a 12-day festival called Akitu, making promises to return borrowed farm equipment and pay debts. The Romans adopted the custom; after the Julian calendar (46 BC) they began each year with promises to the god Janus. An early instance of the phrase 'new year resolution' appears in a January 1, 1813 Boston newspaper. A 2007 study by Richard Wiseman of about 3,000 people found 88% of resolutions fail.",
+    "angle": "We've been breaking the same promise for 4,000 years.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Around 2000 B.C., the Babylonians celebrated the New Year during a 12-day festival called Akitu.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/New_Year%27s_resolution",
+            "title": "New Year's resolution - Wikipedia",
+            "quote": "Around 2000 B.C., the Babylonians celebrated the New Year during a 12-day festival called Akitu."
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "id": "c2",
+        "text": "During the festival, Babylonians made promises to return borrowed farm equipment and pay their debts.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/New_Year%27s_resolution",
+            "title": "New Year's resolution - Wikipedia",
+            "quote": "make promises to return borrowed farm equipment and pay their debts"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "id": "c3",
+        "text": "The custom was adopted by the ancient Romans, who began each year by making promises to the god Janus.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/New_Year%27s_resolution",
+            "title": "New Year's resolution - Wikipedia",
+            "quote": "began each year by making promises to the god Janus"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "id": "c4",
+        "text": "An early instance of the complete phrase 'new year resolution' is found in a January 1st issue of a Boston newspaper from 1813.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/New_Year%27s_resolution",
+            "title": "New Year's resolution - Wikipedia",
+            "quote": "a Boston newspaper from 1813"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "A 2007 study by Richard Wiseman of about 3,000 people found that 88% of those who set New Year resolutions fail.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/New_Year%27s_resolution",
+            "title": "New Year's resolution - Wikipedia",
+            "quote": "88% of those who set New Year resolutions fail"
+          }
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Resolutions Are 4,000 Years Old",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "New Year's resolutions are about 4,000 years old.",
+            "emphasis": [
+              "4,000"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "Around 2000 BC, the Babylonians held a 12-day new year festival called Akitu.",
+            "emphasis": [
+              "Akitu."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "And they made promises to their gods. Pay your debts. Return the farm tools you borrowed.",
+            "emphasis": [
+              "borrowed."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l4",
+            "text": "The Romans kept the habit, making new year promises to Janus, the god with two faces.",
+            "emphasis": [
+              "Janus,"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l5",
+            "text": "The phrase new year resolution shows up in a Boston newspaper in 1813.",
+            "emphasis": [
+              "1813."
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l6",
+            "text": "And how well do they work? One study of 3,000 people found 88 percent failed.",
+            "emphasis": [
+              "88"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l7",
+            "text": "So we've been breaking the same promises for 4,000 years.",
+            "emphasis": [
+              "breaking"
+            ],
+            "claimIds": [
+              "c1",
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:5717421",
+            "prompt": "a notebook of handwritten New Year's resolutions",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "focusY": 0.4
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "stat",
+          "value": "4,000",
+          "caption": "years of New Year promises",
+          "sourceClaimId": "c1"
+        },
+        "anchor": "4,000"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Babylon,",
+          "highlight": "2000 BC",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"One dragon of the Ishtar Gate of Babylon\"",
+            "prompt": "a dragon from the Ishtar Gate of Babylon",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Babylon"
+        },
+        "anchor": "Babylonians"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Clay tablet and its sealed clay envelope\"",
+            "prompt": "a Babylonian clay tablet",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Old Babylonian tablet"
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l3",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "hand-coins",
+            "label": "PAY YOUR DEBTS",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "Pay"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Janus coin\"",
+            "prompt": "a Roman coin showing two-faced Janus",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Janus, Roman coin"
+        }
+      },
+      {
+        "id": "sh8",
+        "lineId": "l5",
+        "scene": {
+          "type": "typewriter",
+          "lead": "\"new year resolution\":",
+          "highlight": "1813",
+          "cps": 12
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "l6",
+        "scene": {
+          "type": "stat",
+          "value": "88%",
+          "caption": "of resolutions failed (one 2007 study)",
+          "sourceClaimId": "c5"
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "l7",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "video",
+            "query": "pexels:29999683",
+            "prompt": "New Year fireworks",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "4,000 years later"
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "New Year's resolutions are 4,000 years old",
+    "description": "New Year's resolutions are about 4,000 years old.\nAround 2000 BC, Babylonians at the Akitu festival promised their gods they'd pay debts and return borrowed farm tools. The Romans made new year promises to Janus. And one 2007 study of 3,000 people found 88% of resolutions fail.",
+    "hashtags": [
+      "newyear",
+      "newyearsresolution",
+      "history",
+      "2027",
+      "didyouknow"
+    ],
+    "keywords": [
+      "history of New Year's resolutions",
+      "Babylonian New Year",
+      "Akitu festival",
+      "Janus New Year",
+      "why resolutions fail"
+    ],
+    "hook": "New Year's resolutions are about 4,000 years old.",
+    "altText": "Motion-graphics explainer on the ancient origins of New Year's resolutions.",
+    "pinnedComment": "What's your 2027 resolution? 👀 Say it here so we can check on you in February.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/New_Year%27s_resolution",
+        "title": "New Year's resolution"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

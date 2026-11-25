@@ -1,0 +1,375 @@
+{
+  "ResearchDossier": {
+    "topic": "why X means a kiss",
+    "summary": "There is no definitive answer to how x came to mean a kiss. One speculation links it to the cross used in place of a signature in the Middle Ages, which was certainly sometimes done; the idea that writers kissed the cross is unscholarly speculation. The earliest OED attestation is Florence Montgomery's 1878 novel Seaforth, which says kisses were sometimes expressed by x x x x x and sometimes by o o o o o o. Even less is known about how o came to mean a hug.",
+    "angle": "Nobody actually knows.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "A cross was certainly sometimes used in place of a signature.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Hugs_and_kisses",
+            "title": "Hugs and kisses - Wikipedia",
+            "quote": "the sign was certainly sometimes used in place of a signature"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The idea that the writer kissed the cross is unscholarly speculation; there is no definitive answer to how a cross came to mean a kiss.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Hugs_and_kisses",
+            "title": "Hugs and kisses - Wikipedia",
+            "quote": "there is no definitive answer to how a cross came to mean a kiss"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "The earliest attestation of x and o as kisses is Florence Montgomery's 1878 novel Seaforth: 'sometimes expressed by × × × × ×, and sometimes by o o o o o o'.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Hugs_and_kisses",
+            "title": "Hugs and kisses - Wikipedia",
+            "quote": "sometimes expressed by × × × × ×, and sometimes by o o o o o o"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "Less is known about how 'o' came to signify a hug.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Hugs_and_kisses",
+            "title": "Hugs and kisses - Wikipedia",
+            "quote": "less is known about how 'o' came to signify a hug"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Nobody Knows Why X Means Kiss",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Why does X mean a kiss? Honestly, nobody knows.",
+            "emphasis": [
+              "nobody"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "stakes",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "The popular story goes like this. In the Middle Ages, some people signed documents with a cross.",
+            "emphasis": [
+              "cross."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "And supposedly, they kissed it to seal the promise.",
+            "emphasis": [
+              "kissed"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l4",
+            "text": "But there's no real evidence for the kissing part.",
+            "emphasis": [
+              "evidence"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "The first clear X for a kiss in print? An 1878 novel, describing a row of X's.",
+            "emphasis": [
+              "1878"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "And here's the strange part. That same book says a kiss could also be a row of O's.",
+            "emphasis": [
+              "O's."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l7",
+            "text": "So O didn't always mean a hug. How it became one is another mystery.",
+            "emphasis": [
+              "mystery."
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:9898392",
+            "prompt": "hands texting on a smartphone",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "focusY": 0.4
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "circle-help",
+            "label": "NOBODY KNOWS",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "nobody"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:35664824",
+            "prompt": "a stack of old handwritten letters",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Signed with a cross"
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "x",
+            "label": "A KISS ON THE CROSS?",
+            "color": "#FF3B30",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "scroll-text",
+            "title": "STORY",
+            "label": "Kissing the cross"
+          },
+          "right": {
+            "icon": "search",
+            "title": "EVIDENCE",
+            "label": "None found"
+          },
+          "winner": "right"
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "typewriter",
+          "lead": "first X for a kiss:",
+          "highlight": "1878",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:4544724",
+            "prompt": "a handwritten love letter",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "A row of X's"
+        },
+        "anchor": "describing"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "typewriter",
+          "lead": "also a kiss:",
+          "highlight": "o o o o o o",
+          "cps": 12
+        },
+        "anchor": "also"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:6633073",
+            "prompt": "a love note in an envelope",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "XOXO"
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Nobody actually knows why X means a kiss",
+    "description": "Why does X mean a kiss? Honestly, nobody knows.\nThe popular story says medieval people kissed the cross they signed with, but there's no real evidence for it. The first clear X-for-a-kiss in print is an 1878 novel, which says a kiss could also be written as a row of O's.",
+    "hashtags": [
+      "xoxo",
+      "kiss",
+      "etymology",
+      "history",
+      "didyouknow"
+    ],
+    "keywords": [
+      "why does X mean kiss",
+      "XOXO meaning",
+      "XOXO origin",
+      "hugs and kisses history",
+      "why O means hug"
+    ],
+    "hook": "Why does X mean a kiss? Honestly, nobody knows.",
+    "altText": "Motion-graphics explainer on why x means a kiss and o means a hug.",
+    "pinnedComment": "How do you sign off a text: x, xx, xoxo, ❤️, or nothing at all? 👀",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Hugs_and_kisses",
+        "title": "Hugs and kisses"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

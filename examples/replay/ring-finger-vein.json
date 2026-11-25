@@ -1,0 +1,357 @@
+{
+  "ResearchDossier": {
+    "topic": "the ring finger vein to the heart is a myth",
+    "summary": "Before medical science understood circulation, people believed a vein ran directly from the fourth finger of the left hand to the heart, the vena amoris ('vein of love'). The 1662 Book of Common Prayer put the wedding ring on the fourth finger of the woman's left hand. Today the ring is generally worn on the left hand in the former British Empire (UK, US, Canada, Australia), but on the right hand in some Orthodox and a few Catholic European countries, including Russia, Germany, Greece and Poland.",
+    "angle": "The vein of love was never there.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Before medical science discovered how circulation worked, people believed a vein ran directly from the fourth finger of the left hand to the heart, called the vena amoris (Latin for 'vein of love').",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ring_finger",
+            "title": "Ring finger - Wikipedia",
+            "quote": "people believed that a vein ran directly from the fourth digit on the left hand to the heart"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The 1662 Book of Common Prayer put the ring on the fourth finger of the woman's left hand.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ring_finger",
+            "title": "Ring finger - Wikipedia",
+            "quote": "the fourth finger of the woman's left hand"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "The wedding ring is generally worn on the left hand in the former British Empire, including the UK, US, Canada and Australia.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ring_finger",
+            "title": "Ring finger - Wikipedia",
+            "quote": "The wedding ring is generally worn on the ring finger of the left hand in the former British Empire"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "The wedding ring is worn on the right hand in some Orthodox and a few Catholic European countries, including Russia, Germany, Greece and Poland.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ring_finger",
+            "title": "Ring finger - Wikipedia",
+            "quote": "The wedding ring is worn on the ring finger of the right hand in some Orthodox"
+          }
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Your Ring Finger Has No Love Vein",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "There's no special vein running from your ring finger to your heart.",
+            "emphasis": [
+              "vein"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "People once believed there was. They even named it. Vena amoris. The vein of love.",
+            "emphasis": [
+              "love."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l3",
+            "text": "It was a belief from before anyone understood how blood actually circulates.",
+            "emphasis": [
+              "circulates."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l4",
+            "text": "In 1662, England's Book of Common Prayer put the wedding ring on the fourth finger of the left hand.",
+            "emphasis": [
+              "left"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l5",
+            "text": "That's still the custom in the UK, the US, Canada and Australia.",
+            "emphasis": [
+              "custom"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l6",
+            "text": "But in Germany, Russia, Greece and Poland, the wedding ring usually goes on the right hand.",
+            "emphasis": [
+              "right"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l7",
+            "text": "So in Berlin, the vein of love would be on the wrong side.",
+            "emphasis": [
+              "wrong"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:30008469",
+            "prompt": "a couple's hands with wedding rings",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "focusY": 0.5
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "heart-pulse",
+            "label": "A VEIN TO THE HEART?",
+            "color": "#FF3B30",
+            "glow": "yes"
+          }
+        },
+        "anchor": "vein"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "typewriter",
+          "lead": "vena amoris:",
+          "highlight": "\"vein of love\"",
+          "cps": 12
+        },
+        "anchor": "named"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"First medical X-ray by Wilhelm Röntgen of his wife Anna Bertha Ludwig's hand\"",
+            "prompt": "the first medical X-ray, a hand with a ring",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "The first medical X-ray, 1895"
+        }
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Book of Common Prayer (1662)\"",
+            "prompt": "the 1662 Book of Common Prayer",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Book of Common Prayer, 1662"
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "hand",
+            "title": "LEFT",
+            "label": "UK, US, Canada, Australia"
+          },
+          "right": {
+            "icon": "hand",
+            "title": "RIGHT",
+            "label": "Germany, Russia, Greece"
+          },
+          "winner": "none"
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l6",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:13080333",
+            "prompt": "two hands with wedding rings",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Right hand in much of Europe"
+        }
+      },
+      {
+        "id": "sh8",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "map-pin",
+            "label": "BERLIN: RIGHT HAND",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "There's no vein from your ring finger to your heart",
+    "description": "There's no special vein running from your ring finger to your heart.\nPeople once believed in the vena amoris, the 'vein of love', before anyone understood circulation. The 1662 Book of Common Prayer put the ring on the left hand, still the custom in the UK and US. But in Germany, Russia, Greece and Poland, it usually goes on the right.",
+    "hashtags": [
+      "weddingring",
+      "wedding",
+      "history",
+      "mythbusting",
+      "didyouknow"
+    ],
+    "keywords": [
+      "ring finger vein myth",
+      "vena amoris",
+      "why wedding ring on left hand",
+      "which hand wedding ring",
+      "vein of love"
+    ],
+    "hook": "There's no special vein running from your ring finger to your heart.",
+    "altText": "Motion-graphics explainer on the vena amoris wedding ring myth.",
+    "pinnedComment": "Which hand do you wear your ring on, and where are you from? 💍",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Ring_finger",
+        "title": "Ring finger"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}
