@@ -1,0 +1,420 @@
+{
+  "ResearchDossier": {
+    "topic": "Bell wanted us to answer the phone with ahoy",
+    "summary": "Alexander Graham Bell answered the telephone with 'ahoy' ('ahoy-hoy'), but there is no evidence the greeting caught on. Thomas Edison, in a letter of 15 August 1877 to T. B. A. David, wrote that 'Hello!' can be heard 10 to 20 feet away, and is credited with popularising hello on the telephone. By 1889 telephone operators were known as 'hello-girls'. The word itself is older: 'hello' is in print by 1826 and 'hullo' by 1803.",
+    "angle": "The phone greeting that lost.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Alexander Graham Bell initially used 'Ahoy' as a telephone greeting; there is no evidence it caught on.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Hello",
+            "title": "Hello - Wikipedia",
+            "quote": "Ahoy"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "In a letter of 15 August 1877, Thomas Edison wrote that 'Hello!' can be heard 10 to 20 feet away.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Hello",
+            "title": "Hello - Wikipedia",
+            "quote": "can be heard 10 to 20 feet away"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Edison is credited with popularising hello as a telephone greeting.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Hello",
+            "title": "Hello - Wikipedia",
+            "quote": "Edison"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "id": "c4",
+        "text": "By 1889, central telephone exchange operators were known as 'hello-girls'.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Hello",
+            "title": "Hello - Wikipedia",
+            "quote": "hello-girls"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "The word hello is attested in print by 1826, and the variant hullo by 1803.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Hello",
+            "title": "Hello - Wikipedia",
+            "quote": "1826"
+          }
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Bell Wanted Us to Say Ahoy",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "The inventor of the phone wanted you to answer it with ahoy.",
+            "emphasis": [
+              "ahoy."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "Alexander Graham Bell used the sailor's call. Ahoy, ahoy.",
+            "emphasis": [
+              "Ahoy,"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l3",
+            "text": "But Thomas Edison pushed a different word. Hello.",
+            "emphasis": [
+              "Hello."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "In 1877, Edison wrote that hello could be heard ten to twenty feet away.",
+            "emphasis": [
+              "twenty"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "Hello won. By 1889, telephone operators were known as hello girls.",
+            "emphasis": [
+              "girls."
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          },
+          {
+            "id": "l6",
+            "text": "And there's no evidence ahoy ever caught on.",
+            "emphasis": [
+              "no"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "Edison didn't invent hello, though. It was in print by 1826, and hullo by 1803.",
+            "emphasis": [
+              "1803."
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:33926374",
+            "prompt": "a vintage rotary telephone",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "focusY": 0.6
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "typewriter",
+          "lead": "answer the phone with:",
+          "highlight": "AHOY",
+          "cps": 10
+        },
+        "anchor": "answer"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Alexander Graham Bell's big box telephone\"",
+            "prompt": "Bell's 1876 big box telephone",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Bell's telephone, 1876"
+        }
+      },
+      {
+        "id": "sh3b",
+        "lineId": "l2",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "anchor",
+            "label": "AHOY, AHOY",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "Ahoy,"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Thomas Edison, 1878\"",
+            "prompt": "portrait of Thomas Edison in 1878",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Thomas Edison, 1878"
+        }
+      },
+      {
+        "id": "sh4b",
+        "lineId": "l3",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Edison's word:",
+          "highlight": "HELLO",
+          "cps": 10
+        },
+        "anchor": "Hello."
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "stat",
+          "value": "10–20 ft",
+          "caption": "how far Edison said a hello carried",
+          "sourceClaimId": "c2"
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "anchor",
+            "title": "AHOY",
+            "label": "Bell"
+          },
+          "right": {
+            "icon": "phone",
+            "title": "HELLO",
+            "label": "Edison"
+          },
+          "winner": "right"
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"SC-49623 Signal Corps telephone operators at switchboard\"",
+            "prompt": "telephone operators at a switchboard",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Telephone operators"
+        },
+        "anchor": "By"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:19504834",
+            "prompt": "two classic telephones on a desk",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "typewriter",
+          "lead": "hello in print:",
+          "highlight": "1826",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh9b",
+        "lineId": "l7",
+        "scene": {
+          "type": "typewriter",
+          "lead": "hullo in print:",
+          "highlight": "1803",
+          "cps": 10
+        },
+        "anchor": "hullo"
+      },
+      {
+        "id": "sh10",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Bell wanted us to answer the phone with \"ahoy\"",
+    "description": "The inventor of the phone wanted you to answer it with ahoy.\nAlexander Graham Bell used \"ahoy\", but Thomas Edison pushed \"hello\", writing in 1877 that it could be heard 10 to 20 feet away. By 1889, operators were called hello girls. Edison didn't invent the word, though: hello was in print by 1826, and hullo by 1803.",
+    "hashtags": [
+      "hello",
+      "telephone",
+      "etymology",
+      "history",
+      "didyouknow"
+    ],
+    "keywords": [
+      "why we say hello on the phone",
+      "ahoy telephone greeting",
+      "Alexander Graham Bell ahoy",
+      "Edison hello",
+      "hello girls"
+    ],
+    "hook": "The inventor of the phone wanted you to answer it with ahoy.",
+    "altText": "Motion-graphics explainer on how hello beat ahoy as the telephone greeting.",
+    "pinnedComment": "How do you answer an unknown number: hello, yeah?, or silence until they talk first? 📞",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Hello",
+        "title": "Hello"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

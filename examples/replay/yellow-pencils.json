@@ -1,0 +1,460 @@
+{
+  "ResearchDossier": {
+    "topic": "Why pencils are yellow",
+    "summary": "A large graphite deposit was found at Borrowdale, England, around 1565; it was thought to be a form of lead and called plumbago, which is why pencil cores are still called lead. According to Henry Petroski, the yellow-pencil tradition began in 1890 with L. & C. Hardtmuth's Koh-I-Noor brand. The colour may have been inspired by the Austro-Hungarian flag, and was suggestive of the Orient at a time when the best-quality graphite came from Siberia. Other companies copied it. Most pencils made in the US are painted yellow.",
+    "angle": "A luxury brand's paint job became the default.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "A large deposit of graphite was discovered at Borrowdale in England around 1565; people thought it was a form of lead and called it plumbago.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Pencil",
+            "title": "Pencil - Wikipedia",
+            "quote": "plumbago"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "Pencil cores are still called 'lead' even though they contain graphite, not lead.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Pencil",
+            "title": "Pencil - Wikipedia",
+            "quote": "lead"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "id": "c3",
+        "text": "According to Henry Petroski, the yellow pencil tradition began in 1890 with L. & C. Hardtmuth's Koh-I-Noor brand.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Pencil",
+            "title": "Pencil - Wikipedia",
+            "quote": "Petroski"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "The yellow may have been inspired by the Austro-Hungarian flag, and was suggestive of the Orient at a time when the best-quality graphite came from Siberia.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Pencil",
+            "title": "Pencil - Wikipedia",
+            "quote": "Siberia"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "Other companies then copied the yellow colour so their pencils would be associated with the high-quality brand.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Pencil",
+            "title": "Pencil - Wikipedia",
+            "quote": "copied"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "id": "c6",
+        "text": "The majority of pencils made in the US are painted yellow.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Pencil",
+            "title": "Pencil - Wikipedia",
+            "quote": "painted yellow"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Pencils Are Yellow Because of One Brand",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Pencils are yellow because of one fancy brand.",
+            "emphasis": [
+              "fancy"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "Around 1565, people in England found a huge deposit of pure graphite.",
+            "emphasis": [
+              "graphite."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "They thought it was lead. That's why we still call it pencil lead.",
+            "emphasis": [
+              "lead."
+            ],
+            "claimIds": [
+              "c1",
+              "c2"
+            ],
+            "pauseAfterSec": 0.4
+          },
+          {
+            "id": "l4",
+            "text": "Later, the best graphite in the world came from Siberia.",
+            "emphasis": [
+              "Siberia."
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "Then in 1890, according to historian Henry Petroski, the Koh-i-Noor brand painted its pencils yellow.",
+            "emphasis": [
+              "yellow."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l6",
+            "text": "Maybe for the colours of the Austro-Hungarian flag. Maybe to hint at the East, where that graphite came from.",
+            "emphasis": [
+              "East,"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "Other companies copied the yellow, so their pencils looked just as good.",
+            "emphasis": [
+              "copied"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l8",
+            "text": "And today, most pencils made in the US are still painted yellow.",
+            "emphasis": [
+              "yellow."
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:30583224",
+            "prompt": "a huge pile of yellow pencils",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:4853198",
+            "prompt": "four yellow pencils on grey",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "focusY": 0.7
+        },
+        "anchor": "fancy"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Ruins of Borrowdale Graphite Mine\"",
+            "prompt": "ruins of the Borrowdale graphite mine",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Borrowdale graphite mine, England"
+        }
+      },
+      {
+        "id": "sh3b",
+        "lineId": "l2",
+        "scene": {
+          "type": "typewriter",
+          "lead": "graphite found:",
+          "highlight": "1565",
+          "cps": 10
+        },
+        "anchor": "found"
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:12458505",
+            "prompt": "macro of a sharpened pencil tip",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Graphite, not lead"
+        }
+      },
+      {
+        "id": "sh4b",
+        "lineId": "l3",
+        "scene": {
+          "type": "typewriter",
+          "lead": "its old name:",
+          "highlight": "plumbago",
+          "cps": 10
+        },
+        "anchor": "That's"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "map-pin",
+            "label": "SIBERIAN GRAPHITE",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "typewriter",
+          "lead": "painted yellow:",
+          "highlight": "1890",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"Koh-i-Noor Pencils ad from The Bookman, May 1908\"",
+            "prompt": "a 1908 Koh-i-Noor pencils advert",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Koh-i-Noor ad, 1908"
+        },
+        "anchor": "Koh-i-Noor"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "flag",
+            "label": "AUSTRIA-HUNGARY'S COLOURS?",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh8b",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "compass",
+            "label": "A HINT OF THE EAST?",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "Maybe"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:30663291",
+            "prompt": "pencils in containers",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Everyone copied it"
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "l8",
+        "scene": {
+          "type": "stat",
+          "value": "Most",
+          "caption": "US-made pencils are painted yellow",
+          "sourceClaimId": "c6"
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Pencils are yellow because of one fancy brand",
+    "description": "Pencils are yellow because of one fancy brand.\nPeople found pure graphite in England around 1565 and thought it was lead, which is why we still say pencil lead. In 1890, according to historian Henry Petroski, Koh-i-Noor painted its pencils yellow, maybe for the Austro-Hungarian flag, maybe to hint at the East, where the best graphite came from. Everyone copied it.",
+    "hashtags": [
+      "pencil",
+      "yellowpencil",
+      "history",
+      "design",
+      "didyouknow"
+    ],
+    "keywords": [
+      "why are pencils yellow",
+      "yellow pencil history",
+      "Koh-i-Noor pencil",
+      "why is it called pencil lead",
+      "Borrowdale graphite"
+    ],
+    "hook": "Pencils are yellow because of one fancy brand.",
+    "altText": "Motion-graphics explainer on why most pencils are painted yellow.",
+    "pinnedComment": "Wooden pencil or mechanical pencil? ✏️ Pick a side, and defend it.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Pencil",
+        "title": "Pencil"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

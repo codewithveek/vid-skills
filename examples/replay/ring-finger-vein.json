@@ -239,6 +239,16 @@
         }
       },
       {
+        "id": "sh5a",
+        "lineId": "l4",
+        "scene": {
+          "type": "typewriter",
+          "lead": "England,",
+          "highlight": "1662",
+          "cps": 10
+        }
+      },
+      {
         "id": "sh5",
         "lineId": "l4",
         "scene": {
@@ -252,7 +262,23 @@
           "treatment": "natural",
           "move": "pushIn",
           "label": "Book of Common Prayer, 1662"
-        }
+        },
+        "anchor": "Book"
+      },
+      {
+        "id": "sh5b",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "hand",
+            "label": "4TH FINGER, LEFT HAND",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "fourth"
       },
       {
         "id": "sh6",

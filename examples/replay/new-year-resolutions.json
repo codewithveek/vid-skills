@@ -285,7 +285,7 @@
           "type": "broll",
           "asset": {
             "kind": "image",
-            "query": "intitle:\"Janus coin\"",
+            "query": "intitle:\"Janus coin\" -Comparison -Context -FindID -coin1",
             "prompt": "a Roman coin showing two-faced Janus",
             "prefer": "stock"
           },

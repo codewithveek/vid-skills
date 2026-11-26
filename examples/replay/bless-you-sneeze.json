@@ -81,7 +81,18 @@
         "lines": [
           {
             "id": "l1",
-            "text": "Why do we say bless you after a sneeze? The famous answer is probably wrong.",
+            "text": "Why do we say bless you after a sneeze?",
+            "emphasis": [
+              "sneeze?"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.2
+          },
+          {
+            "id": "l1b",
+            "text": "The famous answer is probably wrong.",
             "emphasis": [
               "wrong."
             ],
@@ -216,7 +227,7 @@
       },
       {
         "id": "sh2",
-        "lineId": "l1",
+        "lineId": "l1b",
         "scene": {
           "type": "diagram",
           "template": "icon-draw",
@@ -226,8 +237,7 @@
             "color": "#FF3B30",
             "glow": "yes"
           }
-        },
-        "anchor": "famous"
+        }
       },
       {
         "id": "sh3",
@@ -302,6 +312,17 @@
             "glow": "yes"
           }
         }
+      },
+      {
+        "id": "sh7b",
+        "lineId": "l7",
+        "scene": {
+          "type": "typewriter",
+          "lead": "a good omen:",
+          "highlight": "400 BC",
+          "cps": 10
+        },
+        "anchor": "Around"
       },
       {
         "id": "sh8",
