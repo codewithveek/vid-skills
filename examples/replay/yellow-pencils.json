@@ -340,13 +340,12 @@
           "type": "broll",
           "asset": {
             "kind": "image",
-            "query": "intitle:\"Koh-i-Noor Pencils ad from The Bookman, May 1908\"",
-            "prompt": "a 1908 Koh-i-Noor pencils advert",
+            "query": "pexels:8386695",
+            "prompt": "yellow pencils with erasers",
             "prefer": "stock"
           },
           "treatment": "natural",
-          "move": "pushIn",
-          "label": "Koh-i-Noor ad, 1908"
+          "move": "pushIn"
         },
         "anchor": "Koh-i-Noor"
       },
