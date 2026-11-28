@@ -150,6 +150,12 @@ export interface VisualCandidate {
 export interface StockProvider {
   readonly id: string;
   readonly kinds: ("image" | "video")[];
+  /**
+   * True when the provider honours `intitle:"…"` (an exact archive file). Queries using it are then sent
+   * only to such providers: a keyword-only provider would answer with an unrelated photo that still
+   * carries the shot's historical label.
+   */
+  readonly titleSearch?: boolean;
   search(q: { query: string; kind: "image" | "video"; orientation?: "portrait" | "landscape" | "square"; limit?: number; signal?: AbortSignal }): Promise<VisualCandidate[]>;
 }
 

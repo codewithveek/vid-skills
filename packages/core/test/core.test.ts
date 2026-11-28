@@ -290,6 +290,34 @@ describe("pipeline (offline, mock providers)", () => {
     expect(visuals.every((a) => a.provider === "fake-stock")).toBe(true);
     expect(searches).toBe(1);
   });
+  it("sends exact archive queries only to providers that support intitle:", async () => {
+    const storage = new MemoryStorage();
+    const lic = { name: "CC0", commercialUse: true, requiresAttribution: false };
+    let keywordSearches = 0;
+    const archive: StockProvider = { id: "archive", kinds: ["image"], titleSearch: true, search: async () => [] };
+    const keyword: StockProvider = {
+      id: "keyword",
+      kinds: ["image"],
+      search: async ({ query }) => {
+        keywordSearches++;
+        return [{ id: query, kind: "image", url: `data:image/png;base64,${btoa(query)}`, width: 1600, height: 1100, provider: "keyword", license: lic }];
+      },
+    };
+    const run = (force?: "assets"[]) => runPipeline({ topic: "the floppy disk save icon", durationSec: 25 }, { providers: { llm: fakeLLM(), tts: fakeTTS(), stock: [archive, keyword] }, storage, jobId: "t7", stopAfter: "assets", force });
+    await run();
+    const key = "jobs/t7/stages/storyboard.json";
+    type Shot = { id: string; scene: { type: string; asset?: { query?: string } } };
+    const sb = (await getJson<{ shots: Shot[] }>(storage, key))!;
+    const one = sb.shots.find((s) => s.scene.type === "broll" && s.scene.asset)!;
+    one.scene.asset!.query = 'intitle:"Thomas Edison, 1878"';
+    await putJson(storage, key, sb);
+    keywordSearches = 0;
+    const res = await run(["assets"]);
+    const a = res.manifest.assets.find((x) => x.query === 'intitle:"Thomas Edison, 1878"')!;
+    expect(a.provider).toBe("placeholder");
+    // Only the edited shot re-resolves (the rest come from the cache), and it never reaches "keyword".
+    expect(keywordSearches).toBe(0);
+  });
   it("ranks tiny stock images last", () => {
     const lic = { name: "CC0", commercialUse: true, requiresAttribution: false };
     const c = (id: string, w: number) => ({ id, kind: "image" as const, url: `https://x.test/${id}`, width: w, height: Math.round(w * 0.7), description: `File:Ray Tomlinson ${id}.jpg`, provider: "t", license: lic });

@@ -136,6 +136,7 @@ export class OpenverseStock implements StockProvider {
 export class WikimediaStock implements StockProvider {
   readonly id = "wikimedia";
   readonly kinds: ("image" | "video")[] = ["image"];
+  readonly titleSearch = true;
   constructor(private readonly o: { userAgent?: string } = {}) {}
   async search(q: Q): Promise<VisualCandidate[]> {
     if (q.kind !== "image") return [];
