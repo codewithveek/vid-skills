@@ -1,0 +1,443 @@
+{
+  "ResearchDossier": {
+    "topic": "The first rubber eraser was an accident",
+    "summary": "Before rubber erasers, tablets of wax and crustless bread were used to erase pencil marks. In 1770 Joseph Priestley described a substance excellently adapted to wiping black-lead-pencil marks from paper. Edward Nairne, an English optician and instrument maker, reportedly developed the first widely marketed rubber eraser; according to Nairne, he picked up a piece of rubber instead of breadcrumbs. In 1770 'rubber' meant any object used for rubbing; the word attached to the new material between 1770 and 1778. Vulcanisation (1839) made rubber durable. In 1858 Hymen Lipman patented attaching an eraser to a pencil; the patent was later invalidated.",
+    "angle": "A happy accident that named a material.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Before rubber erasers, tablets of wax and crustless bread were used to erase pencil marks.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Eraser",
+            "title": "Eraser - Wikipedia",
+            "quote": "Crustless bread was used"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "In 1770 Joseph Priestley described a substance excellently adapted to wiping pencil marks from paper.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Eraser",
+            "title": "Eraser - Wikipedia",
+            "quote": "excellently adapted to the purpose of wiping from paper the mark of black-lead-pencil"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Edward Nairne, an English optician and instrument maker, reportedly developed the first widely marketed rubber eraser.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Eraser",
+            "title": "Eraser - Wikipedia",
+            "quote": "reportedly developed the first widely marketed rubber eraser"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "According to Nairne, he inadvertently picked up a piece of rubber instead of breadcrumbs.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Eraser",
+            "title": "Eraser - Wikipedia",
+            "quote": "he inadvertently picked up a piece of rubber instead of breadcrumbs"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "In 1770 'rubber' meant any object used for rubbing; the word became attached to the new material between 1770 and 1778.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Eraser",
+            "title": "Eraser - Wikipedia",
+            "quote": "the word became attached to the new material sometime between 1770 and 1778"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c6",
+        "text": "On March 30, 1858, Hymen Lipman received the first patent for attaching an eraser to the end of a pencil; it was later invalidated.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Eraser",
+            "title": "Eraser - Wikipedia",
+            "quote": "received the first patent for attaching an eraser to the end of a pencil"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "The First Eraser Was an Accident",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "The first rubber eraser was an accident.",
+            "emphasis": [
+              "accident."
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "Before rubber, people rubbed out pencil marks with wax, or crustless bread.",
+            "emphasis": [
+              "bread."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "Then in 1770, scientist Joseph Priestley wrote about a substance perfect for wiping pencil off paper.",
+            "emphasis": [
+              "perfect"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "Instrument maker Edward Nairne is said to have sold the first popular rubber eraser.",
+            "emphasis": [
+              "first"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l5",
+            "text": "His story? He reached for breadcrumbs, and grabbed a piece of rubber by mistake.",
+            "emphasis": [
+              "mistake."
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l6",
+            "text": "Back then, a rubber was anything you rubbed with. Within a few years, the name stuck to the material itself.",
+            "emphasis": [
+              "stuck"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "And in 1858, Hymen Lipman patented the eraser on the end of a pencil.",
+            "emphasis": [
+              "patented"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l8",
+            "text": "Years later, the patent was thrown out. A pencil with an eraser was just two old inventions combined.",
+            "emphasis": [
+              "two"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:10816479",
+            "prompt": "pencils with erasers on paper",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "focusY": 0.5
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:8599593",
+            "prompt": "a slice of white bread",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Bread: the old eraser"
+        }
+      },
+      {
+        "id": "sh3",
+        "lineId": "l3",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Joseph Priestley,",
+          "highlight": "1770",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "flask-conical",
+            "label": "PERFECT FOR WIPING PENCIL",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "substance"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "eraser",
+            "label": "EDWARD NAIRNE",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:8599591",
+            "prompt": "sliced white bread",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh6b",
+        "lineId": "l5",
+        "scene": {
+          "type": "typewriter",
+          "lead": "grabbed by mistake:",
+          "highlight": "rubber",
+          "cps": 10
+        },
+        "anchor": "grabbed"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l6",
+        "scene": {
+          "type": "typewriter",
+          "lead": "a rubber =",
+          "highlight": "anything you rub with",
+          "cps": 14
+        }
+      },
+      {
+        "id": "sh7b",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "eraser",
+            "label": "THE NAME STUCK",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        },
+        "anchor": "Within"
+      },
+      {
+        "id": "sh8",
+        "lineId": "l7",
+        "scene": {
+          "type": "typewriter",
+          "lead": "pencil + eraser patent:",
+          "highlight": "1858",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh8b",
+        "lineId": "l7",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:6952425",
+            "prompt": "pencils with erasers on the end",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        },
+        "anchor": "Hymen"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l8",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "pencil",
+            "title": "PENCIL",
+            "label": "Already invented"
+          },
+          "right": {
+            "icon": "eraser",
+            "title": "ERASER",
+            "label": "Already invented"
+          },
+          "winner": "none"
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "The first rubber eraser was an accident",
+    "description": "The first rubber eraser was an accident.\nBefore rubber, people erased pencil with wax or crustless bread. In 1770, Joseph Priestley wrote about a substance perfect for wiping pencil off paper, and instrument maker Edward Nairne is said to have sold the first popular rubber eraser. By his own account, he grabbed rubber instead of breadcrumbs by mistake.",
+    "hashtags": [
+      "eraser",
+      "pencil",
+      "inventions",
+      "history",
+      "didyouknow"
+    ],
+    "keywords": [
+      "eraser history",
+      "why is it called rubber",
+      "first rubber eraser",
+      "Edward Nairne",
+      "Hymen Lipman pencil eraser patent"
+    ],
+    "hook": "The first rubber eraser was an accident.",
+    "altText": "Motion-graphics explainer on how the rubber eraser was invented by accident.",
+    "pinnedComment": "Eraser or rubber? 🇺🇸 vs 🇬🇧 What do you call it?",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Eraser",
+        "title": "Eraser"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

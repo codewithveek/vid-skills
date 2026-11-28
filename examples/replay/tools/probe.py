@@ -17,8 +17,7 @@ def get(url, headers=None):
             raise
 out, specs = sys.argv[1], sys.argv[2:]
 items = []
-for spec in specs:
-    kind, q = spec.split(":", 1)
+def collect(kind, q):
     if kind == "wm":
         u = "https://commons.wikimedia.org/w/api.php?" + urllib.parse.urlencode({"action": "query", "format": "json", "generator": "search", "gsrnamespace": 6, "gsrlimit": 6, "gsrsearch": f"filetype:bitmap {q}", "prop": "imageinfo", "iiprop": "url|size|extmetadata", "iiurlwidth": 330})
         pages = json.loads(get(u)).get("query", {}).get("pages", {})
@@ -30,6 +29,10 @@ for spec in specs:
         for r in json.loads(get(u, {"Authorization": os.environ["PEXELS_API_KEY"]})).get("videos" if kind == "video" else "photos", []):
             if kind == "video": items.append((q, f"V{r['id']}", f"{r['duration']}s {r['url'][-60:]}", r["image"]))
             else: items.append((q, f"P{r['id']}", f"{r['width']}x{r['height']} {r.get('alt', '')[:70]}", r["src"]["medium"]))
+for spec in specs:
+    kind, q = spec.split(":", 1)
+    try: collect(kind, q)
+    except Exception as e: print(f"skip {spec}: {e}")
 W, H, cols = 250, 330, 6
 sheet = Image.new("RGB", (W * cols, (H + 40) * ((len(items) + cols - 1) // cols)), "white")
 d = ImageDraw.Draw(sheet)

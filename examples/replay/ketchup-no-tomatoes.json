@@ -1,0 +1,397 @@
+{
+  "ResearchDossier": {
+    "topic": "The first ketchup had no tomatoes",
+    "summary": "The etymology of ketchup is unclear; one theory derives it from Hokkien kôe-chiap or kê-chiap, the brine of pickled fish or shellfish. From the 1600s ketchup was prepared with mushrooms as a primary ingredient; early recipes contained mushrooms, oysters, mussels, egg whites, grapes or walnuts. James Mease published the first known tomato ketchup recipe in 1812.",
+    "angle": "A sauce that changed its main ingredient but kept its name.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "One theory derives ketchup from Hokkien kôe-chiap or kê-chiap, meaning the brine of pickled fish or shellfish; the etymology is unclear.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ketchup",
+            "title": "Ketchup - Wikipedia",
+            "quote": "where it meant the brine of pickled fish or shellfish"
+          }
+        ],
+        "confidence": "medium"
+      },
+      {
+        "id": "c2",
+        "text": "From the 1600s ketchup was prepared with mushrooms as a primary ingredient, rather than tomatoes.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ketchup",
+            "title": "Ketchup - Wikipedia",
+            "quote": "from the 1600s ketchup was prepared with mushrooms as a primary ingredient, rather than tomatoes"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Early recipes contained mushrooms, oysters, mussels, egg whites, grapes, or walnuts.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ketchup",
+            "title": "Ketchup - Wikipedia",
+            "quote": "mushrooms, oysters, mussels, egg whites, grapes, or walnuts"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "James Mease published the first known tomato ketchup recipe in 1812.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ketchup",
+            "title": "Ketchup - Wikipedia",
+            "quote": "James Mease published the first known tomato ketchup recipe in 1812."
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "The First Ketchup Had No Tomatoes",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "The first ketchup didn't have a single tomato in it.",
+            "emphasis": [
+              "tomato"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "The word may come from Hokkien Chinese, where it meant the brine of pickled fish.",
+            "emphasis": [
+              "fish."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "And from the 1600s, ketchup was made mostly from mushrooms.",
+            "emphasis": [
+              "mushrooms."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "Other recipes used oysters, mussels, grapes, even walnuts.",
+            "emphasis": [
+              "walnuts."
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "The first known tomato ketchup recipe didn't show up until 1812.",
+            "emphasis": [
+              "1812."
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "It was published by a man named James Mease.",
+            "emphasis": [
+              "Mease."
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "So the name on your bottle is older than the tomatoes inside it.",
+            "emphasis": [
+              "older"
+            ],
+            "claimIds": [
+              "c2",
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:4676397",
+            "prompt": "ketchup squeezed onto fries",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "focusY": 0.5
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "typewriter",
+          "lead": "tomatoes in the first ketchup:",
+          "highlight": "0",
+          "cps": 10
+        },
+        "anchor": "single"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Hokkien, maybe:",
+          "highlight": "kê-chiap",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l2",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "fish",
+            "label": "BRINE OF PICKLED FISH",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "brine"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:17630122",
+            "prompt": "a cluster of wild mushrooms",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Mushroom ketchup"
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:17205217",
+            "prompt": "fresh oysters on ice",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh6b",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:39432877",
+            "prompt": "walnuts in their shells",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        },
+        "anchor": "even"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "typewriter",
+          "lead": "first tomato ketchup recipe:",
+          "highlight": "1812",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh8",
+        "lineId": "l5",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:29479888",
+            "prompt": "a pile of ripe red tomatoes",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        },
+        "anchor": "recipe"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "book-open",
+            "label": "JAMES MEASE",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "l7",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:6941017",
+            "prompt": "a bottle of ketchup on a checked tablecloth",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "The first ketchup had no tomatoes",
+    "description": "The first ketchup didn't have a single tomato in it.\nThe word may come from Hokkien Chinese, where it meant the brine of pickled fish. From the 1600s, ketchup was made mostly from mushrooms, and other recipes used oysters, mussels, grapes and walnuts. The first known tomato ketchup recipe wasn't published until 1812.",
+    "hashtags": [
+      "ketchup",
+      "foodhistory",
+      "food",
+      "history",
+      "didyouknow"
+    ],
+    "keywords": [
+      "ketchup history",
+      "ketchup without tomatoes",
+      "mushroom ketchup",
+      "where does the word ketchup come from",
+      "first tomato ketchup recipe"
+    ],
+    "hook": "The first ketchup didn't have a single tomato in it.",
+    "altText": "Motion-graphics explainer on how ketchup existed long before tomato ketchup.",
+    "pinnedComment": "Ketchup on eggs: delicious or a crime? 🍳 Pick a side.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Ketchup",
+        "title": "Ketchup"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}
