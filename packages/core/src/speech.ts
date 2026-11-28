@@ -126,6 +126,12 @@ function speakToken(tok: string, prev: string, next: string): string | null {
     if (v !== null) return `${lead}${cardinal(v)}${trail}`;
   }
 
+  // Model numbers after an acronym ("IBM 1401", "DC 3") are read in pairs, like a year: "fourteen oh one".
+  if (/^[A-Z]{2,}(?:'s|’s)?$/.test(prev.replace(/[^\w'’]/g, "")) && /^\d{3,4}$/.test(core) && core[0] !== "0") {
+    const n = Number(core);
+    return `${lead}${n < 1000 ? `${ONES[Math.floor(n / 100)]} ${n % 100 === 0 ? "hundred" : n % 100 < 10 ? `oh ${ONES[n % 100]}` : twoDigits(n % 100)}` : yearWords(n)}${trail}`;
+  }
+
   // Decades: 1980s, 1980's, '90s
   let d = /^(1[1-9]|20)(\d)0'?s$/.exec(core);
   if (d) {

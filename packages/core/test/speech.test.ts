@@ -15,6 +15,8 @@ describe("speech normalization", () => {
     expect(toSpeech("Back in 1868, outside Parliament.").spoken).toBe("Back in eighteen sixty-eight, outside Parliament.");
     expect(toSpeech("By 2004, a new standard").spoken).toBe("By two thousand four, a new standard");
     expect(toSpeech("In 1920, a Detroit signal").spoken).toBe("In nineteen twenty, a Detroit signal");
+    expect(toSpeech("shipping IBM 1401 computers").spoken).toBe("shipping IBM fourteen oh one computers");
+    expect(toSpeech("a Boeing 747 jet").spoken).not.toContain("seven forty-seven");
     expect(toSpeech("on 2 January 1869 it exploded").spoken).toBe("on two January eighteen sixty-nine it exploded");
     expect(toSpeech("Sony made the last ones in 2011.").spoken).toBe("Sony made the last ones in twenty eleven.");
     expect(toSpeech("Then came the 1840 election.").spoken).toBe("Then came the eighteen forty election.");

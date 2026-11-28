@@ -1,0 +1,429 @@
+{
+  "ResearchDossier": {
+    "topic": "Bubble wrap was meant to be wallpaper",
+    "summary": "In 1957 Alfred Fielding and Marc Chavannes were attempting to create a three-dimensional plastic wallpaper. The idea failed, but they found it could be used as packing material. Fielding co-founded Sealed Air in 1960. One of the first widespread uses came in 1960, shipping IBM 1401 computers to customers who had never seen this packing material. Bubble Wrap Appreciation Day is the last Monday of January, and in 2015 Sealed Air launched iBubble Wrap, which cannot be popped.",
+    "angle": "The failed wallpaper that ships the world.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "In 1957, Alfred Fielding and Marc Chavannes were attempting to create a three-dimensional plastic wallpaper.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Bubble_wrap",
+            "title": "Bubble wrap - Wikipedia",
+            "quote": "were attempting to create a three-dimensional plastic wallpaper."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The wallpaper idea was a failure, but they found what they made could be used as packing material.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Bubble_wrap",
+            "title": "Bubble wrap - Wikipedia",
+            "quote": "Although the idea was a failure, they found that what they made could be used as packing material."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Sealed Air was co-founded by Fielding in 1960.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Bubble_wrap",
+            "title": "Bubble wrap - Wikipedia",
+            "quote": "Sealed Air was co-founded by Fielding in 1960."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "One of the first widespread uses of bubble wrap came in 1960, shipping the new IBM 1401 computers to customers, most of whom had never seen this packing material.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Bubble_wrap",
+            "title": "Bubble wrap - Wikipedia",
+            "quote": "with the shipping of the new IBM 1401 computers to customers"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "Bubble Wrap Appreciation Day is celebrated on the last Monday of January.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Bubble_wrap",
+            "title": "Bubble wrap - Wikipedia",
+            "quote": "Bubble Wrap Appreciation Day is celebrated on the last Monday of January."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c6",
+        "text": "In 2015 Sealed Air launched iBubble Wrap, whose connected bubbles cannot be popped.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Bubble_wrap",
+            "title": "Bubble wrap - Wikipedia",
+            "quote": "In 2015 Sealed Air launched an"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Bubble Wrap Was Meant to Be Wallpaper",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Bubble wrap was supposed to go on your walls.",
+            "emphasis": [
+              "walls."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "In 1957, two inventors, Alfred Fielding and Marc Chavannes, were trying to make three-dimensional plastic wallpaper.",
+            "emphasis": [
+              "wallpaper."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "As wallpaper, it was a failure.",
+            "emphasis": [
+              "failure."
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "But they realised it could protect things in a box.",
+            "emphasis": [
+              "protect"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "proof",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "In 1960, Fielding co-founded Sealed Air to sell it.",
+            "emphasis": [
+              "Sealed"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l6",
+            "text": "One of its first big jobs was shipping IBM 1401 computers, to customers who had never seen packing like it.",
+            "emphasis": [
+              "never"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l7",
+            "text": "Today it has its own holiday, Bubble Wrap Appreciation Day, on the last Monday of January.",
+            "emphasis": [
+              "holiday,"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l8",
+            "text": "And in 2015, the same company made a version you can't even pop.",
+            "emphasis": [
+              "can't"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:6159688",
+            "prompt": "close-up of bubble wrap",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "focusY": 0.5
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:33419833",
+            "prompt": "vintage patterned wallpaper",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        },
+        "anchor": "walls."
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "typewriter",
+          "lead": "wallpaper, invented:",
+          "highlight": "1957",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:36539003",
+            "prompt": "black and white bubble wrap texture",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "3D plastic wallpaper"
+        },
+        "anchor": "three-dimensional"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "x",
+            "label": "FAILED WALLPAPER",
+            "color": "#FF3B30",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "package",
+            "label": "PACKING MATERIAL",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Sealed Air, founded:",
+          "highlight": "1960",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"IBM 1401 Demo Lab, Computer History Museum\"",
+            "prompt": "an IBM 1401 computer",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "IBM 1401"
+        }
+      },
+      {
+        "id": "sh8b",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "package-open",
+            "label": "NEVER SEEN BEFORE",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "customers"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "calendar",
+            "label": "LAST MONDAY OF JANUARY",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "l8",
+        "scene": {
+          "type": "typewriter",
+          "lead": "unpoppable bubble wrap:",
+          "highlight": "2015",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh12",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Bubble wrap was supposed to be wallpaper",
+    "description": "Bubble wrap was supposed to go on your walls.\nIn 1957, Alfred Fielding and Marc Chavannes were trying to make three-dimensional plastic wallpaper. It failed, but it turned out to be great packing material. One of its first big jobs was shipping IBM's 1401 computers in 1960. Today it has its own day, and in 2015 Sealed Air made a version you can't pop.",
+    "hashtags": [
+      "bubblewrap",
+      "inventions",
+      "history",
+      "satisfying",
+      "didyouknow"
+    ],
+    "keywords": [
+      "bubble wrap history",
+      "bubble wrap was wallpaper",
+      "who invented bubble wrap",
+      "Sealed Air",
+      "Bubble Wrap Appreciation Day"
+    ],
+    "hook": "Bubble wrap was supposed to go on your walls.",
+    "altText": "Motion-graphics explainer on how bubble wrap started as failed wallpaper.",
+    "pinnedComment": "Do you pop bubble wrap one bubble at a time, or twist the whole sheet? 🫧",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Bubble_wrap",
+        "title": "Bubble wrap"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}
