@@ -217,21 +217,6 @@
         }
       },
       {
-        "id": "sh2",
-        "lineId": "l1",
-        "scene": {
-          "type": "diagram",
-          "template": "icon-draw",
-          "data": {
-            "icon": "barcode",
-            "label": "DRAWN IN THE SAND",
-            "color": "#FFD400",
-            "glow": "yes"
-          }
-        },
-        "anchor": "drawing"
-      },
-      {
         "id": "sh3",
         "lineId": "l2",
         "scene": {
@@ -243,8 +228,7 @@
             "prefer": "stock"
           },
           "treatment": "natural",
-          "move": "pushIn",
-          "label": "Florida beach"
+          "move": "pushIn"
         }
       },
       {
@@ -278,12 +262,12 @@
         "scene": {
           "type": "versus",
           "left": {
-            "icon": "minus",
+            "icon": "circle",
             "title": "DOT",
             "label": "Thin line"
           },
           "right": {
-            "icon": "equal",
+            "icon": "minus",
             "title": "DASH",
             "label": "Thick line"
           },
@@ -311,6 +295,16 @@
         }
       },
       {
+        "id": "sh9b",
+        "lineId": "l7",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Troy, Ohio:",
+          "highlight": "June 26, 1974",
+          "cps": 12
+        }
+      },
+      {
         "id": "sh9",
         "lineId": "l7",
         "scene": {
@@ -322,20 +316,9 @@
             "prefer": "stock"
           },
           "treatment": "natural",
-          "move": "pushIn",
-          "label": "The scanner"
-        }
-      },
-      {
-        "id": "sh9b",
-        "lineId": "l7",
-        "scene": {
-          "type": "typewriter",
-          "lead": "Troy, Ohio:",
-          "highlight": "June 26, 1974",
-          "cps": 12
+          "move": "pushIn"
         },
-        "anchor": "June"
+        "anchor": "first"
       },
       {
         "id": "sh10",
