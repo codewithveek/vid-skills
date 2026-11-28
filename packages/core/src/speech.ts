@@ -107,6 +107,7 @@ export const PRONUNCIATIONS: Record<string, string> = {
   gif: "giff",
   gifs: "giffs",
   jif: "jiff",
+  "m'aider": "Mehday", // French "help me", the root of Mayday
   cosaque: "Kozack", // French for Cossack (Tom Smith's first cracker brand)
   blixem: "Blixum",
 };

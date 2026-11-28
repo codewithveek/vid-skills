@@ -1,0 +1,466 @@
+{
+  "ResearchDossier": {
+    "topic": "Mayday has nothing to do with May",
+    "summary": "Mayday is the phonetic equivalent of the French m'aider. It was conceived in the early 1920s by Frederick Stanley Mockford, officer-in-charge of radio at Croydon Airport, who was asked for a distress word every pilot and ground staff would understand; since much traffic was between Croydon and Le Bourget in Paris, he proposed mayday. It was introduced for cross-Channel flights in February 1923, partly owing to the difficulty of distinguishing the letter S by telephone. In 1927 it was adopted as the radiotelephone distress call in addition to SOS. It is said three times in a row.",
+    "angle": "A French plea hiding in an English word.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Mayday is the phonetic equivalent of the French m'aider ('help me').",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Mayday",
+            "title": "Mayday - Wikipedia",
+            "quote": "the phonetic equivalent of the French m'aider"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "Mayday was conceived in the early 1920s by Frederick Stanley Mockford, officer-in-charge of radio at Croydon Airport, England.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Mayday",
+            "title": "Mayday - Wikipedia",
+            "quote": "officer-in-charge of radio at Croydon Airport"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "Mockford was asked to think of a word that would indicate distress and be easily understood by all pilots and ground staff in an emergency.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Mayday",
+            "title": "Mayday - Wikipedia",
+            "quote": "would easily be understood by all pilots and ground staff in an emergency"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "Since much of the air traffic was between Croydon and Le Bourget Airport in Paris, he proposed mayday.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Mayday",
+            "title": "Mayday - Wikipedia",
+            "quote": "Since much of the air traffic at the time was between Croydon and Le Bourget Airport in Paris"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "A 1923 report cited the difficulty of distinguishing the letter S by telephone.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Mayday",
+            "title": "Mayday - Wikipedia",
+            "quote": "owing to the difficulty of distinguishing the letter 'S' by telephone"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c6",
+        "text": "In 1927 the International Radiotelegraph Convention adopted mayday as the voice distress call, in addition to SOS.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Mayday",
+            "title": "Mayday - Wikipedia",
+            "quote": "in addition to the SOS radiotelegraph"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c7",
+        "text": "Convention requires the word be repeated three times in a row.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Mayday",
+            "title": "Mayday - Wikipedia",
+            "quote": "repeated three times in a row"
+          }
+        ],
+        "confidence": "high"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "Mayday Has Nothing to Do With May",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "Mayday has nothing to do with the month of May.",
+            "emphasis": [
+              "nothing"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "It's French. It comes from m'aider. Help me.",
+            "emphasis": [
+              "Help"
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.4
+          },
+          {
+            "id": "l3",
+            "text": "In the early 1920s, Frederick Mockford ran the radio at Croydon Airport, in England.",
+            "emphasis": [
+              "Croydon"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l4",
+            "text": "He was asked for a distress word that every pilot and every ground crew would understand.",
+            "emphasis": [
+              "every"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l5",
+            "text": "Most flights back then went between Croydon and Le Bourget, in Paris. So he picked a French one.",
+            "emphasis": [
+              "French"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l6",
+            "text": "Over a crackly phone line, the S in SOS was easy to mishear.",
+            "emphasis": [
+              "mishear."
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l7",
+            "text": "By 1927, Mayday was the official spoken distress call, alongside SOS.",
+            "emphasis": [
+              "official"
+            ],
+            "claimIds": [
+              "c6"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l8",
+            "text": "And you always say it three times. Mayday, mayday, mayday.",
+            "emphasis": [
+              "three"
+            ],
+            "claimIds": [
+              "c7"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:4879871",
+            "prompt": "a pilot wearing a radio headset",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "focusY": 0.4
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "calendar-x",
+            "label": "NOT THE MONTH OF MAY",
+            "color": "#FF3B30",
+            "glow": "yes"
+          }
+        },
+        "anchor": "month"
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "typewriter",
+          "lead": "m'aider =",
+          "highlight": "help me",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l3",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "intitle:\"James Jimmy Jeffs at work Croydon\"",
+            "prompt": "a 1920s control room at Croydon Airport",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "label": "Croydon Airport"
+        }
+      },
+      {
+        "id": "sh4b",
+        "lineId": "l3",
+        "scene": {
+          "type": "typewriter",
+          "lead": "Croydon Airport:",
+          "highlight": "early 1920s",
+          "cps": 12
+        },
+        "anchor": "Croydon"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:12128384",
+            "prompt": "a pilot at the controls with a headset",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh5b",
+        "lineId": "l4",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "radio",
+            "label": "ONE WORD EVERYONE GETS",
+            "color": "#20FFF6",
+            "glow": "yes"
+          }
+        },
+        "anchor": "every"
+      },
+      {
+        "id": "sh6",
+        "lineId": "l5",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "plane-takeoff",
+            "title": "CROYDON",
+            "label": "London"
+          },
+          "right": {
+            "icon": "plane-landing",
+            "title": "LE BOURGET",
+            "label": "Paris"
+          },
+          "winner": "none"
+        }
+      },
+      {
+        "id": "sh6b",
+        "lineId": "l5",
+        "scene": {
+          "type": "typewriter",
+          "lead": "so, in French:",
+          "highlight": "m'aider",
+          "cps": 10
+        },
+        "anchor": "So"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l6",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "radio-tower",
+            "label": "THE S GETS LOST",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh8",
+        "lineId": "l7",
+        "scene": {
+          "type": "typewriter",
+          "lead": "official distress call:",
+          "highlight": "1927",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh9",
+        "lineId": "l8",
+        "scene": {
+          "type": "typewriter",
+          "lead": "say it:",
+          "highlight": "× 3",
+          "cps": 8
+        }
+      },
+      {
+        "id": "sh9b",
+        "lineId": "l8",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:20051146",
+            "prompt": "two pilots in a cockpit",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        },
+        "anchor": "Mayday,"
+      },
+      {
+        "id": "sh10",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "Mayday has nothing to do with May",
+    "description": "Mayday has nothing to do with the month of May.\nIt comes from the French m'aider, \"help me\". In the early 1920s, Frederick Mockford ran the radio at Croydon Airport and needed a distress word every pilot would understand. With most flights going between Croydon and Paris, he picked a French one. By 1927 it was the official spoken distress call, alongside SOS.",
+    "hashtags": [
+      "mayday",
+      "aviation",
+      "etymology",
+      "history",
+      "didyouknow"
+    ],
+    "keywords": [
+      "why do pilots say mayday",
+      "mayday meaning",
+      "mayday French m'aider",
+      "Croydon Airport mayday",
+      "mayday three times"
+    ],
+    "hook": "Mayday has nothing to do with the month of May.",
+    "altText": "Motion-graphics explainer on the French origin of the distress call Mayday.",
+    "pinnedComment": "Be honest: did you think Mayday came from May Day? 👀",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Mayday",
+        "title": "Mayday"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}

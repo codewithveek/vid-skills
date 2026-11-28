@@ -1,0 +1,419 @@
+{
+  "ResearchDossier": {
+    "topic": "The tiny jeans pocket was made for a pocket watch",
+    "summary": "Jacob Davis and Levi Strauss patented riveted work pants on May 20, 1873 (US patent 139,121, 'Improvement in Fastening Pocket-Openings'); the 1873 design had two front pockets and one back patch pocket. The small riveted watch pocket was first added by Levi Strauss in the late 1870s. A watch pocket, or fob pocket, is a small compartment originally for holding a pocket watch; it is also called a coin pocket.",
+    "angle": "A pocket that outlived its purpose.",
+    "claims": [
+      {
+        "id": "c1",
+        "text": "Jacob Davis and Levi Strauss patented their riveted pants on May 20, 1873.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Jeans",
+            "title": "Jeans - Wikipedia",
+            "quote": "patented by Davis and Levi Strauss on May 20, 1873."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c2",
+        "text": "The 1873 design had two pockets in the front and a patch pocket on the back right, reinforced with copper rivets.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Jeans",
+            "title": "Jeans - Wikipedia",
+            "quote": "there were two pockets in the front and a patch pocket on the back right"
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c3",
+        "text": "The small riveted watch pocket was first added by Levi Strauss to their jeans in the late 1870s.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Jeans",
+            "title": "Jeans - Wikipedia",
+            "quote": "The small riveted watch pocket was first added by Levi Strauss to their jeans in the late 1870s."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c4",
+        "text": "A watch pocket or fob pocket is a small compartment, originally for holding a pocket watch.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Pocket",
+            "title": "Pocket - Wikipedia",
+            "quote": "originally for holding a pocket watch."
+          }
+        ],
+        "confidence": "high"
+      },
+      {
+        "id": "c5",
+        "text": "It is also described as a coin pocket.",
+        "sources": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Pocket",
+            "title": "Pocket - Wikipedia",
+            "quote": "coin- or watch-pocket"
+          }
+        ],
+        "confidence": "medium"
+      }
+    ],
+    "timeline": [],
+    "analogies": [],
+    "visualIdeas": [],
+    "openQuestions": []
+  },
+  "Script": {
+    "headline": "That Tiny Jeans Pocket Was for a Watch",
+    "cta": "Follow for more things hiding in plain sight.",
+    "beats": [
+      {
+        "id": "b1",
+        "kind": "hook",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l1",
+            "text": "That tiny pocket on your jeans was made for a pocket watch.",
+            "emphasis": [
+              "watch."
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.35
+          }
+        ]
+      },
+      {
+        "id": "b2",
+        "kind": "history",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l2",
+            "text": "In 1873, Jacob Davis and Levi Strauss patented work pants held together with copper rivets.",
+            "emphasis": [
+              "rivets."
+            ],
+            "claimIds": [
+              "c1"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l3",
+            "text": "Those first jeans had just two pockets in the front, and one on the back.",
+            "emphasis": [
+              "two"
+            ],
+            "claimIds": [
+              "c2"
+            ],
+            "pauseAfterSec": 0.35
+          },
+          {
+            "id": "l4",
+            "text": "Then, in the late 1870s, Levi Strauss added one more. A small, riveted watch pocket.",
+            "emphasis": [
+              "watch"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b3",
+        "kind": "mechanism",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "l5",
+            "text": "It was made to hold one thing. A pocket watch.",
+            "emphasis": [
+              "hold"
+            ],
+            "claimIds": [
+              "c4"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b4",
+        "kind": "twist",
+        "musicCue": "drop",
+        "lines": [
+          {
+            "id": "l6",
+            "text": "Pocket watches went out of style. The pocket never left.",
+            "emphasis": [
+              "never"
+            ],
+            "claimIds": [
+              "c3"
+            ],
+            "pauseAfterSec": 0.3
+          },
+          {
+            "id": "l7",
+            "text": "Today most people just call it the coin pocket.",
+            "emphasis": [
+              "coin"
+            ],
+            "claimIds": [
+              "c5"
+            ],
+            "pauseAfterSec": 0.4
+          }
+        ]
+      },
+      {
+        "id": "b9",
+        "kind": "cta",
+        "musicCue": "none",
+        "lines": [
+          {
+            "id": "lz",
+            "text": "Follow for more things hiding in plain sight.",
+            "emphasis": [
+              "Follow"
+            ],
+            "claimIds": [],
+            "pauseAfterSec": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "Storyboard": {
+    "shots": [
+      {
+        "id": "sh1",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:14840593",
+            "prompt": "close-up of a jeans front pocket",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn",
+          "focusY": 0.4
+        }
+      },
+      {
+        "id": "sh2",
+        "lineId": "l1",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:35192654",
+            "prompt": "a hand holding a pocket watch",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        },
+        "anchor": "watch."
+      },
+      {
+        "id": "sh3",
+        "lineId": "l2",
+        "scene": {
+          "type": "typewriter",
+          "lead": "riveted jeans patent:",
+          "highlight": "1873",
+          "cps": 10
+        }
+      },
+      {
+        "id": "sh4",
+        "lineId": "l2",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:10133273",
+            "prompt": "denim stitching and a pocket",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        },
+        "anchor": "copper"
+      },
+      {
+        "id": "sh5",
+        "lineId": "l3",
+        "scene": {
+          "type": "versus",
+          "left": {
+            "icon": "hand",
+            "title": "FRONT",
+            "label": "Two pockets"
+          },
+          "right": {
+            "icon": "hand",
+            "title": "BACK",
+            "label": "One pocket"
+          },
+          "winner": "none"
+        }
+      },
+      {
+        "id": "sh6",
+        "lineId": "l4",
+        "scene": {
+          "type": "typewriter",
+          "lead": "watch pocket added:",
+          "highlight": "late 1870s",
+          "cps": 12
+        }
+      },
+      {
+        "id": "sh6b",
+        "lineId": "l4",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:17539483",
+            "prompt": "vintage pocket watches on a table",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        },
+        "anchor": "small,"
+      },
+      {
+        "id": "sh7",
+        "lineId": "l5",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "watch",
+            "label": "MADE FOR A WATCH",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh8",
+        "lineId": "l6",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:18359903",
+            "prompt": "an antique pocket watch",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        }
+      },
+      {
+        "id": "sh8b",
+        "lineId": "l6",
+        "scene": {
+          "type": "broll",
+          "asset": {
+            "kind": "image",
+            "query": "pexels:10133278",
+            "prompt": "folded blue jeans showing the pockets",
+            "prefer": "stock"
+          },
+          "treatment": "natural",
+          "move": "pushIn"
+        },
+        "anchor": "pocket"
+      },
+      {
+        "id": "sh9",
+        "lineId": "l7",
+        "scene": {
+          "type": "diagram",
+          "template": "icon-draw",
+          "data": {
+            "icon": "coins",
+            "label": "THE COIN POCKET",
+            "color": "#FFD400",
+            "glow": "yes"
+          }
+        }
+      },
+      {
+        "id": "sh10",
+        "lineId": "lz",
+        "scene": {
+          "type": "cta",
+          "variant": "subscribe-morph",
+          "text": "FOLLOW",
+          "doneText": "FOLLOWING"
+        }
+      },
+      {
+        "id": "sh11",
+        "lineId": "lz",
+        "scene": {
+          "type": "endcard",
+          "handle": "@hiddeninplainsight.tv"
+        }
+      }
+    ]
+  },
+  "PublishCopy": {
+    "title": "That tiny jeans pocket was made for a pocket watch",
+    "description": "That tiny pocket on your jeans was made for a pocket watch.\nJacob Davis and Levi Strauss patented riveted work pants in 1873, with two front pockets and one on the back. In the late 1870s, Levi Strauss added a small riveted watch pocket. Pocket watches went out of style, but the pocket never left.",
+    "hashtags": [
+      "jeans",
+      "denim",
+      "fashionhistory",
+      "history",
+      "didyouknow"
+    ],
+    "keywords": [
+      "jeans small pocket",
+      "jeans watch pocket",
+      "why do jeans have a tiny pocket",
+      "Levi Strauss history",
+      "coin pocket"
+    ],
+    "hook": "That tiny pocket on your jeans was made for a pocket watch.",
+    "altText": "Motion-graphics explainer on why jeans have a tiny front pocket.",
+    "pinnedComment": "What do you actually keep in the tiny pocket? 👖 Wrong answers only.",
+    "sources": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Jeans",
+        "title": "Jeans"
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Pocket",
+        "title": "Pocket"
+      }
+    ]
+  },
+  "Review": {
+    "pass": true,
+    "score": 90,
+    "issues": []
+  }
+}
