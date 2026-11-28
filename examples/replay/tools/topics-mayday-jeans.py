@@ -24,7 +24,6 @@ out("mayday-french.json", {
   CTAB]},
 "Storyboard": {"shots": [
   sh("sh1", "l1", pxb(4879871, "a pilot wearing a radio headset", focusY=0.4)),
-  sh("sh2", "l1", icon("calendar-x", "NOT THE MONTH OF MAY", "#FF3B30"), "month"),
   sh("sh3", "l2", tw("m'aider =", "help me", 10)),
   sh("sh4", "l3", broll("James Jimmy Jeffs at work Croydon", "a 1920s control room at Croydon Airport", "Croydon Airport")),
   sh("sh4b", "l3", tw("Croydon Airport:", "early 1920s", 12), "Croydon"),
@@ -68,7 +67,7 @@ out("jeans-watch-pocket.json", {
   sh("sh2", "l1", pxb(35192654, "a hand holding a pocket watch"), "watch."),
   sh("sh3", "l2", tw("riveted jeans patent:", "1873", 10)),
   sh("sh4", "l2", pxb(10133273, "denim stitching and a pocket"), "copper"),
-  sh("sh5", "l3", versus({"icon": "hand", "title": "FRONT", "label": "Two pockets"}, {"icon": "hand", "title": "BACK", "label": "One pocket"}, "none")),
+  sh("sh5", "l3", versus({"icon": "copy", "title": "FRONT", "label": "Two pockets"}, {"icon": "square", "title": "BACK", "label": "One pocket"}, "none")),
   sh("sh6", "l4", tw("watch pocket added:", "late 1870s", 12)),
   sh("sh6b", "l4", pxb(17539483, "vintage pocket watches on a table"), "small,"),
   sh("sh7", "l5", icon("watch", "MADE FOR A WATCH", "#FFD400")),

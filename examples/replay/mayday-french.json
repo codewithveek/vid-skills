@@ -251,21 +251,6 @@
         }
       },
       {
-        "id": "sh2",
-        "lineId": "l1",
-        "scene": {
-          "type": "diagram",
-          "template": "icon-draw",
-          "data": {
-            "icon": "calendar-x",
-            "label": "NOT THE MONTH OF MAY",
-            "color": "#FF3B30",
-            "glow": "yes"
-          }
-        },
-        "anchor": "month"
-      },
-      {
         "id": "sh3",
         "lineId": "l2",
         "scene": {

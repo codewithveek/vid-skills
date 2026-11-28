@@ -263,12 +263,12 @@
         "scene": {
           "type": "versus",
           "left": {
-            "icon": "hand",
+            "icon": "copy",
             "title": "FRONT",
             "label": "Two pockets"
           },
           "right": {
-            "icon": "hand",
+            "icon": "square",
             "title": "BACK",
             "label": "One pocket"
           },
