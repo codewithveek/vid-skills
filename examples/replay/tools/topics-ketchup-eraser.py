@@ -22,7 +22,7 @@ out("ketchup-no-tomatoes.json", {
   sh("sh1", "l1", pxb(4676397, "ketchup squeezed onto fries", focusY=0.5)),
   sh("sh2", "l1", tw("tomatoes in the first ketchup:", "0", 10), "single"),
   sh("sh3", "l2", tw("Hokkien, maybe:", "kê-chiap", 10)),
-  sh("sh4", "l2", icon("fish", "BRINE OF PICKLED FISH", "#20FFF6"), "brine"),
+  sh("sh4", "l2", icon("fish", "BRINE OF PICKLED FISH", "#20FFF6"), "where"),
   sh("sh5", "l3", pxb(17630122, "a cluster of wild mushrooms", "Mushroom ketchup")),
   sh("sh6", "l4", pxb(17205217, "fresh oysters on ice")),
   sh("sh6b", "l4", pxb(39432877, "walnuts in their shells"), "even"),

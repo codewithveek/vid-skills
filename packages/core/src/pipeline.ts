@@ -504,8 +504,12 @@ export async function stageAssets(
       // An exact archive file (intitle:) goes only to providers that can find it: anything else would
       // swap in a look-alike photo under a label that names a specific person, object or date.
       const exact = /\bintitle:/i.test(query) && ctx.providers.stock.some((s) => s.titleSearch);
+      // "<provider>:<id>" pins one file from one provider (e.g. pexels:123): ask only that provider,
+      // so pins don't spend other providers' rate limits on queries they can't answer.
+      const pinned = /^([a-z][\w-]*):\S+$/i.exec(query.trim())?.[1]?.toLowerCase();
+      const pinTo = pinned && ctx.providers.stock.some((s) => s.id === pinned) ? pinned : undefined;
       for (const kind of req.kind === "video" ? (["video", "image"] as const) : (["image"] as const)) {
-        for (const sp of ctx.providers.stock.filter((s) => s.kinds.includes(kind) && !open(s.id) && (!exact || s.titleSearch))) {
+        for (const sp of ctx.providers.stock.filter((s) => s.kinds.includes(kind) && !open(s.id) && (!exact || s.titleSearch) && (!pinTo || s.id === pinTo))) {
           let cands: VisualCandidate[] = [];
           try {
             cands = await sp.search({ query, kind, orientation, limit: 8, signal: ctx.signal });

@@ -318,6 +318,30 @@ describe("pipeline (offline, mock providers)", () => {
     // Only the edited shot re-resolves (the rest come from the cache), and it never reaches "keyword".
     expect(keywordSearches).toBe(0);
   });
+  it("sends provider pins (pexels:<id>) only to that provider", async () => {
+    const storage = new MemoryStorage();
+    const lic = { name: "CC0", commercialUse: true, requiresAttribution: false };
+    const asked: string[] = [];
+    const mk = (id: string): StockProvider => ({
+      id,
+      kinds: ["image"],
+      search: async ({ query }) => {
+        asked.push(`${id} ${query}`);
+        return [{ id: `${id}-${query}`, kind: "image", url: `data:image/png;base64,${btoa(id + query)}`, width: 1600, height: 1100, provider: id, license: lic }];
+      },
+    });
+    const run = (force?: "assets"[]) => runPipeline({ topic: "the floppy disk save icon", durationSec: 25 }, { providers: { llm: fakeLLM(), tts: fakeTTS(), stock: [mk("wikimedia"), mk("pexels")] }, storage, jobId: "t8", stopAfter: "assets", force });
+    await run();
+    const key = "jobs/t8/stages/storyboard.json";
+    type Shot = { id: string; scene: { type: string; asset?: { query?: string } } };
+    const sb = (await getJson<{ shots: Shot[] }>(storage, key))!;
+    sb.shots.find((s) => s.scene.type === "broll" && s.scene.asset)!.scene.asset!.query = "pexels:12345";
+    await putJson(storage, key, sb);
+    asked.length = 0;
+    const res = await run(["assets"]);
+    expect(asked).toEqual(["pexels pexels:12345"]);
+    expect(res.manifest.assets.find((a) => a.query === "pexels:12345")!.provider).toBe("pexels");
+  });
   it("ranks tiny stock images last", () => {
     const lic = { name: "CC0", commercialUse: true, requiresAttribution: false };
     const c = (id: string, w: number) => ({ id, kind: "image" as const, url: `https://x.test/${id}`, width: w, height: Math.round(w * 0.7), description: `File:Ray Tomlinson ${id}.jpg`, provider: "t", license: lic });
